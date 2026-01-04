@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Capictive es una plataforma que busca democratizar la información necesaria para votar correctamente en las elecciones del 2026 en Perú. El enfoque visual es estilo periódico (inspirado en The New York Times), con tipografías y colores definidos en `styles/globals.css`.
 
-## Getting Started
+## Páginas
 
-First, run the development server:
+- Inicio: portada tipo periódico con fecha, titulares y módulos como Entrevista y Hechos Históricos. Al final se listan las redes sociales `@capictive`.
+- Partidos Políticos: lista navegable de partidos (5 por página) con filtro simple. Al seleccionar, se muestra el detalle en un grid (lista ocupa 1 columna, detalle 2 columnas).
+- Candidatos: página en construcción con mensaje amigable.
+
+## Variables de estilo (definidas en globals.css)
+
+- Colores: `--color-primary-background`, `--color-title`, `--color-subtitle`, `--color-button-background-primary`, `--color-button-background-secondary`.
+- Fuentes: `--font-jost` (títulos), `--font-google-sans` (cuerpo).
+- Utilidades: clases `btn-primary`, `btn-secondary`, `nav-selected`, `nav-unselected`, `card`.
+
+## Ejecutar el proyecto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Luego visita [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estructura relevante
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [app/layout.tsx](app/layout.tsx) – configuración global de fuentes y estilos.
+- [app/components/Nav.tsx](app/components/Nav.tsx) – navegación superior con selección por ruta.
+- [app/page.tsx](app/page.tsx) – Inicio.
+- [app/partidos/page.tsx](app/partidos/page.tsx) – Partidos Políticos.
+- [app/candidatos/page.tsx](app/candidatos/page.tsx) – Candidatos.
+- [app/lib/parties.ts](app/lib/parties.ts) – datos de ejemplo para los partidos.
+- [styles/globals.css](styles/globals.css) – tema y utilidades Tailwind.
 
-## Learn More
+## Guía de estilo
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Consulta [STYLEGUIDE.md](STYLEGUIDE.md) para el lineamiento visual por página y cómo reutilizar las variables.

@@ -30,7 +30,6 @@ export default function RootLayout({
       <body
         className={`${googleSans.variable} ${jost.variable} `}
       >
-              <div className="bg-black absolute size-10 top-10 left-10">X</div>
 
         {children}
       </body>
