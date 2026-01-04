@@ -1,26 +1,39 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Montserrat } from "next/font/google"
-import "./globals.css"
+import type { Metadata } from "next";
+import "@/styles/globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] })
+import { Jost } from "next/font/google";
+import { Google_Sans } from "next/font/google";
+
+const googleSans = Google_Sans({ 
+  variable: "--font-google-sans",
+  subsets: ["latin"], 
+  weight: ["400", "700"],
+});
+
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "Capictive - AI para Campañas y Seguimiento de Gobierno",
-  description: "El agente de IA para procesos electorales y seguimiento gubernamental transparente",
-  generator: "v0.app",
-}
+  title: "Capictive",
+  description: "Plataforma Politica para las Elecciones 2026",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
-      <body className={`${montserrat.className} antialiased`}>
+    <html lang="es">
+      <body
+        className={`${googleSans.variable} ${jost.variable} `}
+      >
+              <div className="bg-black absolute size-10 top-10 left-10">X</div>
+
         {children}
       </body>
     </html>
-  )
+  );
 }
