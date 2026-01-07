@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Nav from "../components/Nav";
 import { PARTIES, Party, PartyDetail } from "../lib/parties";
 
@@ -229,68 +229,45 @@ export default function PartidosPage() {
 
                  {/* Ejes */}
                 <div className="space-y-4">
-                  <h3 className="font-title text-subtitle text-2xl font-bold">Ejes Principales</h3>
-                  <div className="flex items-center gap-4">
-                    <button
-                      className="btn-secondary text-2xl"
-                      onClick={() => setCurrentEjeIndex((i) => Math.max(0, i - 1))}
-                      disabled={currentEjeIndex === 0}
-                    >
-                      ‹
-                    </button>
-                    <div className="flex-1">
-                      {detailState.detail.ejes.length > 0 && (
-                        <div className="border rounded-md p-4 space-y-2 shadow-lg bg-white">
-                          <h4 className="font-title text-subtitle text-xl font-semibold">{detailState.detail.ejes[currentEjeIndex].categoria}</h4>
-                          <p className="font-body font-bold text-subtitle">{detailState.detail.ejes[currentEjeIndex].propuesta_estrella}</p>
-                          <div className="space-y-1">
-                            {detailState.detail.ejes[currentEjeIndex].que_proponen.map((propuesta: string, i: number) => (
-                              <div key={i} className="flex items-start gap-2">
-                                <span className="text-green-500 text-lg">✔</span>
-                                <span className="font-body text-sm">{propuesta}</span>
-                              </div>
-                            ))}
-                          </div>
-                          <p className="font-body text-sm italic bg-gray-100 p-2 rounded">Dato curioso: {detailState.detail.ejes[currentEjeIndex].dato_curioso}</p>
-                          <p className="font-body text-sm bg-yellow-100 p-3 rounded shadow-sm border-l-4 border-yellow-500">Reflexión: {detailState.detail.ejes[currentEjeIndex].para_reflexionar}</p>
-                          <div className="border-t pt-2 bg-white p-4 rounded-lg shadow-md relative pl-6 pr-16">
-                            <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold ${
-                              detailState.detail.ejes[currentEjeIndex].benchmark_internacional.nivel_similitud === 'ALTO' ? 'bg-green-500 text-white' :
-                              detailState.detail.ejes[currentEjeIndex].benchmark_internacional.nivel_similitud === 'MEDIO' ? 'bg-yellow-500 text-black' :
-                              'bg-red-500 text-white'
-                            }`}>
-                              {detailState.detail.ejes[currentEjeIndex].benchmark_internacional.nivel_similitud}
-                            </div>
-                            <div className="flex items-center gap-3 mb-3">
-                              <span className="text-4xl">{flagMap[detailState.detail.ejes[currentEjeIndex].benchmark_internacional.codigo_pais] || "🏛️"}</span>
-                              <div>
-                                <p className="font-body text-sm font-bold text-subtitle">{detailState.detail.ejes[currentEjeIndex].benchmark_internacional.caso_similar}</p>
-                                <p className="font-body text-xs text-gray-600">({detailState.detail.ejes[currentEjeIndex].benchmark_internacional.codigo_pais})</p>
-                              </div>
-                            </div>
-                            <div className="space-y-2">
-                              <div className="flex items-start gap-2">
-                                <span className="text-lg">📝</span>
-                                <p className="font-body text-sm italic text-gray-700">{detailState.detail.ejes[currentEjeIndex].benchmark_internacional.descripcion}</p>
-                              </div>
-                              <div className="flex items-start gap-2">
-                                <span className="text-lg">💡</span>
-                                <p className="font-body text-sm font-semibold text-amber-800">Lección: {detailState.detail.ejes[currentEjeIndex].benchmark_internacional.leccion}</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                    <button
-                      className="btn-secondary text-2xl"
-                      onClick={() => setCurrentEjeIndex((i) => Math.min(detailState.detail!.ejes.length - 1, i + 1))}
-                      disabled={currentEjeIndex === detailState.detail!.ejes.length - 1}
-                    >
-                      ›
-                    </button>
+                  <h3 className="font-title text-subtitle text-2xl font-bold flex items-center gap-2">
+                    <span>📋</span> Ejes Principales
+                  </h3>
+                  
+                  {/* Mobile: Swipeable cards */}
+                  <div className="md:hidden">
+                    <EjesSwipeable 
+                      ejes={detailState.detail.ejes} 
+                      currentIndex={currentEjeIndex}
+                      setCurrentIndex={setCurrentEjeIndex}
+                      flagMap={flagMap}
+                    />
                   </div>
-                  <p className="text-center font-body text-sm">{currentEjeIndex + 1} de {detailState.detail.ejes.length}</p>
+
+                  {/* Desktop: Normal view with buttons */}
+                  <div className="hidden md:block">
+                    <div className="flex items-center gap-4">
+                      <button
+                        className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                        onClick={() => setCurrentEjeIndex((i) => Math.max(0, i - 1))}
+                        disabled={currentEjeIndex === 0}
+                      >
+                        ‹
+                      </button>
+                      <div className="flex-1">
+                        {detailState.detail.ejes.length > 0 && (
+                          <EjeCard eje={detailState.detail.ejes[currentEjeIndex]} flagMap={flagMap} />
+                        )}
+                      </div>
+                      <button
+                        className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                        onClick={() => setCurrentEjeIndex((i) => Math.min(detailState.detail!.ejes.length - 1, i + 1))}
+                        disabled={currentEjeIndex === detailState.detail!.ejes.length - 1}
+                      >
+                        ›
+                      </button>
+                    </div>
+                    <p className="text-center font-body text-sm mt-3">{currentEjeIndex + 1} de {detailState.detail.ejes.length}</p>
+                  </div>
                 </div>
 
                 {/* Lo que no dicen */}
@@ -318,5 +295,206 @@ export default function PartidosPage() {
         </article>
       </section>
     </main>
+  );
+}
+
+// Component for individual Eje Card
+import { Eje } from "../lib/parties";
+
+function EjeCard({ eje, flagMap }: { eje: Eje; flagMap: Record<string, string> }) {
+  return (
+    <div className="border rounded-xl p-4 md:p-5 space-y-3 shadow-lg bg-white">
+      {/* Category Header */}
+      <div className="flex items-center gap-2">
+        <span className="text-2xl">
+          {eje.categoria.includes('SEGURIDAD') ? '🛡️' :
+           eje.categoria.includes('INFRAESTRUCTURA') ? '🏗️' :
+           eje.categoria.includes('ECONOMÍA') ? '💰' :
+           eje.categoria.includes('GESTIÓN') ? '🏛️' :
+           eje.categoria.includes('EDUCACIÓN') ? '📚' :
+           eje.categoria.includes('SALUD') ? '🏥' : '📋'}
+        </span>
+        <h4 className="font-title text-subtitle text-lg md:text-xl font-semibold">{eje.categoria}</h4>
+      </div>
+      
+      {/* Main Proposal */}
+      <div className="bg-button-background-primary/10 p-3 rounded-lg border-l-4 border-button-background-primary">
+        <p className="font-body font-bold text-subtitle text-sm md:text-base">{eje.propuesta_estrella}</p>
+      </div>
+      
+      {/* What they propose */}
+      <div className="space-y-2">
+        <p className="font-body font-semibold text-xs uppercase text-gray-500">Qué proponen:</p>
+        <div className="space-y-1.5 max-h-40 overflow-y-auto">
+          {eje.que_proponen.map((propuesta: string, i: number) => (
+            <div key={i} className="flex items-start gap-2">
+              <span className="text-green-500 text-sm flex-shrink-0 mt-0.5">✔</span>
+              <span className="font-body text-xs md:text-sm">{propuesta}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Collapsible sections for mobile */}
+      <details className="group">
+        <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-gray-100 p-2 rounded-lg">
+          <span>💡</span> Dato curioso
+          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="font-body text-xs md:text-sm italic mt-2 p-2 bg-gray-50 rounded">{eje.dato_curioso}</p>
+      </details>
+      
+      <details className="group">
+        <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-yellow-100 p-2 rounded-lg">
+          <span>🤔</span> Para reflexionar
+          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="font-body text-xs md:text-sm mt-2 p-2 bg-yellow-50 rounded border-l-4 border-yellow-500">{eje.para_reflexionar}</p>
+      </details>
+      
+      {/* Benchmark Internacional */}
+      <details className="group" open>
+        <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-blue-100 p-2 rounded-lg">
+          <span>🌍</span> Caso Internacional
+          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <div className="mt-2 border rounded-lg p-3 bg-white shadow-sm relative">
+          <div className={`absolute top-2 right-2 px-2 py-0.5 rounded-full text-xs font-bold ${
+            eje.benchmark_internacional.nivel_similitud === 'ALTO' ? 'bg-green-500 text-white' :
+            eje.benchmark_internacional.nivel_similitud === 'MEDIO' ? 'bg-yellow-500 text-black' :
+            'bg-red-500 text-white'
+          }`}>
+            {eje.benchmark_internacional.nivel_similitud}
+          </div>
+          <div className="flex items-center gap-2 mb-2 pr-16">
+            <span className="text-3xl">{flagMap[eje.benchmark_internacional.codigo_pais] || "🏛️"}</span>
+            <div>
+              <p className="font-body text-xs md:text-sm font-bold text-subtitle">{eje.benchmark_internacional.caso_similar}</p>
+              <p className="font-body text-xs text-gray-600">({eje.benchmark_internacional.codigo_pais})</p>
+            </div>
+          </div>
+          <div className="space-y-2">
+            <div className="flex items-start gap-2">
+              <span className="text-sm">📝</span>
+              <p className="font-body text-xs italic text-gray-700">{eje.benchmark_internacional.descripcion}</p>
+            </div>
+            <div className="flex items-start gap-2 bg-amber-50 p-2 rounded">
+              <span className="text-sm">💡</span>
+              <p className="font-body text-xs font-semibold text-amber-800">Lección: {eje.benchmark_internacional.leccion}</p>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  );
+}
+
+// Swipeable component for mobile
+function EjesSwipeable({ 
+  ejes, 
+  currentIndex, 
+  setCurrentIndex, 
+  flagMap 
+}: { 
+  ejes: Eje[]; 
+  currentIndex: number; 
+  setCurrentIndex: (fn: (i: number) => number) => void;
+  flagMap: Record<string, string>;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  }, []);
+
+  const onTouchMove = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }, []);
+
+  const onTouchEnd = useCallback(() => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe && currentIndex < ejes.length - 1) {
+      setCurrentIndex((i) => i + 1);
+    }
+    if (isRightSwipe && currentIndex > 0) {
+      setCurrentIndex((i) => i - 1);
+    }
+  }, [touchStart, touchEnd, currentIndex, ejes.length, setCurrentIndex]);
+
+  return (
+    <div className="space-y-3">
+      {/* Swipe instruction */}
+      <p className="text-center font-body text-xs text-gray-500 flex items-center justify-center gap-1">
+        <span>👆</span> Desliza para ver más ejes
+      </p>
+      
+      {/* Card container with touch events */}
+      <div 
+        ref={containerRef}
+        className="overflow-hidden"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
+        <div 
+          className="transition-transform duration-300 ease-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          <div className="flex">
+            {ejes.map((eje, index) => (
+              <div key={index} className="w-full flex-shrink-0 px-1">
+                <EjeCard eje={eje} flagMap={flagMap} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      {/* Navigation dots */}
+      <div className="flex justify-center items-center gap-3">
+        <button
+          className="btn-secondary text-lg px-3 py-1 disabled:opacity-40"
+          onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
+          disabled={currentIndex === 0}
+        >
+          ‹
+        </button>
+        <div className="flex gap-2">
+          {ejes.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(() => index)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'bg-button-background-primary w-6' 
+                  : 'bg-button-background-secondary'
+              }`}
+            />
+          ))}
+        </div>
+        <button
+          className="btn-secondary text-lg px-3 py-1 disabled:opacity-40"
+          onClick={() => setCurrentIndex((i) => Math.min(ejes.length - 1, i + 1))}
+          disabled={currentIndex === ejes.length - 1}
+        >
+          ›
+        </button>
+      </div>
+      
+      {/* Current position text */}
+      <p className="text-center font-body text-sm text-subtitle">
+        {currentIndex + 1} de {ejes.length}
+      </p>
+    </div>
   );
 }
