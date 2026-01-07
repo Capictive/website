@@ -109,6 +109,7 @@ export default function PartidosPage() {
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState<Party | null>(PARTIES[0]);
   const [detailState, setDetailState] = useState<{detail: PartyDetail | null, loading: boolean}>({detail: null, loading: false});
+  const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
 
   const perPage = 5;
   const filtered = useMemo(() => {
@@ -123,9 +124,11 @@ export default function PartidosPage() {
   useEffect(() => {
     if (selected) {
       setDetailState({detail: null, loading: true});
+      setCurrentEjeIndex(0);
       fetchPartyDetail(selected.name).then((data) => setDetailState({detail: data, loading: false}));
     } else {
       setDetailState({detail: null, loading: false});
+      setCurrentEjeIndex(0);
     }
   }, [selected]);
 
@@ -224,39 +227,70 @@ export default function PartidosPage() {
                   </div>
                 </div>
 
-                {/* Ejes */}
+                 {/* Ejes */}
                 <div className="space-y-4">
                   <h3 className="font-title text-subtitle text-2xl font-bold">Ejes Principales</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {detailState.detail.ejes.map((eje, index) => (
-                      <div key={index} className="border rounded-md p-4 space-y-2 shadow-lg bg-white">
-                        <h4 className="font-title text-subtitle text-xl font-semibold">{eje.categoria}</h4>
-                        <p className="font-body font-bold text-subtitle">{eje.propuesta_estrella}</p>
-                        <div className="space-y-1">
-                          {eje.que_proponen.map((propuesta, i) => (
-                            <div key={i} className="flex items-start gap-2">
-                              <span className="text-green-500 text-lg">✔</span>
-                              <span className="font-body text-sm">{propuesta}</span>
+                  <div className="flex items-center gap-4">
+                    <button
+                      className="btn-secondary text-2xl"
+                      onClick={() => setCurrentEjeIndex((i) => Math.max(0, i - 1))}
+                      disabled={currentEjeIndex === 0}
+                    >
+                      ‹
+                    </button>
+                    <div className="flex-1">
+                      {detailState.detail.ejes.length > 0 && (
+                        <div className="border rounded-md p-4 space-y-2 shadow-lg bg-white">
+                          <h4 className="font-title text-subtitle text-xl font-semibold">{detailState.detail.ejes[currentEjeIndex].categoria}</h4>
+                          <p className="font-body font-bold text-subtitle">{detailState.detail.ejes[currentEjeIndex].propuesta_estrella}</p>
+                          <div className="space-y-1">
+                            {detailState.detail.ejes[currentEjeIndex].que_proponen.map((propuesta: string, i: number) => (
+                              <div key={i} className="flex items-start gap-2">
+                                <span className="text-green-500 text-lg">✔</span>
+                                <span className="font-body text-sm">{propuesta}</span>
+                              </div>
+                            ))}
+                          </div>
+                          <p className="font-body text-sm italic bg-gray-100 p-2 rounded">Dato curioso: {detailState.detail.ejes[currentEjeIndex].dato_curioso}</p>
+                          <p className="font-body text-sm bg-yellow-100 p-3 rounded shadow-sm border-l-4 border-yellow-500">Reflexión: {detailState.detail.ejes[currentEjeIndex].para_reflexionar}</p>
+                          <div className="border-t pt-2 bg-white p-4 rounded-lg shadow-md relative pl-6 pr-16">
+                            <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold ${
+                              detailState.detail.ejes[currentEjeIndex].benchmark_internacional.nivel_similitud === 'ALTO' ? 'bg-green-500 text-white' :
+                              detailState.detail.ejes[currentEjeIndex].benchmark_internacional.nivel_similitud === 'MEDIO' ? 'bg-yellow-500 text-black' :
+                              'bg-red-500 text-white'
+                            }`}>
+                              {detailState.detail.ejes[currentEjeIndex].benchmark_internacional.nivel_similitud}
                             </div>
-                          ))}
-                        </div>
-                        <p className="font-body text-sm italic bg-gray-100 p-2 rounded">Dato curioso: {eje.dato_curioso}</p>
-                        <p className="font-body text-sm bg-yellow-100 p-3 rounded shadow-sm border-l-4 border-yellow-500">Reflexión: {eje.para_reflexionar}</p>
-                        <div className="border-t pt-2 bg-gray-50 p-3 rounded-lg shadow-inner">
-                          <div className="flex items-center gap-3 mb-2">
-                            <span className="text-3xl">{flagMap[eje.benchmark_internacional.codigo_pais] || "🏛️"}</span>
-                            <div>
-                              <p className="font-body text-sm font-semibold text-subtitle">{eje.benchmark_internacional.caso_similar}</p>
-                              <p className="font-body text-xs text-gray-600">({eje.benchmark_internacional.codigo_pais})</p>
+                            <div className="flex items-center gap-3 mb-3">
+                              <span className="text-4xl">{flagMap[detailState.detail.ejes[currentEjeIndex].benchmark_internacional.codigo_pais] || "🏛️"}</span>
+                              <div>
+                                <p className="font-body text-sm font-bold text-subtitle">{detailState.detail.ejes[currentEjeIndex].benchmark_internacional.caso_similar}</p>
+                                <p className="font-body text-xs text-gray-600">({detailState.detail.ejes[currentEjeIndex].benchmark_internacional.codigo_pais})</p>
+                              </div>
+                            </div>
+                            <div className="space-y-2">
+                              <div className="flex items-start gap-2">
+                                <span className="text-lg">📝</span>
+                                <p className="font-body text-sm italic text-gray-700">{detailState.detail.ejes[currentEjeIndex].benchmark_internacional.descripcion}</p>
+                              </div>
+                              <div className="flex items-start gap-2">
+                                <span className="text-lg">💡</span>
+                                <p className="font-body text-sm font-semibold text-amber-800">Lección: {detailState.detail.ejes[currentEjeIndex].benchmark_internacional.leccion}</p>
+                              </div>
                             </div>
                           </div>
-                          <p className="font-body text-sm mb-1">{eje.benchmark_internacional.descripcion}</p>
-                          <p className="font-body text-sm font-medium text-green-700">Lección: {eje.benchmark_internacional.leccion}</p>
-                          <p className="font-body text-sm text-blue-600">Similitud: {eje.benchmark_internacional.nivel_similitud}</p>
                         </div>
-                      </div>
-                    ))}
+                      )}
+                    </div>
+                    <button
+                      className="btn-secondary text-2xl"
+                      onClick={() => setCurrentEjeIndex((i) => Math.min(detailState.detail!.ejes.length - 1, i + 1))}
+                      disabled={currentEjeIndex === detailState.detail!.ejes.length - 1}
+                    >
+                      ›
+                    </button>
                   </div>
+                  <p className="text-center font-body text-sm">{currentEjeIndex + 1} de {detailState.detail.ejes.length}</p>
                 </div>
 
                 {/* Lo que no dicen */}
