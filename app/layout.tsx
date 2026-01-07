@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 
-import { Jost } from "next/font/google";
+import { Playpen_Sans } from "next/font/google";
 import { Google_Sans } from "next/font/google";
 
 const googleSans = Google_Sans({ 
@@ -10,8 +10,8 @@ const googleSans = Google_Sans({
   weight: ["400", "700"],
 });
 
-const jost = Jost({
-  variable: "--font-jost",
+const playpenSans = Playpen_Sans({
+  variable: "--font-playpen-sans",
   subsets: ["latin"],
 });
 
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${googleSans.variable} ${jost.variable} `}
+        className={`${googleSans.variable} ${playpenSans.variable} `}
       >
 
         {children}
