@@ -207,22 +207,56 @@ export default function PartidosPage() {
                 <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
                   <div className="flex flex-col items-center">
                     <Image src={detailState.detail.logo_links[0] || selected.logo} alt={selected.name} width={120} height={120} />
-                    <Image
-                      src={detailState.detail.presidente_links[0] || selected.candidateImage}
-                      alt={`Candidato ${selected.name}`}
-                      width={240}
-                      height={240}
-                      className="mt-4 rounded-md border border-subtitle object-cover aspect-square w-full max-w-[240px]"
-                    />
+                    {/* Imagen del candidato con nombre superpuesto */}
+                    <div className="relative mt-4">
+                      <Image
+                        src={detailState.detail.presidente_links[0] || selected.candidateImage}
+                        alt={`Candidato ${selected.name}`}
+                        width={240}
+                        height={240}
+                        className="rounded-md border border-subtitle object-cover aspect-square w-full max-w-[240px]"
+                      />
+                      {/* Nombre del presidente superpuesto */}
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-md">
+                        <p className="font-title text-white text-sm font-bold text-center leading-tight">
+                          {selected.candidatos.presidente}
+                        </p>
+                        <p className="font-body text-white/80 text-xs text-center">
+                          Candidato Presidencial
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   <div className="flex-1 space-y-3 text-center md:text-left">
                     <h2 className="font-title text-subtitle text-4xl font-bold">{detailState.detail.partido}</h2>
-                    <p className="font-body italic text-lg">{detailState.detail.slogan_detectado}</p>
-                    <p className="font-body">{detailState.detail.vision_resumen}</p>
-                    <div className="flex gap-3 justify-center md:justify-start">
-                      <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20RESUMEN.pdf`} target="_blank" className="btn-primary">Plan Resumen PDF</a>
-                      <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20GOBIERNO.pdf`} target="_blank" className="btn-secondary">Plan Gobierno PDF</a>
-                      <button className="btn-secondary">Comparar</button>
+                    <p className="font-body italic text-lg">&ldquo;{detailState.detail.slogan_detectado}&rdquo;</p>
+                    <p className="font-body text-sm md:text-base">{detailState.detail.vision_resumen}</p>
+                    
+                    {/* Vicepresidentes */}
+                    <div className="bg-button-background-secondary/30 rounded-lg p-4 space-y-2">
+                      <p className="font-body text-xs uppercase font-bold text-subtitle/70 tracking-wide">Fórmula Presidencial</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">🥇</span>
+                          <div>
+                            <p className="font-body text-xs text-subtitle/70">1er Vicepresidente</p>
+                            <p className="font-body text-sm font-semibold text-subtitle">{selected.candidatos.primer_vicepresidente}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">🥈</span>
+                          <div>
+                            <p className="font-body text-xs text-subtitle/70">2do Vicepresidente</p>
+                            <p className="font-body text-sm font-semibold text-subtitle">{selected.candidatos.segundo_vicepresidente}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                      <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20RESUMEN.pdf`} target="_blank" className="btn-primary text-sm">📄 Plan Resumen</a>
+                      <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20GOBIERNO.pdf`} target="_blank" className="btn-secondary text-sm">📑 Plan Gobierno</a>
+                      <button className="btn-secondary text-sm">⚖️ Comparar</button>
                     </div>
                   </div>
                 </div>
