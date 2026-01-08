@@ -45,7 +45,7 @@ export default function Home() {
     <main>
       <Nav />
       {/* Hero Header */}
-      <div className="p-6 md:p-10 border-b border-subtitle bg-gradient-to-r from-button-background-secondary/30 to-transparent">
+      <div className="p-6 md:p-10 border-b border-subtitle   ">
         <div className="flex gap-4 justify-center items-center">
           <Image
             src={logo}
@@ -61,7 +61,7 @@ export default function Home() {
       </div>
 
       {/* Info bar */}
-      <div className="p-3 text-sm font-body flex flex-wrap justify-between gap-2 bg-button-background-secondary/20">
+      <div className="p-3 text-sm font-body flex flex-wrap justify-between gap-2 ">
         <p>Miércoles, <strong>07 de Enero del 2026</strong></p>
         <p className="flex items-center gap-2">
           <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
@@ -71,8 +71,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="mt-6 py-16 border-y font-title text-center border-subtitle relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-button-background-primary/5 to-transparent"></div>
-        <p className="text-4xl sm:text-6xl md:text-8xl text-subtitle font-title font-extrabold relative z-10">
+        <div className="absolute inset-0  from-button-background-primary/5 to-transparent"></div>
+        <p className="text-3xl sm:text-4xl md:text-7xl text-subtitle font-title font-extrabold relative z-10">
           Tenemos un Problema
         </p>
         <p className="font-body text-lg mt-2 relative z-10">O bueno... varios 🤔</p>
@@ -147,7 +147,7 @@ export default function Home() {
             Conversamos con especialistas en políticas públicas para darte opiniones, 
             datos y un resumen imparcial que te ayude a decidir informadamente.
           </p>
-          <button className="btn-secondary w-fit flex items-center gap-2">
+          <button className="btn-secondary text-sm w-fit font-body flex items-center gap-2">
             <span>Leer entrevistas</span>
             <span>→</span>
           </button>
@@ -161,7 +161,7 @@ export default function Home() {
           <p className="font-body">
             Momentos clave de la política peruana que ayudan a entender el presente electoral.
           </p>
-          <button className="btn-secondary w-fit flex items-center gap-2">
+          <button className="btn-secondary text-sm w-fit font-body flex items-center gap-2">
             <span>Ver cronología</span>
             <span>→</span>
           </button>
@@ -195,13 +195,16 @@ export default function Home() {
         <p className="font-body text-lg mb-4">Síguenos en redes sociales</p>
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 font-body">
           <a href="https://facebook.com/capictive" className="btn-secondary flex items-center gap-2">
-            <span>📘</span> Facebook
+            <Image src="/logos/facebook.png" alt="Facebook" width={20} height={20} />
+            Facebook
           </a>
           <a href="https://instagram.com/capictive" className="btn-secondary flex items-center gap-2">
-            <span>📸</span> Instagram
+            <Image src="/logos/instagram.png" alt="Instagram" width={20} height={20} />
+            Instagram
           </a>
           <a href="https://tiktok.com/@capictive" className="btn-secondary flex items-center gap-2">
-            <span>🎵</span> TikTok
+            <Image src="/logos/tiktok.png" alt="TikTok" width={20} height={20} />
+            TikTok
           </a>
         </div>
         <p className="font-body text-xs mt-6 text-subtitle/60">

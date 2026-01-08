@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Nav from "../components/Nav";
-import { PARTIES, Party, PartyDetail } from "../lib/parties";
+import { PARTIES, Party, PartyDetail, Problema, Eje } from "../lib/parties";
 
 const flagMap: Record<string, string> = {
   // --- NORTEAMÉRICA ---
@@ -110,6 +110,8 @@ export default function PartidosPage() {
   const [selected, setSelected] = useState<Party | null>(PARTIES[0]);
   const [detailState, setDetailState] = useState<{detail: PartyDetail | null, loading: boolean}>({detail: null, loading: false});
   const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
+  const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
+  const [viewMode, setViewMode] = useState<'ejes' | 'problemas'>('ejes');
 
   const perPage = 5;
   const filtered = useMemo(() => {
@@ -125,10 +127,13 @@ export default function PartidosPage() {
     if (selected) {
       setDetailState({detail: null, loading: true});
       setCurrentEjeIndex(0);
+      setCurrentProblemaIndex(0);
+      setViewMode('ejes');
       fetchPartyDetail(selected.name).then((data) => setDetailState({detail: data, loading: false}));
     } else {
       setDetailState({detail: null, loading: false});
       setCurrentEjeIndex(0);
+      setCurrentProblemaIndex(0);
     }
   }, [selected]);
 
@@ -261,47 +266,115 @@ export default function PartidosPage() {
                   </div>
                 </div>
 
-                 {/* Ejes */}
+                 {/* Toggle: Ejes / Problemas */}
                 <div className="space-y-4">
-                  <h3 className="font-title text-subtitle text-2xl font-bold flex items-center gap-2">
-                    <span>📋</span> Ejes Principales
-                  </h3>
+                  {/* Toggle buttons */}
+                  <div className="flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1">
+                    <button
+                      onClick={() => setViewMode('ejes')}
+                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all ${
+                        viewMode === 'ejes' 
+                          ? 'bg-button-background-primary text-white shadow-md' 
+                          : 'text-subtitle hover:bg-button-background-secondary/30'
+                      }`}
+                    >
+                      📋 Ejes Principales
+                    </button>
+                    <button
+                      onClick={() => setViewMode('problemas')}
+                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all ${
+                        viewMode === 'problemas' 
+                          ? 'bg-button-background-primary text-white shadow-md' 
+                          : 'text-subtitle hover:bg-button-background-secondary/30'
+                      }`}
+                    >
+                      ⚠️ Problemas Identificados
+                    </button>
+                  </div>
                   
-                  {/* Mobile: Swipeable cards */}
-                  <div className="md:hidden">
-                    <EjesSwipeable 
-                      ejes={detailState.detail.ejes} 
-                      currentIndex={currentEjeIndex}
-                      setCurrentIndex={setCurrentEjeIndex}
-                      flagMap={flagMap}
-                    />
-                  </div>
-
-                  {/* Desktop: Normal view with buttons */}
-                  <div className="hidden md:block">
-                    <div className="flex items-center gap-4">
-                      <button
-                        className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
-                        onClick={() => setCurrentEjeIndex((i) => Math.max(0, i - 1))}
-                        disabled={currentEjeIndex === 0}
-                      >
-                        ‹
-                      </button>
-                      <div className="flex-1">
-                        {detailState.detail.ejes.length > 0 && (
-                          <EjeCard eje={detailState.detail.ejes[currentEjeIndex]} flagMap={flagMap} />
-                        )}
+                  {viewMode === 'ejes' ? (
+                    <>
+                      {/* Mobile: Swipeable cards */}
+                      <div className="md:hidden">
+                        <EjesSwipeable 
+                          ejes={detailState.detail.ejes} 
+                          currentIndex={currentEjeIndex}
+                          setCurrentIndex={setCurrentEjeIndex}
+                          flagMap={flagMap}
+                        />
                       </div>
-                      <button
-                        className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
-                        onClick={() => setCurrentEjeIndex((i) => Math.min(detailState.detail!.ejes.length - 1, i + 1))}
-                        disabled={currentEjeIndex === detailState.detail!.ejes.length - 1}
-                      >
-                        ›
-                      </button>
-                    </div>
-                    <p className="text-center font-body text-sm mt-3">{currentEjeIndex + 1} de {detailState.detail.ejes.length}</p>
-                  </div>
+
+                      {/* Desktop: Normal view with buttons */}
+                      <div className="hidden md:block">
+                        <div className="flex items-center gap-4">
+                          <button
+                            className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                            onClick={() => setCurrentEjeIndex((i) => Math.max(0, i - 1))}
+                            disabled={currentEjeIndex === 0}
+                          >
+                            ‹
+                          </button>
+                          <div className="flex-1">
+                            {detailState.detail.ejes.length > 0 && (
+                              <EjeCard eje={detailState.detail.ejes[currentEjeIndex]} flagMap={flagMap} />
+                            )}
+                          </div>
+                          <button
+                            className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                            onClick={() => setCurrentEjeIndex((i) => Math.min(detailState.detail!.ejes.length - 1, i + 1))}
+                            disabled={currentEjeIndex === detailState.detail!.ejes.length - 1}
+                          >
+                            ›
+                          </button>
+                        </div>
+                        <p className="text-center font-body text-sm mt-3">{currentEjeIndex + 1} de {detailState.detail.ejes.length}</p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {detailState.detail.problemas && detailState.detail.problemas.length > 0 ? (
+                        <>
+                          {/* Mobile: Swipeable problema cards */}
+                          <div className="md:hidden">
+                            <ProblemasSwipeable 
+                              problemas={detailState.detail.problemas} 
+                              currentIndex={currentProblemaIndex}
+                              setCurrentIndex={setCurrentProblemaIndex}
+                            />
+                          </div>
+
+                          {/* Desktop: Normal view with buttons */}
+                          <div className="hidden md:block">
+                            <div className="flex items-center gap-4">
+                              <button
+                                className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                                onClick={() => setCurrentProblemaIndex((i) => Math.max(0, i - 1))}
+                                disabled={currentProblemaIndex === 0}
+                              >
+                                ‹
+                              </button>
+                              <div className="flex-1">
+                                <ProblemaCard problema={detailState.detail.problemas[currentProblemaIndex]} />
+                              </div>
+                              <button
+                                className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                                onClick={() => setCurrentProblemaIndex((i) => Math.min(detailState.detail!.problemas!.length - 1, i + 1))}
+                                disabled={currentProblemaIndex === detailState.detail!.problemas!.length - 1}
+                              >
+                                ›
+                              </button>
+                            </div>
+                            <p className="text-center font-body text-sm mt-3">{currentProblemaIndex + 1} de {detailState.detail.problemas.length}</p>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="text-center py-8 border rounded-xl bg-gray-50">
+                          <span className="text-4xl mb-2 block">📭</span>
+                          <p className="font-body text-subtitle">No hay problemas identificados para este partido.</p>
+                        </div>
+                      )}
+                    </>
+                  )}
                 </div>
 
                 {/* Lo que no dicen */}
@@ -333,7 +406,6 @@ export default function PartidosPage() {
 }
 
 // Component for individual Eje Card
-import { Eje } from "../lib/parties";
 
 function EjeCard({ eje, flagMap }: { eje: Eje; flagMap: Record<string, string> }) {
   return (
@@ -528,6 +600,162 @@ function EjesSwipeable({
       {/* Current position text */}
       <p className="text-center font-body text-sm text-subtitle">
         {currentIndex + 1} de {ejes.length}
+      </p>
+    </div>
+  );
+}
+
+// Component for individual Problema Card
+function ProblemaCard({ problema }: { problema: Problema }) {
+  return (
+    <div className="border rounded-xl p-4 md:p-5 space-y-4 shadow-lg bg-white">
+      {/* Title Header */}
+      <div className="flex items-start gap-3">
+        <span className="text-3xl">⚠️</span>
+        <div className="flex-1">
+          <h4 className="font-title text-subtitle text-lg md:text-xl font-bold">{problema.titulo}</h4>
+        </div>
+      </div>
+      
+      {/* Resumen */}
+      <div className="bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+        <p className="font-body text-xs uppercase font-bold text-red-700 mb-1">Resumen del problema</p>
+        <p className="font-body text-sm text-subtitle">{problema.resumen}</p>
+      </div>
+      
+      {/* Ejemplo */}
+      <details className="group" open>
+        <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-orange-100 p-2 rounded-lg">
+          <span>📋</span> Ejemplo concreto
+          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-orange-50 rounded border-l-4 border-orange-400 italic">{problema.ejemplo}</p>
+      </details>
+      
+      {/* Solución */}
+      <details className="group" open>
+        <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-green-100 p-2 rounded-lg">
+          <span>💡</span> Solución propuesta
+          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-green-50 rounded border-l-4 border-green-500">{problema.solución}</p>
+      </details>
+      
+      {/* Resolución de ejemplo */}
+      <details className="group">
+        <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-blue-100 p-2 rounded-lg">
+          <span>🎯</span> Cómo se resolvería
+          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-blue-50 rounded border-l-4 border-blue-500">{problema["resolución de ejemplo"]}</p>
+      </details>
+    </div>
+  );
+}
+
+// Swipeable component for Problemas on mobile
+function ProblemasSwipeable({ 
+  problemas, 
+  currentIndex, 
+  setCurrentIndex 
+}: { 
+  problemas: Problema[]; 
+  currentIndex: number; 
+  setCurrentIndex: (fn: (i: number) => number) => void;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  }, []);
+
+  const onTouchMove = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }, []);
+
+  const onTouchEnd = useCallback(() => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe && currentIndex < problemas.length - 1) {
+      setCurrentIndex((i) => i + 1);
+    }
+    if (isRightSwipe && currentIndex > 0) {
+      setCurrentIndex((i) => i - 1);
+    }
+  }, [touchStart, touchEnd, currentIndex, problemas.length, setCurrentIndex]);
+
+  return (
+    <div className="space-y-3">
+      {/* Swipe instruction */}
+      <p className="text-center font-body text-xs text-gray-500 flex items-center justify-center gap-1">
+        <span>👆</span> Desliza para ver más problemas
+      </p>
+      
+      {/* Card container with touch events */}
+      <div 
+        ref={containerRef}
+        className="overflow-hidden"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
+        <div 
+          className="transition-transform duration-300 ease-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          <div className="flex">
+            {problemas.map((problema, index) => (
+              <div key={index} className="w-full flex-shrink-0 px-1">
+                <ProblemaCard problema={problema} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      {/* Navigation dots */}
+      <div className="flex justify-center items-center gap-3">
+        <button
+          className="btn-secondary text-lg px-3 py-1 disabled:opacity-40"
+          onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
+          disabled={currentIndex === 0}
+        >
+          ‹
+        </button>
+        <div className="flex gap-2">
+          {problemas.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(() => index)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'bg-button-background-primary w-6' 
+                  : 'bg-button-background-secondary'
+              }`}
+            />
+          ))}
+        </div>
+        <button
+          className="btn-secondary text-lg px-3 py-1 disabled:opacity-40"
+          onClick={() => setCurrentIndex((i) => Math.min(problemas.length - 1, i + 1))}
+          disabled={currentIndex === problemas.length - 1}
+        >
+          ›
+        </button>
+      </div>
+      
+      {/* Current position text */}
+      <p className="text-center font-body text-sm text-subtitle">
+        {currentIndex + 1} de {problemas.length}
       </p>
     </div>
   );

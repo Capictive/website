@@ -31,11 +31,20 @@ export type Eje = {
     fuente_pagina: string;
 };
 
+export type Problema = {
+    titulo: string;
+    resumen: string;
+    ejemplo: string;
+    solución: string;
+    "resolución de ejemplo": string;
+};
+
 export type PartyDetail = {
     partido: string;
     slogan_detectado: string;
     vision_resumen: string;
     ejes: Eje[];
+    problemas?: Problema[];
     lo_que_no_dicen: string;
     fuentes_consultadas: string[];
     presidente_links: string[];
