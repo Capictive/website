@@ -112,6 +112,17 @@ export default function PartidosPage() {
   const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
   const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
   const [viewMode, setViewMode] = useState<'ejes' | 'problemas'>('ejes');
+  const detailArticleRef = useRef<HTMLElement>(null);
+
+  const handlePartySelect = (party: Party) => {
+    setSelected(party);
+    // En móvil, hacer scroll hacia el detalle del partido
+    if (window.innerWidth < 768 && detailArticleRef.current) {
+      setTimeout(() => {
+        detailArticleRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  };
 
   const perPage = 5;
   const filtered = useMemo(() => {
@@ -188,12 +199,18 @@ export default function PartidosPage() {
               {visible.map((p) => (
                 <button
                   key={p.id}
-                  className={`card rounded-md border w-full text-left ${selected?.id === p.id ? "border-button-background-primary" : "border-subtitle"}`}
-                  onClick={() => setSelected(p)}
+                  className={`card rounded-md border-2 w-full text-left transition-all duration-200 ${
+                    selected?.id === p.id 
+                      ? "border-button-background-primary bg-button-background-primary/10 shadow-lg scale-105 ring-2 ring-button-background-primary/30" 
+                      : "border-subtitle hover:border-button-background-primary/50 hover:shadow-md"
+                  }`}
+                  onClick={() => handlePartySelect(p)}
                 >
                   <div className="flex items-center gap-3">
                     <Image src={p.logo} alt={p.name} width={48} height={48} />
-                    <span className="font-body text-subtitle">{p.name}</span>
+                    <span className={`font-body ${
+                      selected?.id === p.id ? "text-button-background-primary font-bold" : "text-subtitle"
+                    }`}>{p.name}</span>
                   </div>
                 </button>
               ))}
@@ -202,7 +219,7 @@ export default function PartidosPage() {
         </aside>
 
         {/* Detalle del partido seleccionado */}
-        <article className="col-span-2 border rounded-md border-subtitle p-6 space-y-6">
+        <article ref={detailArticleRef} className="col-span-2 border rounded-md border-subtitle p-6 space-y-6">
           {selected ? (
             detailState.loading ? (
               <p className="font-body">Cargando detalles...</p>
@@ -261,7 +278,7 @@ export default function PartidosPage() {
                     <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20RESUMEN.pdf`} target="_blank" className="btn-primary text-sm">📄 Plan Resumen</a>
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20GOBIERNO.pdf`} target="_blank" className="btn-secondary text-sm">📑 Plan Gobierno</a>
-                      <button className="btn-secondary text-sm">⚖️ Comparar</button>
+                      <button className="btn-secondary text-sm opacity-60 cursor-not-allowed" disabled>⚖️ Comparar - Próximamente</button>
                     </div>
                   </div>
                 </div>
@@ -269,23 +286,23 @@ export default function PartidosPage() {
                  {/* Toggle: Ejes / Problemas */}
                 <div className="space-y-4">
                   {/* Toggle buttons */}
-                  <div className="flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1">
+                  <div className="flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1 border-2 border-subtitle/30">
                     <button
                       onClick={() => setViewMode('ejes')}
-                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all ${
+                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
                         viewMode === 'ejes' 
-                          ? 'bg-button-background-primary text-white shadow-md' 
-                          : 'text-subtitle hover:bg-button-background-secondary/30'
+                          ? 'bg-button-background-primary text-white shadow-md border-button-background-primary' 
+                          : 'text-subtitle hover:bg-button-background-secondary/30 border-transparent'
                       }`}
                     >
                       📋 Ejes Principales
                     </button>
                     <button
                       onClick={() => setViewMode('problemas')}
-                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all ${
+                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
                         viewMode === 'problemas' 
-                          ? 'bg-button-background-primary text-white shadow-md' 
-                          : 'text-subtitle hover:bg-button-background-secondary/30'
+                          ? 'bg-button-background-primary text-white shadow-md border-button-background-primary' 
+                          : 'text-subtitle hover:bg-button-background-secondary/30 border-transparent'
                       }`}
                     >
                       ⚠️ Problemas Identificados

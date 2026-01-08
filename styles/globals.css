@@ -21,7 +21,7 @@ main {
 }
 
 .btn-secondary {
-  @apply bg-button-background-secondary duration-100 cursor-pointer text-subtitle px-4 py-2 rounded-md hover:bg-button-background-secondary/85 transition;
+  @apply bg-button-background-secondary text-sm duration-100 cursor-pointer text-subtitle px-4 py-2 rounded-md hover:bg-button-background-secondary/85 transition;
 }
 
 .nav-selected {

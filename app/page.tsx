@@ -5,6 +5,93 @@ import { useState, useEffect } from "react";
 import logo from "@/public/capictive.png";
 import Nav from "./components/Nav";
 
+const timelineEvents = [
+  {
+    date: "2025-03-25",
+    event: "Convocatoria a Elecciones",
+    description: "Publicación del Decreto Supremo N.º 039-2025-PCM oficializando el llamado a elecciones.",
+    category: "legal",
+    status: "past"
+  },
+  {
+    date: "2025-11-30",
+    event: "Elecciones Primarias",
+    description: "Votación interna de partidos para definir sus candidatos.",
+    category: "voting",
+    status: "past"
+  },
+  {
+    date: "2025-12-23",
+    event: "Cierre de Inscripción de Listas",
+    description: "Fecha límite para presentar solicitudes de inscripción de fórmulas presidenciales y parlamentarias.",
+    category: "registration",
+    status: "past"
+  },
+  {
+    date: "2025-12-24",
+    event: "Publicación de Hojas de Vida",
+    description: "Planes de gobierno y hojas de vida disponibles al público en el portal del JNE.",
+    category: "transparency",
+    status: "past"
+  },
+  {
+    date: "2026-01-29",
+    event: "Sorteo de Miembros de Mesa",
+    description: "La ONPE realiza el sorteo público de los 3 titulares y 6 suplentes por mesa.",
+    category: "logistics",
+    status: "upcoming"
+  },
+  {
+    date: "2026-02-11",
+    event: "Publicación de Listas Admitidas",
+    description: "Fecha límite para publicar las listas que pasaron la primera revisión (inicia periodo de tachas).",
+    category: "registration",
+    status: "upcoming"
+  },
+  {
+    date: "2026-02-26",
+    event: "Resolución de Tachas (1.ª instancia)",
+    description: "Plazo máximo para que los Jurados Electorales Especiales resuelvan tachas ciudadanas.",
+    category: "legal",
+    status: "upcoming"
+  },
+  {
+    date: "2026-03-14",
+    event: "Inscripción Definitiva de Listas",
+    description: "Fecha límite tras apelaciones. Se define oficialmente quiénes aparecerán en la cédula.",
+    category: "registration",
+    status: "upcoming"
+  },
+  {
+    date: "2026-03-30",
+    event: "Debates Presidenciales (Estimado)",
+    description: "Inicio de la semana de debates escalonados (fecha exacta por confirmar tras inscripción definitiva).",
+    category: "debate",
+    status: "upcoming"
+  },
+  {
+    date: "2026-04-10",
+    event: "Inicio de Ley Seca",
+    description: "Prohibición de venta de alcohol desde las 8:00 a.m. (48 horas antes de la elección).",
+    category: "logistics",
+    status: "upcoming"
+  },
+  {
+    date: "2026-04-12",
+    event: "Día de la Elección (Primera Vuelta)",
+    description: "Votación general para Presidente, Vicepresidentes, Congreso y Parlamento Andino.",
+    category: "voting",
+    status: "upcoming"
+  },
+  {
+    date: "2026-06-07",
+    event: "Segunda Vuelta (Proyectada)",
+    description: "Fecha probable en caso de que ningún candidato supere el 50% de votos válidos.",
+    category: "voting",
+    status: "upcoming"
+  }
+];
+
 const partyLogos = [
   "https://res.cloudinary.com/dzcjiie9l/image/upload/v1767743028/Capictive/Logo/ahora_nacion_logo.png",
   "https://res.cloudinary.com/dzcjiie9l/image/upload/v1767743030/Capictive/Logo/alianza_para_el_progreso_logo.png",
@@ -35,6 +122,22 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  // Calcular el próximo evento y días restantes
+  const getNextEvent = () => {
+    const today = new Date();
+    for (let i = 0; i < timelineEvents.length; i++) {
+      const eventDate = new Date(timelineEvents[i].date);
+      if (eventDate >= today) {
+        const diffTime = eventDate.getTime() - today.getTime();
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        return { event: timelineEvents[i], daysLeft: diffDays };
+      }
+    }
+    return null;
+  };
+
+  const nextEvent = getNextEvent();
+
   const visibleLogos = [
     partyLogos[logoIndex % partyLogos.length],
     partyLogos[(logoIndex + 1) % partyLogos.length],
@@ -63,10 +166,12 @@ export default function Home() {
       {/* Info bar */}
       <div className="p-3 text-sm font-body flex flex-wrap justify-between gap-2 ">
         <p>Miércoles, <strong>07 de Enero del 2026</strong></p>
-        <p className="flex items-center gap-2">
-          <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-          <strong>41</strong> días para el Debate
-        </p>
+        {nextEvent && (
+          <p className="flex items-center gap-2">
+            <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            <strong>{nextEvent.daysLeft}</strong> días para {nextEvent.event.event}
+          </p>
+        )}
       </div>
 
       {/* Hero Section */}
@@ -124,7 +229,7 @@ export default function Home() {
             <strong className="text-button-background-primary"> ¿Cómo elegir?</strong> 
             {" "}Nosotros te ayudamos a entender sus propuestas de forma simple y clara.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex font-body flex-col sm:flex-row gap-3">
             <Link href="/partidos" className="btn-primary text-center text-lg py-3">
               🗳️ Revisar Partidos
             </Link>
@@ -140,30 +245,30 @@ export default function Home() {
         <article className="col-span-1 md:col-span-2 space-y-4 p-6 rounded-xl bg-white/50 shadow-sm">
           <div className="flex items-center gap-2 text-button-background-primary">
             <span className="text-2xl">📰</span>
-            <span className="text-sm font-bold uppercase tracking-wide">Exclusivo</span>
+            <span className="text-sm font-bold uppercase font-title tracking-wide">Exclusivo</span>
           </div>
-          <h2 className="font-title text-subtitle text-3xl md:text-4xl font-extrabold">Entrevistas con Expertos</h2>
+          <h2 className="font-title text-subtitle text-3xl md:text-4xl font-extrabold">Transcripciones de Entrevistas</h2>
           <p className="font-body text-base leading-relaxed">
-            Conversamos con especialistas en políticas públicas para darte opiniones, 
-            datos y un resumen imparcial que te ayude a decidir informadamente.
+            Accede a transcripciones de entrevistas realizadas a representantes de los partidos políticos, 
+            donde explican sus propuestas y planes de gobierno de manera directa.
           </p>
-          <button className="btn-secondary text-sm w-fit font-body flex items-center gap-2">
-            <span>Leer entrevistas</span>
-            <span>→</span>
+          <button className="btn-secondary text-sm w-fit font-body flex items-center gap-2 opacity-60 cursor-not-allowed" disabled>
+            <span>Próximamente</span>
+            <span>🔜</span>
           </button>
         </article>
         <aside className="space-y-4 p-6 rounded-xl bg-button-background-secondary/30">
           <div className="flex items-center gap-2 text-subtitle">
             <span className="text-2xl">📜</span>
-            <span className="text-sm font-bold uppercase tracking-wide">Historia</span>
+            <span className="text-sm font-bold uppercase font-title tracking-wide">Historia</span>
           </div>
           <h3 className="font-title text-subtitle text-2xl md:text-3xl font-bold">Hechos Históricos</h3>
           <p className="font-body">
             Momentos clave de la política peruana que ayudan a entender el presente electoral.
           </p>
-          <button className="btn-secondary text-sm w-fit font-body flex items-center gap-2">
-            <span>Ver cronología</span>
-            <span>→</span>
+          <button className="btn-secondary text-sm w-fit font-body flex items-center gap-2 opacity-60 cursor-not-allowed" disabled>
+            <span>Próximamente</span>
+            <span>🔜</span>
           </button>
         </aside>
       </section>
@@ -190,6 +295,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Timeline Electoral */}
+      <TimelineElectoral />
+
       {/* Redes sociales */}
       <footer className="mt-12 border-t p-8 border-subtitle text-center">
         <p className="font-body text-lg mb-4">Síguenos en redes sociales</p>
@@ -212,5 +320,204 @@ export default function Home() {
         </p>
       </footer>
     </main>
+  );
+}
+
+// Componente Timeline Electoral
+function TimelineElectoral() {
+  const [selectedEvent, setSelectedEvent] = useState<number | null>(null);
+
+  const getCategoryColor = (category: string) => {
+    const colors: Record<string, { bg: string; text: string; dot: string }> = {
+      legal: { bg: "bg-blue-100", text: "text-blue-700", dot: "bg-blue-500" },
+      voting: { bg: "bg-red-100", text: "text-red-700", dot: "bg-red-500" },
+      registration: { bg: "bg-green-100", text: "text-green-700", dot: "bg-green-500" },
+      transparency: { bg: "bg-purple-100", text: "text-purple-700", dot: "bg-purple-500" },
+      logistics: { bg: "bg-orange-100", text: "text-orange-700", dot: "bg-orange-500" },
+      debate: { bg: "bg-yellow-100", text: "text-yellow-700", dot: "bg-yellow-500" },
+    };
+    return colors[category] || colors.legal;
+  };
+
+  const getCategoryIcon = (category: string) => {
+    const icons: Record<string, string> = {
+      legal: "⚖️",
+      voting: "🗳️",
+      registration: "📝",
+      transparency: "👁️",
+      logistics: "🏗️",
+      debate: "🎤",
+    };
+    return icons[category] || "📅";
+  };
+
+  const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString("es-PE", { day: "numeric", month: "short", year: "numeric" });
+  };
+
+  // Determinar qué evento es el actual (el próximo evento upcoming)
+  const getCurrentEventIndex = () => {
+    const today = new Date();
+    for (let i = 0; i < timelineEvents.length; i++) {
+      const eventDate = new Date(timelineEvents[i].date);
+      if (eventDate >= today) {
+        return i;
+      }
+    }
+    return timelineEvents.length - 1;
+  };
+
+  const currentEventIndex = getCurrentEventIndex();
+
+  return (
+    <div className="mt-6 py-8 border-y border-subtitle bg-gradient-to-b from-button-background-primary/5 to-transparent">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="font-title text-subtitle text-3xl md:text-4xl font-bold mb-2">
+            📅 Línea de Tiempo de Elecciones 2026
+          </h2>
+          <p className="font-body text-sm md:text-base text-subtitle/70">
+            Haz clic en cada punto para saber más
+          </p>
+        </div>
+
+        {/* Desktop Timeline */}
+        <div className="hidden md:block relative pb-16">
+          {/* Línea principal */}
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-subtitle/30 via-button-background-primary/50 to-subtitle/30 transform -translate-y-1/2"></div>
+
+          <div className="flex justify-between items-center relative">
+            {timelineEvents.map((event, index) => {
+              const colors = getCategoryColor(event.category);
+              const isSelected = selectedEvent === index;
+              const isPast = event.status === "past";
+              const isCurrent = index === currentEventIndex;
+
+              return (
+                <div key={index} className="flex flex-col items-center relative group">
+                  {/* Punto clickeable */}
+                  <button
+                    onClick={() => setSelectedEvent(isSelected ? null : index)}
+                    className={`w-6 h-6 rounded-full border-4 border-white shadow-lg transition-all duration-300 z-10 ${
+                      colors.dot
+                    } ${
+                      isSelected ? "scale-150 ring-4 ring-button-background-primary/30" : "hover:scale-125"
+                    } ${isPast ? "opacity-60" : ""} ${isCurrent ? "ring-4 ring-yellow-400 animate-pulse" : ""}`}
+                    aria-label={event.event}
+                  />
+
+                  {/* Fecha */}
+                  <div className="mt-3 text-center">
+                    <p className="font-body text-xs font-bold text-subtitle">{formatDate(event.date)}</p>
+                  </div>
+
+                  {/* Indicador "Te encuentras aquí" */}
+                  {isCurrent && (
+                    <div className="mt-2">
+                      <div className="bg-button-background-primary text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-pulse whitespace-nowrap">
+                        📍 Te encuentras aquí
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Mobile Timeline */}
+        <div className="md:hidden space-y-4">
+          {timelineEvents.map((event, index) => {
+            const colors = getCategoryColor(event.category);
+            const isSelected = selectedEvent === index;
+            const isPast = event.status === "past";
+            const isCurrent = index === currentEventIndex;
+
+            return (
+              <div key={index} className="relative">
+                <button
+                  onClick={() => setSelectedEvent(isSelected ? null : index)}
+                  className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-300 ${
+                    isSelected
+                      ? `${colors.bg} border-button-background-primary shadow-lg`
+                      : `border-subtitle/30 hover:border-button-background-primary/50 ${isPast ? "opacity-60" : ""}`
+                  } ${isCurrent ? "ring-2 ring-yellow-400" : ""}`}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl flex-shrink-0">{getCategoryIcon(event.category)}</span>
+                    <div className="flex-1">
+                      <p className="font-body text-xs font-semibold text-subtitle/70">{formatDate(event.date)}</p>
+                      <p className="font-title text-base font-bold text-subtitle mt-1">{event.event}</p>
+                      {isSelected && (
+                        <p className="font-body text-sm mt-2 text-subtitle/80">{event.description}</p>
+                      )}
+                    </div>
+                    <span className={`text-xs ${colors.dot} w-3 h-3 rounded-full flex-shrink-0 mt-2`}></span>
+                  </div>
+                </button>
+                {isCurrent && (
+                  <div className="mt-2 flex justify-center">
+                    <div className="bg-button-background-primary text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-pulse">
+                      📍 Te encuentras aquí
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Panel de información (Desktop) */}
+        {selectedEvent !== null && (
+          <div className="hidden md:block mt-8 p-6 rounded-xl border-2 border-button-background-primary bg-white shadow-xl animate-fade-in">
+            <div className="flex items-start gap-4">
+              <span className="text-4xl">{getCategoryIcon(timelineEvents[selectedEvent].category)}</span>
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="font-title text-xl font-bold text-subtitle">
+                    {timelineEvents[selectedEvent].event}
+                  </h3>
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-bold ${
+                      getCategoryColor(timelineEvents[selectedEvent].category).bg
+                    } ${getCategoryColor(timelineEvents[selectedEvent].category).text}`}
+                  >
+                    {formatDate(timelineEvents[selectedEvent].date)}
+                  </span>
+                </div>
+                <p className="font-body text-base leading-relaxed">{timelineEvents[selectedEvent].description}</p>
+              </div>
+              <button
+                onClick={() => setSelectedEvent(null)}
+                className="text-subtitle/50 hover:text-subtitle text-2xl font-bold"
+              >
+                ×
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Leyenda de categorías */}
+        <div className="mt-8 flex flex-wrap justify-center gap-3 text-xs">
+          {[
+            { key: "legal", label: "Legal" },
+            { key: "voting", label: "Votación" },
+            { key: "registration", label: "Inscripción" },
+            { key: "transparency", label: "Transparencia" },
+            { key: "logistics", label: "Logística" },
+            { key: "debate", label: "Debates" },
+          ].map(({ key, label }) => {
+            const colors = getCategoryColor(key);
+            return (
+              <div key={key} className="flex items-center gap-2">
+                <span className={`w-3 h-3 rounded-full ${colors.dot}`}></span>
+                <span className="font-body">{label}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
 }
