@@ -772,6 +772,15 @@ export default function CandidatosPage() {
 
       <Nav />
 
+            <div className="flex justify-end px-4 pt-3">
+        <a
+          href="/apoyar"
+          className="text-xs font-body text-subtitle/60 hover:text-button-background-primary transition-colors flex items-center gap-1"
+        >
+          ❤️ Apoyar la página
+        </a>
+      </div>
+
       {/* Header */}
       <div className="mt-8 py-6 border-y text-center border-subtitle">
         <h1 className="font-title text-subtitle text-4xl sm:text-5xl md:text-6xl font-extrabold">
