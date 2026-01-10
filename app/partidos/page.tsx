@@ -416,9 +416,9 @@ export default function PartidosPage() {
       <div className="flex justify-end px-4 pt-3">
         <a
           href="/apoyar"
-          className="text-xs font-body text-subtitle/60 hover:text-button-background-primary transition-colors flex items-center gap-1"
+          className="text-xs font-body text-subtitle font-bold hover:text-button-background-primary transition-colors flex items-center gap-1"
         >
-          ❤️ Apoyar la página
+          ❤️ Apoyar a la página
         </a>
       </div>
 
