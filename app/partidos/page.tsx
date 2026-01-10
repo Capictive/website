@@ -418,7 +418,7 @@ export default function PartidosPage() {
           href="/apoyar"
           className="text-xs font-body text-subtitle font-bold hover:text-button-background-primary transition-colors flex items-center gap-1"
         >
-          ❤️ Apoyar a la página
+          ❤️ Apoyar la página
         </a>
       </div>
 
