@@ -371,7 +371,7 @@ function TimelineElectoral() {
   const currentEventIndex = getCurrentEventIndex();
 
   return (
-    <div className="mt-6 py-8 border-y border-subtitle bg-gradient-to-b from-button-background-primary/5 to-transparent">
+    <div className="mt-6 py-8 border-y border-subtitle">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="font-title text-subtitle text-3xl md:text-4xl font-bold mb-2">
@@ -385,7 +385,7 @@ function TimelineElectoral() {
         {/* Desktop Timeline */}
         <div className="hidden md:block relative pb-16">
           {/* Línea principal */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-subtitle/30 via-button-background-primary/50 to-subtitle/30 transform -translate-y-1/2"></div>
+          <div className="absolute top-1/2 left-0 right-0 h-1  transform -translate-y-1/2"></div>
 
           <div className="flex justify-between items-center relative">
             {timelineEvents.map((event, index) => {

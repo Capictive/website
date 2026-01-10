@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
+import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
 import { PARTIES, Party, PartyDetail, Problema, Eje } from "../lib/parties";
 
@@ -92,6 +93,162 @@ const flagMap: Record<string, string> = {
   "ARE": "🇦🇪",
 };
 
+// Mapeo de imágenes para cada paso del tour
+const TOUR_IMAGES: Record<number, string> = {
+  0: "/pose/searching.png",  // Bienvenida
+  1: "/pose/reading.png",    // Buscador
+  2: "/pose/giveme.png",     // Lista partidos
+  3: "/pose/reading.png",    // Detalle partido
+  4: "/pose/searching.png",  // Documentos
+  5: "/pose/sending.png",    // Ejes/Problemas
+  6: "/pose/lost.png",       // Final
+};
+
+// Mapeo de audios para cada paso del tour
+const TOUR_AUDIOS: Record<number, string> = {
+  0: "/audios/partidos/1.mp3",
+  1: "/audios/partidos/2.mp3",
+  2: "/audios/partidos/3.mp3",
+  3: "/audios/partidos/4.mp3",
+  4: "/audios/partidos/5.mp3",
+  5: "/audios/partidos/6.mp3",
+  6: "/audios/partidos/7.mp3",
+};
+
+// Pasos del tour
+const TOUR_STEPS: Step[] = [
+  {
+    target: "body",
+    content: "¡Bienvenido a la sección de Partidos Políticos! Aquí podrás explorar las propuestas de cada partido de manera simple. 🗳️",
+    placement: "center",
+    disableBeacon: true,
+  },
+  {
+    target: ".tour-buscador",
+    content: "Usa el buscador para filtrar partidos por nombre rápidamente.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-lista-partidos",
+    content: "Aquí aparecen los partidos políticos. Haz clic en cualquiera para ver sus propuestas detalladas.",
+    placement: "right",
+  },
+  {
+    target: ".tour-detalle-partido",
+    content: "En esta sección verás toda la información del partido: candidatos, visión y propuestas.",
+    placement: "left",
+  },
+  {
+    target: ".tour-documentos",
+    content: "Descarga el Plan Resumen o el Plan de Gobierno completo en PDF para más detalles.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-toggle-ejes",
+    content: "Alterna entre Ejes Principales (propuestas por tema) y Problemas Identificados (diagnóstico del partido).",
+    placement: "top",
+  },
+  {
+    target: "body",
+    content: "¡Eso es todo! Explora los partidos y toma una decisión informada. 🎯",
+    placement: "center",
+  },
+];
+
+// Componente de tooltip personalizado para Joyride
+interface CustomTooltipProps {
+  continuous: boolean;
+  index: number;
+  step: Step;
+  backProps: React.HTMLAttributes<HTMLButtonElement>;
+  primaryProps: React.HTMLAttributes<HTMLButtonElement>;
+  skipProps: React.HTMLAttributes<HTMLButtonElement>;
+  tooltipProps: React.HTMLAttributes<HTMLDivElement>;
+  isLastStep: boolean;
+}
+
+const CustomTooltip = ({ 
+  continuous, 
+  index, 
+  step, 
+  backProps, 
+  primaryProps, 
+  skipProps,
+  tooltipProps,
+  isLastStep 
+}: CustomTooltipProps) => (
+  <div 
+    {...tooltipProps}
+    className="bg-white rounded-2xl shadow-2xl p-0 max-w-sm overflow-hidden"
+  >
+    {/* Imagen del paso */}
+    {TOUR_IMAGES[index] && (
+      <div className="bg-linear-to-br from-button-background-primary/20 to-button-background-secondary flex justify-center py-4">
+        <Image
+          src={TOUR_IMAGES[index]}
+          alt="Tour illustration"
+          width={120}
+          height={120}
+          className="object-contain"
+        />
+      </div>
+    )}
+    
+    {/* Contenido */}
+    <div className="p-5">
+      {step.title && (
+        <h3 className="font-title text-subtitle text-lg font-bold mb-2">
+          {step.title}
+        </h3>
+      )}
+      <p className="font-body text-subtitle/80 text-sm leading-relaxed">
+        {step.content}
+      </p>
+      
+      {/* Indicador de progreso */}
+      <div className="flex gap-1 mt-4 mb-3">
+        {TOUR_STEPS.map((_, i) => (
+          <div
+            key={`step-${i}`}
+            className={`h-1 flex-1 rounded-full transition-colors ${
+              i <= index ? "bg-button-background-primary" : "bg-gray-200"
+            }`}
+          />
+        ))}
+      </div>
+      
+      {/* Botones */}
+      <div className="flex items-center justify-between mt-4">
+        <button
+          {...skipProps}
+          className="text-xs font-body text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          Saltar tour
+        </button>
+        
+        <div className="flex gap-2">
+          {index > 0 && (
+            <button
+              {...backProps}
+              className="px-3 py-1.5 text-sm font-body text-subtitle hover:bg-gray-100 rounded-lg transition-colors"
+            >
+              Atrás
+            </button>
+          )}
+          {continuous && (
+            <button
+              {...primaryProps}
+              className="px-4 py-1.5 text-sm font-body font-bold bg-button-background-primary text-white rounded-lg hover:bg-button-background-primary/90 transition-colors"
+            >
+              {isLastStep ? "¡Listo!" : "Siguiente"}
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 async function fetchPartyDetail(partyName: string): Promise<PartyDetail | null> {
   try {
     const encodedName = encodeURIComponent(partyName);
@@ -107,12 +264,91 @@ async function fetchPartyDetail(partyName: string): Promise<PartyDetail | null> 
 export default function PartidosPage() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
-  const [selected, setSelected] = useState<Party | null>(PARTIES[0]);
+  const [selected, setSelected] = useState<Party | null>(null);
   const [detailState, setDetailState] = useState<{detail: PartyDetail | null, loading: boolean}>({detail: null, loading: false});
   const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
   const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
   const [viewMode, setViewMode] = useState<'ejes' | 'problemas'>('ejes');
   const detailArticleRef = useRef<HTMLElement>(null);
+
+  // Estado del tour
+  const [runTour, setRunTour] = useState<boolean>(false);
+  const [tourCompleted, setTourCompleted] = useState<boolean>(false);
+  
+  // Ref para el audio del tour
+  const tourAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Función para reproducir audio del tour
+  const playTourAudio = useCallback((stepIndex: number) => {
+    // Detener audio anterior si existe
+    if (tourAudioRef.current) {
+      tourAudioRef.current.pause();
+      tourAudioRef.current.currentTime = 0;
+    }
+    
+    const audioSrc = TOUR_AUDIOS[stepIndex];
+    if (audioSrc) {
+      tourAudioRef.current = new Audio(audioSrc);
+      tourAudioRef.current.volume = 0.7;
+      tourAudioRef.current.play().catch(err => console.log("Audio autoplay blocked:", err));
+    }
+  }, []);
+
+  // Detener audio cuando se cierra el tour
+  const stopTourAudio = useCallback(() => {
+    if (tourAudioRef.current) {
+      tourAudioRef.current.pause();
+      tourAudioRef.current.currentTime = 0;
+      tourAudioRef.current = null;
+    }
+  }, []);
+
+  // Verificar si es la primera visita
+  useEffect(() => {
+    const hasSeenTour = localStorage.getItem("partidos-tour-completed");
+    if (!hasSeenTour) {
+      const timer = setTimeout(() => setRunTour(true), 1000);
+      return () => clearTimeout(timer);
+    } else {
+      setTourCompleted(true);
+    }
+  }, []);
+
+  // Callback del tour
+  const handleTourCallback = (data: CallBackProps) => {
+    const { status, index, type } = data;
+    const finishedStatuses: string[] = [STATUS.FINISHED, STATUS.SKIPPED];
+    
+    // Reproducir audio cuando cambia el paso
+    if (type === "step:after" || type === "tour:start") {
+      const nextIndex = type === "tour:start" ? 0 : index + 1;
+      if (nextIndex < TOUR_STEPS.length) {
+        playTourAudio(nextIndex);
+      }
+    }
+    
+    // Reproducir audio del primer paso al iniciar
+    if (type === "tour:start") {
+      playTourAudio(0);
+    }
+    
+    // Cuando llegamos al paso de la lista de partidos (index 2), seleccionar automáticamente el primer partido
+    if (type === "step:before" && index === 2 && !selected) {
+      setSelected(PARTIES[0]);
+    }
+    
+    if (finishedStatuses.includes(status)) {
+      stopTourAudio();
+      setRunTour(false);
+      setTourCompleted(true);
+      localStorage.setItem("partidos-tour-completed", "true");
+    }
+  };
+
+  // Reiniciar tour
+  const restartTour = () => {
+    setRunTour(true);
+  };
 
   const handlePartySelect = (party: Party) => {
     setSelected(party);
@@ -150,19 +386,62 @@ export default function PartidosPage() {
 
   return (
     <main>
+      {/* Tour guiado */}
+      <Joyride
+        steps={TOUR_STEPS}
+        run={runTour}
+        continuous
+        showSkipButton
+        showProgress
+        callback={handleTourCallback}
+        tooltipComponent={CustomTooltip}
+        floaterProps={{
+          styles: {
+            arrow: {
+              color: "#fff",
+            },
+          },
+        }}
+        styles={{
+          options: {
+            overlayColor: "rgba(80, 50, 36, 0.5)",
+            zIndex: 10000,
+          },
+        }}
+      />
+
       <Nav />
 
+      {/* Botón discreto de apoyo */}
+      <div className="flex justify-end px-4 pt-3">
+        <a
+          href="/apoyar"
+          className="text-xs font-body text-subtitle/60 hover:text-button-background-primary transition-colors flex items-center gap-1"
+        >
+          ❤️ Apoyar la página
+        </a>
+      </div>
+
       {/* Encabezado periódico */}
-      <div className="mt-6 py-8 border-y text-center border-subtitle">
+      <div className="py-8 border-y text-center border-subtitle">
         <h1 className="font-title text-subtitle text-6xl font-extrabold">Partidos Políticos</h1>
         <p className="font-body">Explora y compara propuestas de manera simple</p>
+        {/* Botón para reiniciar tour */}
+        {tourCompleted && (
+          <button
+            onClick={restartTour}
+            className="mt-2 text-xs font-body text-button-background-primary hover:underline"
+          >
+            🎯 Ver tutorial nuevamente
+          </button>
+        )}
       </div>
 
       {/* Grid principal: lista + detalle */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         {/* Lista y filtros */}
-        <aside className="col-span-1 space-y-4">
-          <div className="flex items-center gap-3">
+        <aside className="tour-lista-partidos col-span-1 space-y-4">
+          <div className="tour-buscador flex items-center gap-3">
             <input
               value={query}
               onChange={(e) => {
@@ -219,16 +498,38 @@ export default function PartidosPage() {
         </aside>
 
         {/* Detalle del partido seleccionado */}
-        <article ref={detailArticleRef} className="col-span-2 border rounded-md border-subtitle p-6 space-y-6">
-          {selected ? (
-            detailState.loading ? (
-              <p className="font-body">Cargando detalles...</p>
-            ) : detailState.detail ? (
+        <article ref={detailArticleRef} className="tour-detalle-partido col-span-2 border rounded-md border-subtitle p-6 space-y-6">
+          {!selected ? (
+            /* Placeholder cuando no hay partido seleccionado */
+            <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center space-y-6">
+              <Image
+                src="/pose/searching.png"
+                alt="Selecciona un partido"
+                width={180}
+                height={180}
+                className="opacity-80"
+              />
+              <div className="space-y-2">
+                <h3 className="font-title text-subtitle text-2xl font-bold">
+                  ¡Selecciona un partido político!
+                </h3>
+                <p className="font-body text-subtitle/70 max-w-md">
+                  Haz clic en cualquier partido de la lista de la izquierda para ver sus propuestas, candidatos y plan de gobierno.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 text-button-background-primary">
+                <span className="text-2xl">👈</span>
+                <span className="font-body text-sm">Elige de la lista</span>
+              </div>
+            </div>
+          ) : detailState.loading ? (
+            <p className="font-body">Cargando detalles...</p>
+          ) : detailState.detail ? (
               <div className="space-y-6">
                 {/* Encabezado centrado con logo y candidato */}
                 <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
                   <div className="flex flex-col items-center">
-                    <Image src={detailState.detail.logo_links[0] || selected.logo} alt={selected.name} width={120} height={120} />
+                    <Image src={selected.logo} alt={selected.name} width={120} height={120} />
                     {/* Imagen del candidato con nombre superpuesto */}
                     <div className="relative mt-4">
                       <Image
@@ -239,7 +540,7 @@ export default function PartidosPage() {
                         className="rounded-md border border-subtitle object-cover aspect-square w-full max-w-[240px]"
                       />
                       {/* Nombre del presidente superpuesto */}
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-md">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-black/5 p-3 rounded-b-md">
                         <p className="font-title text-white text-sm font-bold text-center leading-tight">
                           {selected.candidatos.presidente}
                         </p>
@@ -275,18 +576,17 @@ export default function PartidosPage() {
                       </div>
                     </div>
                     
-                    <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                    <div className="tour-documentos flex flex-wrap gap-3 font-body justify-center md:justify-start">
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20RESUMEN.pdf`} target="_blank" className="btn-primary text-sm">📄 Plan Resumen</a>
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20GOBIERNO.pdf`} target="_blank" className="btn-secondary text-sm">📑 Plan Gobierno</a>
                       <button className="btn-secondary text-sm opacity-60 cursor-not-allowed" disabled>⚖️ Comparar - Próximamente</button>
                     </div>
                   </div>
                 </div>
-
                  {/* Toggle: Ejes / Problemas */}
                 <div className="space-y-4">
                   {/* Toggle buttons */}
-                  <div className="flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1 border-2 border-subtitle/30">
+                  <div className="tour-toggle-ejes flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1 border-2 border-subtitle/30">
                     <button
                       onClick={() => setViewMode('ejes')}
                       className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
@@ -413,9 +713,7 @@ export default function PartidosPage() {
             ) : (
               <p className="font-body">No se pudieron cargar los detalles del partido.</p>
             )
-          ) : (
-            <p className="font-body">Selecciona un partido para ver detalles.</p>
-          )}
+          }
         </article>
       </section>
     </main>
