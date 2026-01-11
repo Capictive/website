@@ -304,7 +304,8 @@ export default function CandidatosPage() {
 
   // Estados para filtros
   const [selectedCargo, setSelectedCargo] = useState<string>("");
-  const [selectedPartidos, setSelectedPartidos] = useState<string[]>([]);
+  const [selectedPartidos, setSelectedPartidos] = useState<string[]>([]); // Los partidos realmente aplicados
+  const [partidosDraft, setPartidosDraft] = useState<string[]>([]); // Los partidos seleccionados en el dropdown
   const [showPartidosDropdown, setShowPartidosDropdown] = useState(false);
   
   // Estados para departamento/región
@@ -314,7 +315,7 @@ export default function CandidatosPage() {
   const [isExtranjero, setIsExtranjero] = useState<boolean>(false);
   
   // Estados para datos de API
-  const [masterCandidatos, setMasterCandidatos] = useState<Candidato[]>([]); // Todos los candidatos de la API
+  // Eliminado: masterCandidatos ya no se usa
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -324,7 +325,7 @@ export default function CandidatosPage() {
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   // Constante para paginación local
-  const PAGE_SIZE = 20;
+  // Eliminado: PAGE_SIZE ya no se usa
 
   // Estado del tour
   const [runTour, setRunTour] = useState<boolean>(false);
@@ -401,9 +402,10 @@ export default function CandidatosPage() {
     setRunTour(true);
   };
 
-  // Función para construir la URL base de la API (sin paginación)
-  const buildApiBaseUrl = useCallback(() => {
+  // Función para construir la URL de la API (con paginación)
+  const buildApiUrl = useCallback(() => {
     const params = new URLSearchParams();
+    params.append("page", currentPage.toString());
 
     // Filtro de cargo
     if (selectedCargo) {
@@ -420,96 +422,68 @@ export default function CandidatosPage() {
     }
 
     return `${API_BASE_URL}/candidatos?${params.toString()}`;
-  }, [selectedCargo, selectedRegion, isNacional, isExtranjero]);
+  }, [currentPage, selectedCargo, selectedRegion, isNacional, isExtranjero]);
 
-  // Filtrar candidatos por partidos seleccionados (localmente)
+  // Estado para los candidatos de la página actual
+  const [candidatos, setCandidatos] = useState<Candidato[]>([]);
+  const [totalPages, setTotalPages] = useState<number>(1);
+
+  // Filtrar candidatos por partidos seleccionados (localmente, solo en la página actual)
   const candidatosFiltrados = useMemo(() => {
     if (selectedPartidos.length === 0) {
-      return masterCandidatos;
+      return candidatos;
     }
-    return masterCandidatos.filter(c => selectedPartidos.includes(c.partido));
-  }, [masterCandidatos, selectedPartidos]);
+    return candidatos.filter(c => selectedPartidos.includes(c.partido));
+  }, [candidatos, selectedPartidos]);
 
-  // Calcular paginación local
-  const totalPages = useMemo(() => {
-    return Math.max(1, Math.ceil(candidatosFiltrados.length / PAGE_SIZE));
-  }, [candidatosFiltrados.length]);
-
-  // Candidatos de la página actual (paginación local)
-  const candidatosPaginados = useMemo(() => {
-    const startIndex = (currentPage - 1) * PAGE_SIZE;
-    return candidatosFiltrados.slice(startIndex, startIndex + PAGE_SIZE);
-  }, [candidatosFiltrados, currentPage]);
-
-  // Fetch de TODOS los candidatos (todas las páginas)
-  const fetchAllCandidatos = useCallback(async () => {
-    // Verificar si puede hacer la petición
+  // Fetch de candidatos de la página actual
+  const fetchCandidatos = useCallback(async () => {
     if (!canMakeRequest) {
       setError("Has agotado tus consultas de hoy. ¡Apoya al creador para seguir usando la plataforma!");
       router.push("/apoyar");
       return;
     }
-
     setLoading(true);
     setError(null);
-    
     try {
-      // Consumir una petición
       const consumed = consumeRequest();
       if (!consumed) {
         setError("Has agotado tus consultas de hoy.");
         router.push("/apoyar");
         return;
       }
-
-      const baseUrl = buildApiBaseUrl();
-      
-      // Primera petición para obtener el total de páginas
-      const firstResponse = await fetch(`${baseUrl}&page=1`);
-      if (!firstResponse.ok) {
+      const url = buildApiUrl();
+      const response = await fetch(url);
+      if (!response.ok) {
         throw new Error("Error al cargar los candidatos");
       }
-      
-      const firstData: ApiResponse = await firstResponse.json();
-      let allData: Candidato[] = [...firstData.data];
-      const totalApiPages = firstData.totalPages;
-      
-      // Si hay más páginas, cargarlas todas
-      if (totalApiPages > 1) {
-        const pagePromises: Promise<Response>[] = [];
-        for (let page = 2; page <= totalApiPages; page++) {
-          pagePromises.push(fetch(`${baseUrl}&page=${page}`));
-        }
-        
-        const responses = await Promise.all(pagePromises);
-        
-        for (const response of responses) {
-          if (response.ok) {
-            const data: ApiResponse = await response.json();
-            allData = [...allData, ...data.data];
-          }
-        }
-      }
-      
-      setMasterCandidatos(allData);
-      setTotal(allData.length);
+      const data: ApiResponse = await response.json();
+      setCandidatos(data.data);
+      setTotalPages(data.totalPages);
+      setTotal(data.total);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Error desconocido");
-      setMasterCandidatos([]);
+      setCandidatos([]);
     } finally {
       setLoading(false);
     }
-  }, [buildApiBaseUrl, canMakeRequest, consumeRequest, router]);
+  }, [buildApiUrl, canMakeRequest, consumeRequest, router]);
 
-  // Efecto para cargar datos cuando cambian los filtros principales
+  // Efecto para cargar datos cuando cambian los filtros principales (no partidos)
   useEffect(() => {
-    fetchAllCandidatos();
-  }, [fetchAllCandidatos]);
+    fetchCandidatos();
+  }, [fetchCandidatos]);
 
-  // Reset de página cuando cambian los filtros (incluyendo partidos)
+  // Reset de página cuando cambian los filtros principales (no partidos)
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedCargo, selectedRegion, isNacional, isExtranjero, selectedPartidos]);
+  }, [selectedCargo, selectedRegion, isNacional, isExtranjero]);
+
+  // Cuando se aplican los partidos (al cerrar el dropdown), recargar la página 1
+  useEffect(() => {
+    setCurrentPage(1);
+    fetchCandidatos();
+  }, [selectedPartidos]);
 
   // Handler para cambio de cargo
   const handleCargoChange = (cargo: string) => {
@@ -522,18 +496,31 @@ export default function CandidatosPage() {
     }
   };
 
-  // Toggle partido en la selección
+  // Toggle partido en la selección (solo draft)
   const togglePartido = (partido: string) => {
-    setSelectedPartidos(prev => 
+    setPartidosDraft(prev =>
       prev.includes(partido)
         ? prev.filter(p => p !== partido)
         : [...prev, partido]
     );
   };
 
-  // Limpiar todos los partidos seleccionados
+  // Limpiar todos los partidos seleccionados (solo draft)
   const clearPartidos = () => {
-    setSelectedPartidos([]);
+    setPartidosDraft([]);
+  };
+
+  // Al abrir el dropdown, sincronizar draft con los partidos aplicados
+  useEffect(() => {
+    if (showPartidosDropdown) {
+      setPartidosDraft(selectedPartidos);
+    }
+  }, [showPartidosDropdown, selectedPartidos]);
+
+  // Al cerrar el dropdown, aplicar los partidos seleccionados
+  const handleClosePartidosDropdown = () => {
+    setShowPartidosDropdown(false);
+    setSelectedPartidos(partidosDraft);
   };
 
   // Corroborar candidato en JNE
@@ -582,11 +569,10 @@ export default function CandidatosPage() {
     setIsExtranjero(false);
   };
 
-  // Agrupar candidatos por partido (usando los paginados)
+  // Agrupar candidatos por partido (usando los filtrados de la página actual)
   const candidatosPorPartido = useMemo<PartidoAgrupado[]>(() => {
     const grupos: Record<string, PartidoAgrupado> = {};
-
-    candidatosPaginados.forEach((c) => {
+    candidatosFiltrados.forEach((c) => {
       if (!grupos[c.partido]) {
         grupos[c.partido] = {
           nombre: c.partido,
@@ -596,9 +582,8 @@ export default function CandidatosPage() {
       }
       grupos[c.partido].candidatos.push(c);
     });
-
     return Object.values(grupos);
-  }, [candidatosPaginados]);
+  }, [candidatosFiltrados]);
 
   const handleMouseMove = (event: React.MouseEvent) => {
     setTooltipPosition({ x: event.clientX, y: event.clientY });
@@ -623,7 +608,7 @@ export default function CandidatosPage() {
           <p className="text-6xl mb-4">⚠️</p>
           <h3 className="font-title text-red-600 text-xl font-bold">Error</h3>
           <p className="font-body text-subtitle/60 mt-2">{error}</p>
-          <button onClick={fetchAllCandidatos} className="btn-secondary mt-4">
+          <button onClick={fetchCandidatos} className="btn-secondary mt-4">
             Reintentar
           </button>
         </div>
@@ -863,7 +848,7 @@ export default function CandidatosPage() {
           <div className="tour-filtro-partidos flex-1 min-w-[200px] relative">
             <label className="block text-sm font-body text-subtitle/70 mb-1">Partidos</label>
             <button
-              onClick={() => setShowPartidosDropdown(!showPartidosDropdown)}
+              onClick={() => setShowPartidosDropdown(true)}
               className="w-full px-4 py-2 rounded-lg border border-subtitle/20 bg-white font-body text-subtitle text-left flex items-center justify-between focus:outline-none focus:border-button-background-primary"
             >
               <span className={selectedPartidos.length === 0 ? "text-subtitle/50" : ""}>
@@ -875,16 +860,21 @@ export default function CandidatosPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            
             {/* Dropdown content */}
             {showPartidosDropdown && (
-              <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-white border border-subtitle/20 rounded-lg shadow-lg">
-                <div className="sticky top-0 bg-white border-b border-subtitle/10 p-2">
+              <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-white border border-subtitle/20 rounded-lg shadow-lg" tabIndex={-1} onBlur={handleClosePartidosDropdown}>
+                <div className="sticky top-0 bg-white border-b border-subtitle/10 p-2 flex justify-between items-center">
                   <button
                     onClick={clearPartidos}
                     className="text-xs text-button-background-primary hover:underline font-body"
                   >
                     Limpiar selección
+                  </button>
+                  <button
+                    onClick={handleClosePartidosDropdown}
+                    className="text-xs text-button-background-primary hover:underline font-body ml-2"
+                  >
+                    Cerrar
                   </button>
                 </div>
                 {PARTIDOS_DISPONIBLES.map((partido) => (
@@ -894,7 +884,7 @@ export default function CandidatosPage() {
                   >
                     <input
                       type="checkbox"
-                      checked={selectedPartidos.includes(partido)}
+                      checked={partidosDraft.includes(partido)}
                       onChange={() => togglePartido(partido)}
                       className="w-4 h-4 text-button-background-primary rounded focus:ring-button-background-primary"
                     />
