@@ -496,13 +496,21 @@ export default function CandidatosPage() {
     }
   };
 
-  // Toggle partido en la selección (solo draft)
+  // Toggle partido en la selección draft o real según estado del dropdown
   const togglePartido = (partido: string) => {
-    setPartidosDraft(prev =>
-      prev.includes(partido)
-        ? prev.filter(p => p !== partido)
-        : [...prev, partido]
-    );
+    if (showPartidosDropdown) {
+      setPartidosDraft(prev =>
+        prev.includes(partido)
+          ? prev.filter(p => p !== partido)
+          : [...prev, partido]
+      );
+    } else {
+      setSelectedPartidos(prev =>
+        prev.includes(partido)
+          ? prev.filter(p => p !== partido)
+          : [...prev, partido]
+      );
+    }
   };
 
   // Limpiar todos los partidos seleccionados (solo draft)
@@ -641,7 +649,7 @@ export default function CandidatosPage() {
           <p className="font-body text-subtitle/60 mt-2">
             No hay candidatos con los filtros seleccionados
           </p>
-          <button onClick={clearUbicacion} className="btn-secondary mt-4">
+          <button onClick={clearUbicacion} className="btn-secondary mt-4 z-50">
             Limpiar selección
           </button>
         </div>
@@ -862,11 +870,11 @@ export default function CandidatosPage() {
             </button>
             {/* Dropdown content */}
             {showPartidosDropdown && (
-              <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-white border border-subtitle/20 rounded-lg shadow-lg" tabIndex={-1} onBlur={handleClosePartidosDropdown}>
+              <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-white border border-subtitle/20 rounded-lg shadow-lg">
                 <div className="sticky top-0 bg-white border-b border-subtitle/10 p-2 flex justify-between items-center">
                   <button
                     onClick={clearPartidos}
-                    className="text-xs text-button-background-primary hover:underline font-body"
+                    className="text-xs text-button-background-primary z-50 hover:underline font-body"
                   >
                     Limpiar selección
                   </button>
@@ -894,7 +902,7 @@ export default function CandidatosPage() {
                           src={logoMap[partido]}
                           alt={partido}
                           fill
-                          className="object-contain"
+                          className="object-contain -z-10"
                         />
                       </div>
                     )}
@@ -916,8 +924,15 @@ export default function CandidatosPage() {
               >
                 {partido}
                 <button
-                  onClick={() => togglePartido(partido)}
+                  onClick={() => {
+                    if (showPartidosDropdown) {
+                      setPartidosDraft(prev => prev.filter(p => p !== partido));
+                    } else {
+                      setSelectedPartidos(prev => prev.filter(p => p !== partido));
+                    }
+                  }}
                   className="hover:text-red-500 ml-1"
+                  aria-label={`Eliminar ${partido}`}
                 >
                   ✕
                 </button>
