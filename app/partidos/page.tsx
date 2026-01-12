@@ -590,6 +590,7 @@ export default function PartidosPage() {
                     <div className="tour-documentos flex flex-wrap gap-3 font-body justify-center md:justify-start">
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20RESUMEN.pdf`} target="_blank" className="btn-primary text-sm">📄 Plan Resumen</a>
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20GOBIERNO.pdf`} target="_blank" className="btn-secondary text-sm">📑 Plan Gobierno</a>
+                      <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/HOJA%20DE%20CANDIDATOS.pdf`} target="_blank" className="btn-secondary text-sm">👥 Hoja de Candidatos</a>
                       <button className="btn-secondary text-sm opacity-60 cursor-not-allowed" disabled>⚖️ Comparar - Próximamente</button>
                     </div>
                   </div>
