@@ -79,7 +79,7 @@ const logoMap: Record<string, string> = {
     "Perú Acción": "/political parties/peru_accion_logo.png",
     "Perú Libre": "/political parties/peru_libre_logo.png",
     "Perú Moderno": "/political parties/peru_moderno_logo.jpg",
-    "Perú Primero": "/political parties/peru_primero_logo_2.png",
+    "Perú Primero": "/political parties/peru_primero_logo.png",
     "Podemos Perú": "/political parties/podemos_peru_logo.png",
     "Progresemos": "/political parties/progresemos_logo.jpg",
     "Renovación Popular": "/political parties/renovacion_popular_logo.png",
