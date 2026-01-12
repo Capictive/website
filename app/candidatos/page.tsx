@@ -47,7 +47,7 @@ const logoMap: Record<string, string> = {
   "Perú Acción": "/political parties/peru_accion_logo.png",
   "Perú Libre": "/political parties/peru_libre_logo.png",
   "Perú Moderno": "/political parties/peru_moderno_logo.jpg",
-  "Perú Primero": "/political parties/peru_primero_logo_2.png",
+  "Perú Primero": "/political parties/peru_primero_logo.png",
   "Podemos Perú": "/political parties/podemos_peru_logo.png",
   "Progresemos": "/political parties/progresemos_logo.jpg",
   "Renovación Popular": "/political parties/renovacion_popular_logo.png",
@@ -421,20 +421,20 @@ export default function CandidatosPage() {
       params.append("postulaDepartamento", selectedRegion);
     }
 
+    // Filtro de partidos (varios parámetros partido=A&partido=B)
+    if (selectedPartidos.length > 0) {
+      selectedPartidos.forEach((p) => params.append("partido", p));
+    }
+
     return `${API_BASE_URL}/candidatos?${params.toString()}`;
-  }, [currentPage, selectedCargo, selectedRegion, isNacional, isExtranjero]);
+  }, [currentPage, selectedCargo, selectedRegion, isNacional, isExtranjero, selectedPartidos]);
 
   // Estado para los candidatos de la página actual
   const [candidatos, setCandidatos] = useState<Candidato[]>([]);
   const [totalPages, setTotalPages] = useState<number>(1);
 
-  // Filtrar candidatos por partidos seleccionados (localmente, solo en la página actual)
-  const candidatosFiltrados = useMemo(() => {
-    if (selectedPartidos.length === 0) {
-      return candidatos;
-    }
-    return candidatos.filter(c => selectedPartidos.includes(c.partido));
-  }, [candidatos, selectedPartidos]);
+  // Ya no es necesario filtrar localmente, la API devuelve los partidos correctos
+  const candidatosFiltrados = candidatos;
 
   // Fetch de candidatos de la página actual
   const fetchCandidatos = useCallback(async () => {
@@ -856,8 +856,17 @@ export default function CandidatosPage() {
           <div className="tour-filtro-partidos flex-1 min-w-[200px] relative">
             <label className="block text-sm font-body text-subtitle/70 mb-1">Partidos</label>
             <button
-              onClick={() => setShowPartidosDropdown(true)}
+              onClick={() => {
+                if (showPartidosDropdown) {
+                  handleClosePartidosDropdown();
+                } else {
+                  setShowPartidosDropdown(true);
+                }
+              }}
               className="w-full px-4 py-2 rounded-lg border border-subtitle/20 bg-white font-body text-subtitle text-left flex items-center justify-between focus:outline-none focus:border-button-background-primary"
+              type="button"
+              title={showPartidosDropdown ? "Cerrar selección de partidos" : undefined}
+              style={showPartidosDropdown ? { cursor: "pointer" } : {}}
             >
               <span className={selectedPartidos.length === 0 ? "text-subtitle/50" : ""}>
                 {selectedPartidos.length === 0
@@ -871,10 +880,10 @@ export default function CandidatosPage() {
             {/* Dropdown content */}
             {showPartidosDropdown && (
               <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-white border border-subtitle/20 rounded-lg shadow-lg">
-                <div className="sticky top-0 bg-white border-b border-subtitle/10 p-2 flex justify-between items-center">
+                <div className="sticky top-0  z-50 bg-white border-b border-subtitle/10 p-2 flex justify-between items-center">
                   <button
                     onClick={clearPartidos}
-                    className="text-xs text-button-background-primary z-50 hover:underline font-body"
+                    className="text-xs text-button-background-primary hover:underline font-body"
                   >
                     Limpiar selección
                   </button>
@@ -894,15 +903,15 @@ export default function CandidatosPage() {
                       type="checkbox"
                       checked={partidosDraft.includes(partido)}
                       onChange={() => togglePartido(partido)}
-                      className="w-4 h-4 text-button-background-primary rounded focus:ring-button-background-primary"
+                      className="w-4 h-4  rounded "
                     />
                     {logoMap[partido] && (
-                      <div className="w-5 h-5 relative shrink-0">
+                      <div className="w-5 h-5 relative ">
                         <Image
                           src={logoMap[partido]}
                           alt={partido}
                           fill
-                          className="object-contain -z-10"
+                          className="object-contain"
                         />
                       </div>
                     )}
