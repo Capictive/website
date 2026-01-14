@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
@@ -591,6 +592,12 @@ export default function PartidosPage() {
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20RESUMEN.pdf`} target="_blank" className="btn-primary text-sm">📄 Plan Resumen</a>
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20GOBIERNO.pdf`} target="_blank" className="btn-secondary text-sm">📑 Plan Gobierno</a>
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/HOJA%20DE%20CANDIDATOS.pdf`} target="_blank" className="btn-secondary text-sm">👥 Hoja de Candidatos</a>
+                      <Link 
+                        href={`/entrevistas?partido=${encodeURIComponent(detailState.detail.partido)}`}
+                        className="btn-secondary text-sm flex items-center gap-1"
+                      >
+                        🎥 Ver Entrevistas
+                      </Link>
                       <button className="btn-secondary text-sm opacity-60 cursor-not-allowed" disabled>⚖️ Comparar - Próximamente</button>
                     </div>
                   </div>
