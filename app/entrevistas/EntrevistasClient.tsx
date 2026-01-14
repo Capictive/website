@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
 type Entrevista = {
@@ -16,23 +16,32 @@ type Entrevista = {
 
 export default function EntrevistasClient({ partidoParam, expedienteParam } : { partidoParam: string; expedienteParam?: string }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [entrevistas, setEntrevistas] = useState<Entrevista[]>([]);
 
+  // Determine partido to use: prefer server-provided `partidoParam`, fallback to client search params
+  const partido = partidoParam || (searchParams?.get("partido") ?? "");
+
   useEffect(() => {
-    if (!partidoParam) return;
+    if (!partido) return;
     setLoading(true);
     setError(null);
-    fetch(`https://api.capictive.app/entrevistas?partido=${encodeURIComponent(partidoParam)}`)
+    const url = `https://api.capictive.app/entrevistas?partido=${encodeURIComponent(partido)}`;
+    console.debug("Fetching entrevistas for partido:", partido, url);
+    fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error("No se pudo cargar entrevistas");
         return res.json();
       })
       .then((data) => setEntrevistas(data || []))
-      .catch((err) => setError(err.message))
+      .catch((err) => {
+        console.error("Error fetching entrevistas:", err);
+        setError(err?.message || String(err));
+      })
       .finally(() => setLoading(false));
-  }, [partidoParam]);
+  }, [partido]);
 
   const selected = useMemo(() => {
     if (!expedienteParam) return null;
@@ -57,7 +66,14 @@ export default function EntrevistasClient({ partidoParam, expedienteParam } : { 
         <aside className="md:col-span-1 space-y-3">
           <div className="bg-white border rounded-lg p-3">
             <p className="font-body text-sm text-gray-500">Entrevistas para:</p>
-            <h3 className="font-title text-base mt-1 break-words">{decodeURIComponent(partidoParam)}</h3>
+            <h3 className="font-title text-base mt-1 break-words">{(() => {
+              const p = partido || "";
+              try {
+                return p ? decodeURIComponent(p) : "";
+              } catch (e) {
+                return p;
+              }
+            })()}</h3>
           </div>
 
           <div className="space-y-2">
