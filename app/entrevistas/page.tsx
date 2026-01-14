@@ -2,16 +2,202 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState, Suspense, useMemo } from "react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+// Removed unused ReactMarkdown imports
 import Nav from "../components/Nav";
 import Link from "next/link";
 import Image from "next/image";
 import { PARTIES } from "../lib/parties";
 
-// --- FIX PARA LIBRERIAS (Evita el error de "object" en algunos entornos) ---
-const MD = (ReactMarkdown as any).default || ReactMarkdown;
-const GFM = (remarkGfm as any).default || remarkGfm;
+// --- HARDCODED FORMATTING COMPONENT ---
+// Since the structure is consistent, we can manually parse and render
+// key sections without relying purely on a generic Markdown parser that might fail.
+
+const CustomInterviewRenderer = ({ content }: { content: string }) => {
+  if (!content) return null;
+
+  // --- 1. Extract KEY POINTS section ---
+  // Look for "### 🗝️ 5-10 key points" until "---" or next header
+  const keyPointsMatch = content.match(/### 🗝️ 5-10 key points([\s\S]*?)(---|\n## )/);
+  const keyPointsText = keyPointsMatch ? keyPointsMatch[1] : "";
+  const keyPoints = keyPointsText
+    .split(/\n\d+\.\s+/) // Split by numbered list "1. ", "2. "
+    .filter(p => p.trim().length > 0)
+    .map(p => p.trim());
+
+  // --- 2. Extract COMPARISON sections ---
+  // Regex to find sections like "### 🔐 Seguridad ciudadana" followed by content
+  // Structure: ### [Emoji] [Title] \n [Content] \n ---
+  // Improved regex to handle Windows newlines and different spacing
+  const comparisonSectionsRegex = /###\s+([^\n\r]+)(?:\r?\n)([\s\S]*?)(?=(?:---|##\s+Evaluación|$))/g;
+  const comparisons = [];
+  let match;
+  
+  // Reset regex index just in case
+  comparisonSectionsRegex.lastIndex = 0;
+  
+  while ((match = comparisonSectionsRegex.exec(content)) !== null) {
+      // Skip the Key Points section if regex accidentally catches it (though structure is different)
+      if (match[1].includes("key points")) continue;
+      
+      comparisons.push({
+          title: match[1].trim(),
+          body: match[2].trim()
+      });
+  }
+
+  // --- 3. Extract GENERAL EVALUATION ---
+  const evalMatch = content.match(/## Evaluación general de coherencia([\s\S]*?)(?:> \*\*Nota|$)/);
+  let evaluationText = evalMatch ? evalMatch[1].trim() : "";
+  
+  // Clean up bold markers in evaluation for cleaner custom rendering if needed
+  // e.g. "**Nivel de coherencia observado:** ALTO" -> { label: "Nivel...", value: "ALTO" }
+  const coherenceLevelMatch = evaluationText.match(/\*\*Nivel de coherencia observado:\*\*\s*(.*)/);
+  const coherenceLevel = coherenceLevelMatch ? coherenceLevelMatch[1] : "";
+  
+  const conclusionMatch = evaluationText.match(/\*\*Conclusión:\*\*([\s\S]*)/);
+  const conclusion = conclusionMatch ? conclusionMatch[1].trim() : "";
+
+
+  // --- RENDER ---
+  return (
+    <div className="space-y-10 font-body text-subtitle">
+        
+        {/* SECTION: KEY POINTS */}
+        {keyPoints.length > 0 && (
+            <section className="bg-white rounded-xl p-6 border border-subtitle/10 shadow-sm">
+                <h2 className="font-title text-2xl font-bold text-subtitle mb-6 flex items-center gap-2">
+                    🗝️ Puntos Clave de la Entrevista
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {keyPoints.map((point, i) => {
+                        // Bold the first part if it has "**Title:**" structure
+                        const parts = point.split('**');
+                        return (
+                            <div key={i} className="flex gap-3 items-start p-3 rounded-lg bg-gray-50 hover:bg-button-background-secondary/20 transition-colors">
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-button-background-primary text-white flex items-center justify-center text-xs font-bold mt-0.5">
+                                    {i + 1}
+                                </span>
+                                <p className="text-sm leading-relaxed">
+                                    {parts.length >= 3 ? (
+                                        <>
+                                            <span className="font-bold text-subtitle">{parts[1]}</span>
+                                            {parts[2]}
+                                        </>
+                                    ) : point}
+                                </p>
+                            </div>
+                        )
+                    })}
+                </div>
+            </section>
+        )}
+
+        {/* SECTION: COMPARISONS */}
+        {comparisons.length > 0 && (
+            <section>
+                <div className="mb-8 border-l-4 border-button-background-primary pl-4">
+                    <h2 className="font-title text-3xl font-bold text-subtitle">Comparación con el Plan de Gobierno</h2>
+                    <p className="text-subtitle/70 mt-1">Análisis de coherencia entre lo dicho y lo escrito.</p>
+                </div>
+
+                <div className="grid grid-cols-1 gap-6">
+                    {comparisons.map((comp, i) => {
+                        // Parse internal structure: "**Lo dicho...:** text"
+                        const saidMatch = comp.body.match(/- \*\*Lo dicho en la entrevista:\*\*([\s\S]*?)(?=- \*\*Lo establecido)/);
+                        const planMatch = comp.body.match(/- \*\*Lo establecido en el plan:\*\*([\s\S]*?)(?=\*\*Evaluación:)/);
+                        const evalResultMatch = comp.body.match(/\*\*Evaluación:\*\*([\s\S]*?)(?=\*|$)/); // Capture up to italized explanation start or end
+                        const explanationMatch = comp.body.match(/\*([^*]+)\*$/); // Capture italic text at end
+                        
+                        const said = saidMatch ? saidMatch[1].trim() : "";
+                        const plan = planMatch ? planMatch[1].trim() : "";
+                        const result = evalResultMatch ? evalResultMatch[1].trim() : "";
+                        const explanation = explanationMatch ? explanationMatch[1].trim() : "";
+
+                        return (
+                            <div key={i} className="bg-white rounded-xl overflow-hidden border border-subtitle/10 shadow-md">
+                                {/* Header */}
+                                <div className="bg-button-background-secondary/20 p-4 border-b border-subtitle/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                    <h3 className="font-title text-xl font-bold text-subtitle">{comp.title}</h3>
+                                    {result && (
+                                        <span className={`px-3 py-1 rounded-full text-xs font-bold border ${
+                                            result.includes("ALTO") || result.includes("Coherente") || result.includes("✔️") 
+                                                ? "bg-green-100 text-green-700 border-green-200" 
+                                                : result.includes("Parcial") || result.includes("🟡")
+                                                ? "bg-yellow-100 text-yellow-800 border-yellow-200"
+                                                : "bg-red-100 text-red-700 border-red-200"
+                                        }`}>
+                                            {result}
+                                        </span>
+                                    )}
+                                </div>
+                                
+                                {/* Content */}
+                                <div className="p-5 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {/* Left: Interview */}
+                                    <div className="space-y-2">
+                                        <p className="text-xs uppercase font-bold text-button-background-primary flex items-center gap-1">
+                                            🎙️ En la entrevista
+                                        </p>
+                                        <p className="text-sm text-subtitle/80 bg-gray-50 p-3 rounded-lg border border-gray-100 h-full">
+                                            {said || "Sin información extraída."}
+                                        </p>
+                                    </div>
+                                    
+                                    {/* Right: Plan */}
+                                    <div className="space-y-2">
+                                        <p className="text-xs uppercase font-bold text-subtitle flex items-center gap-1">
+                                            📄 En el Plan
+                                        </p>
+                                        <p className="text-sm text-subtitle/80 bg-gray-50 p-3 rounded-lg border border-gray-100 h-full">
+                                            {plan || "Sin información extraída."}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Footer: Explanation */}
+                                {explanation && (
+                                    <div className="bg-button-background-primary/5 p-4 border-t border-subtitle/10 flex gap-3">
+                                        <span className="text-xl">💡</span>
+                                        <p className="text-sm italic text-subtitle/90">
+                                            {explanation}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+            </section>
+        )}
+
+        {/* SECTION: CONCLUSION */}
+        {(coherenceLevel || conclusion) && (
+            <section className="bg-gradient-to-br from-button-background-secondary/30 to-white p-6 rounded-xl border border-button-background-primary/20 shadow-lg">
+                <h2 className="font-title text-2xl font-bold text-subtitle mb-4">Evaluación General</h2>
+                
+                {coherenceLevel && (
+                    <div className="mb-4 inline-flex items-center gap-3 bg-white px-4 py-2 rounded-lg shadow-sm border border-subtitle/10">
+                        <span className="font-bold text-sm text-subtitle/70">Nivel de Coherencia:</span>
+                        <span className="font-title font-extrabold text-xl text-button-background-primary">{coherenceLevel}</span>
+                    </div>
+                )}
+                
+                <p className="text-subtitle/90 leading-relaxed text-lg">
+                    {conclusion}
+                </p>
+            </section>
+        )}
+
+        {/* Fallback if parsing failed completely but content exists */}
+        {keyPoints.length === 0 && comparisons.length === 0 && (
+            <div className="p-4 bg-red-50 text-red-700 rounded-lg">
+                <p>No se pudo analizar el formato estructurado. Mostrando texto plano:</p>
+                <pre className="whitespace-pre-wrap mt-2 text-xs">{content}</pre>
+            </div>
+        )}
+    </div>
+  );
+};
 
 interface Entrevista {
   id: number;
@@ -211,58 +397,9 @@ function EntrevistasContent() {
                     </div>
                 </div>
 
-                {/* CONTENIDO MARKDOWN */}
-                <article className="bg-white rounded-2xl shadow-xl overflow-hidden border border-subtitle/10">
-                    <div className="p-6 md:p-10">
-                        {/* 
-                            Usamos una estructura similar al playground provisto por el usuario:
-                            - MD component con remarkPlugins
-                            - Componentes manuales para asegurar estilos Tailwind
-                        */}
-                        <div className="font-body text-subtitle">
-                             <MD 
-                                remarkPlugins={[GFM]}
-                                components={{
-                                    // Títulos
-                                    h1: ({node, ...props}: any) => <h1 className="font-title text-3xl font-bold text-subtitle mb-4 mt-6 border-b border-subtitle/10 pb-2" {...props} />,
-                                    h2: ({node, ...props}: any) => <h2 className="font-title text-2xl font-bold text-subtitle/90 mb-3 mt-8" {...props} />,
-                                    h3: ({node, ...props}: any) => <h3 className="font-title text-xl font-bold text-button-background-primary mb-2 mt-6" {...props} />,
-                                    
-                                    // Texto y Listas
-                                    p: ({node, ...props}: any) => <p className="font-body text-subtitle/80 mb-4 leading-relaxed text-base" {...props} />,
-                                    ul: ({node, ...props}: any) => <ul className="list-disc list-inside text-subtitle/80 mb-4 pl-2 space-y-1" {...props} />,
-                                    ol: ({node, ...props}: any) => <ol className="list-decimal list-inside text-subtitle/80 mb-4 pl-2 space-y-1" {...props} />,
-                                    li: ({node, ...props}: any) => <li className="pl-1 marker:text-button-background-primary" {...props} />,
-                                    
-                                    // Citas / Blockquotes
-                                    blockquote: ({node, ...props}: any) => <blockquote className="border-l-4 border-button-background-primary pl-4 py-2 my-6 text-subtitle/70 italic bg-button-background-secondary/10 rounded-r-lg" {...props} />,
-                                    
-                                    // Tablas
-                                    table: ({node, ...props}: any) => <div className="overflow-x-auto my-6 rounded-lg border border-subtitle/20"><table className="w-full text-left border-collapse" {...props} /></div>,
-                                    th: ({node, ...props}: any) => <th className="bg-button-background-secondary/30 p-3 font-bold text-subtitle border-b border-subtitle/20" {...props} />,
-                                    td: ({node, ...props}: any) => <td className="p-3 border-b border-subtitle/10 text-sm text-subtitle/80" {...props} />,
-                                    
-                                    // Código
-                                    code: ({node, inline, ...props}: any) => (
-                                        inline 
-                                          ? <code className="bg-gray-100 text-button-background-primary px-1.5 py-0.5 rounded text-sm font-mono border border-gray-200" {...props} />
-                                          : <code className="block bg-gray-900 p-4 rounded-lg text-xs text-gray-100 font-mono my-4 overflow-x-auto border border-gray-800" {...props} />
-                                    ),
-                                    
-                                    // Separador
-                                    hr: ({node, ...props}: any) => <hr className="my-8 border-subtitle/20" {...props} />,
-                                    
-                                    // Links
-                                    a: ({node, ...props}: any) => <a className="text-button-background-primary hover:underline font-semibold" target="_blank" rel="noopener noreferrer" {...props} />,
-                                    
-                                    // Negritas
-                                    strong: ({node, ...props}: any) => <strong className="font-bold text-subtitle" {...props} />,
-                                }}
-                             >
-                                {cleanMarkdown(selectedEntrevista.titulo_ia)}
-                             </MD>
-                        </div>
-                    </div>
+                {/* CONTENIDO (RENDERIZADOR PERSONALIZADO) */}
+                <article className="bg-transparent">
+                     <CustomInterviewRenderer content={selectedEntrevista.titulo_ia} />
                 </article>
 
                 {/* IFRAME VIDEO (Fixed) */}
