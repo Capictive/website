@@ -7,106 +7,108 @@ import Nav from "../components/Nav";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 
-const EntrevistasList = dynamic(() => import("../components/EntrevistasList"), { ssr: false });
+const EntrevistasList = dynamic(() => import("../components/EntrevistasList"), {
+  ssr: false,
+});
 import { PARTIES, Party, PartyDetail, Problema, Eje } from "../lib/parties";
 
 const flagMap: Record<string, string> = {
   // --- NORTEAMÉRICA ---
-  "CAN": "🇨🇦",
-  "USA": "🇺🇸",
-  "MEX": "🇲🇽",
+  CAN: "🇨🇦",
+  USA: "🇺🇸",
+  MEX: "🇲🇽",
 
   // --- CENTROAMÉRICA Y CARIBE ---
-  "CRI": "🇨🇷",
-  "CUB": "🇨🇺",
-  "DOM": "🇩🇴",
-  "SLV": "🇸🇻",
-  "GTM": "🇬🇹",
-  "HND": "🇭🇳",
-  "NIC": "🇳🇮",
-  "PAN": "🇵🇦",
-  "PRI": "🇵🇷",
-  "HTI": "🇭🇹",
-  "JAM": "🇯🇲",
+  CRI: "🇨🇷",
+  CUB: "🇨🇺",
+  DOM: "🇩🇴",
+  SLV: "🇸🇻",
+  GTM: "🇬🇹",
+  HND: "🇭🇳",
+  NIC: "🇳🇮",
+  PAN: "🇵🇦",
+  PRI: "🇵🇷",
+  HTI: "🇭🇹",
+  JAM: "🇯🇲",
 
   // --- SUDAMÉRICA (LATAM) ---
-  "ARG": "🇦🇷",
-  "BOL": "🇧🇴",
-  "BRA": "🇧🇷",
-  "CHL": "🇨🇱",
-  "COL": "🇨🇴",
-  "ECU": "🇪🇨",
-  "PRY": "🇵🇾",
-  "PER": "🇵🇪",
-  "URY": "🇺🇾",
-  "VEN": "🇻🇪",
+  ARG: "🇦🇷",
+  BOL: "🇧🇴",
+  BRA: "🇧🇷",
+  CHL: "🇨🇱",
+  COL: "🇨🇴",
+  ECU: "🇪🇨",
+  PRY: "🇵🇾",
+  PER: "🇵🇪",
+  URY: "🇺🇾",
+  VEN: "🇻🇪",
 
   // --- EUROPA ---
-  "ALB": "🇦🇱",
-  "AND": "🇦🇩",
-  "AUT": "🇦🇹",
-  "BEL": "🇧🇪",
-  "BGR": "🇧🇬",
-  "HRV": "🇭🇷",
-  "CYP": "🇨🇾",
-  "CZE": "🇨🇿",
-  "DNK": "🇩🇰",
-  "EST": "🇪🇪",
-  "FIN": "🇫🇮",
-  "FRA": "🇫🇷",
-  "DEU": "🇩🇪",
-  "GRC": "🇬🇷",
-  "HUN": "🇭🇺",
-  "ISL": "🇮🇸",
-  "IRL": "🇮🇪",
-  "ITA": "🇮🇹",
-  "LVA": "🇱🇻",
-  "LIE": "🇱🇮",
-  "LTU": "🇱🇹",
-  "LUX": "🇱🇺",
-  "MLT": "🇲🇹",
-  "MCO": "🇲🇨",
-  "MNE": "🇲🇪",
-  "NLD": "🇳🇱",
-  "NOR": "🇳🇴",
-  "POL": "🇵🇱",
-  "PRT": "🇵🇹",
-  "ROU": "🇷🇴",
-  "RUS": "🇷🇺",
-  "SRB": "🇷🇸",
-  "SVK": "🇸🇰",
-  "SVN": "🇸🇮",
-  "ESP": "🇪🇸",
-  "SWE": "🇸🇪",
-  "CHE": "🇨🇭",
-  "UKR": "🇺🇦",
-  "GBR": "🇬🇧",
-  "VAT": "🇻🇦",
+  ALB: "🇦🇱",
+  AND: "🇦🇩",
+  AUT: "🇦🇹",
+  BEL: "🇧🇪",
+  BGR: "🇧🇬",
+  HRV: "🇭🇷",
+  CYP: "🇨🇾",
+  CZE: "🇨🇿",
+  DNK: "🇩🇰",
+  EST: "🇪🇪",
+  FIN: "🇫🇮",
+  FRA: "🇫🇷",
+  DEU: "🇩🇪",
+  GRC: "🇬🇷",
+  HUN: "🇭🇺",
+  ISL: "🇮🇸",
+  IRL: "🇮🇪",
+  ITA: "🇮🇹",
+  LVA: "🇱🇻",
+  LIE: "🇱🇮",
+  LTU: "🇱🇹",
+  LUX: "🇱🇺",
+  MLT: "🇲🇹",
+  MCO: "🇲🇨",
+  MNE: "🇲🇪",
+  NLD: "🇳🇱",
+  NOR: "🇳🇴",
+  POL: "🇵🇱",
+  PRT: "🇵🇹",
+  ROU: "🇷🇴",
+  RUS: "🇷🇺",
+  SRB: "🇷🇸",
+  SVK: "🇸🇰",
+  SVN: "🇸🇮",
+  ESP: "🇪🇸",
+  SWE: "🇸🇪",
+  CHE: "🇨🇭",
+  UKR: "🇺🇦",
+  GBR: "🇬🇧",
+  VAT: "🇻🇦",
 
   // --- ASIA / OCEANÍA ---
-  "AUS": "🇦🇺",
-  "CHN": "🇨🇳",
-  "HKG": "🇭🇰",
-  "IND": "🇮🇳",
-  "JPN": "🇯🇵",
-  "NZL": "🇳🇿",
-  "KOR": "🇰🇷",
-  "SGP": "🇸🇬",
-  "THA": "🇹🇭",
-  "TUR": "🇹🇷",
-  "ISR": "🇮🇱",
-  "ARE": "🇦🇪",
+  AUS: "🇦🇺",
+  CHN: "🇨🇳",
+  HKG: "🇭🇰",
+  IND: "🇮🇳",
+  JPN: "🇯🇵",
+  NZL: "🇳🇿",
+  KOR: "🇰🇷",
+  SGP: "🇸🇬",
+  THA: "🇹🇭",
+  TUR: "🇹🇷",
+  ISR: "🇮🇱",
+  ARE: "🇦🇪",
 };
 
 // Mapeo de imágenes para cada paso del tour
 const TOUR_IMAGES: Record<number, string> = {
-  0: "/pose/searching.png",  // Bienvenida
-  1: "/pose/reading.png",    // Buscador
-  2: "/pose/giveme.png",     // Lista partidos
-  3: "/pose/reading.png",    // Detalle partido
-  4: "/pose/searching.png",  // Documentos
-  5: "/pose/sending.png",    // Ejes/Problemas
-  6: "/pose/lost.png",       // Final
+  0: "/pose/searching.png", // Bienvenida
+  1: "/pose/reading.png", // Buscador
+  2: "/pose/giveme.png", // Lista partidos
+  3: "/pose/reading.png", // Detalle partido
+  4: "/pose/searching.png", // Documentos
+  5: "/pose/sending.png", // Ejes/Problemas
+  6: "/pose/lost.png", // Final
 };
 
 // Mapeo de audios para cada paso del tour
@@ -124,7 +126,8 @@ const TOUR_AUDIOS: Record<number, string> = {
 const TOUR_STEPS: Step[] = [
   {
     target: "body",
-    content: "¡Bienvenido a la sección de Partidos Políticos! Aquí podrás explorar las propuestas de cada partido de manera simple. 🗳️",
+    content:
+      "¡Bienvenido a la sección de Partidos Políticos! Aquí podrás explorar las propuestas de cada partido de manera simple. 🗳️",
     placement: "center",
     disableBeacon: true,
   },
@@ -135,27 +138,32 @@ const TOUR_STEPS: Step[] = [
   },
   {
     target: ".tour-lista-partidos",
-    content: "Aquí aparecen los partidos políticos. Haz clic en cualquiera para ver sus propuestas detalladas.",
+    content:
+      "Aquí aparecen los partidos políticos. Haz clic en cualquiera para ver sus propuestas detalladas.",
     placement: "right",
   },
   {
     target: ".tour-detalle-partido",
-    content: "En esta sección verás toda la información del partido: candidatos, visión y propuestas.",
+    content:
+      "En esta sección verás toda la información del partido: candidatos, visión y propuestas.",
     placement: "left",
   },
   {
     target: ".tour-documentos",
-    content: "Descarga el Plan Resumen o el Plan de Gobierno completo en PDF para más detalles.",
+    content:
+      "Descarga el Plan Resumen o el Plan de Gobierno completo en PDF para más detalles.",
     placement: "bottom",
   },
   {
     target: ".tour-toggle-ejes",
-    content: "Alterna entre Ejes Principales (propuestas por tema) y Problemas Identificados (diagnóstico del partido).",
+    content:
+      "Alterna entre Ejes Principales (propuestas por tema) y Problemas Identificados (diagnóstico del partido).",
     placement: "top",
   },
   {
     target: "body",
-    content: "¡Eso es todo! Explora los partidos y toma una decisión informada. 🎯",
+    content:
+      "¡Eso es todo! Explora los partidos y toma una decisión informada. 🎯",
     placement: "center",
   },
 ];
@@ -172,17 +180,17 @@ interface CustomTooltipProps {
   isLastStep: boolean;
 }
 
-const CustomTooltip = ({ 
-  continuous, 
-  index, 
-  step, 
-  backProps, 
-  primaryProps, 
+const CustomTooltip = ({
+  continuous,
+  index,
+  step,
+  backProps,
+  primaryProps,
   skipProps,
   tooltipProps,
-  isLastStep 
+  isLastStep,
 }: CustomTooltipProps) => (
-  <div 
+  <div
     {...tooltipProps}
     className="bg-white rounded-2xl shadow-2xl p-0 max-w-sm overflow-hidden"
   >
@@ -198,7 +206,7 @@ const CustomTooltip = ({
         />
       </div>
     )}
-    
+
     {/* Contenido */}
     <div className="p-5">
       {step.title && (
@@ -209,7 +217,7 @@ const CustomTooltip = ({
       <p className="font-body text-subtitle/80 text-sm leading-relaxed">
         {step.content}
       </p>
-      
+
       {/* Indicador de progreso */}
       <div className="flex gap-1 mt-4 mb-3">
         {TOUR_STEPS.map((_, i) => (
@@ -221,7 +229,7 @@ const CustomTooltip = ({
           />
         ))}
       </div>
-      
+
       {/* Botones */}
       <div className="flex items-center justify-between mt-4">
         <button
@@ -230,7 +238,7 @@ const CustomTooltip = ({
         >
           Saltar tour
         </button>
-        
+
         <div className="flex gap-2">
           {index > 0 && (
             <button
@@ -254,7 +262,26 @@ const CustomTooltip = ({
   </div>
 );
 
-async function fetchPartyDetail(partyName: string): Promise<PartyDetail | null> {
+function EntrevistasButton({ partido }: { partido?: string }) {
+  const router = useRouter();
+  if (!partido) return null;
+  return (
+    <div className="border-t pt-4 flex justify-end">
+      <button
+        className="btn-primary text-sm"
+        onClick={() =>
+          router.push(`/entrevistas/${encodeURIComponent(partido)}`)
+        }
+      >
+        🎤 Ver Entrevistas
+      </button>
+    </div>
+  );
+}
+
+async function fetchPartyDetail(
+  partyName: string
+): Promise<PartyDetail | null> {
   try {
     const encodedName = encodeURIComponent(partyName);
     const res = await fetch(`https://api.capictive.app/?id=${encodedName}`);
@@ -270,16 +297,19 @@ export default function PartidosPage() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState<Party | null>(null);
-  const [detailState, setDetailState] = useState<{detail: PartyDetail | null, loading: boolean}>({detail: null, loading: false});
+  const [detailState, setDetailState] = useState<{
+    detail: PartyDetail | null;
+    loading: boolean;
+  }>({ detail: null, loading: false });
   const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
   const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
-  const [viewMode, setViewMode] = useState<'ejes' | 'problemas'>('ejes');
+  const [viewMode, setViewMode] = useState<"ejes" | "problemas">("ejes");
   const detailArticleRef = useRef<HTMLElement>(null);
 
   // Estado del tour
   const [runTour, setRunTour] = useState<boolean>(false);
   const [tourCompleted, setTourCompleted] = useState<boolean>(false);
-  
+
   // Ref para el audio del tour
   const tourAudioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -290,12 +320,14 @@ export default function PartidosPage() {
       tourAudioRef.current.pause();
       tourAudioRef.current.currentTime = 0;
     }
-    
+
     const audioSrc = TOUR_AUDIOS[stepIndex];
     if (audioSrc) {
       tourAudioRef.current = new Audio(audioSrc);
       tourAudioRef.current.volume = 0.7;
-      tourAudioRef.current.play().catch(err => console.log("Audio autoplay blocked:", err));
+      tourAudioRef.current
+        .play()
+        .catch((err) => console.log("Audio autoplay blocked:", err));
     }
   }, []);
 
@@ -323,7 +355,7 @@ export default function PartidosPage() {
   const handleTourCallback = (data: CallBackProps) => {
     const { status, index, type } = data;
     const finishedStatuses: string[] = [STATUS.FINISHED, STATUS.SKIPPED];
-    
+
     // Reproducir audio cuando cambia el paso
     if (type === "step:after" || type === "tour:start") {
       const nextIndex = type === "tour:start" ? 0 : index + 1;
@@ -331,17 +363,17 @@ export default function PartidosPage() {
         playTourAudio(nextIndex);
       }
     }
-    
+
     // Reproducir audio del primer paso al iniciar
     if (type === "tour:start") {
       playTourAudio(0);
     }
-    
+
     // Cuando llegamos al paso de la lista de partidos (index 2), seleccionar automáticamente el primer partido
     if (type === "step:before" && index === 2 && !selected) {
       setSelected(PARTIES[0]);
     }
-    
+
     if (finishedStatuses.includes(status)) {
       stopTourAudio();
       setRunTour(false);
@@ -360,7 +392,10 @@ export default function PartidosPage() {
     // En móvil, hacer scroll hacia el detalle del partido
     if (window.innerWidth < 768 && detailArticleRef.current) {
       setTimeout(() => {
-        detailArticleRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        detailArticleRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       }, 100);
     }
   };
@@ -373,17 +408,22 @@ export default function PartidosPage() {
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
   const safePage = Math.min(page, totalPages - 1);
-  const visible = filtered.slice(safePage * perPage, safePage * perPage + perPage);
+  const visible = filtered.slice(
+    safePage * perPage,
+    safePage * perPage + perPage
+  );
 
   useEffect(() => {
     if (selected) {
-      setDetailState({detail: null, loading: true});
+      setDetailState({ detail: null, loading: true });
       setCurrentEjeIndex(0);
       setCurrentProblemaIndex(0);
-      setViewMode('ejes');
-      fetchPartyDetail(selected.name).then((data) => setDetailState({detail: data, loading: false}));
+      setViewMode("ejes");
+      fetchPartyDetail(selected.name).then((data) =>
+        setDetailState({ detail: data, loading: false })
+      );
     } else {
-      setDetailState({detail: null, loading: false});
+      setDetailState({ detail: null, loading: false });
       setCurrentEjeIndex(0);
       setCurrentProblemaIndex(0);
     }
@@ -426,7 +466,7 @@ export default function PartidosPage() {
           className="text-sm font-body underline p-1 hover:bg-transparent text-subtitle hover:text-green-600 transition-colors flex items-center gap-1"
         >
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
           </svg>
           Compartir
         </a>
@@ -440,8 +480,12 @@ export default function PartidosPage() {
 
       {/* Encabezado periódico */}
       <div className="py-8 border-y text-center border-subtitle">
-        <h1 className="font-title text-subtitle text-4xl sm:text-5xl md:text-6xl font-extrabold">Partidos Políticos</h1>
-        <p className="font-body">Explora y compara propuestas de manera simple</p>
+        <h1 className="font-title text-subtitle text-4xl sm:text-5xl md:text-6xl font-extrabold">
+          Partidos Políticos
+        </h1>
+        <p className="font-body">
+          Explora y compara propuestas de manera simple
+        </p>
         {/* Botón para reiniciar tour */}
         {tourCompleted && (
           <button
@@ -478,7 +522,9 @@ export default function PartidosPage() {
             >
               ←
             </button>
-            <span className="font-body text-sm">Página {safePage + 1} de {totalPages}</span>
+            <span className="font-body text-sm">
+              Página {safePage + 1} de {totalPages}
+            </span>
             <button
               className="btn-secondary"
               onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
@@ -495,17 +541,23 @@ export default function PartidosPage() {
                 <button
                   key={p.id}
                   className={`card rounded-md border-2 w-full text-left transition-all duration-200 ${
-                    selected?.id === p.id 
-                      ? "border-button-background-primary bg-button-background-primary/10 shadow-lg scale-105 ring-2 ring-button-background-primary/30" 
+                    selected?.id === p.id
+                      ? "border-button-background-primary bg-button-background-primary/10 shadow-lg scale-105 ring-2 ring-button-background-primary/30"
                       : "border-subtitle hover:border-button-background-primary/50 hover:shadow-md"
                   }`}
                   onClick={() => handlePartySelect(p)}
                 >
                   <div className="flex items-center gap-3">
                     <Image src={p.logo} alt={p.name} width={48} height={48} />
-                    <span className={`font-body ${
-                      selected?.id === p.id ? "text-button-background-primary font-bold" : "text-subtitle"
-                    }`}>{p.name}</span>
+                    <span
+                      className={`font-body ${
+                        selected?.id === p.id
+                          ? "text-button-background-primary font-bold"
+                          : "text-subtitle"
+                      }`}
+                    >
+                      {p.name}
+                    </span>
                   </div>
                 </button>
               ))}
@@ -514,7 +566,10 @@ export default function PartidosPage() {
         </aside>
 
         {/* Detalle del partido seleccionado */}
-        <article ref={detailArticleRef} className="tour-detalle-partido col-span-2 border rounded-md border-subtitle p-6 space-y-6">
+        <article
+          ref={detailArticleRef}
+          className="tour-detalle-partido col-span-2 border rounded-md border-subtitle p-6 space-y-6"
+        >
           {!selected ? (
             /* Placeholder cuando no hay partido seleccionado */
             <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center space-y-6">
@@ -530,7 +585,8 @@ export default function PartidosPage() {
                   ¡Selecciona un partido político!
                 </h3>
                 <p className="font-body text-subtitle/70 max-w-md">
-                  Haz clic en cualquier partido de la lista de la izquierda para ver sus propuestas, candidatos y plan de gobierno.
+                  Haz clic en cualquier partido de la lista de la izquierda para
+                  ver sus propuestas, candidatos y plan de gobierno.
                 </p>
               </div>
               <div className="flex items-center gap-2 text-button-background-primary">
@@ -541,215 +597,306 @@ export default function PartidosPage() {
           ) : detailState.loading ? (
             <p className="font-body">Cargando detalles...</p>
           ) : detailState.detail ? (
-              <div className="space-y-6">
-                {/* Encabezado centrado con logo y candidato */}
-                <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
-                  <div className="flex flex-col items-center">
-                    <Image src={selected.logo} alt={selected.name} width={120} height={120} />
-                    {/* Imagen del candidato con nombre superpuesto */}
-                    <div className="relative mt-4">
-                      <Image
-                        src={detailState.detail.presidente_links[0] || selected.candidateImage}
-                        alt={`Candidato ${selected.name}`}
-                        width={240}
-                        height={240}
-                        className="rounded-md border border-subtitle object-cover aspect-square w-full max-w-[240px]"
-                      />
-                      {/* Nombre del presidente superpuesto */}
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-black/5 p-3 rounded-b-md">
-                        <p className="font-title text-white text-sm font-bold text-center leading-tight">
-                          {selected.candidatos.presidente}
-                        </p>
-                        <p className="font-body text-white/80 text-xs text-center">
-                          Candidato Presidencial
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex-1 space-y-3 text-center md:text-left">
-                    <h2 className="font-title text-subtitle text-4xl font-bold">{detailState.detail.partido}</h2>
-                    <p className="font-body italic text-lg">&ldquo;{detailState.detail.slogan_detectado}&rdquo;</p>
-                    <p className="font-body text-sm md:text-base">{detailState.detail.vision_resumen}</p>
-                    
-                    {/* Vicepresidentes */}
-                    <div className="bg-button-background-secondary/30 rounded-lg p-4 space-y-2">
-                      <p className="font-body text-xs uppercase font-bold text-subtitle/70 tracking-wide">Fórmula Presidencial</p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">🥇</span>
-                          <div>
-                            <p className="font-body text-xs text-subtitle/70">1er Vicepresidente</p>
-                            <p className="font-body text-sm font-semibold text-subtitle">{selected.candidatos.primer_vicepresidente}</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">🥈</span>
-                          <div>
-                            <p className="font-body text-xs text-subtitle/70">2do Vicepresidente</p>
-                            <p className="font-body text-sm font-semibold text-subtitle">{selected.candidatos.segundo_vicepresidente}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="tour-documentos flex flex-wrap gap-3 font-body justify-center md:justify-start">
-                      <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20RESUMEN.pdf`} target="_blank" className="btn-primary text-sm">📄 Plan Resumen</a>
-                      <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20GOBIERNO.pdf`} target="_blank" className="btn-secondary text-sm">📑 Plan Gobierno</a>
-                      <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/HOJA%20DE%20CANDIDATOS.pdf`} target="_blank" className="btn-secondary text-sm">👥 Hoja de Candidatos</a>
-                      <button className="btn-secondary text-sm opacity-60 cursor-not-allowed" disabled>⚖️ Comparar - Próximamente</button>
+            <div className="space-y-6">
+              {/* Encabezado centrado con logo y candidato */}
+              <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={selected.logo}
+                    alt={selected.name}
+                    width={120}
+                    height={120}
+                  />
+                  {/* Imagen del candidato con nombre superpuesto */}
+                  <div className="relative mt-4">
+                    <Image
+                      src={
+                        detailState.detail.presidente_links[0] ||
+                        selected.candidateImage
+                      }
+                      alt={`Candidato ${selected.name}`}
+                      width={240}
+                      height={240}
+                      className="rounded-md border border-subtitle object-cover aspect-square w-full max-w-[240px]"
+                    />
+                    {/* Nombre del presidente superpuesto */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-black/5 p-3 rounded-b-md">
+                      <p className="font-title text-white text-sm font-bold text-center leading-tight">
+                        {selected.candidatos.presidente}
+                      </p>
+                      <p className="font-body text-white/80 text-xs text-center">
+                        Candidato Presidencial
+                      </p>
                     </div>
                   </div>
                 </div>
-                {/* Botón para ver entrevistas */}
-                <EntrevistasButton partido={detailState.detail?.partido} />
+                <div className="flex-1 space-y-3 text-center md:text-left">
+                  <h2 className="font-title text-subtitle text-4xl font-bold">
+                    {detailState.detail.partido}
+                  </h2>
+                  <p className="font-body italic text-lg">
+                    &ldquo;{detailState.detail.slogan_detectado}&rdquo;
+                  </p>
+                  <p className="font-body text-sm md:text-base">
+                    {detailState.detail.vision_resumen}
+                  </p>
 
-// ...
+                  {/* Vicepresidentes */}
+                  <div className="bg-button-background-secondary/30 rounded-lg p-4 space-y-2">
+                    <p className="font-body text-xs uppercase font-bold text-subtitle/70 tracking-wide">
+                      Fórmula Presidencial
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">🥇</span>
+                        <div>
+                          <p className="font-body text-xs text-subtitle/70">
+                            1er Vicepresidente
+                          </p>
+                          <p className="font-body text-sm font-semibold text-subtitle">
+                            {selected.candidatos.primer_vicepresidente}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">🥈</span>
+                        <div>
+                          <p className="font-body text-xs text-subtitle/70">
+                            2do Vicepresidente
+                          </p>
+                          <p className="font-body text-sm font-semibold text-subtitle">
+                            {selected.candidatos.segundo_vicepresidente}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-function EntrevistasButton({ partido }: { partido?: string }) {
-  const router = useRouter();
-  if (!partido) return null;
-  return (
-    <div className="border-t pt-4 flex justify-end">
-      <button
-        className="btn-primary text-sm"
-        onClick={() => router.push(`/entrevistas/${encodeURIComponent(partido)}`)}
-      >
-        🎤 Ver Entrevistas
-      </button>
-    </div>
-  );
-}
-                {/* Toggle: Ejes / Problemas */}
-                <div className="space-y-4">
-                  {/* Toggle buttons */}
-                  <div className="tour-toggle-ejes flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1 border-2 border-subtitle/30">
-                    <button
-                      onClick={() => setViewMode('ejes')}
-                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
-                        viewMode === 'ejes' 
-                          ? 'bg-button-background-primary text-white shadow-md border-button-background-primary' 
-                          : 'text-subtitle hover:bg-button-background-secondary/30 border-transparent'
-                      }`}
+                  <div className="tour-documentos flex flex-wrap gap-3 font-body justify-center md:justify-start">
+                    <a
+                      href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(
+                        detailState.detail.partido
+                      )}/PLAN%20RESUMEN.pdf`}
+                      target="_blank"
+                      className="btn-primary text-sm"
                     >
-                      📋 Ejes Principales
-                    </button>
-                    <button
-                      onClick={() => setViewMode('problemas')}
-                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
-                        viewMode === 'problemas' 
-                          ? 'bg-button-background-primary text-white shadow-md border-button-background-primary' 
-                          : 'text-subtitle hover:bg-button-background-secondary/30 border-transparent'
-                      }`}
+                      📄 Plan Resumen
+                    </a>
+                    <a
+                      href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(
+                        detailState.detail.partido
+                      )}/PLAN%20GOBIERNO.pdf`}
+                      target="_blank"
+                      className="btn-secondary text-sm"
                     >
-                      ⚠️ Problemas Identificados
+                      📑 Plan Gobierno
+                    </a>
+                    <a
+                      href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(
+                        detailState.detail.partido
+                      )}/HOJA%20DE%20CANDIDATOS.pdf`}
+                      target="_blank"
+                      className="btn-secondary text-sm"
+                    >
+                      👥 Hoja de Candidatos
+                    </a>
+                    <button
+                      className="btn-secondary text-sm opacity-60 cursor-not-allowed"
+                      disabled
+                    >
+                      ⚖️ Comparar - Próximamente
                     </button>
                   </div>
-                  
-                  {viewMode === 'ejes' ? (
-                    <>
-                      {/* Mobile: Swipeable cards */}
-                      <div className="md:hidden">
-                        <EjesSwipeable 
-                          ejes={detailState.detail.ejes} 
-                          currentIndex={currentEjeIndex}
-                          setCurrentIndex={setCurrentEjeIndex}
-                          flagMap={flagMap}
-                        />
-                      </div>
-
-                      {/* Desktop: Normal view with buttons */}
-                      <div className="hidden md:block">
-                        <div className="flex items-center gap-4">
-                          <button
-                            className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
-                            onClick={() => setCurrentEjeIndex((i) => Math.max(0, i - 1))}
-                            disabled={currentEjeIndex === 0}
-                          >
-                            ‹
-                          </button>
-                          <div className="flex-1">
-                            {detailState.detail.ejes.length > 0 && (
-                              <EjeCard eje={detailState.detail.ejes[currentEjeIndex]} flagMap={flagMap} />
-                            )}
-                          </div>
-                          <button
-                            className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
-                            onClick={() => setCurrentEjeIndex((i) => Math.min(detailState.detail!.ejes.length - 1, i + 1))}
-                            disabled={currentEjeIndex === detailState.detail!.ejes.length - 1}
-                          >
-                            ›
-                          </button>
-                        </div>
-                        <p className="text-center font-body text-sm mt-3">{currentEjeIndex + 1} de {detailState.detail.ejes.length}</p>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      {detailState.detail.problemas && detailState.detail.problemas.length > 0 ? (
-                        <>
-                          {/* Mobile: Swipeable problema cards */}
-                          <div className="md:hidden">
-                            <ProblemasSwipeable 
-                              problemas={detailState.detail.problemas} 
-                              currentIndex={currentProblemaIndex}
-                              setCurrentIndex={setCurrentProblemaIndex}
-                            />
-                          </div>
-
-                          {/* Desktop: Normal view with buttons */}
-                          <div className="hidden md:block">
-                            <div className="flex items-center gap-4">
-                              <button
-                                className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
-                                onClick={() => setCurrentProblemaIndex((i) => Math.max(0, i - 1))}
-                                disabled={currentProblemaIndex === 0}
-                              >
-                                ‹
-                              </button>
-                              <div className="flex-1">
-                                <ProblemaCard problema={detailState.detail.problemas[currentProblemaIndex]} />
-                              </div>
-                              <button
-                                className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
-                                onClick={() => setCurrentProblemaIndex((i) => Math.min(detailState.detail!.problemas!.length - 1, i + 1))}
-                                disabled={currentProblemaIndex === detailState.detail!.problemas!.length - 1}
-                              >
-                                ›
-                              </button>
-                            </div>
-                            <p className="text-center font-body text-sm mt-3">{currentProblemaIndex + 1} de {detailState.detail.problemas.length}</p>
-                          </div>
-                        </>
-                      ) : (
-                        <div className="text-center py-8 border rounded-xl bg-gray-50">
-                          <span className="text-4xl mb-2 block">📭</span>
-                          <p className="font-body text-subtitle">No hay problemas identificados para este partido.</p>
-                        </div>
-                      )}
-                    </>
-                  )}
-                </div>
-
-                {/* Lo que no dicen */}
-                <div className="border-t pt-4">
-                  <h3 className="font-title text-subtitle text-xl font-bold">Lo que no dicen</h3>
-                  <p className="font-body">{detailState.detail.lo_que_no_dicen}</p>
-                </div>
-
-                {/* Fuentes */}
-                <div className="border-t pt-4">
-                  <h3 className="font-title text-subtitle text-lg font-bold">Fuentes Consultadas</h3>
-                  <ul className="list-disc list-inside space-y-1">
-                    {detailState.detail.fuentes_consultadas.map((fuente: string, i: number) => (
-                      <li key={i} className="font-body text-sm">{fuente}</li>
-                    ))}
-                  </ul>
                 </div>
               </div>
-            ) : (
-              <p className="font-body">No se pudieron cargar los detalles del partido.</p>
-            )
-          }
+              {/* Botón para ver entrevistas */}
+              <EntrevistasButton partido={detailState.detail?.partido} />
+              {/* Toggle: Ejes / Problemas */}
+              <div className="space-y-4">
+                {/* Toggle buttons */}
+                <div className="tour-toggle-ejes flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1 border-2 border-subtitle/30">
+                  <button
+                    onClick={() => setViewMode("ejes")}
+                    className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
+                      viewMode === "ejes"
+                        ? "bg-button-background-primary text-white shadow-md border-button-background-primary"
+                        : "text-subtitle hover:bg-button-background-secondary/30 border-transparent"
+                    }`}
+                  >
+                    📋 Ejes Principales
+                  </button>
+                  <button
+                    onClick={() => setViewMode("problemas")}
+                    className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
+                      viewMode === "problemas"
+                        ? "bg-button-background-primary text-white shadow-md border-button-background-primary"
+                        : "text-subtitle hover:bg-button-background-secondary/30 border-transparent"
+                    }`}
+                  >
+                    ⚠️ Problemas Identificados
+                  </button>
+                </div>
+
+                {viewMode === "ejes" ? (
+                  <>
+                    {/* Mobile: Swipeable cards */}
+                    <div className="md:hidden">
+                      <EjesSwipeable
+                        ejes={detailState.detail.ejes}
+                        currentIndex={currentEjeIndex}
+                        setCurrentIndex={setCurrentEjeIndex}
+                        flagMap={flagMap}
+                      />
+                    </div>
+
+                    {/* Desktop: Normal view with buttons */}
+                    <div className="hidden md:block">
+                      <div className="flex items-center gap-4">
+                        <button
+                          className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                          onClick={() =>
+                            setCurrentEjeIndex((i) => Math.max(0, i - 1))
+                          }
+                          disabled={currentEjeIndex === 0}
+                        >
+                          ‹
+                        </button>
+                        <div className="flex-1">
+                          {detailState.detail.ejes.length > 0 && (
+                            <EjeCard
+                              eje={detailState.detail.ejes[currentEjeIndex]}
+                              flagMap={flagMap}
+                            />
+                          )}
+                        </div>
+                        <button
+                          className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                          onClick={() =>
+                            setCurrentEjeIndex((i) =>
+                              Math.min(
+                                detailState.detail!.ejes.length - 1,
+                                i + 1
+                              )
+                            )
+                          }
+                          disabled={
+                            currentEjeIndex ===
+                            detailState.detail!.ejes.length - 1
+                          }
+                        >
+                          ›
+                        </button>
+                      </div>
+                      <p className="text-center font-body text-sm mt-3">
+                        {currentEjeIndex + 1} de{" "}
+                        {detailState.detail.ejes.length}
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {detailState.detail.problemas &&
+                    detailState.detail.problemas.length > 0 ? (
+                      <>
+                        {/* Mobile: Swipeable problema cards */}
+                        <div className="md:hidden">
+                          <ProblemasSwipeable
+                            problemas={detailState.detail.problemas}
+                            currentIndex={currentProblemaIndex}
+                            setCurrentIndex={setCurrentProblemaIndex}
+                          />
+                        </div>
+
+                        {/* Desktop: Normal view with buttons */}
+                        <div className="hidden md:block">
+                          <div className="flex items-center gap-4">
+                            <button
+                              className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                              onClick={() =>
+                                setCurrentProblemaIndex((i) =>
+                                  Math.max(0, i - 1)
+                                )
+                              }
+                              disabled={currentProblemaIndex === 0}
+                            >
+                              ‹
+                            </button>
+                            <div className="flex-1">
+                              <ProblemaCard
+                                problema={
+                                  detailState.detail.problemas[
+                                    currentProblemaIndex
+                                  ]
+                                }
+                              />
+                            </div>
+                            <button
+                              className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                              onClick={() =>
+                                setCurrentProblemaIndex((i) =>
+                                  Math.min(
+                                    detailState.detail!.problemas!.length - 1,
+                                    i + 1
+                                  )
+                                )
+                              }
+                              disabled={
+                                currentProblemaIndex ===
+                                detailState.detail!.problemas!.length - 1
+                              }
+                            >
+                              ›
+                            </button>
+                          </div>
+                          <p className="text-center font-body text-sm mt-3">
+                            {currentProblemaIndex + 1} de{" "}
+                            {detailState.detail.problemas.length}
+                          </p>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="text-center py-8 border rounded-xl bg-gray-50">
+                        <span className="text-4xl mb-2 block">📭</span>
+                        <p className="font-body text-subtitle">
+                          No hay problemas identificados para este partido.
+                        </p>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+
+              {/* Lo que no dicen */}
+              <div className="border-t pt-4">
+                <h3 className="font-title text-subtitle text-xl font-bold">
+                  Lo que no dicen
+                </h3>
+                <p className="font-body">
+                  {detailState.detail.lo_que_no_dicen}
+                </p>
+              </div>
+
+              {/* Fuentes */}
+              <div className="border-t pt-4">
+                <h3 className="font-title text-subtitle text-lg font-bold">
+                  Fuentes Consultadas
+                </h3>
+                <ul className="list-disc list-inside space-y-1">
+                  {detailState.detail.fuentes_consultadas.map(
+                    (fuente: string, i: number) => (
+                      <li key={i} className="font-body text-sm">
+                        {fuente}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+            </div>
+          ) : (
+            <p className="font-body">
+              No se pudieron cargar los detalles del partido.
+            </p>
+          )}
         </article>
       </section>
     </main>
@@ -758,86 +905,131 @@ function EntrevistasButton({ partido }: { partido?: string }) {
 
 // Component for individual Eje Card
 
-function EjeCard({ eje, flagMap }: { eje: Eje; flagMap: Record<string, string> }) {
+function EjeCard({
+  eje,
+  flagMap,
+}: {
+  eje: Eje;
+  flagMap: Record<string, string>;
+}) {
   return (
     <div className="border rounded-xl p-4 md:p-5 space-y-3 shadow-lg bg-white">
       {/* Category Header */}
       <div className="flex items-center gap-2">
         <span className="text-2xl">
-          {eje.categoria.includes('SEGURIDAD') ? '🛡️' :
-           eje.categoria.includes('INFRAESTRUCTURA') ? '🏗️' :
-           eje.categoria.includes('ECONOMÍA') ? '💰' :
-           eje.categoria.includes('GESTIÓN') ? '🏛️' :
-           eje.categoria.includes('EDUCACIÓN') ? '📚' :
-           eje.categoria.includes('SALUD') ? '🏥' : '📋'}
+          {eje.categoria.includes("SEGURIDAD")
+            ? "🛡️"
+            : eje.categoria.includes("INFRAESTRUCTURA")
+            ? "🏗️"
+            : eje.categoria.includes("ECONOMÍA")
+            ? "💰"
+            : eje.categoria.includes("GESTIÓN")
+            ? "🏛️"
+            : eje.categoria.includes("EDUCACIÓN")
+            ? "📚"
+            : eje.categoria.includes("SALUD")
+            ? "🏥"
+            : "📋"}
         </span>
-        <h4 className="font-title text-subtitle text-lg md:text-xl font-semibold">{eje.categoria}</h4>
+        <h4 className="font-title text-subtitle text-lg md:text-xl font-semibold">
+          {eje.categoria}
+        </h4>
       </div>
-      
+
       {/* Main Proposal */}
       <div className="bg-button-background-primary/10 p-3 rounded-lg border-l-4 border-button-background-primary">
-        <p className="font-body font-bold text-subtitle text-sm md:text-base">{eje.propuesta_estrella}</p>
+        <p className="font-body font-bold text-subtitle text-sm md:text-base">
+          {eje.propuesta_estrella}
+        </p>
       </div>
-      
+
       {/* What they propose */}
       <div className="space-y-2">
-        <p className="font-body font-semibold text-xs uppercase text-gray-500">Qué proponen:</p>
+        <p className="font-body font-semibold text-xs uppercase text-gray-500">
+          Qué proponen:
+        </p>
         <div className="space-y-1.5 max-h-40 overflow-y-auto">
           {eje.que_proponen.map((propuesta: string, i: number) => (
             <div key={i} className="flex items-start gap-2">
-              <span className="text-green-500 text-sm flex-shrink-0 mt-0.5">✔</span>
+              <span className="text-green-500 text-sm flex-shrink-0 mt-0.5">
+                ✔
+              </span>
               <span className="font-body text-xs md:text-sm">{propuesta}</span>
             </div>
           ))}
         </div>
       </div>
-      
+
       {/* Collapsible sections for mobile */}
       <details className="group">
         <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-gray-100 p-2 rounded-lg">
           <span>💡</span> Dato curioso
-          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+          <span className="ml-auto group-open:rotate-180 transition-transform">
+            ▼
+          </span>
         </summary>
-        <p className="font-body text-xs md:text-sm italic mt-2 p-2 bg-gray-50 rounded">{eje.dato_curioso}</p>
+        <p className="font-body text-xs md:text-sm italic mt-2 p-2 bg-gray-50 rounded">
+          {eje.dato_curioso}
+        </p>
       </details>
-      
+
       <details className="group">
         <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-yellow-100 p-2 rounded-lg">
           <span>🤔</span> Para reflexionar
-          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+          <span className="ml-auto group-open:rotate-180 transition-transform">
+            ▼
+          </span>
         </summary>
-        <p className="font-body text-xs md:text-sm mt-2 p-2 bg-yellow-50 rounded border-l-4 border-yellow-500">{eje.para_reflexionar}</p>
+        <p className="font-body text-xs md:text-sm mt-2 p-2 bg-yellow-50 rounded border-l-4 border-yellow-500">
+          {eje.para_reflexionar}
+        </p>
       </details>
-      
+
       {/* Benchmark Internacional */}
       <details className="group" open>
         <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-blue-100 p-2 rounded-lg">
           <span>🌍</span> Caso Internacional
-          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+          <span className="ml-auto group-open:rotate-180 transition-transform">
+            ▼
+          </span>
         </summary>
         <div className="mt-2 border rounded-lg p-3 bg-white shadow-sm relative">
-          <div className={`absolute top-2 right-2 px-2 py-0.5 rounded-full text-xs font-bold ${
-            eje.benchmark_internacional.nivel_similitud === 'ALTO' ? 'bg-green-500 text-white' :
-            eje.benchmark_internacional.nivel_similitud === 'MEDIO' ? 'bg-yellow-500 text-black' :
-            'bg-red-500 text-white'
-          }`}>
+          <div
+            className={`absolute top-2 right-2 px-2 py-0.5 rounded-full text-xs font-bold ${
+              eje.benchmark_internacional.nivel_similitud === "ALTO"
+                ? "bg-green-500 text-white"
+                : eje.benchmark_internacional.nivel_similitud === "MEDIO"
+                ? "bg-yellow-500 text-black"
+                : "bg-red-500 text-white"
+            }`}
+          >
             {eje.benchmark_internacional.nivel_similitud}
           </div>
           <div className="flex items-center gap-2 mb-2 pr-16">
-            <span className="text-3xl">{flagMap[eje.benchmark_internacional.codigo_pais] || "🏛️"}</span>
+            <span className="text-3xl">
+              {flagMap[eje.benchmark_internacional.codigo_pais] || "🏛️"}
+            </span>
             <div>
-              <p className="font-body text-xs md:text-sm font-bold text-subtitle">{eje.benchmark_internacional.caso_similar}</p>
-              <p className="font-body text-xs text-gray-600">({eje.benchmark_internacional.codigo_pais})</p>
+              <p className="font-body text-xs md:text-sm font-bold text-subtitle">
+                {eje.benchmark_internacional.caso_similar}
+              </p>
+              <p className="font-body text-xs text-gray-600">
+                ({eje.benchmark_internacional.codigo_pais})
+              </p>
             </div>
           </div>
           <div className="space-y-2">
             <div className="flex items-start gap-2">
               <span className="text-sm">📝</span>
-              <p className="font-body text-xs italic text-gray-700">{eje.benchmark_internacional.descripcion}</p>
+              <p className="font-body text-xs italic text-gray-700">
+                {eje.benchmark_internacional.descripcion}
+              </p>
             </div>
             <div className="flex items-start gap-2 bg-amber-50 p-2 rounded">
               <span className="text-sm">💡</span>
-              <p className="font-body text-xs font-semibold text-amber-800">Lección: {eje.benchmark_internacional.leccion}</p>
+              <p className="font-body text-xs font-semibold text-amber-800">
+                Lección: {eje.benchmark_internacional.leccion}
+              </p>
             </div>
           </div>
         </div>
@@ -847,14 +1039,14 @@ function EjeCard({ eje, flagMap }: { eje: Eje; flagMap: Record<string, string> }
 }
 
 // Swipeable component for mobile
-function EjesSwipeable({ 
-  ejes, 
-  currentIndex, 
-  setCurrentIndex, 
-  flagMap 
-}: { 
-  ejes: Eje[]; 
-  currentIndex: number; 
+function EjesSwipeable({
+  ejes,
+  currentIndex,
+  setCurrentIndex,
+  flagMap,
+}: {
+  ejes: Eje[];
+  currentIndex: number;
   setCurrentIndex: (fn: (i: number) => number) => void;
   flagMap: Record<string, string>;
 }) {
@@ -875,11 +1067,11 @@ function EjesSwipeable({
 
   const onTouchEnd = useCallback(() => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe && currentIndex < ejes.length - 1) {
       setCurrentIndex((i) => i + 1);
     }
@@ -894,16 +1086,16 @@ function EjesSwipeable({
       <p className="text-center font-body text-xs text-gray-500 flex items-center justify-center gap-1">
         <span>👆</span> Desliza para ver más ejes
       </p>
-      
+
       {/* Card container with touch events */}
-      <div 
+      <div
         ref={containerRef}
         className="overflow-hidden"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        <div 
+        <div
           className="transition-transform duration-300 ease-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
@@ -916,7 +1108,7 @@ function EjesSwipeable({
           </div>
         </div>
       </div>
-      
+
       {/* Navigation dots */}
       <div className="flex justify-center items-center gap-3">
         <button
@@ -932,22 +1124,24 @@ function EjesSwipeable({
               key={index}
               onClick={() => setCurrentIndex(() => index)}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-button-background-primary w-6' 
-                  : 'bg-button-background-secondary'
+                index === currentIndex
+                  ? "bg-button-background-primary w-6"
+                  : "bg-button-background-secondary"
               }`}
             />
           ))}
         </div>
         <button
           className="btn-secondary text-lg px-3 py-1 disabled:opacity-40"
-          onClick={() => setCurrentIndex((i) => Math.min(ejes.length - 1, i + 1))}
+          onClick={() =>
+            setCurrentIndex((i) => Math.min(ejes.length - 1, i + 1))
+          }
           disabled={currentIndex === ejes.length - 1}
         >
           ›
         </button>
       </div>
-      
+
       {/* Current position text */}
       <p className="text-center font-body text-sm text-subtitle">
         {currentIndex + 1} de {ejes.length}
@@ -964,54 +1158,70 @@ function ProblemaCard({ problema }: { problema: Problema }) {
       <div className="flex items-start gap-3">
         <span className="text-3xl">⚠️</span>
         <div className="flex-1">
-          <h4 className="font-title text-subtitle text-lg md:text-xl font-bold">{problema.titulo}</h4>
+          <h4 className="font-title text-subtitle text-lg md:text-xl font-bold">
+            {problema.titulo}
+          </h4>
         </div>
       </div>
-      
+
       {/* Resumen */}
       <div className="bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
-        <p className="font-body text-xs uppercase font-bold text-red-700 mb-1">Resumen del problema</p>
+        <p className="font-body text-xs uppercase font-bold text-red-700 mb-1">
+          Resumen del problema
+        </p>
         <p className="font-body text-sm text-subtitle">{problema.resumen}</p>
       </div>
-      
+
       {/* Ejemplo */}
       <details className="group" open>
         <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-orange-100 p-2 rounded-lg">
           <span>📋</span> Ejemplo concreto
-          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+          <span className="ml-auto group-open:rotate-180 transition-transform">
+            ▼
+          </span>
         </summary>
-        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-orange-50 rounded border-l-4 border-orange-400 italic">{problema.ejemplo}</p>
+        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-orange-50 rounded border-l-4 border-orange-400 italic">
+          {problema.ejemplo}
+        </p>
       </details>
-      
+
       {/* Solución */}
       <details className="group" open>
         <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-green-100 p-2 rounded-lg">
           <span>💡</span> Solución propuesta
-          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+          <span className="ml-auto group-open:rotate-180 transition-transform">
+            ▼
+          </span>
         </summary>
-        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-green-50 rounded border-l-4 border-green-500">{problema.solución}</p>
+        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-green-50 rounded border-l-4 border-green-500">
+          {problema.solución}
+        </p>
       </details>
-      
+
       {/* Resolución de ejemplo */}
       <details className="group">
         <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 bg-blue-100 p-2 rounded-lg">
           <span>🎯</span> Cómo se resolvería
-          <span className="ml-auto group-open:rotate-180 transition-transform">▼</span>
+          <span className="ml-auto group-open:rotate-180 transition-transform">
+            ▼
+          </span>
         </summary>
-        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-blue-50 rounded border-l-4 border-blue-500">{problema["resolución de ejemplo"]}</p>
+        <p className="font-body text-xs md:text-sm mt-2 p-3 bg-blue-50 rounded border-l-4 border-blue-500">
+          {problema["resolución de ejemplo"]}
+        </p>
       </details>
     </div>
   );
 }
 
 // Swipeable component for Problemas on mobile
-function ProblemasSwipeable({ 
-  problemas, 
-  currentIndex, 
-  setCurrentIndex 
-}: { 
-  problemas: Problema[]; 
-  currentIndex: number; 
+function ProblemasSwipeable({
+  problemas,
+  currentIndex,
+  setCurrentIndex,
+}: {
+  problemas: Problema[];
+  currentIndex: number;
   setCurrentIndex: (fn: (i: number) => number) => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -1031,11 +1241,11 @@ function ProblemasSwipeable({
 
   const onTouchEnd = useCallback(() => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe && currentIndex < problemas.length - 1) {
       setCurrentIndex((i) => i + 1);
     }
@@ -1050,16 +1260,16 @@ function ProblemasSwipeable({
       <p className="text-center font-body text-xs text-gray-500 flex items-center justify-center gap-1">
         <span>👆</span> Desliza para ver más problemas
       </p>
-      
+
       {/* Card container with touch events */}
-      <div 
+      <div
         ref={containerRef}
         className="overflow-hidden"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        <div 
+        <div
           className="transition-transform duration-300 ease-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
@@ -1072,7 +1282,7 @@ function ProblemasSwipeable({
           </div>
         </div>
       </div>
-      
+
       {/* Navigation dots */}
       <div className="flex justify-center items-center gap-3">
         <button
@@ -1088,22 +1298,24 @@ function ProblemasSwipeable({
               key={index}
               onClick={() => setCurrentIndex(() => index)}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-button-background-primary w-6' 
-                  : 'bg-button-background-secondary'
+                index === currentIndex
+                  ? "bg-button-background-primary w-6"
+                  : "bg-button-background-secondary"
               }`}
             />
           ))}
         </div>
         <button
           className="btn-secondary text-lg px-3 py-1 disabled:opacity-40"
-          onClick={() => setCurrentIndex((i) => Math.min(problemas.length - 1, i + 1))}
+          onClick={() =>
+            setCurrentIndex((i) => Math.min(problemas.length - 1, i + 1))
+          }
           disabled={currentIndex === problemas.length - 1}
         >
           ›
         </button>
       </div>
-      
+
       {/* Current position text */}
       <p className="text-center font-body text-sm text-subtitle">
         {currentIndex + 1} de {problemas.length}
