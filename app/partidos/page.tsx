@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
+import { useRouter } from "next/navigation";
 import { PARTIES, Party, PartyDetail, Problema, Eje } from "../lib/parties";
 
 const flagMap: Record<string, string> = {
@@ -266,6 +267,7 @@ export default function PartidosPage() {
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState<Party | null>(null);
   const [detailState, setDetailState] = useState<{detail: PartyDetail | null, loading: boolean}>({detail: null, loading: false});
+  const router = useRouter();
   const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
   const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
   const [viewMode, setViewMode] = useState<'ejes' | 'problemas'>('ejes');
@@ -592,6 +594,19 @@ export default function PartidosPage() {
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/PLAN%20GOBIERNO.pdf`} target="_blank" className="btn-secondary text-sm">📑 Plan Gobierno</a>
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/HOJA%20DE%20CANDIDATOS.pdf`} target="_blank" className="btn-secondary text-sm">👥 Hoja de Candidatos</a>
                       <button className="btn-secondary text-sm opacity-60 cursor-not-allowed" disabled>⚖️ Comparar - Próximamente</button>
+                    </div>
+                    <div className="mt-3 flex justify-end">
+                      <button
+                        className="btn-primary text-sm"
+                        onClick={() => {
+                          const partidoQuery = detailState.detail?.partido || selected?.name;
+                          if (partidoQuery) {
+                            router.push(`/entrevistas?partido=${encodeURIComponent(partidoQuery)}`);
+                          }
+                        }}
+                      >
+                        🎤 Ver Entrevistas
+                      </button>
                     </div>
                   </div>
                 </div>
