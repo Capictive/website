@@ -3,6 +3,7 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState, Suspense, useMemo } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Nav from "../components/Nav";
 import Link from "next/link";
 import Image from "next/image";
@@ -198,8 +199,21 @@ function EntrevistasContent() {
                             prose-ul:list-disc prose-ol:list-decimal
                             prose-blockquote:border-l-4 prose-blockquote:border-button-background-primary prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg
                         ">
-                             <ReactMarkdown>
-                                {selectedEntrevista.titulo_ia}
+                             <ReactMarkdown 
+                                remarkPlugins={[remarkGfm]}
+                                components={{
+                                    // Override basic elements to ensure styles are applied if prose fails specific inheritance
+                                    h1: ({node, ...props}) => <h1 className="font-title text-3xl font-bold text-subtitle mb-4 mt-6" {...props} />,
+                                    h2: ({node, ...props}) => <h2 className="font-title text-2xl font-bold text-subtitle mb-3 mt-5" {...props} />,
+                                    h3: ({node, ...props}) => <h3 className="font-title text-xl font-bold text-subtitle mb-2 mt-4" {...props} />,
+                                    p: ({node, ...props}) => <p className="font-body text-subtitle/90 leading-relaxed mb-4" {...props} />,
+                                    ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-4 space-y-1" {...props} />,
+                                    ol: ({node, ...props}) => <ol className="list-decimal pl-5 mb-4 space-y-1" {...props} />,
+                                    li: ({node, ...props}) => <li className="font-body text-subtitle/90 pl-1" {...props} />,
+                                    blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-button-background-primary bg-gray-50 p-4 rounded-r-lg italic text-subtitle/80 my-4" {...props} />,
+                                }}
+                             >
+                                {selectedEntrevista.titulo_ia ? selectedEntrevista.titulo_ia.replace(/\\n/g, '\n') : ""}
                              </ReactMarkdown>
                         </div>
                     </div>
