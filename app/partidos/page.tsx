@@ -645,6 +645,8 @@ export default function PartidosPage() {
                       <a href={`https://files.capictive.app/Partidos%20Politicos/${encodeURIComponent(detailState.detail.partido)}/HOJA%20DE%20CANDIDATOS.pdf`} target="_blank" className="btn-secondary text-sm">👥 Hoja de Candidatos</a>
                       <button className="btn-secondary text-sm opacity-60 cursor-not-allowed" disabled>⚖️ Comparar - Próximamente</button>
                     </div>
+                    {/* Entrevistas navigation button (SPA-safe) */}
+                    <EntrevistasButton partido={detailState.detail.partido} />
                   </div>
                 </div>
                  {/* Toggle: Ejes / Problemas */}
