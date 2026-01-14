@@ -3,6 +3,11 @@ import Image from "next/image";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
+
+import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+
+const EntrevistasList = dynamic(() => import("../components/EntrevistasList"), { ssr: false });
 import { PARTIES, Party, PartyDetail, Problema, Eje } from "../lib/parties";
 
 const flagMap: Record<string, string> = {
@@ -595,7 +600,20 @@ export default function PartidosPage() {
                     </div>
                   </div>
                 </div>
-                 {/* Toggle: Ejes / Problemas */}
+                {/* Botón para ver entrevistas */}
+                <div className="border-t pt-4 flex justify-end">
+                  <button
+                    className="btn-primary text-sm"
+                    onClick={() => {
+                      if (detailState.detail?.partido) {
+                        window.location.href = `/entrevistas/${encodeURIComponent(detailState.detail.partido)}`;
+                      }
+                    }}
+                  >
+                    🎤 Ver Entrevistas
+                  </button>
+                </div>
+                {/* Toggle: Ejes / Problemas */}
                 <div className="space-y-4">
                   {/* Toggle buttons */}
                   <div className="tour-toggle-ejes flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1 border-2 border-subtitle/30">
