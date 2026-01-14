@@ -9,6 +9,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { PARTIES } from "../lib/parties";
 
+// --- FIX PARA LIBRERIAS (Evita el error de "object" en algunos entornos) ---
+const MD = (ReactMarkdown as any).default || ReactMarkdown;
+const GFM = (remarkGfm as any).default || remarkGfm;
+
 interface Entrevista {
   id: number;
   entrevista_id: string;
@@ -210,33 +214,53 @@ function EntrevistasContent() {
                 {/* CONTENIDO MARKDOWN */}
                 <article className="bg-white rounded-2xl shadow-xl overflow-hidden border border-subtitle/10">
                     <div className="p-6 md:p-10">
-                        <div className="prose prose-stone prose-lg max-w-none 
-                            prose-headings:font-title prose-headings:text-subtitle 
-                            prose-h1:text-3xl prose-h1:font-bold prose-h1:mb-6
-                            prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4
-                            prose-h3:text-xl prose-h3:font-semibold
-                            prose-p:font-body prose-p:text-subtitle/90 prose-p:leading-relaxed
-                            prose-strong:font-bold prose-strong:text-subtitle
-                            prose-li:font-body prose-li:text-subtitle/90
-                            prose-ul:list-disc prose-ol:list-decimal
-                            prose-blockquote:border-l-4 prose-blockquote:border-button-background-primary prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg
-                        ">
-                             <ReactMarkdown 
-                                remarkPlugins={[remarkGfm]}
+                        {/* 
+                            Usamos una estructura similar al playground provisto por el usuario:
+                            - MD component con remarkPlugins
+                            - Componentes manuales para asegurar estilos Tailwind
+                        */}
+                        <div className="font-body text-subtitle">
+                             <MD 
+                                remarkPlugins={[GFM]}
                                 components={{
-                                    // Override basic elements to ensure styles are applied if prose fails specific inheritance
-                                    h1: ({node, ...props}) => <h1 className="font-title text-3xl font-bold text-subtitle mb-4 mt-6" {...props} />,
-                                    h2: ({node, ...props}) => <h2 className="font-title text-2xl font-bold text-subtitle mb-3 mt-5" {...props} />,
-                                    h3: ({node, ...props}) => <h3 className="font-title text-xl font-bold text-subtitle mb-2 mt-4" {...props} />,
-                                    p: ({node, ...props}) => <p className="font-body text-subtitle/90 leading-relaxed mb-4" {...props} />,
-                                    ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-4 space-y-1" {...props} />,
-                                    ol: ({node, ...props}) => <ol className="list-decimal pl-5 mb-4 space-y-1" {...props} />,
-                                    li: ({node, ...props}) => <li className="font-body text-subtitle/90 pl-1" {...props} />,
-                                    blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-button-background-primary bg-gray-50 p-4 rounded-r-lg italic text-subtitle/80 my-4" {...props} />,
+                                    // Títulos
+                                    h1: ({node, ...props}: any) => <h1 className="font-title text-3xl font-bold text-subtitle mb-4 mt-6 border-b border-subtitle/10 pb-2" {...props} />,
+                                    h2: ({node, ...props}: any) => <h2 className="font-title text-2xl font-bold text-subtitle/90 mb-3 mt-8" {...props} />,
+                                    h3: ({node, ...props}: any) => <h3 className="font-title text-xl font-bold text-button-background-primary mb-2 mt-6" {...props} />,
+                                    
+                                    // Texto y Listas
+                                    p: ({node, ...props}: any) => <p className="font-body text-subtitle/80 mb-4 leading-relaxed text-base" {...props} />,
+                                    ul: ({node, ...props}: any) => <ul className="list-disc list-inside text-subtitle/80 mb-4 pl-2 space-y-1" {...props} />,
+                                    ol: ({node, ...props}: any) => <ol className="list-decimal list-inside text-subtitle/80 mb-4 pl-2 space-y-1" {...props} />,
+                                    li: ({node, ...props}: any) => <li className="pl-1 marker:text-button-background-primary" {...props} />,
+                                    
+                                    // Citas / Blockquotes
+                                    blockquote: ({node, ...props}: any) => <blockquote className="border-l-4 border-button-background-primary pl-4 py-2 my-6 text-subtitle/70 italic bg-button-background-secondary/10 rounded-r-lg" {...props} />,
+                                    
+                                    // Tablas
+                                    table: ({node, ...props}: any) => <div className="overflow-x-auto my-6 rounded-lg border border-subtitle/20"><table className="w-full text-left border-collapse" {...props} /></div>,
+                                    th: ({node, ...props}: any) => <th className="bg-button-background-secondary/30 p-3 font-bold text-subtitle border-b border-subtitle/20" {...props} />,
+                                    td: ({node, ...props}: any) => <td className="p-3 border-b border-subtitle/10 text-sm text-subtitle/80" {...props} />,
+                                    
+                                    // Código
+                                    code: ({node, inline, ...props}: any) => (
+                                        inline 
+                                          ? <code className="bg-gray-100 text-button-background-primary px-1.5 py-0.5 rounded text-sm font-mono border border-gray-200" {...props} />
+                                          : <code className="block bg-gray-900 p-4 rounded-lg text-xs text-gray-100 font-mono my-4 overflow-x-auto border border-gray-800" {...props} />
+                                    ),
+                                    
+                                    // Separador
+                                    hr: ({node, ...props}: any) => <hr className="my-8 border-subtitle/20" {...props} />,
+                                    
+                                    // Links
+                                    a: ({node, ...props}: any) => <a className="text-button-background-primary hover:underline font-semibold" target="_blank" rel="noopener noreferrer" {...props} />,
+                                    
+                                    // Negritas
+                                    strong: ({node, ...props}: any) => <strong className="font-bold text-subtitle" {...props} />,
                                 }}
                              >
                                 {cleanMarkdown(selectedEntrevista.titulo_ia)}
-                             </ReactMarkdown>
+                             </MD>
                         </div>
                     </div>
                 </article>
