@@ -601,18 +601,24 @@ export default function PartidosPage() {
                   </div>
                 </div>
                 {/* Botón para ver entrevistas */}
-                <div className="border-t pt-4 flex justify-end">
-                  <button
-                    className="btn-primary text-sm"
-                    onClick={() => {
-                      if (detailState.detail?.partido) {
-                        window.location.href = `/entrevistas/${encodeURIComponent(detailState.detail.partido)}`;
-                      }
-                    }}
-                  >
-                    🎤 Ver Entrevistas
-                  </button>
-                </div>
+                <EntrevistasButton partido={detailState.detail?.partido} />
+
+// ...
+
+function EntrevistasButton({ partido }: { partido?: string }) {
+  const router = useRouter();
+  if (!partido) return null;
+  return (
+    <div className="border-t pt-4 flex justify-end">
+      <button
+        className="btn-primary text-sm"
+        onClick={() => router.push(`/entrevistas/${encodeURIComponent(partido)}`)}
+      >
+        🎤 Ver Entrevistas
+      </button>
+    </div>
+  );
+}
                 {/* Toggle: Ejes / Problemas */}
                 <div className="space-y-4">
                   {/* Toggle buttons */}
