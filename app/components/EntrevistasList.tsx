@@ -18,6 +18,9 @@ export default function EntrevistasList({ partido }: { partido: string }) {
   const [entrevistas, setEntrevistas] = useState<Entrevista[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     setLoading(true);
@@ -36,6 +39,8 @@ export default function EntrevistasList({ partido }: { partido: string }) {
         setLoading(false);
       });
   }, [partido]);
+
+  if (!mounted) return null;
 
   if (loading) return <div className="font-body">Cargando entrevistas...</div>;
   if (error) return <div className="font-body text-red-600">{error}</div>;
