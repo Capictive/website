@@ -262,15 +262,15 @@ const CustomTooltip = ({
   </div>
 );
 
-function EntrevistasButton({ partido }: { partido?: string }) {
+function EntrevistasButton({ partido, id }: { partido?: string; id?: string }) {
   const router = useRouter();
-  if (!partido) return null;
+  if (!id) return null;
   return (
     <div className="border-t pt-4 flex justify-end">
       <button
         className="btn-primary text-sm"
         onClick={() =>
-          router.push(`/entrevistas/${encodeURIComponent(partido)}`)
+          router.push(`/entrevistas/${encodeURIComponent(id)}`)
         }
       >
         🎤 Ver Entrevistas
@@ -710,7 +710,7 @@ export default function PartidosPage() {
                 </div>
               </div>
               {/* Botón para ver entrevistas */}
-              <EntrevistasButton partido={detailState.detail?.partido} />
+              <EntrevistasButton partido={detailState.detail?.partido} id={selected.id} />
               {/* Toggle: Ejes / Problemas */}
               <div className="space-y-4">
                 {/* Toggle buttons */}
