@@ -91,10 +91,32 @@ function EntrevistasContent() {
   // Helper to extract clean youtube ID
   const getYoutubeId = (urlOrId: string) => {
       if (!urlOrId) return "";
+      // If it's already an ID (11 chars, alphanumeric, dash, underscore)
+      if (/^[a-zA-Z0-9_-]{11}$/.test(urlOrId)) {
+        return urlOrId;
+      }
       // If it looks like a URL, try to extract ID
       const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
       const match = urlOrId.match(regExp);
-      return (match && match[2].length === 11) ? match[2] : urlOrId;
+      return (match && match[2].length === 11) ? match[2] : ""; // Return empty if extraction fails
+  };
+
+  const cleanMarkdown = (text: string) => {
+    if (!text) return "";
+    let clean = text;
+    
+    // Replace literal escaped newlines that might come from JSON
+    clean = clean.replace(/\\n/g, '\n');
+    
+    // Heuristic: Add newlines before headers if they are missing
+    // e.g. "Content ## Header" -> "Content\n\n## Header"
+    clean = clean.replace(/([^\n])\s*(#{1,3}\s)/g, '$1\n\n$2');
+    
+    // Heuristic: Add newlines before numbered lists if missing
+    // e.g. "Text 1. Item" -> "Text\n1. Item"
+    clean = clean.replace(/([^\n])\s+(\d+\.\s)/g, '$1\n$2');
+
+    return clean;
   };
 
   return (
@@ -213,7 +235,7 @@ function EntrevistasContent() {
                                     blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-button-background-primary bg-gray-50 p-4 rounded-r-lg italic text-subtitle/80 my-4" {...props} />,
                                 }}
                              >
-                                {selectedEntrevista.titulo_ia ? selectedEntrevista.titulo_ia.replace(/\\n/g, '\n') : ""}
+                                {cleanMarkdown(selectedEntrevista.titulo_ia)}
                              </ReactMarkdown>
                         </div>
                     </div>
