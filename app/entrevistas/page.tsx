@@ -1,14 +1,14 @@
-"use client";
-
 import { notFound } from "next/navigation";
-import { useSearchParams } from "next/navigation";
-import dynamic from "next/dynamic";
+import EntrevistasList from "../components/EntrevistasList";
 
-const EntrevistasList = dynamic(() => import("../components/EntrevistasList"), { ssr: false });
+export const dynamic = 'force-dynamic';
 
-export default function EntrevistasPage() {
-  const searchParams = useSearchParams();
-  const partido = decodeURIComponent(searchParams.get("partido") || "");
+export default function EntrevistasPage({
+  searchParams,
+}: {
+  searchParams: { partido?: string };
+}) {
+  const partido = decodeURIComponent(searchParams.partido || "");
   if (!partido) return notFound();
   return (
     <main className="max-w-3xl mx-auto py-8 px-4">
