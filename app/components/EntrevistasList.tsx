@@ -35,6 +35,7 @@ export default function EntrevistasList({ partido }: { partido: string }) {
         setLoading(false);
       })
       .catch((err) => {
+        console.error("Error fetching entrevistas:", err);
         setError(err.message);
         setLoading(false);
       });
