@@ -47,7 +47,7 @@ const CustomInterviewRenderer = ({ content }: { content: string }) => {
 
   // --- 3. Extract GENERAL EVALUATION ---
   const evalMatch = content.match(/## Evaluación general de coherencia([\s\S]*?)(?:> \*\*Nota|$)/);
-  let evaluationText = evalMatch ? evalMatch[1].trim() : "";
+  const evaluationText = evalMatch ? evalMatch[1].trim() : "";
   
   // Clean up bold markers in evaluation for cleaner custom rendering if needed
   // e.g. "**Nivel de coherencia observado:** ALTO" -> { label: "Nivel...", value: "ALTO" }
@@ -291,24 +291,6 @@ function EntrevistasContent() {
       return (match && match[2].length === 11) ? match[2] : ""; // Return empty if extraction fails
   };
 
-  const cleanMarkdown = (text: string) => {
-    if (!text) return "";
-    let clean = text;
-    
-    // Replace literal escaped newlines that might come from JSON
-    clean = clean.replace(/\\n/g, '\n');
-    
-    // Heuristic: Add newlines before headers if they are missing
-    // e.g. "Content ## Header" -> "Content\n\n## Header"
-    clean = clean.replace(/([^\n])\s*(#{1,3}\s)/g, '$1\n\n$2');
-    
-    // Heuristic: Add newlines before numbered lists if missing
-    // e.g. "Text 1. Item" -> "Text\n1. Item"
-    clean = clean.replace(/([^\n])\s+(\d+\.\s)/g, '$1\n$2');
-
-    return clean;
-  };
-
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
         {loading ? (
@@ -374,7 +356,7 @@ function EntrevistasContent() {
                                 <a 
                                     href={planGobiernoLink} 
                                     target="_blank" 
-                                    rel="noopener noreferrer"
+                                    rel="noopener"
                                     className="btn-primary flex items-center gap-2 text-center"
                                 >
                                     📄 Plan de Gobierno
