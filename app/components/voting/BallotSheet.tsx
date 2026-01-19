@@ -421,13 +421,13 @@ export default function BallotSheet() {
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-[#e7e0d7] flex gap-3 z-50 shadow-lg">
         <button
           onClick={() => setShowSummary(false)}
-          className="flex-1 py-3 bg-[#e7e0d7] font-bold text-[#8a6957] rounded-xl flex justify-center items-center gap-2"
+          className="flex-1 py-3 bg-[#e7e0d7]  cursor-pointer font-bold text-[#8a6957] rounded-xl flex justify-center items-center gap-2"
         >
           <RotateCcw size={18} /> Volver
         </button>
         <button
           onClick={exportBallot}
-          className="flex-[2] py-3 bg-[#b9832c] text-white font-bold rounded-xl flex justify-center items-center gap-2 shadow-lg"
+          className="flex-[2] py-3 bg-[#b9832c] cursor-pointer text-white font-bold rounded-xl flex justify-center items-center gap-2 shadow-lg"
         >
           <Share2 size={18} /> DESCARGAR
         </button>
@@ -643,18 +643,18 @@ export default function BallotSheet() {
                   >
                     {/* NAME SECTION */}
                     <div
-                      className="flex items-center justify-start overflow-hidden p-2 lg:justify-center lg:text-center lg:border-r-0 lg:border-b"
+                      className="flex items-center justify-start p-3 overflow-hidden  lg:justify-center lg:text-center lg:border-r-0 lg:border-b"
                       style={{
-                        flex: isMobile ? 1 : "0 0 45px",
+                        flex: isMobile ? 1 : "0 0 12px",
                         borderRight: isMobile ? "1px solid #000000" : "none",
                         borderBottom: isMobile ? "none" : "1px solid #000000",
                       }}
                     >
                       <span
-                        className="font-bold leading-tight uppercase font-body"
+                        className="font-bold leading-tight p-2 uppercase font-body"
                         style={{
                           color: "#000000",
-                          fontSize: isMobile ? "14px" : "12px",
+                          fontSize: isMobile ? "14px" : "10px",
                           display: "-webkit-box",
                           WebkitLineClamp: isMobile ? 4 : 2,
                           WebkitBoxOrient: "vertical",
@@ -666,9 +666,9 @@ export default function BallotSheet() {
                     </div>
 
                     {/* IMAGES SECTION */}
-                    <div className="flex flex-1">
+                    <div className="flex flex-1 relative">
                       <div
-                        className="relative flex items-center justify-center overflow-hidden"
+                        className="relative flex items-center justify-center overflow-hidden "
                         style={{
                           width: isMobile ? "96px" : "50%",
                           borderRight: "1px solid #000000",
@@ -678,7 +678,7 @@ export default function BallotSheet() {
                         }}
                       >
                         {party.portrait ? (
-                          <div className="relative w-full h-full">
+                          <div className="absolute inset-0 w-full h-full">
                             <img
                               src={party.portrait}
                               alt="foto"
@@ -690,22 +690,30 @@ export default function BallotSheet() {
                             FOTO
                           </span>
                         )}
-                        {isSelected && <HandwrittenX />}
+                        {isSelected && (
+                          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <HandwrittenX />
+                          </div>
+                        )}
                       </div>
                       <div
-                        className="relative flex items-center justify-center p-2"
+                        className="relative flex items-center justify-center p-2 overflow-hidden"
                         style={{
                           width: isMobile ? "96px" : "50%",
                         }}
                       >
-                        <div className="w-full h-full relative">
+                        <div className="absolute inset-0 w-full h-full mt-3">
                           <img
                             src={party.logo}
                             alt="symbol"
                             className="w-full h-4/5 object-contain"
                           />
                         </div>
-                        {isSelected && <CrossMark />}
+                        {isSelected && (
+                          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <CrossMark />
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
