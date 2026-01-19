@@ -39,6 +39,13 @@ export type Problema = {
     "resolución de ejemplo": string;
 };
 
+export type Escandalo = {
+    titulo: string;
+    información: string;
+    involucrados: string[];
+    fuentes: string[];
+};
+
 export type PartyDetail = {
     partido: string;
     slogan_detectado: string;

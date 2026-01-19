@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
-import { PARTIES, Party, PartyDetail, Problema, Eje } from "../lib/parties";
+import { PARTIES, Party, PartyDetail, Problema, Eje, Escandalo } from "../lib/parties";
 
 const flagMap: Record<string, string> = {
   // --- NORTEAMÉRICA ---
@@ -262,14 +262,29 @@ async function fetchPartyDetail(partyName: string): Promise<PartyDetail | null> 
   }
 }
 
+async function fetchPartyScandals(partyName: string): Promise<Escandalo[] | null> {
+  try {
+    const encodedName = encodeURIComponent(partyName);
+    const res = await fetch(`https://controver.capictive.app?partido=${encodedName}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.escandalos || [];
+  } catch (error) {
+    console.error("Error fetching party scandals:", error);
+    return null;
+  }
+}
+
 export default function PartidosPage() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState<Party | null>(null);
   const [detailState, setDetailState] = useState<{detail: PartyDetail | null, loading: boolean}>({detail: null, loading: false});
+  const [scandalsState, setScandalsState] = useState<{scandals: Escandalo[] | null, loading: boolean}>({scandals: null, loading: false});
   const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
   const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
-  const [viewMode, setViewMode] = useState<'ejes' | 'problemas'>('ejes');
+  const [currentEscandaloIndex, setCurrentEscandaloIndex] = useState(0);
+  const [viewMode, setViewMode] = useState<'ejes' | 'problemas' | 'escandalos'>('ejes');
   const detailArticleRef = useRef<HTMLElement>(null);
 
   // Estado del tour
@@ -374,14 +389,19 @@ export default function PartidosPage() {
   useEffect(() => {
     if (selected) {
       setDetailState({detail: null, loading: true});
+      setScandalsState({scandals: null, loading: true});
       setCurrentEjeIndex(0);
       setCurrentProblemaIndex(0);
+      setCurrentEscandaloIndex(0);
       setViewMode('ejes');
       fetchPartyDetail(selected.name).then((data) => setDetailState({detail: data, loading: false}));
+      fetchPartyScandals(selected.name).then((data) => setScandalsState({scandals: data, loading: false}));
     } else {
       setDetailState({detail: null, loading: false});
+      setScandalsState({scandals: null, loading: false});
       setCurrentEjeIndex(0);
       setCurrentProblemaIndex(0);
+      setCurrentEscandaloIndex(0);
     }
   }, [selected]);
 
@@ -605,10 +625,10 @@ export default function PartidosPage() {
                  {/* Toggle: Ejes / Problemas */}
                 <div className="space-y-4">
                   {/* Toggle buttons */}
-                  <div className="tour-toggle-ejes flex items-center justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1 border-2 border-subtitle/30">
+                  <div className="tour-toggle-ejes flex flex-col sm:flex-row items-stretch justify-center gap-2 bg-button-background-secondary/20 rounded-lg p-1 border-2 border-subtitle/30">
                     <button
                       onClick={() => setViewMode('ejes')}
-                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
+                      className={`flex-1 py-2 px-2 rounded-md font-body text-sm font-semibold transition-all border-2 ${
                         viewMode === 'ejes' 
                           ? 'bg-button-background-primary text-white shadow-md border-button-background-primary' 
                           : 'text-subtitle hover:bg-button-background-secondary/30 border-transparent'
@@ -618,13 +638,23 @@ export default function PartidosPage() {
                     </button>
                     <button
                       onClick={() => setViewMode('problemas')}
-                      className={`flex-1 py-2 px-4 rounded-md font-body text-sm font-semibold transition-all border-2 ${
+                      className={`flex-1 py-2 px-2 rounded-md font-body text-sm font-semibold transition-all border-2 ${
                         viewMode === 'problemas' 
                           ? 'bg-button-background-primary text-white shadow-md border-button-background-primary' 
                           : 'text-subtitle hover:bg-button-background-secondary/30 border-transparent'
                       }`}
                     >
-                      ⚠️ Problemas Identificados
+                      ⚠️ Problemas
+                    </button>
+                    <button
+                      onClick={() => setViewMode('escandalos')}
+                      className={`flex-1 py-2 px-2 rounded-md font-body text-sm font-semibold transition-all border-2 ${
+                        viewMode === 'escandalos' 
+                          ? 'bg-red-600 text-white shadow-md border-red-600' 
+                          : 'text-subtitle hover:bg-red-50 border-transparent hover:text-red-700'
+                      }`}
+                    >
+                      🚨 Escándalos
                     </button>
                   </div>
                   
@@ -666,7 +696,7 @@ export default function PartidosPage() {
                         <p className="text-center font-body text-sm mt-3">{currentEjeIndex + 1} de {detailState.detail.ejes.length}</p>
                       </div>
                     </>
-                  ) : (
+                  ) : viewMode === 'problemas' ? (
                     <>
                       {detailState.detail.problemas && detailState.detail.problemas.length > 0 ? (
                         <>
@@ -709,6 +739,54 @@ export default function PartidosPage() {
                           <p className="font-body text-subtitle">No hay problemas identificados para este partido.</p>
                         </div>
                       )}
+                    </>
+                  ) : (
+                    <>
+                       {scandalsState.loading ? (
+                          <div className="text-center py-12">
+                             <div className="inline-block animate-spin text-4xl mb-2">🔄</div>
+                             <p className="font-body text-subtitle">Investigando escándalos...</p>
+                          </div>
+                       ) : scandalsState.scandals && scandalsState.scandals.length > 0 ? (
+                          <>
+                             {/* Mobile Swipeable */}
+                             <div className="md:hidden">
+                                <EscandalosSwipeable 
+                                   escandalos={scandalsState.scandals}
+                                   currentIndex={currentEscandaloIndex}
+                                   setCurrentIndex={setCurrentEscandaloIndex}
+                                />
+                             </div>
+                             {/* Desktop */}
+                             <div className="hidden md:block">
+                                <div className="flex items-center gap-4">
+                                  <button
+                                    className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                                    onClick={() => setCurrentEscandaloIndex((i) => Math.max(0, i - 1))}
+                                    disabled={currentEscandaloIndex === 0}
+                                  >
+                                    ‹
+                                  </button>
+                                  <div className="flex-1">
+                                    <EscandaloCard escandalo={scandalsState.scandals[currentEscandaloIndex]} />
+                                  </div>
+                                  <button
+                                    className="btn-secondary text-2xl flex-shrink-0 disabled:opacity-40"
+                                    onClick={() => setCurrentEscandaloIndex((i) => Math.min(scandalsState.scandals!.length - 1, i + 1))}
+                                    disabled={currentEscandaloIndex === scandalsState.scandals.length - 1}
+                                  >
+                                    ›
+                                  </button>
+                                </div>
+                                <p className="text-center font-body text-sm mt-3">{currentEscandaloIndex + 1} de {scandalsState.scandals.length}</p>
+                             </div>
+                          </>
+                       ) : (
+                          <div className="text-center py-8 border rounded-xl bg-green-50">
+                             <span className="text-4xl mb-2 block">✅</span>
+                             <p className="font-body text-subtitle">No se han registrado escándalos mayores o no hay información disponible.</p>
+                          </div>
+                       )}
                     </>
                   )}
                 </div>
@@ -1090,6 +1168,165 @@ function ProblemasSwipeable({
       {/* Current position text */}
       <p className="text-center font-body text-sm text-subtitle">
         {currentIndex + 1} de {problemas.length}
+      </p>
+    </div>
+  );
+}
+
+// Component for individual Escandalo Card
+function EscandaloCard({ escandalo }: { escandalo: Escandalo }) {
+  return (
+    <div className="border rounded-xl p-4 md:p-5 space-y-4 shadow-lg bg-white border-red-100">
+      {/* Title Header */}
+      <div className="flex items-start gap-3">
+        <span className="text-3xl">🚨</span>
+        <div className="flex-1">
+          <h4 className="font-title text-subtitle text-lg md:text-xl font-bold text-red-700">{escandalo.titulo}</h4>
+        </div>
+      </div>
+      
+      {/* Information */}
+      <div className="bg-red-50/50 p-4 rounded-lg border-l-4 border-red-500">
+        <p className="font-body text-sm text-subtitle leading-relaxed">{escandalo.información}</p>
+      </div>
+      
+      {/* Involucrados */}
+      {escandalo.involucrados && escandalo.involucrados.length > 0 && (
+         <div className="space-y-2">
+           <p className="font-body text-xs uppercase font-bold text-subtitle/70">Involucrados:</p>
+           <div className="flex flex-wrap gap-2">
+             {escandalo.involucrados.map((persona, i) => (
+               <span key={i} className="px-2 py-1 bg-gray-100 rounded text-xs font-body font-medium text-gray-700 border border-gray-200">
+                 👤 {persona}
+               </span>
+             ))}
+           </div>
+         </div>
+      )}
+
+      {/* Fuentes */}
+      {escandalo.fuentes && escandalo.fuentes.length > 0 && (
+        <details className="group">
+          <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+            <span>🔗</span> Ver fuentes ({escandalo.fuentes.length})
+            <span className="ml-auto group-open:rotate-180 transition-transform text-gray-400">▼</span>
+          </summary>
+          <div className="mt-2 space-y-2 p-2 bg-gray-50 rounded text-xs break-all">
+            {escandalo.fuentes.map((fuente, i) => (
+               <a key={i} href={fuente} target="_blank" rel="noopener noreferrer" className="block text-blue-500 hover:underline">
+                 {fuente}
+               </a>
+            ))}
+          </div>
+        </details>
+      )}
+    </div>
+  );
+}
+
+// Swipeable component for Escandalos on mobile
+function EscandalosSwipeable({ 
+  escandalos, 
+  currentIndex, 
+  setCurrentIndex 
+}: { 
+  escandalos: Escandalo[]; 
+  currentIndex: number; 
+  setCurrentIndex: (fn: (i: number) => number) => void;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  }, []);
+
+  const onTouchMove = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }, []);
+
+  const onTouchEnd = useCallback(() => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe && currentIndex < escandalos.length - 1) {
+      setCurrentIndex((i) => i + 1);
+    }
+    if (isRightSwipe && currentIndex > 0) {
+      setCurrentIndex((i) => i - 1);
+    }
+  }, [touchStart, touchEnd, currentIndex, escandalos.length, setCurrentIndex]);
+
+  return (
+    <div className="space-y-3">
+      {/* Swipe instruction */}
+      <p className="text-center font-body text-xs text-gray-500 flex items-center justify-center gap-1">
+        <span>👆</span> Desliza para ver más escándalos
+      </p>
+      
+      {/* Card container with touch events */}
+      <div 
+        ref={containerRef}
+        className="overflow-hidden"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
+        <div 
+          className="transition-transform duration-300 ease-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          <div className="flex">
+            {escandalos.map((escandalo, index) => (
+              <div key={index} className="w-full flex-shrink-0 px-1">
+                <EscandaloCard escandalo={escandalo} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      {/* Navigation dots */}
+      <div className="flex justify-center items-center gap-3">
+        <button
+          className="btn-secondary text-lg px-3 py-1 disabled:opacity-40"
+          onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
+          disabled={currentIndex === 0}
+        >
+          ‹
+        </button>
+        <div className="flex gap-2">
+          {escandalos.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(() => index)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'bg-red-600 w-6' 
+                  : 'bg-button-background-secondary'
+              }`}
+            />
+          ))}
+        </div>
+        <button
+          className="btn-secondary text-lg px-3 py-1 disabled:opacity-40"
+          onClick={() => setCurrentIndex((i) => Math.min(escandalos.length - 1, i + 1))}
+          disabled={currentIndex === escandalos.length - 1}
+        >
+          ›
+        </button>
+      </div>
+      
+      {/* Current position text */}
+      <p className="text-center font-body text-sm text-subtitle">
+        {currentIndex + 1} de {escandalos.length}
       </p>
     </div>
   );
