@@ -5,6 +5,9 @@ import { useState, useEffect } from "react";
 import logo from "@/public/capictive.png";
 import Nav from "./components/Nav";
 import { ArrowRight } from "lucide-react";
+import { redirect } from "next/dist/server/api-utils";
+// import { navigate } from "next/dist/client/components/segment-cache/navigation";
+import { useRouter } from "next/navigation";
 
 const timelineEvents = [
   {
@@ -122,6 +125,7 @@ const partyLogos = [
 export default function Home() {
   const [logoIndex, setLogoIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -292,10 +296,10 @@ export default function Home() {
             gobierno de manera directa.
           </p>
           <button
-            className="btn-secondary text-sm w-fit font-body flex items-center gap-2 opacity-60 cursor-not-allowed"
-            disabled
+            onClick={() => router.push("/partidos")}
+            className="btn-secondary text-sm w-fit font-body flex items-center gap-2  "
           >
-            <span>Próximamente</span>
+            <span> Revisar Aquí</span>
             <span>🔜</span>
           </button>
         </article>
