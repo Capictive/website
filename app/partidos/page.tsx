@@ -285,7 +285,55 @@ export default function PartidosPage() {
   const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
   const [currentEscandaloIndex, setCurrentEscandaloIndex] = useState(0);
   const [viewMode, setViewMode] = useState<'ejes' | 'problemas' | 'escandalos'>('ejes');
+  const [blockedParties, setBlockedParties] = useState<string[]>([]);
+  
+  // Estado para el modal de bloqueo
+  const [partyToBlock, setPartyToBlock] = useState<string | null>(null);
+  const [showBlockModal, setShowBlockModal] = useState(false);
+
   const detailArticleRef = useRef<HTMLElement>(null);
+
+  // Cargar partidos bloqueados
+  useEffect(() => {
+    const stored = localStorage.getItem("blocked-parties");
+    if (stored) {
+      try {
+        setBlockedParties(JSON.parse(stored));
+      } catch (e) {
+        console.error("Error parsing blocked parties", e);
+      }
+    }
+  }, []);
+
+  // Función para iniciar el bloqueo
+  const initiateBlockParty = (e: React.MouseEvent, partyName: string) => {
+    e.stopPropagation(); // Evitar seleccionar el partido
+    setPartyToBlock(partyName);
+    setShowBlockModal(true);
+  };
+
+  // Confirmar bloqueo
+  const confirmBlockParty = () => {
+    if (partyToBlock) {
+      const newBlocked = [...blockedParties, partyToBlock];
+      setBlockedParties(newBlocked);
+      localStorage.setItem("blocked-parties", JSON.stringify(newBlocked));
+      
+      // Si el partido bloqueado estaba seleccionado, deseleccionar
+      if (selected?.name === partyToBlock) {
+        setSelected(null);
+      }
+      
+      closeBlockModal();
+    }
+  };
+
+  // Cerrar modal
+  const closeBlockModal = () => {
+    setPartyToBlock(null);
+    setShowBlockModal(false);
+  };
+
 
   // Estado del tour
   const [runTour, setRunTour] = useState<boolean>(false);
@@ -379,8 +427,8 @@ export default function PartidosPage() {
   const perPage = 5;
   const filtered = useMemo(() => {
     const q = query.toLowerCase();
-    return PARTIES.filter((p) => p.name.toLowerCase().includes(q));
-  }, [query]);
+    return PARTIES.filter((p) => p.name.toLowerCase().includes(q) && !blockedParties.includes(p.name));
+  }, [query, blockedParties]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
   const safePage = Math.min(page, totalPages - 1);
@@ -508,22 +556,40 @@ export default function PartidosPage() {
           <div className="mt-3">
             <div className="grid grid-cols-1 gap-3">
               {visible.map((p) => (
-                <button
+                <div
                   key={p.id}
-                  className={`card rounded-md border-2 w-full text-left transition-all duration-200 ${
+                  role="button"
+                  tabIndex={0}
+                  className={`card rounded-md border-2 w-full text-left transition-all duration-200 cursor-pointer flex items-center justify-between pr-2 ${
                     selected?.id === p.id 
                       ? "border-button-background-primary bg-button-background-primary/10 shadow-lg scale-105 ring-2 ring-button-background-primary/30" 
                       : "border-subtitle hover:border-button-background-primary/50 hover:shadow-md"
                   }`}
                   onClick={() => handlePartySelect(p)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      handlePartySelect(p);
+                    }
+                  }}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 p-3 flex-1">
                     <Image src={p.logo} alt={p.name} width={48} height={48} />
                     <span className={`font-body ${
                       selected?.id === p.id ? "text-button-background-primary font-bold" : "text-subtitle"
                     }`}>{p.name}</span>
                   </div>
-                </button>
+
+                  {/* Botón de bloquear */}
+                  <button
+                    onClick={(e) => initiateBlockParty(e, p.name)}
+                    className="p-2 text-subtitle/40 hover:text-button-background-primary hover:bg-button-background-secondary/50 rounded-full transition-colors"
+                    title="Bloquear partido (No ver más)"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                    </svg>
+                  </button>
+                </div>
               ))}
             </div>
           </div>
@@ -813,6 +879,45 @@ export default function PartidosPage() {
           }
         </article>
       </section>
+      {/* Modal de confirmación de bloqueo */}
+      {showBlockModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-subtitle/40 backdrop-blur-sm animate-fadeIn">
+          <div className="bg-primary-background rounded-2xl shadow-2xl max-w-md w-full p-6 animate-scaleIn border-2 border-subtitle">
+            <div className="flex flex-col items-center text-center space-y-4">
+              <div className="w-16 h-16 bg-button-background-secondary rounded-full flex items-center justify-center mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-button-background-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                </svg>
+              </div>
+              
+              <h3 className="text-xl font-bold font-title text-title">
+                ¿Bloquear a {partyToBlock}?
+              </h3>
+              
+              <p className="text-subtitle font-body text-sm">
+                Al confirmar, este partido desaparecerá de tu lista.
+                <br />
+                <span className="text-xs opacity-70 mt-2 block">(Podrás desbloquearlo borrando tus datos de navegación si cambias de opinión)</span>
+              </p>
+
+              <div className="flex gap-3 w-full mt-4">
+                <button
+                  onClick={closeBlockModal}
+                  className="flex-1 btn-secondary"
+                >
+                  Cancelar
+                </button>
+                <button
+                  onClick={confirmBlockParty}
+                  className="flex-1 btn-primary"
+                >
+                  Bloquear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

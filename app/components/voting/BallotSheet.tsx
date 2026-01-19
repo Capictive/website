@@ -219,9 +219,8 @@ export default function BallotSheet() {
   };
 
   // --- COMPONENTE DE RESUMEN (Shared) ---
-  const SummaryView = () => (
+  const renderSummary = () => (
     <div className="w-full pb-24">
-      {/* Usamos un contenedor centrado para la captura que no dependa de márgenes extraños */}
       <div className="flex justify-center">
         <div
           ref={summaryRef}
@@ -439,7 +438,7 @@ export default function BallotSheet() {
   // --- RENDER PRINCIPAL ---
 
   if (showSummary) {
-    return <SummaryView />;
+    return renderSummary();
   }
 
   // --- HEADER HELPER ---
@@ -512,14 +511,14 @@ export default function BallotSheet() {
           {/* New Desktop Summary Button */}
           <button
             onClick={() => setShowSummary(true)}
-            className="flex items-center gap-2 bg-[#e7e0d7] text-[#8a6957] px-6 py-3 rounded-full hover:opacity-90 transition-colors font-bold shadow-sm"
+            className="flex items-center gap-2 cursor-pointer bg-[#e7e0d7] text-[#8a6957] px-6 py-3 rounded-full hover:opacity-90 transition-colors font-bold shadow-sm"
           >
             <Eye size={18} /> Ver Resumen
           </button>
           <button
             onClick={exportBallot}
             disabled={isExporting}
-            className="flex items-center gap-2 text-white px-6 py-3 rounded-full hover:opacity-90 transition-colors font-bold shadow-lg transform duration-100 disabled:opacity-50"
+            className="flex items-center gap-2 cursor-pointer text-white px-6 py-3 rounded-full hover:opacity-90 transition-colors font-bold shadow-lg transform duration-100 disabled:opacity-50"
             style={{ backgroundColor: "#b9832c" }}
           >
             {isExporting ? (
