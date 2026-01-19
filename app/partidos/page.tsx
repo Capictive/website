@@ -650,7 +650,7 @@ export default function PartidosPage() {
                       onClick={() => setViewMode('escandalos')}
                       className={`flex-1 py-2 px-2 rounded-md font-body text-sm font-semibold transition-all border-2 ${
                         viewMode === 'escandalos' 
-                          ? 'bg-red-600 text-white shadow-md border-red-600' 
+                          ? 'bg-button-background-primary text-white shadow-md border-button-background-primary' 
                           : 'text-subtitle hover:bg-red-50 border-transparent hover:text-red-700'
                       }`}
                     >
@@ -1176,7 +1176,7 @@ function ProblemasSwipeable({
 // Component for individual Escandalo Card
 function EscandaloCard({ escandalo }: { escandalo: Escandalo }) {
   return (
-    <div className="border rounded-xl p-4 md:p-5 space-y-4 shadow-lg bg-white border-red-100">
+    <div className="border rounded-xl p-4 md:p-5 space-y-4 shadow-lg bg-white">
       {/* Title Header */}
       <div className="flex items-start gap-3">
         <span className="text-3xl">🚨</span>
@@ -1207,14 +1207,14 @@ function EscandaloCard({ escandalo }: { escandalo: Escandalo }) {
       {/* Fuentes */}
       {escandalo.fuentes && escandalo.fuentes.length > 0 && (
         <details className="group">
-          <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+          <summary className="font-body text-sm font-semibold cursor-pointer list-none flex items-center gap-2 text-subtitle hover:text-button-background-primary transition-colors">
             <span>🔗</span> Ver fuentes ({escandalo.fuentes.length})
             <span className="ml-auto group-open:rotate-180 transition-transform text-gray-400">▼</span>
           </summary>
           <div className="mt-2 space-y-2 p-2 bg-gray-50 rounded text-xs break-all">
             {escandalo.fuentes.map((fuente, i) => (
-               <a key={i} href={fuente} target="_blank" rel="noopener noreferrer" className="block text-blue-500 hover:underline">
-                 {fuente}
+               <a key={i} href={fuente} target="_blank" rel="noopener noreferrer" className="block text-subtitle hover:underline hover:text-button-background-primary">
+                 Link {i + 1}
                </a>
             ))}
           </div>
@@ -1309,7 +1309,7 @@ function EscandalosSwipeable({
               onClick={() => setCurrentIndex(() => index)}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                 index === currentIndex 
-                  ? 'bg-red-600 w-6' 
+                  ? 'bg-button-background-primary w-6' 
                   : 'bg-button-background-secondary'
               }`}
             />
