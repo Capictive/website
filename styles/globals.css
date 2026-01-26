@@ -26,11 +26,11 @@ main {
 }
 
 .nav-selected {
-  @apply cursor-pointer bg-button-background-primary py-2 text-white hover:bg-button-background-primary/85 duration-150
+  @apply cursor-pointer bg-button-background-primary py-2 text-white hover:bg-button-background-primary/85 duration-150;
 }
 
 .nav-unselected {
-  @apply cursor-pointer bg-button-background-secondary py-2  hover:bg-button-background-secondary/85 duration-150
+  @apply cursor-pointer bg-button-background-secondary py-2  hover:bg-button-background-secondary/85 duration-150;
 }
 .card {
   @apply p-6;
@@ -38,7 +38,8 @@ main {
 
 /* Animaciones para el mapa de candidatos */
 @keyframes pulse-region {
-  0%, 100% {
+  0%,
+  100% {
     filter: drop-shadow(0 0 4px rgba(185, 131, 44, 0.6));
   }
   50% {
@@ -47,7 +48,8 @@ main {
 }
 
 @keyframes glow-border {
-  0%, 100% {
+  0%,
+  100% {
     stroke-width: 1.5;
     stroke-opacity: 1;
   }
