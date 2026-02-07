@@ -1,0 +1,992 @@
+[
+  {
+    "nombre": "Ahora Nación",
+    "siglas": "AN",
+    "libertadEconomica": 4.5,
+    "libertadPersonal": 7.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 4.5,
+        "justificacion": "El partido propone una economía mixta con una fuerte intervención estratégica del Estado. Aunque reconoce al mercado como motor de crecimiento, enfatiza la planificación estatal, la redistribución de la riqueza y el rol del Estado como 'garante' y 'planificador'. Propone la creación de un Fondo Soberano de Riqueza y el fortalecimiento de empresas públicas de saneamiento y el Banco de la Nación.",
+        "evidencias": [
+          "Apoyamos el rol del mercado como motor de crecimiento, pero con intervención del Estado para garantizar equidad y sostenibilidad (p. 11).",
+          "Concebimos al Estado como garante del bienestar colectivo, especialmente de los más vulnerables y fomentamos políticas redistributivas que reduzcan la pobreza y la exclusión (p. 11).",
+          "Impulsar un crecimiento regional sostenido que reduzca las brechas territoriales... mediante un Estado planificador (p. 73, 77).",
+          "Generación de un FONDO SOBERANO DE RIQUEZA con excedentes fiscales y recursos de proyectos extractivos estratégicos (p. 80)."
+        ]
+      },
+      "personal": {
+        "calificacion": 7.5,
+        "justificacion": "Se alinea con una postura progresista y de libertades civiles amplias. El plan enfatiza la protección de derechos humanos bajo estándares internacionales, el enfoque de género transversal, la educación sexual integral y la lucha contra todo tipo de discriminación. Aunque es firme en seguridad ciudadana, lo hace desde un enfoque institucional y de respeto a los derechos fundamentales.",
+        "evidencias": [
+          "Ahora Nación reconoce la igualdad ante la ley de todos los hombres y mujeres del Perú, sin distinción de raza, género, nacionalidad, condición social o económica (p. 10).",
+          "Incorporando de manera transversal el enfoque de género, entendido como la igualdad entre hombres y mujeres, en todas las políticas públicas (p. 14).",
+          "Incorporar estrategias que privilegien el bienestar de los estudiantes... a través de una educación sexual (p. 23).",
+          "Garantizar el cumplimiento de las decisiones de la Corte IDH. Adoptar las medidas necesarias para adecuar la institucionalidad y el marco jurídico nacional a las exigencias del sistema internacional de protección de los derechos humanos (p. 62)."
+        ]
+      }
+    },
+    "cuadrante": "progresista",
+    "descripcion": "Ahora Nación se define explícitamente como una coalición de centro-izquierda. Su ideología combina un fuerte componente de justicia social y derechos civiles (progresismo social) con una economía regulada que busca la descentralización productiva y la industrialización dirigida por el Estado."
+  },
+  {
+    "nombre": "Alianza Electoral Venceremos",
+    "siglas": "Venceremos",
+    "libertadEconomica": 1.8,
+    "libertadPersonal": 8.2,
+    "analisis": {
+      "economico": {
+        "calificacion": 1.8,
+        "justificacion": "El plan propone un modelo de economía estatista y de planificación central, alejándose del libre mercado. Incluye la nacionalización de sectores estratégicos, la creación de empresas estatales en minería y la imposición de impuestos a las grandes fortunas, además de una regulación estricta sobre la banca y la propiedad privada de la tierra.",
+        "evidencias": [
+          "El Estado nacionalizará Telefónica del Perú (Integratel) y recuperará los activos estratégicos del sector telecomunicaciones.",
+          "Crearemos la Empresa Nacional de Minerales, siguiendo el modelo de CODELCO, a fin de hacer participe al estado peruano de la explotación de los recursos minerales.",
+          "Estableceremos un impuesto a las grandes fortunas —aplicable a patrimonios mayores a US$ 100 millones—.",
+          "Límite a la propiedad de la tierra agrícola y prohibición del latifundio y acaparamiento de tierras."
+        ]
+      },
+      "personal": {
+        "calificacion": 8.2,
+        "justificacion": "La alianza sostiene una postura de libertades civiles amplias, enfocándose en derechos reproductivos, derechos de la comunidad LGBTIQ+, educación laica y derechos colectivos de minorías étnicas. Sin embargo, su enfoque punitivo en seguridad (mega-cárceles) previene una calificación de libertarismo total.",
+        "evidencias": [
+          "Una maternidad elegida y una sociedad con cuidados y bienestar.",
+          "Atención diferenciada para adolescentes, jóvenes, mujeres y personas LGBTIQ+, respetando la autonomía, la diversidad cultural y los derechos sexuales y reproductivos.",
+          "El gobierno de ‘Venceremos’ reconocerá la educación como un derecho humano... y laica en todo el sistema.",
+          "Reconocer constitucionalmente los derechos colectivos de pueblos originarios, comunidades campesinas, andinas, amazónicas y afroperuanas."
+        ]
+      }
+    },
+    "cuadrante": "progresista",
+    "descripcion": "Coalición de izquierda radical que combina un fuerte intervencionismo estatal y nacionalismo económico con una agenda social progresista enfocada en derechos de minorías, laicismo y justicia social distributiva."
+  },
+  {
+  "nombre": "Avanza País - Partido de Integración Social",
+  "siglas": "AP",
+  "libertadEconomica": 8.2,
+  "libertadPersonal": 4.2,
+  "analisis": {
+    "economico": {
+      "calificacion": 8.2,
+      "justificacion": "El partido propone una orientación clara hacia el libre mercado, la privatización de empresas estatales ineficientes y la flexibilización laboral. Defiende un Estado limitado con enfoque en la eficiencia técnica, la promoción de la inversión privada mediante APPs y la reducción drástica de la carga regulatoria.",
+      "evidencias": [
+        "Nosotros defendemos: El Estado de derecho... el libre mercado, la propiedad privada, la libre empresa.",
+        "Diversas medidas tales como la venta de empresas estatales en falencia, como es el caso de Petroperú.",
+        "Expedición de un Nuevo Código del Trabajo y Previsión Social que simplificará los trámites, reducirá la presión tributaria razonablemente.",
+        "Implementar en los policlínicos y centros de nivel II y III... los contratos de Asociación Público – Privada 'Modelo de Gestión Bata Blanca'."
+      ]
+    },
+    "personal": {
+      "calificacion": 4.2,
+      "justificacion": "Aunque el ideario menciona la 'libertad individual' y el 'principio de no agresión', sus propuestas concretas tienen un fuerte sesgo de conservadurismo social y punitivismo estatal. Destaca la propuesta de restaurar la pena de muerte y el retiro de la CIDH, además de un enfoque familiar tradicionalista.",
+      "evidencias": [
+        "Iniciaremos también el proceso de retiro de la Corte Interamericana de Derechos humanos... para restaurar la pena de muerte.",
+        "Nuestro gobierno, desde su enfoque pro-familia, dará especial énfasis al binomio madre-niño.",
+        "Reduciremos la percepción de inseguridad con la incorporación de 60 mil efectivos policiales adicionales.",
+        "Fomento de la educación privada cuyos promotores sean tanto instituciones religiosas e instituciones laicas."
+      ]
+    }
+  },
+  "cuadrante": "conservador",
+  "descripcion": "Avanza País se define como una opción de centro-derecha que combina un liberalismo económico robusto (pro-mercado y pro-privatización) con una postura social conservadora y de 'mano dura' en seguridad. Su discurso apela a la libertad individual frente al Estado, pero prioriza el orden público y la soberanía jurídica nacional sobre los tratados internacionales de derechos humanos."
+},
+{
+  "nombre": "Partido Político Perú Acción",
+  "siglas": "Perú Acción",
+  "libertadEconomica": 7.5,
+  "libertadPersonal": 2.0,
+  "analisis": {
+    "economico": {
+      "calificacion": 7.5,
+      "justificacion": "El plan muestra una clara orientación al libre mercado y la reducción del tamaño del Estado, proponiendo recortes drásticos de impuestos y una simplificación administrativa extrema (solo 10 ministerios). Sin embargo, no llega al radicalismo total pues mantiene al Estado como proveedor principal de servicios básicos (salud, educación) bajo el concepto de 'deuda social'.",
+      "evidencias": [
+        "Reestablecer el libre mercado y la libre competencia, eliminando el mercantilismo instalado en la economía peruana.",
+        "Propuesta de un paquete de medicadas económicas para una reducción de impuestos a todo nivel en la sociedad peruana.",
+        "Consolidar únicamente 10 ministerios... reducción del gigantesco aparato estatal innecesario.",
+        "Convertir progresivamente los hospitales del sector público en sociedades de responsabilidad limitada... con administraciones público-privadas."
+      ]
+    },
+    "personal": {
+      "calificacion": 2.0,
+      "justificacion": "La postura en libertades personales es marcadamente autoritaria y conservadora. El plan prioriza el orden público y el castigo punitivo extremo sobre los derechos civiles, proponiendo la salida de pactos internacionales de derechos humanos, la pena de muerte, trabajos forzados y una estructura social basada en valores tradicionales y religiosos.",
+      "evidencias": [
+        "Implementación del programa 'Mano de Hierro', teniendo como primer objetivo la salida de la CIDH... pena de muerte para presidentes corruptos, sicarios y violadores.",
+        "Regímenes carcelarios extremos para delincuentes que incluya trabajos forzados.",      
+        "Destacar a la FAMILIA como EL NÚCLEO BÁSICO DE LA SOCIEDAD... reconociendo en su realidad cultural y de fé un compromiso por su defensa.",
+        "Eliminación de la 'ideología de género' en las escuelas para dar paso a la doctrina del desarrollo y valores propios de nuestro Perú.",
+        "Búsqueda, ubicación, captura, custodia y expulsión de TODO inmigrante ilegal... trasladándolos a centros de detención militarizados."
+      ]
+    }
+  },
+  "cuadrante": "conservador",
+  "descripcion": "El partido se ubica en el cuadrante conservador (derecha autoritaria), combinando una política económica de libre mercado, baja presión tributaria y estado pequeño con una política social de 'mano dura', punitivismo penal extremo y defensa de valores tradicionales frente a derechos civiles progresistas."
+},
+{
+  "nombre": "Partido Político Nacional Perú Libre",
+  "siglas": "PL",
+  "libertadEconomica": 1.5,
+  "libertadPersonal": 4.0,
+  "analisis": {
+    "economico": {
+      "calificacion": 1.5,
+      "justificacion": "El plan propone un control estatal predominante, rechazando explícitamente el modelo de libre mercado (neoliberalismo). Aboga por la nacionalización de sectores estratégicos, la planificación centralizada de la economía y una fuerte política de redistribución de la riqueza a través de una reforma tributaria progresiva y un rol activo del Estado como industrializador.",
+      "evidencias": [
+        "recuperando la capacidad soberana del Estado para planificar, intervenir, nacionalizar sectores estratégicos y redistribuir la riqueza en favor de las mayorías. (Pág. 23)",
+        "Transformar el modelo económico primario-exportador hacia una Economía Popular con Mercados, con un Estado planificador, industrializador y redistribuidor. (Pág. 45)",
+        "Elevar la presión tributaria al 20 % del PBI al 2031, mediante una reforma tributaria progresiva... priorizando impuestos directos a grandes rentas y patrimonios. (Pág. 49)"
+      ]
+    },
+    "personal": {
+      "calificacion": 4.0,
+      "justificacion": "La visión de las libertades es colectivista y comunitaria más que individualista. El Estado asume una responsabilidad 'indelegable' sobre la vida social, educación y salud. Si bien promueve la igualdad de género y derechos para pueblos originarios (plurinacionalidad), lo hace bajo un esquema de control estatal y justicia comunal, omitiendo propuestas de libertades civiles individuales clásicas (como desregulación de conductas morales).",
+      "evidencias": [
+        "Garantizar los derechos sociales fundamentales como responsabilidad indelegable del Estado, asegurando acceso universal, gratuito y de calidad. (Pág. 4)",
+        "Reconocer constitucionalmente al Perú como un Estado plurinacional... garantizando los derechos políticos, territoriales, culturales y de justicia comunal de los pueblos. (Pág. 24)", 
+        "Fortalecer el rol del Estado en la planificación y conducción de la transición energética. (Pág. 63)"
+      ]
+    }
+  },
+  "cuadrante": "totalitario",
+  "descripcion": "Partido de orientación marxista-leninista y soberanista que busca desmantelar el modelo económico liberal para reemplazarlo por un sistema de planificación estatal y nacionalizaciones, subordinando las libertades individuales al bienestar colectivo y a la rectoría del Estado."
+},
+{
+  "nombre": "Partido Político Perú Primero",
+  "siglas": "Perú Primero",
+  "libertadEconomica": 7.0,
+  "libertadPersonal": 7.5,
+  "analisis": {
+    "economico": {
+      "calificacion": 7.0,
+      "justificacion": "El plan se define explícitamente bajo una 'Economía Social de Mercado'. Aunque el Estado mantiene un rol regulador para corregir desigualdades, existe un fuerte énfasis en la inversión privada, la apertura comercial (nearshoring), y la reforma de empresas estatales mediante la venta de acciones al sector privado (como en el caso de Petroperú).",
+      "evidencias": [
+        "La economía social de mercado es un medio para satisfacer las necesidades de los seres humanos y el Estado mediante sus diversas entidades debe regular la actividad económica para reducir las desigualdades (Página 5).",
+        "Propuesta de Reestructuración [de Petroperú]: Vender 49% de acciones aplicando la Ley 30130, traspasando la dirección operativa al sector privado (Página 49).",
+        "Reactivación de la inversión pública - privada y reducción de trámites, a través de un 'Comando Temporal de Destrabe de Inversiones' (Página 122).",
+        "Perú impulsará una política nacional para atraer empresas extranjeras que deseen relocalizar sus operaciones (nearshoring) (Página 155)."
+      ]
+    },
+    "personal": {
+      "calificacion": 7.5,
+      "justificacion": "El partido adopta una postura humanista y progresista en derechos civiles. Incluye compromisos explícitos con la igualdad de género, la protección de la población LGTBI y los derechos de comunidades nativas. No obstante, propone medidas de seguridad nacional y control fronterizo con participación militar que equilibran su perfil hacia un orden institucional fuerte.",
+      "evidencias": [
+        "LIBERTAD. Respetando la condición del ser humano para actuar según sus valores, criterios, razón y voluntad (Página 4).",
+        "Enfoque de derechos con enfoque diferencial e interseccional (sexo, edad, etnia, discapacidad, migración, orientación sexual e identidad de género) (Página 92).",
+        "100% de escuelas con política anti-bullying LGBTI al 2031 (Página 98).",
+        "Construcción de nuevas cárceles de máxima seguridad... con la participación de las Fuerzas Armadas en la seguridad externa (Página 110)."
+      ]
+    }
+  },
+  "cuadrante": "liberal",
+  "descripcion": "Perú Primero se posiciona como una organización socioliberal de centro. Combina una visión económica pro-mercado y de eficiencia técnica (uso de APPs, digitalización y disciplina fiscal) con una agenda social progresista que enfatiza la inclusión de minorías y la defensa de los derechos humanos bajo un marco humanista."
+},
+{
+  "nombre": "Partido Político Integridad Democrática",
+  "siglas": "ID",
+  "libertadEconomica": 7.8,
+  "libertadPersonal": 5.5,
+  "analisis": {
+    "economico": {
+      "calificacion": 7.8,
+      "justificacion": "El plan promueve una economía social de mercado con un rol subsidiario del Estado, priorizando la inversión privada como motor de crecimiento, la disciplina fiscal y la autonomía del Banco Central. Defiende la propiedad privada en pensiones (AFPs) y busca la eficiencia empresarial eliminando rescates a empresas estatales deficitarias.",
+      "evidencias": [
+        "Apostamos por el bienestar general de la población a través de la economía social de mercado, promoviendo la iniciativa privada... mientras el Estado cumple un rol subsidiario.",     
+        "Inversión privada como motor del crecimiento: representa más del 80 % de la inversión total, genera 70 % del empleo formal.",
+        "Petroperú: Basta de pérdidas, basta de rescates. El rol del Estado no es refinar petróleo ni vender combustibles... El Estado regula y fiscaliza; no administra.",
+        "El ahorro previsional individual se mantendrá como único pilar obligatorio, reforzando la propiedad del trabajador sobre sus fondos."
+      ]
+    },
+    "personal": {
+      "calificacion": 5.5,
+      "justificacion": "El partido presenta un balance complejo. Por un lado, apoya libertades civiles modernas como el Estado laico y la protección contra la discriminación de la comunidad LGTBQ+. Por otro lado, muestra un fuerte sesgo hacia el orden y la autoridad, proponiendo medidas punitivas extremas (cadena perpetua), controles de integridad invasivos (polígrafo obligatorio) y un rol protagónico de las fuerzas del orden.",
+      "evidencias": [
+        "Apoyamos un Estado laico sin preferencias por ninguna religión, donde se respete la libertad religiosa y de culto.",
+        "Igualdad y protección institucional para la comunidad LGTBQ+: El Estado tiene la responsabilidad de consolidar una política pública orientada a la prevención de la violencia y la no discriminación.",
+        "Cadena perpetua y sanciones severas para el Presidente de la República, altas autoridades y servidores públicos por corrupción.",
+        "Implementación de evaluaciones poligráficas de integridad para el Presidente de la República, altas autoridades y servidores públicos.",
+        "Reestablecer el principio de autoridad, con un fuerte liderazgo del Presidente de la República en el Consejo Nacional de Seguridad."
+      ]
+    }
+  },
+  "cuadrante": "liberal",
+  "descripcion": "El partido se define como de centro, pero su plan de gobierno lo ubica en una centroderecha de corte liberal-conservador. Combina una fuerte orientación al libre mercado y la eficiencia del sector privado con una política de 'mano dura' y fortalecimiento del principio de autoridad estatal para combatir la inseguridad y la corrupción, aunque respetando derechos civiles fundamentales y la laicidad del Estado."
+},
+  {
+    "nombre": "Alianza Fuerza y Libertad",
+    "siglas": "Fuerza y Libertad",
+    "libertadEconomica": 7.5,
+    "libertadPersonal": 5.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.5,
+        "justificacion": "El plan presenta una fuerte orientación hacia el libre mercado, priorizando la inversión privada, las Alianzas Público-Privadas (APP) y la creación de Zonas Económicas Especiales (ZEE). Propone una reducción drástica de la burocracia bajo el lema 'Un Estado que sirva no que estorbe', aunque mantiene un rol del Estado como planificador estratégico de infraestructura y promotor de clusters industriales.",
+        "evidencias": [
+          "Aprobación de incentivos fiscales, regulatorios y financieros para la inversión privada en investigación, desarrollo e innovación.",
+          "Implementar una Ventanilla Única Nacional para APP y Obras por Impuestos que centralice y simplifique los procesos.",
+          "Elevar la proporción de PYMES formales al 50% mediante la simplificación extrema de trámites y digitalización total.",
+          "Promover la creación de Zonas Económicas Especiales (ZEE) en puntos estratégicos para atraer inversión extranjera directa."
+        ]
+      },
+      "personal": {
+        "calificacion": 5.5,
+        "justificacion": "El partido busca un balance entre la autoridad del Estado y los derechos ciudadanos. Por un lado, promueve la igualdad de género, derechos de comunidades indígenas y protección de grupos vulnerables. Por otro lado, pone un énfasis muy alto en el 'principio de autoridad', el orden público y la seguridad ciudadana con medidas de control estricto, vigilancia tecnológica masiva y endurecimiento de penas.",
+        "evidencias": [
+          "Seguridad y Orden Público: Garantizar la protección de los ciudadanos y erradicar la impunidad.",
+          "Restablece el principio de autoridad, sancionando penalmente a funcionarios que no hagan cumplir la ley.",
+          "Implementación del programa 'Cero agresores libres' que incorporará pulseras de restricción y geolocalización.",
+          "Control y expulsión inmediata de inmigrantes en situación irregular que cometan delitos."
+        ]
+      }
+    },
+    "cuadrante": "liberal",
+    "descripcion": "El partido se define por una ideología de derecha liberal o liberalismo conservador. Combina una agenda económica pro-mercado, orientada a la eficiencia tecnológica y la atracción de capitales, con una visión de seguridad basada en la ley, el orden y el fortalecimiento de la autoridad estatal. Su enfoque es tecnocrático y modernizador, buscando digitalizar el Estado para reducir la corrupción y mejorar la competitividad."
+  },
+  {
+    "nombre": "Alianza para el Progreso",
+    "siglas": "APP",
+    "libertadEconomica": 7.8,
+    "libertadPersonal": 5.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.8,
+        "justificacion": "El plan presenta una fuerte orientación al libre mercado y la reducción de la intervención estatal. Propone una reducción drástica del aparato público, un shock desregulatorio y la apertura de sectores estratégicos (como petróleo y agua) a la inversión privada masiva.",
+        "evidencias": [
+          "Rediseño del Poder Ejecutivo: reducción de 19 a 10 ministerios (pág. 4)",
+          "Shock Desregulatorio: Reingeniería normativa integral en 4 Fases (pág. 10)",
+          "Se convocará el ingreso rápido y agresivo de Inversión privada en Petroperú... nuestro gobierno no le inyectará un sol más a esta empresa (pág. 16)",
+          "Incursión de capital privado en la gestión de Corpac (pág. 17)",
+          "Impulsar agresivamente la incursión del sector privado... para que se hagan cargo de parte o de la totalidad de las empresas [de agua] (pág. 20)"
+        ]
+      },
+      "personal": {
+        "calificacion": 5.5,
+        "justificacion": "Se ubica en un balance entre el orden institucional y las libertades. Si bien promueve una 'Sociedad Participativa y Pluralista', pone un énfasis preventivo y punitivo muy fuerte en la seguridad ciudadana como pre-requisito de la libertad, utilizando inteligencia avanzada y fortaleciendo el brazo militar-policial.",
+        "evidencias": [
+          "Seguridad ciudadana como pre-requisito de desarrollo (pág. 5)",
+          "Creación del Ministerio de Defensa y Seguridad Interna que integra FF.AA. y PNP (pág. 5)",
+          "Uso de Inteligencia Artificial (IA) para análisis predictivo y focalización de operativos (pág. 6)",
+          "Fomentar una convivencia pacífica y democrática en la que todas las ideas y opiniones sean valoradas (pág. 3)",
+          "Marco Regulatorio Moderno: leyes que habiliten el uso responsable de IA... con respeto a la privacidad (pág. 25)"
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "El partido se define como humanista, pero su plan de gobierno 2026-2031 es predominantemente liberal en lo económico (derecha económica) y moderado-conservador en lo social, priorizando el orden público, la seguridad nacional y el fortalecimiento de las instituciones tradicionales como base para el progreso."
+  },
+  {
+    "nombre": "Alianza Unidad Nacional",
+    "siglas": "UN",
+    "libertadEconomica": 7.5,
+    "libertadPersonal": 4.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.5,
+        "justificacion": "El plan se define explícitamente como defensor de la Economía Social de Mercado. Busca reducir la burocracia, promover la inversión privada mediante APPs y profundizar los tratados de libre mercado, aunque mantiene un rol regulador y promotor del Estado.",
+        "evidencias": [
+          "Nuestros fundamentos son : (...) (ii) la Economía social del mercado como modelo económico.",
+          "Establecer un plan de desarrollo de infraestructura y servicios aeronáuticos a 50 años, vinculante para concesiones y contratos.",
+          "Implementar la política de cielos abiertos.",
+          "Beneficio de cero tributos por los primeros tres años y luego una escala reducida progresiva (...) para las nuevas MYPES que se incorporen."
+        ]
+      },
+      "personal": {
+        "calificacion": 4.0,
+        "justificacion": "Muestra una marcada tendencia conservadora en lo social, con énfasis en los valores tradicionales de la familia y el orden público. Prioriza la seguridad nacional y la 'mano dura' penal sobre las libertades individuales de los procesados, y rechaza enfoques progresistas en educación.",
+        "evidencias": [
+          "Nuestra alianza se sustenta en una concepción humanista (...) a la vida y a la familia como célula fundamental de la sociedad.",
+          "Ley más severa contra el Crimen Organizado, con penas altas y cadena perpetua sin beneficios penitenciarios.",
+          "Reemplazando la ESI por una educación sexual en valores, sin ideología de género en el sistema educativo.",
+          "Debe quedar claro que el uso de armas por los ciudadanos es un derecho."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "Se define como una alianza humanista de centroderecha que combina una fuerte orientación al libre mercado con valores sociales tradicionales (familia, religión, vida) y una política de seguridad punitiva basada en el orden y el respeto a la autoridad."
+  },
+  {
+    "nombre": "Partido Cooperación Popular",
+    "siglas": "CP",
+    "libertadEconomica": 4.0,
+    "libertadPersonal": 7.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 4.0,
+        "justificacion": "El plan propone una fuerte intervención estatal bajo el concepto de 'justicia social'. Destaca la renegociación de contratos de concesión, el fortalecimiento de empresas estatales (PetroPerú) rechazando privatizaciones, y un rol subsidiario activo del Estado en la industrialización y agricultura. También incluye controles sobre monopolios y una política de incremento de sueldos y pensiones por mandato estatal.",
+        "evidencias": [
+          "Fortalecimiento de PetroPerú en su gerencia, opción con capital mixto, mas no privatización.",
+          "Disponer la renegociación de los contratos de concesión para hacerlos más equitativos.",
+          "Inversión en la industrialización... actividad empresarial subsidiada por el Estado.",
+          "Dictar normativa para incrementar razonablemente sueldos y pensiones ONP."
+        ]
+      },
+      "personal": {
+        "calificacion": 7.5,
+        "justificacion": "Se observa una postura marcadamente progresista en libertades civiles, incluyendo el reconocimiento de derechos para la diversidad sexual, la unión de parejas del mismo sexo, y la legalización de la eutanasia y el aborto en casos específicos. Sin embargo, mantiene un enfoque de control estatal fuerte en seguridad y justicia (como la muerte civil).",
+        "evidencias": [
+          "Excepcionalmente el aborto terapéutico y violaciones a menores; además la eutanasia debidamente probada y crear marco jurídico para unión de parejas del mismo sexo.",
+          "Garantizar la igualdad de derechos y oportunidades entre hombres y mujeres y sectores sociales con diversidad sexual.",
+          "Respeto, protección y celebración de la diversidad cultural, étnica y de género.",
+          "Aprobación de una nueva Constitución a través de una Asamblea Constituyente o el Congreso."
+        ]
+      }
+    },
+    "cuadrante": "progresista",
+    "descripcion": "El partido presenta una ideología de centro-izquierda o progresista, combinando una agenda social liberal en derechos civiles con una economía de fuerte matiz estatista, reguladora y redistributiva."
+  },
+  {
+    "nombre": "Partido Político Fe en el Perú",
+    "siglas": "Fe en el Perú",
+    "libertadEconomica": 7.2,
+    "libertadPersonal": 6.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.2,
+        "justificacion": "El plan se define explícitamente como una economía de 'Libre Mercado con Responsabilidad Social'. Promueve la inversión privada como motor de riqueza y la simplificación administrativa, pero mantiene un rol estatal activo en la regulación de fallas de mercado, protección del consumidor y el principio de subsidiariedad.",
+        "evidencias": [
+          "Fe en el Perú adopta el verdadero libre mercado como principal motor para la generación de riqueza, empleo, innovación y oportunidades",
+          "El rol del Estado es garantizar: Libre competencia, estabilidad macroeconómica, protección de derechos laborales y del consumidor, corrección de fallas de mercado",
+          "Subsidiariedad del Estado, actuando donde el mercado no llega o resulta insuficiente",
+          "Simplificar trámites y regulaciones... Garantizar seguridad jurídica"
+        ]
+      },
+      "personal": {
+        "calificacion": 6.0,
+        "justificacion": "Muestra un fuerte compromiso con el marco democrático, el pluralismo y los derechos humanos bajo un enfoque de no discriminación. Sin embargo, su postura es institucional y moderada, evitando menciones específicas a libertades civiles controversiales y utilizando términos que pueden interpretarse desde una óptica conservadora moderada como la 'protección de la vida'.",
+        "evidencias": [
+          "Respeto irrestricto a los derechos humanos, sin discriminación alguna",
+          "Tolerancia, respeto al pluralismo político, cultural y social",
+          "Enfoque de género e igualdad de oportunidades",
+          "Compromiso con el documento 'Compromiso Solidario con la Protección de la Vida: Perú Hambre Cero'"
+        ]
+      }
+    },
+    "cuadrante": "centro",
+    "descripcion": "El partido se posiciona en el centro político con una tendencia a la derecha en lo económico. Rechaza los extremos ideológicos y busca un equilibrio entre la libertad de mercado y el bienestar social, manteniendo un respeto institucional por los derechos fundamentales sin adoptar agendas sociales radicales."
+  },
+  {
+    "nombre": "Frente de la Esperanza 2021",
+    "siglas": "FE",
+    "libertadEconomica": 6.5,
+    "libertadPersonal": 4.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 6.5,
+        "justificacion": "El plan propone un modelo de economía social de mercado con un rol subsidiario del Estado, enfatizando la libertad de empresa y la inversión privada. Sin embargo, mantiene una fuerte orientación hacia el 'Estado de Bienestar' y la intervención del Estado como 'árbitro social' para garantizar la igualdad de oportunidades y servicios básicos.",
+        "evidencias": [
+          "El Frente de la Esperanza 2021, es respetuoso y creyente en el rol subsidiario del Estado dentro del marco de una economía social de mercado en un estado de bienestar.",
+          "Reducir progresivamente el IGV hasta llegar al 10% y ampliar la base tributaria.",
+          "Reconoce que la economía debe garantizar la libertad de empresa y, a su vez, hacer reposar sobre el sector privado la responsabilidad en la generación de riqueza y empleo.",
+          "Eliminar el Impuesto de Quinta. Para que esto funcione, un porcentaje de dicha recaudación... iría a un fondo para su jubilación."
+        ]
+      },
+      "personal": {
+        "calificacion": 4.0,
+        "justificacion": "La propuesta tiene un marcado carácter de 'mano dura' y conservadurismo social. Prioriza el orden y la seguridad ciudadana mediante la restricción de beneficios penitenciarios y medidas punitivas severas. Además, presenta una postura restrictiva y nacionalista respecto a la migración, limitando derechos de acceso a servicios y empleo para extranjeros indocumentados.",
+        "evidencias": [
+          "Ley que prohíbe los servicios públicos educativos y de salud, la atención de extranjeros ilegales, salvo situaciones de emergencia.",
+          "Eliminación total de beneficios penitenciarios y aplicación de cárcel efectiva y penas de trabajo para los graves delitos contra la sociedad y el estado.",
+          "Ley que prohíbe la contratación de Extranjeros en condición de ilegales, tanto en el sector público como el privado.",
+          "Nuestro programa se basa en tres grandes principios, seguridad orden y eficiencia... defendemos a la familia como célula básica de la sociedad."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "El partido combina una política económica de mercado con reducciones tributarias significativas y fomento a la inversión privada, pero bajo una estructura de valores tradicionales y un enfoque punitivo y restrictivo en lo social y migratorio, posicionándose como una propuesta de derecha conservadora o populismo de orden."
+  },
+  {
+    "nombre": "Fuerza Popular",
+    "siglas": "FP",
+    "libertadEconomica": 7.8,
+    "libertadPersonal": 3.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.8,
+        "justificacion": "El plan muestra una clara orientación hacia el libre mercado, la disciplina fiscal y la desregulación masiva. Propone un 'shock desregulatorio' para eliminar trabas burocráticas, defiende la independencia del BCRP, busca reducir el déficit fiscal al 1% y promueve activamente la inversión privada mediante APPs y Obras por Impuestos. Sin embargo, no llega al radicalismo total al mantener un rol subsidiario del Estado en sectores estratégicos y programas de apoyo directo a Mypes y agricultura.",
+        "evidencias": [
+          "Retomará y profundizará el proceso de shock desregulatorio... reducir –como mínimo– un 40% del tiempo promedio que hoy tardan los procedimientos de tramitación.",
+          "Sostenimiento del déficit fiscal del 1% del PBI en 2031.",
+          "Optimización de la operación de Petroperú... la empresa estatal se concentrará exclusivamente en las actividades de refinamiento y distribución... gestión de la venta de activos no estratégicos.",
+          "Aseguramiento de la independencia del BCRP y el respeto a los contratos."
+        ]
+      },
+      "personal": {
+        "calificacion": 3.5,
+        "justificacion": "La organización se define dentro del conservadurismo social tradicional. Pone énfasis en el orden público, la autoridad estatal y la protección de valores tradicionales. Su postura sobre la vida y la familia es restrictiva respecto a libertades civiles modernas como el aborto. Además, propone un enfoque de seguridad de 'mano dura' que prioriza el control territorial y el fortalecimiento punitivo (mega penales) sobre una visión de libertades individuales amplias.",
+        "evidencias": [
+          "Protegemos decididamente el derecho a la vida desde su concepción.",
+          "Los padres, por obligación y derecho, se encargan de la educación de sus hijos.",
+          "Construcción de cuatro (4) mega penales de máxima seguridad... bajo administración temporal y exclusiva de las Fuerzas Armadas.",
+          "Intervención militar y policial en Tumbes para control fronterizo."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "Fuerza Popular se posiciona como una derecha conservadora (fujimorista). Económicamente es liberal-liberalizadora, buscando un Estado austero que facilite la inversión privada. Socialmente es conservadora, con un fuerte énfasis en la autoridad, el orden público y la defensa de la familia tradicional y la vida desde la concepción."
+  },
+  {
+    "nombre": "Juntos por el Perú",
+    "siglas": "JP",
+    "libertadEconomica": 3.0,
+    "libertadPersonal": 7.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 3.0,
+        "justificacion": "El plan propone una ruptura con el modelo neoliberal, planteando una fuerte intervención estatal y la recuperación de la soberanía sobre recursos estratégicos. Defiende una 'economía mixta' donde el Estado tiene el rol conductor y reserva para sí la gestión de sectores clave, además de proponer impuestos a las grandes fortunas y la renegociación de tratados comerciales y contratos ley.",
+        "evidencias": [
+          "Construiremos un Estado de Socialismo Andino Amazónico, autónomo, independiente y soberano que no permitirá la injerencia o la dominación neocolonial.",
+          "El Estado reservará para la gestión directa los recursos energéticos, productivos y estratégicos: gas, petróleo, agua, bosques, energía, mares, espacio aéreo, puertos.",
+          "Se propone un sistema tributario progresivo que elimine privilegios... impuesto a grandes fortunas en situación de crisis.",
+          "Se renegociarán los Tratados de Libre Comercio (TLC) y otros acuerdos comerciales, que afecten la soberanía nacional."
+        ]
+      },
+      "personal": {
+        "calificacion": 7.5,
+        "justificacion": "El plan muestra una orientación progresista amplia, con un fuerte énfasis en los derechos de minorías, igualdad de género y el reconocimiento de la plurinacionalidad. Defiende libertades civiles como el derecho a la protesta y la libertad de expresión, aunque supedita esta última a una 'responsabilidad social' y plantea restricciones ideológicas específicas contra lo que define como fascismo.",
+        "evidencias": [
+          "Un Estado garante de los derechos humanos tiene entre sus deberes erradicar la violencia de género y garantizar igualdad de derechos para mujeres, pueblos indígenas, afrodescendientes, población LGTBIQ+.",
+          "Garantizaremos la aplicación del enfoque de género en las políticas públicas... como elemento indispensable para forjar una sociedad más humana.",
+          "Los medios de comunicación ejercerán su labor con plena libertad de expresión y con responsabilidad social.",
+          "Avanzar en este proceso implicará impedir el avance de la ideología y prácticas fascistas."
+        ]
+      }
+    },
+    "cuadrante": "progresista",
+    "descripcion": "Partido de izquierda democrática y progresista que busca reemplazar el modelo económico actual por un 'Socialismo Andino Amazónico'. Su ideología combina el estatismo en sectores estratégicos con una agenda social de ampliación de derechos para grupos históricamente excluidos y un enfoque ecológico."
+  },
+  {
+    "nombre": "Libertad Popular",
+    "siglas": "LP",
+    "libertadEconomica": 8.5,
+    "libertadPersonal": 7.8,
+    "analisis": {
+      "economico": {
+        "calificacion": 8.5,
+        "justificacion": "El plan se alinea con el liberalismo clásico y el libre mercado radical. Propone un rol subsidiario del Estado, reducción de la burocracia, respeto irrestricto a la propiedad privada y una gestión basada en la responsabilidad fiscal y la eficiencia meritocrática, inspirada en Adam Smith y Milton Friedman.",
+        "evidencias": [
+          "Tanto mercado como sea posible, tanto estado como sea necesario... y tan poco como sea posible.",
+          "Creemos en un régimen económico sustentado en la libertad, en el que la iniciativa privada es la principal fuente generadora de la riqueza y de empleo formal sostenible.",
+          "Toda intervención del Estado debe realizarse de forma subsidiaria."
+        ]
+      },
+      "personal": {
+        "calificacion": 7.8,
+        "justificacion": "Se prioriza la autonomía del individuo sobre el Estado, considerándolo fin supremo. Aunque pone gran énfasis en el orden y la seguridad ciudadana, mantiene una postura liberal en libertades civiles, defendiendo la libertad de prensa y proponiendo programas como la Educación Sexual Integral (ESI) bajo enfoques de derechos y ciencia.",
+        "evidencias": [
+          "La persona es anterior y superior al Estado, y constituye el fin supremo de este.",
+          "Garantizar la implementación efectiva de la ESI con enfoque científico y de derechos.",
+          "Es fundamental la vigencia irrestricta de la libertad de información, de prensa y de opinión."
+        ]
+      }
+    },
+    "cuadrante": "liberal",
+    "descripcion": "Libertad Popular se define como un partido de liberalismo democrático. Combina una política económica de libre mercado agresiva (capitalismo popular, desregulación y privatizaciones selectivas) con una defensa de las libertades individuales y el Estado de Derecho, buscando una 'prosperidad inclusiva' mediante el fortalecimiento institucional."
+  },
+  {
+    "nombre": "Partido Aprista Peruano",
+    "siglas": "APRA",
+    "libertadEconomica": 4.5,
+    "libertadPersonal": 4.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 4.5,
+        "justificacion": "El plan propone una Economía Social de Mercado con una fuerte rectoría y planificación estatal. Aunque respeta la inversión privada, busca un Estado 'conductor' del desarrollo con impuestos progresivos, eliminación de exoneraciones y una fuerte intervención en servicios básicos como la salud (financiador único).",
+        "evidencias": [
+          "Propone un 'Estado fuerte, moderno y descentralizado, capaz de conducir el desarrollo nacional' (pág. 5).",
+          "Implementación de un 'Sistema Integrado de Salud con un financiador único y universal' (pág. 17).",
+          "Se establecerá un 'impuesto a las sobreganancias mineras' y se eliminarán exoneraciones tributarias regresivas (pág. 61)."
+        ]
+      },
+      "personal": {
+        "calificacion": 4.5,
+        "justificacion": "Mantiene un discurso de respeto a los derechos humanos, pero con un matiz conservador en lo social (énfasis en valores familiares) y un enfoque punitivo/autoritario en seguridad. El uso de tecnologías de vigilancia y el fortalecimiento del servicio militar (evaluando bajar la edad a 17 años) indican una prioridad del orden sobre la libertad absoluta.",
+        "evidencias": [
+          "Propone una 'educación basada en valores familiares' (pág. 8).",
+          "Uso de 'reconocimiento facial' para vigilancia, aunque limitado a investigación con orden judicial (pág. 44).",
+          "Evaluación de la Ley del Servicio Militar Voluntario para 'bajar de 18 a 17 años' la edad de captación (pág. 56)."
+        ]
+      }
+    },
+    "cuadrante": "totalitario",
+    "descripcion": "El plan se posiciona en el cuadrante estatista (denominado totalitario en el Diagrama de Nolan por su baja libertad en ambos ejes), definiéndose como una 'izquierda democrática' que busca justicia social a través de un Estado interventor y un enfoque de orden y valores tradicionales en lo social."
+  },
+  {
+    "nombre": "Partido Cívico Obras",
+    "siglas": "OBRAS",
+    "libertadEconomica": 5.8,
+    "libertadPersonal": 4.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 5.8,
+        "justificacion": "El plan propone una economía social de mercado que busca un equilibrio entre la inversión privada y la intervención estratégica del Estado. Aunque aboga por un aparato estatal reducido y el respeto a los TLCs, enfatiza que la inversión extranjera debe someterse a condiciones nacionales y el Estado debe participar en el accionariado de empresas estratégicas.",
+        "evidencias": [
+          "Como Partido Humanista, promoveremos la economía social de mercado ¨con rostro humano¨",
+          "Ser un Estado que participe eficaz y eficientemente en el Accionariado y Directorios de aquellas empresas que considere estratégicas para la nación.",
+          "Promotores de la inversión privada, nacional y extranjera, los que PODRÁN VENIR CUANDO QUIERAN, PERO NO COMO QUIERAN.",
+          "Un país con una Gestión Estatal ágil, con un aparato estatal reducido, eficaz y eficiente."
+        ]
+      },
+      "personal": {
+        "calificacion": 4.5,
+        "justificacion": "Se observa una postura de conservadurismo social moderado. Aunque el plan menciona el respeto irrestricto a los derechos humanos y libertades individuales, pone un énfasis marcado en los valores tradicionales, la familia como base de la sociedad y el control estatal sobre los contenidos en medios de comunicación (moralización).",
+        "evidencias": [
+          "Promover una televisión con valores y la imposición de sanciones severas a quienes no cumplan la Ley de Protección al Menor.",
+          "Creemos que la persona humana es el fin supremo de la sociedad y del Estado y la familia como base fundamental de la organización social.",
+          "Curricula escolar con contenidos controvertidos, donde el deporte y los valores, el Folklore han sido olvidados y deben potenciarse.",
+          "Promover que los medios de comunicación difundan la cultura y se distribuya en forma equitativa de la publicidad del Estado."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "El partido se define como humanista y biocéntrico, situándose en una centroderecha conservadora. Combina una apertura moderada al mercado y la eficiencia estatal con una visión social centrada en valores tradicionales, el orden público y la fiscalización moral de los medios y la educación."
+  },
+  {
+    "nombre": "Partido de los Trabajadores y Emprendedores",
+    "siglas": "PTE-PERÚ",
+    "libertadEconomica": 4.5,
+    "libertadPersonal": 4.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 4.5,
+        "justificacion": "El plan propone una economía de fuerte intervención estatal orientada al fomento de la microempresa y la protección laboral. Aunque promueve el emprendimiento, lo hace bajo un modelo de apoyo financiero y técnico estatal y planificación industrial ('desarrollar cadenas productivas'). Además, busca fortalecer las reivindicaciones económicas de los trabajadores y crear nuevos impuestos ambientales, lo que implica una regulación y carga fiscal significativa sobre el mercado.",
+        "evidencias": [
+          "Fortalecer derechos laborales y reivindicaciones económicas de trabajadores estatales y privados",
+          "Impulsar el apoyo financiero y técnico a emprendedores como factor clave en el desarrollo nacional",
+          "Crear impuesto ecológico",
+          "Plan nacional de infraestructura pública"
+        ]
+      },
+      "personal": {
+        "calificacion": 4.0,
+        "justificacion": "La postura se inclina hacia el conservadurismo social y el orden institucional. El plan prioriza medidas punitivas severas como la cadena perpetua y la justicia comunitaria sobre la expansión de libertades civiles individuales. No se mencionan derechos de minorías, autonomía personal ni libertades sociales progresistas, enfocándose en un control estatal más rígido para combatir la inseguridad y la corrupción.",
+        "evidencias": [
+          "Cadena perpetua para delitos graves de corrupción",
+          "Fortalecer justicia comunitaria y seguridad preventiva",
+          "Convocatoria a nuevo pacto social nacional",
+          "Reestructurar carrera pública y entidades estatales"
+        ]
+      }
+    },
+    "cuadrante": "totalitario",
+    "descripcion": "El partido presenta una ideología de corte nacionalista y estatista que combina la promoción de la pequeña empresa privada con un fuerte control estatal de la economía y un enfoque punitivo y tradicional en lo social."
+  },
+  {
+    "nombre": "PARTIDO DEL BUEN GOBIERNO",
+    "siglas": "PBG",
+    "libertadEconomica": 5.5,
+    "libertadPersonal": 8.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 5.5,
+        "justificacion": "El plan se define como una 'economía social de mercado' pero con una fuerte inclinación a la regulación estatal para fines de sostenibilidad y equidad. Busca incrementar la presión fiscal y la progresividad tributaria, además de eliminar subsidios a combustibles fósiles para redirigirlos a innovación verde. Mantiene un equilibrio entre la inversión privada y el rol estratégico del Estado.",
+        "evidencias": [
+          "Para el 2031, el Perú será un país con una economía social de mercado diversificada, resiliente e inclusiva (Pág. 32)",
+          "Fortalecer el sistema tributario para incrementar la presión fiscal, mejorar la progresividad y eficiencia del recaudo (Pág. 35)",
+          "Eliminar gradualmente subsidios fósiles ineficientes e implementar impuestos al carbono (Pág. 36)",
+          "Relanzar APP y Obras por Impuestos, privilegiando modelos transparentes y eficientes (Pág. 33)"
+        ]
+      },
+      "personal": {
+        "calificacion": 8.0,
+        "justificacion": "El plan presenta una postura marcadamente liberal en lo social. Promueve activamente la equidad de género, los derechos sexuales y reproductivos, y propone el reconocimiento del derecho a una muerte digna (eutanasia). Se enfoca en un enfoque de derechos humanos, interculturalidad y diversidad, alejándose de posturas conservadoras.",
+        "evidencias": [
+          "Garantizar el ejercicio pleno de los derechos sexuales y reproductivos (Pág. 27)",
+          "Abrir un amplio debate para reconocer y proteger el derecho a una muerte digna (Pág. 25)",
+          "Educación inclusiva, equitativa y científica, centrada en el pensamiento crítico, la interculturalidad y la equidad de género (Pág. 9)",
+          "Institucionalizar la igualdad de género como principio rector de la gestión pública (Pág. 27)"
+        ]
+      }
+    },
+    "cuadrante": "progresista",
+    "descripcion": "El PBG se posiciona como un partido progresista que combina una economía mixta con fuerte regulación ambiental y redistribución tributaria con una agenda de expansión de libertades civiles y derechos individuales modernos."
+  },
+  {
+    "nombre": "Unido Perú",
+    "siglas": "UP",
+    "libertadEconomica": 6.8,
+    "libertadPersonal": 2.2,
+    "analisis": {
+      "economico": {
+        "calificacion": 6.8,
+        "justificacion": "El plan propone una fuerte reducción del tamaño del Estado y una política de austeridad extrema, orientándose al libre mercado mediante la reducción de impuestos y la flexibilización laboral. Sin embargo, mantiene un rol del Estado como 'promotor' e inversor en infraestructura masiva y empresas estratégicas (bancos estatales, plantas industriales), lo que lo aleja del libre mercado radical.",
+        "evidencias": [
+          "Reducción drástica del gasto público, al 20% del PBI",
+          "Se implementará la reducción de impuestos",
+          "Modernización laboral, reforma del sistema laboral mediante la formalización",
+          "Eliminarán las restricciones cambiarias, el cobro de derechos de exportación",
+          "Se creará el Banco Mypes"
+        ]
+      },
+      "personal": {
+        "calificacion": 2.2,
+        "justificacion": "La propuesta es profundamente autoritaria y conservadora en lo social. Promueve el servicio militar obligatorio para jóvenes, la aplicación de la pena de muerte y trabajos forzados en prisiones, además de rechazar abiertamente políticas de género y proponer vigilancia masiva con identificadores faciales.",
+        "evidencias": [
+          "Servicio militar obligatorio para los que no estudian ni trabajan",
+          "Se eliminará la ideología de género",
+          "El reo para comer deberá trabajar... se construirán las cárceles para corruptos, trabajos forzados",
+          "El Retiro de la Convención Americana de Derechos Humanos, la pena de muerte... serán sometido a referéndum",
+          "Se instalarán las cámaras en todas las ciudades con identificador facial"
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "Unido Perú presenta una ideología de derecha conservadora con matices de 'mano dura'. Combina una retórica de capitalismo popular y apertura económica con un enfoque de seguridad nacional autoritario, centralidad en la familia tradicional y una fuerte presencia estatal en proyectos de infraestructura e industria."
+  },
+  {
+    "nombre": "Partido Político Demócrata Verde",
+    "siglas": "DV",
+    "libertadEconomica": 5.5,
+    "libertadPersonal": 6.8,
+    "analisis": {
+      "economico": {
+        "calificacion": 5.5,
+        "justificacion": "El plan se define bajo una 'economía social de mercado' que no rechaza el capitalismo ni el crecimiento, pero establece límites estrictos basados en la sostenibilidad ambiental y la justicia social. Propone una fuerte regulación estatal en temas ecológicos y de recursos naturales, mientras fomenta la iniciativa privada a través de las MIPYME y la innovación tecnológica.",
+        "evidencias": [
+          "Defiende prácticas respetuosas con el medio ambiente, pero sin rechazar las formas de actuación capitalistas, como el desarrollo de cada individuo, la economía de crecimiento, etc. (Pág. 5)",
+          "Promoción de una economía social de mercado al servicio de la persona. (Pág. 2)",
+          "Incentivos tributarios y financieros para proyectos de vivienda asequible. (Pág. 125)",
+          "Articular programas sociales con empleo formal, emprendimiento y cadenas de valor regionales. (Pág. 165)"
+        ]
+      },
+      "personal": {
+        "calificacion": 6.8,
+        "justificacion": "Muestra una postura progresista en derechos civiles, reconociendo la pluralidad cultural, los derechos de minorías y la igualdad de género. Sin embargo, equilibra estas libertades con un enfoque muy riguroso en el 'Orden Público' y la 'Seguridad Ciudadana', proponiendo penas severas (25 años por corrupción) y un fortalecimiento del control estatal en zonas de riesgo.",
+        "evidencias": [
+          "Garantizar los derechos culturales, la participación efectiva de los pueblos indígenas y afroperuanos. (Pág. 434)",
+          "Eliminar todo tipo de discriminación dándoles las mismas oportunidades a todos. (Pág. 11)",
+          "Recuperar el orden público como condición esencial de convivencia democrática. (Pág. 95)",
+          "Imposición de penas privativas de libertad no menores a 25 años por delitos de corrupción. (Pág. 101)"
+        ]
+      }
+    },
+    "cuadrante": "centro",
+    "descripcion": "El Partido Demócrata Verde se identifica con el Ecologismo Modernista. Es una organización de centro que busca el desarrollo sostenible mediante una economía mixta regulada por criterios ambientales, con un fuerte enfoque en derechos humanos, interculturalidad y la recuperación de la institucionalidad democrática y el orden público."
+  },
+  {
+    "nombre": "Partido Morado",
+    "siglas": "PM",
+    "libertadEconomica": 5.5,
+    "libertadPersonal": 8.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 5.5,
+        "justificacion": "El plan propone una economía mixta que busca el equilibrio entre el libre mercado y la intervención estratégica del Estado. Promueve la inversión privada y la formalización empresarial, pero implementa una reforma tributaria progresiva que aumenta los impuestos a las grandes empresas (del 29.5% al 31%) y crea un sistema de seguridad social universal unificado. Se aleja del estatismo radical al rechazar el control de precios, pero también del libre mercado puro al proponer políticas industriales activas y subsidios focalizados.",
+        "evidencias": [
+          "Rechazamos tanto el estatismo asfixiante como el mercantilismo extractivo sin reglas. (Pág. 22)",
+          "Grandes empresas (más de 23,000 UIT): 31% Incremento de 1.5 puntos porcentuales respecto al sistema actual (29.5% -> 31%). (Pág. 361)",
+          "Sistema Unificado de Seguridad Social Universal (SUSSU)... financiado mediante impuesto solidario a grandes fortunas. (Pág. 277)",
+          "Política Nacional de Ciencia, Tecnología e Innovación con 1% del PBI. (Pág. 41)"
+        ]
+      },
+      "personal": {
+        "calificacion": 8.0,
+        "justificacion": "El partido presenta una postura fuertemente liberal en lo social y defensora de las libertades civiles. Su programa incluye el reconocimiento de la identidad de género autopercibida, una educación estrictamente laica y científica, y la implementación de educación sexual integral siguiendo estándares de la OCDE. Además, pone un énfasis crítico en la defensa de los derechos humanos y la protección de minorías y poblaciones vulnerables frente al autoritarismo.",
+        "evidencias": [
+          "Identidad de Género Auto percibida: Opción de registrar género auto percibido... en DNI digital sin proceso judicial. (Pág. 273)",
+          "Educación Sexual Integral (modelo OCDE): Currículo científico, laico, basado en derechos desde inicial hasta secundaria. (Pág. 157)",
+          "Establece como principio: el sistema penitenciario debe rehabilitar, no solo castigar. (Pág. 246)",
+          "Protección legal de educación sexual científica contra presiones religiosas. (Pág. 159)"
+        ]
+      }
+    },
+    "cuadrante": "progresista",
+    "descripcion": "Se define como un partido de 'republicanismo de centro', centrado en el pragmatismo. Ideológicamente se sitúa en el cuadrante progresista del diagrama de Nolan, combinando una economía mixta regulada con una agenda de libertades civiles amplia, laicismo y enfoque de derechos humanos."
+  },
+  {
+    "nombre": "Partido Patriótico del Perú",
+    "siglas": "PPP",
+    "libertadEconomica": 5.0,
+    "libertadPersonal": 4.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 5.0,
+        "justificacion": "El plan propone una economía mixta con un fuerte componente nacionalista. Si bien reconoce a la inversión privada como motor, busca la creación de empresas estatales en sectores estratégicos (líneas de bandera) e interviene en el mercado financiero a través del Banco de la Nación para fijar tasas de interés.",
+        "evidencias": [
+          "Venderemos a países con moneda más fuerte que la nuestra, siendo más fuertes con nuestras Líneas de bandera Nacional como la Aérea, Pesquera, Mercante y de Trenes a nivel nacional.",
+          "Activando el Crédito MYPE a través del Banco de la Nación... con tasas de intereses menores al 5% al año.",
+          "Garantizar la soberanía alimentaria: El Estado debe tener control real en la transferencia de la propiedad de las tierras al capital extranjero."
+        ]
+      },
+      "personal": {
+        "calificacion": 4.0,
+        "justificacion": "El partido presenta una postura conservadora y centrada en el orden público. Prioriza la seguridad nacional y el principio de autoridad sobre las libertades individuales, basando su visión social en la familia tradicional y el uso de las fuerzas armadas para el control interno.",
+        "evidencias": [
+          "El Partido Patriótico del Perú, cree, respeta y basa su accionar en la FAMILIA, como institución natural y fundamental de la sociedad.",
+          "Rescatar el principio de autoridad en el gobierno es imprescindible... La disciplina atrae el progreso.",
+          "Uso del equipo polígrafo... para Servidores Públicos de alto nivel... Evaluación toxicológica en el sector público en forma regular."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "El PPP se define por un nacionalismo patriótico que busca un Estado fuerte y regulador en sectores estratégicos, combinado con una visión social conservadora que enfatiza la seguridad, la disciplina y los valores familiares tradicionales."
+  },
+  {
+    "nombre": "Partido Regionalista de Integración Nacional",
+    "siglas": "PRIN",
+    "libertadEconomica": 6.2,
+    "libertadPersonal": 6.8,
+    "analisis": {
+      "economico": {
+        "calificacion": 6.2,
+        "justificacion": "El plan propone una Economía Social de Mercado con un enfoque de estabilidad macroeconómica y prudencia fiscal. Si bien busca reducir el gasto estatal 'no productivo' y simplificar trámites para MYPES, también propone aumentar la presión tributaria al 19% y mantiene un rol activo del Estado en la planificación y el fomento de sectores específicos como la minería (creación de un Banco Minero).",
+        "evidencias": [
+          "El PRIN promueve la Economía Social de Mercado, busca un equilibrio en la política y la economía del país (Pág. 4)",
+          "Incrementaremos la presión tributaria al 19% que es el promedio en América latina (Pág. 33)",
+          "Reduciremos sustancialmente y de manera progresiva los gastos del aparato del Estado, gastos no productivos o gastos que no generen valor agregado (Pág. 33)",
+          "Promoveremos la creación del Banco Minero con la finalidad de acopiar la producción de la pequeña y mediana minería formal (Pág. 36)"
+        ]
+      },
+      "personal": {
+        "calificacion": 6.8,
+        "justificacion": "El partido se define como defensor de un Estado laico y promueve libertades civiles avanzadas, incluyendo la educación sexual integral y el reconocimiento de derechos para la comunidad LGBTI. No obstante, su calificación se ve moderada por propuestas de seguridad interna que implican un alto nivel de vigilancia tecnológica y control de conductas (IA para reconocimiento facial y seguimiento de extranjeros).",
+        "evidencias": [
+          "El PRIN promueve un Estado digital, democrático, laico y regionalista (Pág. 5)",
+          "Priorizaremos la Educación sexual integral en el sistema educativo... garantizando el ejercicio de los derechos a la salud sexual y reproductiva de las mujeres (Pág. 15)",
+          "Reduciremos la desigualdad de género que afecta a las mujeres y la discriminación hacia... las personas LGBTI (Pág. 22)",
+          "Instalaremos cámaras con IA para reconocimiento facial y de placas vehiculares en puntos estratégicos (Pág. 28)"
+        ]
+      }
+    },
+    "cuadrante": "progresista",
+    "descripcion": "El PRIN se presenta como una opción de centro-izquierda o progresista que combina el respeto a la economía de mercado con una fuerte agenda de derechos sociales e individuales. Su enfoque principal es la descentralización regional y la modernización del Estado mediante la tecnología, manteniendo una postura socialmente liberal pero con un enfoque de 'mano dura' tecnológica en seguridad ciudadana."
+  },
+  {
+    "nombre": "País para Todos",
+    "siglas": "PPT",
+    "libertadEconomica": 7.8,
+    "libertadPersonal": 5.2,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.8,
+        "justificacion": "El plan presenta una fuerte orientación al libre mercado y la eficiencia fiscal. Propone reducir la burocracia, fomentar la inversión privada y simplificar el sistema tributario sin aumentar tasas. Destaca la disciplina fiscal en empresas estatales y la apertura comercial.",
+        "evidencias": [
+          "Reforma tributaria progresiva - para ampliar base (sin subir tasas): masificar facturación/boleta electrónica.",
+          "Destrabar inversión y subir productividad: menos traba, más competencia y reglas estables para invertir.",
+          "Empresas públicas (p. ej., Petroperú) con disciplina fiscal: directorios profesionales... y cero rescates automáticos.",
+          "Aprovechar acuerdos comerciales para internacionalizar empresas y atraer inversión."
+        ]
+      },
+      "personal": {
+        "calificacion": 5.2,
+        "justificacion": "El plan se sitúa en un equilibrio entre el orden estatal y el respeto a los derechos civiles. Aunque enfatiza fuertemente la 'mano firme', la autoridad y la seguridad, lo hace bajo un discurso de respeto al Estado de derecho, igualdad de oportunidades e inclusión de poblaciones vulnerables, sin proponer restricciones a libertades individuales básicas.",
+        "evidencias": [
+          "Orden y autoridad del Estado y defensa de las familias. Mano firme contra mafias, con respeto al Estado de derecho.",
+          "El plan sostiene una mano firme contra el crimen y la corrupción, sobre bases democráticas.",
+          "Igualdad de oportunidades con enfoque de protección a poblaciones vulnerables.",
+          "Garantizar igualdad de derechos y protección efectiva para mujeres y poblaciones vulnerables."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "El partido País para Todos se define por una ideología de derecha conservadora o centroderecha. Prioriza la libertad económica, la eficiencia del sector privado y la desregulación, mientras que en el ámbito social pone el énfasis en el orden público, la seguridad ciudadana y la autoridad del Estado como pilares para el progreso nacional."
+  },
+  {
+    "nombre": "Perú Moderno",
+    "siglas": "PM",
+    "libertadEconomica": 7.0,
+    "libertadPersonal": 4.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.0,
+        "justificacion": "El plan propone una 'Economía Social de Mercado' con una fuerte orientación hacia la competitividad del sector privado y la reducción de la carga tributaria para las PYMES. Aunque reserva un rol 'empresarial' para el Estado en sectores estratégicos (litio, petroquímica), su enfoque principal es la desregulación, el fomento del emprendimiento y la atracción de inversión extranjera mediante zonas francas y estabilidad jurídica.",
+        "evidencias": [
+          "Se bajará el impuesto corporativo a las Pymes al 10%.",
+          "Implementar zonas económicas liberadas en las zonas fronterizas... con excepción tributaria de hasta 15 años.",
+          "Simplificado y digitalizados todos los trámites, aplicándose el silencio administrativo.",
+          "Aspiramos a una Constitución Moderna que... elimine monopolios y oligopolios."
+        ]
+      },
+      "personal": {
+        "calificacion": 4.0,
+        "justificacion": "El partido presenta una postura de conservadurismo social centrada en el orden, la disciplina y el principio de autoridad. Sus propuestas de 'mano dura' incluyen el endurecimiento drástico de penas (cadena perpetua), el control estricto de fronteras y la expulsión de migrantes. Hay un énfasis marcado en el retorno de la educación cívica y valores tradicionales, priorizando la seguridad ciudadana y la moralidad pública sobre libertades individuales expansivas.",
+        "evidencias": [
+          "Aplicar la cadena perpetua, sin beneficios penitenciarios a las personas sentenciados por traición a la patria, a violadores de menores y feminicidios.",
+          "Controles intensivos de nuestras fronteras para evitar los ingresos ilegales... se construirán centros de expulsión.",
+          "Muerte política para quienes hayan sido condenados en primera instancia por delito doloso en la función pública.",
+          "Retorno de la educación cívica... cultivar los valores cívicos en los educandos."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "Perú Moderno se define como un partido de centro, pero su programa de gobierno se alinea con el cuadrante conservador del diagrama de Nolan. Combina una visión económica liberal de mercado (bajos impuestos, apoyo al emprendimiento) con una visión social autoritaria o conservadora enfocada en la seguridad, el orden público y sanciones severas contra el crimen y la corrupción."
+  },
+  {
+    "nombre": "Partido Podemos Perú",
+    "siglas": "PP",
+    "libertadEconomica": 5.5,
+    "libertadPersonal": 4.0,
+    "analisis": {
+      "economico": {
+        "calificacion": 5.5,
+        "justificacion": "El plan propone una 'Economía Social de Mercado' que busca un equilibrio entre la inversión privada y un Estado regulador fuerte. Aunque promueve activamente el 'shock' de inversión privada y la simplificación administrativa para PYMES, también plantea una intervención estatal significativa para combatir monopolios, crear bancos estatales sectoriales (Minero y para PYMES) y ejercer una 'soberanía soberana' sobre los recursos naturales, lo cual lo sitúa en una economía mixta con matices de control estatal.",
+        "evidencias": [
+          "Apostamos por una economía social de mercado, con bienestar social, que impulse la construcción de infraestructura productiva, dinamice la implementación de las zonas económicas especiales (pág. 5)",
+          "Apostamos en las modificaciones constitucionales que prohíban expresamente monopolios y oligopolios (pág. 5)",
+          "Recuperación de la soberanía sobre recursos naturales: Se promoverá una reforma minera soberana y democrática (pág. 15)",
+          "Crear el Banco de Desarrollo para MYPEs con líneas de crédito accesibles (pág. 29)"
+        ]
+      },
+      "personal": {
+        "calificacion": 4.0,
+        "justificacion": "La posición en libertades personales es marcadamente conservadora. El plan establece la defensa de la vida 'desde la concepción' y prioriza el 'principio de autoridad' y el orden interno a través de una seguridad ciudadana militarizada mediante el programa 'Comando Perú'. Aunque se menciona el respeto a la diversidad y la libertad de expresión, el enfoque central del plan es la recuperación del orden y el control estatal sobre la conducta social y la seguridad pública.",
+        "evidencias": [
+          "SÍ PODEMOS DEFENDER LA VIDA Y LA DIGNIDAD HUMANA DESDE SU CONCEPCIÓN: El ser humano debe ser respetado y tratado como persona, desde el instante de su concepción (pág. 9)",
+          "Fortalecimiento del principio de autoridad y del orden interno (pág. 3, 49)",
+          "Programa 'Comando Perú'... el despliegue de las Fuerzas Armadas en apoyo a la Policía Nacional (pág. 13)",
+          "Recuperar la autoridad no implica autoritarismo. Implica presencia efectiva del Estado... y un uso legítimo de la fuerza (pág. 49)"
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "Podemos Perú se posiciona como una organización conservadora que combina la defensa de la economía social de mercado con un rol estatal regulador y soberano. Socialmente, se ancla en valores tradicionales pro-vida y una agenda de seguridad de 'mano dura' que involucra a las Fuerzas Armadas en tareas de orden interno."
+  },
+  {
+    "nombre": "Partido Político Progresemos",
+    "siglas": "PROGRESEMOS",
+    "libertadEconomica": 6.0,
+    "libertadPersonal": 3.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 6.0,
+        "justificacion": "El plan propone una 'Economía Social de Mercado' con un fuerte enfoque en la formalización de las MYPES, disciplina fiscal y reducción de barreras burocráticas ('Papel Cero'), manteniendo al Estado como un ente promotor y regulador, pero sin buscar una desregulación radical.",
+        "evidencias": [
+          "La política económica se basará en una economía social de mercado inclusiva que permita garantizar la igualdad de oportunidades (pág. 31).",
+          "Se implementará una reforma tributaria simplificada basada en la persona y no solo en la recaudación, eliminando barreras burocráticas (pág. 32).",
+          "Creación de la Ventanilla única digital de formalización Papel Cero... tendrá costo cero para las MYPES de reciente creación (pág. 33)."
+        ]
+      },
+      "personal": {
+        "calificacion": 3.5,
+        "justificacion": "Aunque el partido se define como humanista y animalista, sus propuestas de seguridad son marcadamente autoritarias. Incluyen el retiro de organismos internacionales de DDHH, la reinstalación de la pena de muerte y el uso de estados de excepción, lo que reduce significativamente el eje de libertades civiles frente al poder punitivo del Estado.",
+        "evidencias": [
+          "Salida del Perú de la Corte Interamericana de Derechos Humanos (pág. 18).",
+          "Restablecimiento de la pena de muerte para delitos de extrema gravedad (pág. 19).",
+          "Régimen de excepción: Estado de Sitio contra el crimen organizado (pág. 5).",
+          "Implementación obligatoria del trabajo penitenciario, como mecanismo de disciplina (pág. 18)."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "Progresemos se presenta como un partido de 'humanismo animalista' que combina una economía mixta con orientación al mercado para emprendedores (centroderecha económica) con una postura de 'mano dura' extrema y soberanismo jurídico en lo social, ubicándose en el cuadrante conservador/autoritario del diagrama de Nolan."
+  },
+  {
+    "nombre": "Renovación Popular",
+    "siglas": "RP",
+    "libertadEconomica": 7.5,
+    "libertadPersonal": 3.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.5,
+        "justificacion": "El plan presenta una fuerte orientación hacia el libre mercado y la inversión privada. Propone reducciones impositivas específicas, eliminación de barreras burocráticas y una estricta disciplina fiscal para controlar la inflación. Sin embargo, mantiene un rol activo del Estado en la promoción de sectores específicos (como el Banco PYME) y en la provisión de servicios básicos e infraestructura.",
+        "evidencias": [
+          "Eliminaremos las barreras burocráticas por medio de una intensiva simplificación administrativa, alentando y promoviendo la inversión privada.",
+          "Reduciremos la Tasa del IGV para que los informales opten por la formalización.",
+          "Eliminaremos los regímenes tributarios para la creación de uno solo que sea amigable y permita la formalización de emprendedores.",
+          "Nuestro compromiso en la disciplina fiscal es tener una inflación inferior al 2.5%."
+        ]
+      },
+      "personal": {
+        "calificacion": 3.5,
+        "justificacion": "La organización se define bajo principios humanistas y cristianos, centrando su visión en la familia y los valores tradicionales. Existe un marcado énfasis en la recuperación del 'principio de autoridad' y el orden público, así como en la fiscalización de los padres sobre el contenido educativo, lo que se alinea con una postura conservadora en lo social.",
+        "evidencias": [
+          "El Partido se define como una organización política humanista y cristiana, que persigue el desarrollo integral de la persona y la familia.",
+          "Recuperaremos el principio de autoridad y la confianza en nuestras instituciones.",
+          "Aseguraremos la participación efectiva de los padres de familia en la evaluación y fiscalización de la calidad educativa.",
+          "Devolveremos la autoridad a la Policía Nacional del Perú en la vigilancia y el orden."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "El partido se ubica en el cuadrante conservador (derecha), combinando una agenda de liberalismo económico basada en la reducción de impuestos y la desregulación, con una agenda social tradicionalista fundamentada en valores cristianos, el fortalecimiento de la familia y el orden público."
+  },
+  {
+    "nombre": "Salvemos al Perú",
+    "siglas": "SALVEMOS AL PERÚ",
+    "libertadEconomica": 7.2,
+    "libertadPersonal": 6.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 7.2,
+        "justificacion": "El plan se adscribe a la economía social de mercado, priorizando la inversión privada, la disciplina fiscal y la autonomía de organismos técnicos como el BCRP. Aunque propone un Estado activo en cerrar brechas sociales, lo hace bajo un marco de eficiencia de mercado y fomento de la competitividad.",
+        "evidencias": [
+          "Creemos firmemente y defendemos la economía social de mercado y la libertad de empresa, como medios que garantizan el progreso económico (pág. 4)",
+          "Déficit fiscal ≤ 1,0 % del PBI, manteniéndose dentro de la regla fiscal estructural (pág. 76)",
+          "Incrementar la participación de la inversión privada no minera en más del 65% del total de la inversión privada (pág. 76)",
+          "Preservar la autonomía constitucional del BCRP durante todo el periodo de gobierno (pág. 76)"
+        ]
+      },
+      "personal": {
+        "calificacion": 6.5,
+        "justificacion": "El partido se autodefine como progresista y promueve explícitamente el enfoque de género y la diversidad. Defiende las libertades individuales frente a modelos de valores impuestos, aunque mantiene un énfasis tradicional en la familia como unidad fundamental de la sociedad.",
+        "evidencias": [
+          "se define como un Partido Político de Centro y Progresista... y el fortalecimiento de la familia como unidad celular principal de la sociedad (pág. 2)",
+          "políticas públicas con enfoque intercultural, territorial, de género y de derechos humanos (pág. 26)",
+          "Partido político respetuoso de las libertades individuales respecto a aquellos que quieren imponer un modelo de valores y sociedad contrario (pág. 3)",
+          "Rechazamos toda acción y conducta de violencia contra las mujeres... bajo el principio de Igualdad y No discriminación (pág. 6)"
+        ]
+      }
+    },
+    "cuadrante": "centro",
+    "descripcion": "Organización política de centro que combina una política económica ortodoxa (liberalismo moderado) con una agenda social progresista en derechos, manteniendo el equilibrio institucional y democrático."
+  },
+  {
+    "nombre": "SíCreo",
+    "siglas": "SíCreo",
+    "libertadEconomica": 8.5,
+    "libertadPersonal": 4.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 8.5,
+        "justificacion": "El plan presenta una orientación radical hacia el libre mercado. Propone la privatización de empresas estatales (Petroperú, CORPAC), la creación de zonas económicas con 0% de impuestos, la flexibilización laboral para reducir sobrecostos y la eliminación de monopolios estatales en servicios básicos.",
+        "evidencias": [
+          "Para que el agua llegue a todos los peruanos, debemos romper el monopolio del Estado.",
+          "Sostenemos los principios de Libre Mercado, Libre Comercio y Prosperidad Compartida.",
+          "Privatización/Concesión de CORPAC",
+          "Reducción de impuestos (IR, IGV) y eliminación de impuestos antitécnicos.",
+          "Crear Zonas Económicas Especiales (ZEE) con 0% IGV y 0% de Impuesto a la Renta."
+        ]
+      },
+      "personal": {
+        "calificacion": 4.5,
+        "justificacion": "Aunque el partido defiende libertades clásicas como la de expresión y prensa, mantiene una postura conservadora y de orden. Enfatiza la familia como institución fundamental, propone un control migratorio estricto (prohibición de indocumentados) y prioriza la seguridad pública mediante la construcción de penales de máxima seguridad y el fortalecimiento de las fuerzas del orden.",
+        "evidencias": [
+          "afirmamos que la familia es la institución fundamental de la sociedad.",
+          "Prohibición general de ingreso al país de personas indocumentadas.",
+          "Construcción de nuevos penales de máxima seguridad para cabecillas de organizaciones criminales.",
+          "Hay que proteger al futuro ciudadano desde su concepción.",
+          "A través de la irrestricta Libertad de Expresión y de Prensa, los ciudadanos compartimos y accedemos a la más amplia variedad de ideas."
+        ]
+      }
+    },
+    "cuadrante": "conservador",
+    "descripcion": "El partido SíCreo se define por una ideología de derecha conservadora o liberal-conservadora. Combina una propuesta económica de libre mercado agresiva (privatizaciones y desregulación) con una visión social centrada en el orden, la seguridad nacional, el control fronterizo y los valores familiares tradicionales."
+  },
+  {
+    "nombre": "Un Camino Diferente",
+    "siglas": "UCD",
+    "libertadEconomica": 4.5,
+    "libertadPersonal": 1.5,
+    "analisis": {
+      "economico": {
+        "calificacion": 4.5,
+        "justificacion": "El plan propone un modelo de economía mixta con fuerte intervención estatal en la regulación de precios y la creación de empresas públicas, aunque declara respetar la autonomía del Banco Central y buscar estabilidad macroeconómica.",
+        "evidencias": [
+          "Observatorio Nacional de Precios y Abastecimiento de Medicamentos (ONPAM) ... Base pública con precios reales y comparativos (Pág. 2)",
+          "Gobernanza e Inversión. - Crear empresas para la producción como el alambre y otros (Pág. 13)",
+          "Sistema etiquetado con código QR obligatorio, que permite verificar el origen... el precio y el precio recomendado (Pág. 3)",
+          "Continuar con un banco central independiente que controla la inflación (Pág. 15)"
+        ]
+      },
+      "personal": {
+        "calificacion": 1.5,
+        "justificacion": "La postura en libertades individuales es profundamente autoritaria, priorizando el control estatal y la seguridad sobre la privacidad y los derechos civiles, incluyendo medidas de vigilancia intrusiva y control de la actividad laboral diaria.",
+        "evidencias": [
+          "Unión integral de ministerio de defenza y ministerio del interior, fusionándose en un solo ministerio que será el ministerio de GUERRA (Pág. 1)",
+          "Obligación de reporte laboral diario con supervisión de la central de la comisaria de operaciones (Pág. 2)",
+          "Todas las empresas telefónicas... tendrán la obligación de facilitar ubicaciones de equipos telefónicos... cuando lo solicite el ministerio de guerra (Pág. 2)",
+          "Declaratoria de Estado de Sitio por 12 meses en zonas críticas (Pág. 24)",
+          "Creación de 10 grupos de inteligencia (ESCUADRONES DE LA VIDA) (Pág. 1)"
+        ]
+      }
+    },
+    "cuadrante": "totalitario",
+    "descripcion": "El partido presenta una ideología nacionalista-autoritaria con un enfoque radical en el orden público y la militarización de la seguridad interna. Aunque menciona la estabilidad fiscal, su modelo económico es intervencionista y su enfoque social elimina libertades civiles básicas en favor de un control estatal absoluto."
+  }
+]

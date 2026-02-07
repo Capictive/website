@@ -1,0 +1,3780 @@
+[
+  {
+    "partido": "Ahora Nación",
+    "valores": {
+      "economia": 8.5,
+      "educacion": 7.5,
+      "salud": 8.0,
+      "seguridad": 8.0,
+      "infraestructura": 8.5,
+      "medioAmbiente": 7.5,
+      "desarrolloSocial": 7.0,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.5,
+        "justificacion": "Eje central que propone un cambio de modelo hacia la industrialización y diversificación productiva. Plantea la creación de un Fondo Soberano de Riqueza, un plan de diversificación (agroindustria, manufactura, hidrógeno verde) y la creación de una Agencia de Promoción de MIPYMES. Incluye metas macroeconómicas claras (crecimiento del 6%, deuda <30% PBI).",
+        "propuestasDestacadas": [
+          "Creación de un Fondo Soberano de Riqueza",
+          "Sistema 'Made in Peru' para exportación de valor agregado",
+          "Parques industriales regionales interconectados",
+          "Régimen de Exención Temporal del Impuesto a la Renta para MIPYMES"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque en cerrar brechas de infraestructura y conectar la educación con el mercado laboral (educación técnica). Propone transformar escuelas en espacios de bienestar y reforzar la educación intercultural bilingüe.",
+        "propuestasDestacadas": [
+          "100% de estudiantes de 3 a 5 años con acceso a educación inicial",
+          "Red Nacional de Educación Superior con enfoque territorial",
+          "Centros de formación dual (estudio-trabajo)",
+          "Residencias docentes en zonas rurales"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 8.0,
+        "justificacion": "Diagnóstico detallado de la falta de cobertura real vs nominal. Propone un shock de inversiones en el primer nivel de atención y un enfoque preventivo fuerte (anemia, vacunación).",
+        "propuestasDestacadas": [
+          "Construcción/remodelación de 500 establecimientos de primer nivel",
+          "Historial Clínico Electrónico interoperable nacional (Meta 100%)",
+          "Eliminar la desnutrición crónica infantil",
+          "Incorporar 40,000 agentes comunitarios de salud"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.0,
+        "justificacion": "Abordaje integral que incluye reforma policial, sistema penitenciario y ciberseguridad. Enfasis en inteligencia operativa y tecnología para combatir la extorsión y el crimen organizado.",
+        "propuestasDestacadas": [
+          "Reubicación de penales fuera de las ciudades principales",
+          "Bloqueo total de celulares en penales y uso de escáneres",
+          "Creación de complejos de investigación criminal (CODEIC) en regiones",
+          "Tipificación del delito de mensajes extorsivos"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.5,
+        "justificacion": "Propone una transformación logística masiva con trenes, puertos y cierre de brechas en agua/saneamiento. Plantea una nueva autoridad autónoma de obras públicas para agilizar la inversión.",
+        "propuestasDestacadas": [
+          "Trenes de cercanías: Barranca-Lima e Lima-Ica (concesión en primer año)",
+          "Corredor Bioceánico en el sur",
+          "Creación de 'Ciudades Modelo' replicables",
+          "100% de acceso a agua potable (meta ambiciosa)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 7.5,
+        "justificacion": "Se le dedica una dimensión completa. Vincula el medio ambiente con la economía (bionegocios, hidrógeno verde). Fuerte énfasis en recursos hídricos y lucha contra la deforestación.",
+        "propuestasDestacadas": [
+          "Fondo Nacional de Resiliencia Climática",
+          "Restauración de 150,000 hectáreas de bosques",
+          "Plantas de hidrógeno verde y geotermia",
+          "Siembra y cosecha de agua en microcuencas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.0,
+        "justificacion": "Centrado en la inclusión productiva más que en el asistencialismo puro, aunque mantiene y amplia programas como Pensión 65. Integra Cultura como motor de desarrollo e identidad.",
+        "propuestasDestacadas": [
+          "Pensión social universal no contributiva para adultos mayores pobres (100% cobertura)",
+          "Programa 'Hambre Cero' con alimentación escolar al 100%",
+          "Ventanilla única de servicios sociales",
+          "Impulso a industrias culturales y creativas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque técnico en el manejo del agua (estrés hídrico) y la asociatividad. Busca transformar la agricultura familiar en una actividad competitiva mediante tecnología y semillas certificadas.",
+        "propuestasDestacadas": [
+          "Expansión de siembra y cosecha de agua (300,000 hectáreas)",
+          "Uso de semillas certificadas al 25%",
+          "Seguro Agrícola Catastrófico al 50% de cobertura",
+          "Compras públicas del 30% a cooperativas agrarias"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "infraestructura",
+      "seguridad"
+    ],
+    "areasDesatendidas": [
+      "desarrolloSocial"
+    ],
+    "perfilIdeologico": "Centro-izquierda productivista / Socialdemocracia moderna. Propone un 'Estado Planificador' fuerte que impulsa la industrialización y la infraestructura estratégica, con énfasis en la descentralización ('Todo el poder a las regiones') y la soberanía de recursos, pero manteniendo el respeto a la propiedad privada y buscando alianzas público-privadas."
+  },
+  {
+    "partido": "Alianza Electoral Venceremos",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 7.5,
+      "salud": 7.5,
+      "seguridad": 8.0,
+      "infraestructura": 7.0,
+      "medioAmbiente": 6.5,
+      "desarrolloSocial": 8.0,
+      "agricultura": 8.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Es el eje vertebrador del plan. Propone un cambio total del modelo económico neoliberal hacia una 'economía nacional de mercado popular'. Incluye una reforma tributaria agresiva (impuesto a las grandes fortunas, sobreganancias mineras), revisión de Contratos Ley y un plan de industrialización mediante empresas estatales.",
+        "propuestasDestacadas": [
+          "Impuesto a las grandes fortunas (patrimonios > US$ 100 millones)",
+          "Creación del programa 'Financiamiento Popular' con garantía de S/ 20,000 millones",
+          "Reforma de Petroperú y creación de la Empresa Nacional de Minerales"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Fuerte enfoque en la educación pública, gratuita y laica con perspectiva intercultural. Se compromete a un aumento presupuestal específico y ataca la educación con fines de lucro (DL 882). Prioriza el ingreso libre a universidades y la educación bilingüe.",
+        "propuestasDestacadas": [
+          "Asignación mínima del 6% del PBI al presupuesto educativo",
+          "Ingreso libre y gratuito a las universidades públicas",
+          "Eliminación del DL 882 (lucro en la educación)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.5,
+        "justificacion": "Propone un Sistema Único de Salud público y gratuito. Destaca por metas numéricas muy concretas en infraestructura y personal (equipos de salud familiar). Énfasis en romper oligopolios farmacéuticos.",
+        "propuestasDestacadas": [
+          "Implementación de 700 clínicas especializadas y policlínicos",
+          "Contratación de 5,000 equipos de salud familiar",
+          "Creación de una Red Nacional de Farmacias Populares"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.0,
+        "justificacion": "Aborda la seguridad desde una perspectiva de 'mano dura' contra la corrupción institucional y el crimen organizado, combinada con prevención social. Plantea medidas drásticas como purgas policiales y construcción de infraestructura penitenciaria específica.",
+        "propuestasDestacadas": [
+          "Construcción de 5 nuevas mega-cárceles de alta seguridad",
+          "Depuración definitiva de la Policía Nacional y reforma del sistema de justicia",
+          "Expulsión de extranjeros con sentencia"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 7.0,
+        "justificacion": "Presenta proyectos de gran envergadura (trenes, gasoductos) y metas masivas en vivienda social. Se enfoca en la soberanía energética y la conectividad, con números ambiciosos para electrificación y transporte.",
+        "propuestasDestacadas": [
+          "Construcción de 1 millón de viviendas sociales",
+          "Recuperación del Gasoducto del Sur Peruano",
+          "Adquisición de 10,000 buses eléctricos"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 6.5,
+        "justificacion": "Tiene un enfoque fuerte en 'derechos de la naturaleza' y prohibición de actividades extractivas en zonas sensibles, pero a veces entra en tensión con la propuesta de industrialización de recursos. Se centra mucho en la soberanía sobre el recurso más que en la conservación per se.",
+        "propuestasDestacadas": [
+          "Reconocimiento de la naturaleza como sujeto de derecho",
+          "Prohibición de minería metálica en la Amazonía baja",
+          "Moratoria a monocultivos industriales en la Amazonía"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 8.0,
+        "justificacion": "Muy detallado en derechos laborales, pensiones y género. Propone un nuevo sistema de cuidados y bonos específicos. Busca equiparar derechos y eliminar el sistema privado de pensiones (AFP).",
+        "propuestasDestacadas": [
+          "Nuevo sistema de pensiones solidario (fin de las AFP)",
+          "Bono de maternidad de 800 soles y pensión 65 a 700 soles",
+          "Sistema Nacional de Cuidados"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 8.5,
+        "justificacion": "Propone explícitamente una 'II Reforma Agraria'. Es uno de los ejes más detallados con creación de nuevas instituciones financieras y productivas para el agro, con presupuesto asignado.",
+        "propuestasDestacadas": [
+          "Banco Agrario (AgroPatria) con créditos baratos",
+          "Duplicar presupuesto agrario a S/ 14,000 millones",
+          "Compras estatales obligatorias del 40% a la agricultura familiar"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "agricultura",
+      "seguridad"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente"
+    ],
+    "perfilIdeologico": "Izquierda radical / Progresismo soberanista. El plan es marcadamente anti-neoliberal, buscando refundar el Estado a través de una Asamblea Constituyente. Prioriza la nacionalización o control estatal de recursos estratégicos, el fortalecimiento de empresas públicas, el proteccionismo agrario y la expansión agresiva de derechos sociales y laborales, con una retórica fuerte contra las 'mafias' y grupos de poder económico."
+  },
+  {
+    "partido": "Alianza Fuerza y Libertad",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 8.0,
+      "salud": 8.5,
+      "seguridad": 9.5,
+      "infraestructura": 9.5,
+      "medioAmbiente": 7.5,
+      "desarrolloSocial": 7.5,
+      "agricultura": 8.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Es un eje central con un modelo claro basado en la inversión privada, diversificación productiva y formalización. Plantea reformas estructurales como la creación de Zonas Económicas Especiales y un sistema de inteligencia comercial. Incluye metas macroeconómicas precisas al 2031 (inversión privada al 22% del PBI, reducción de informalidad al 58%).",
+        "propuestasDestacadas": [
+          "Creación de Zonas Económicas Especiales (ZEE) y Hub Logístico Global",
+          "Programa 'Formalizar para Crecer' con trámites digitales en 24 horas",
+          "Plan Perú Potencia Económica de Latinoamérica"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 8.0,
+        "justificacion": "Propone una reforma centrada en la tecnología y la meritocracia docente. Destaca por su enfoque en la conectividad digital ('Plan Nacional de Escuelas Digitales') y la educación técnica vinculada al empleo. Establece metas claras como reducir la brecha de comprensión lectora en 40% y conectar el 100% de escuelas.",
+        "propuestasDestacadas": [
+          "Plan Nacional de Escuelas Digitales y Beca Perú 100% Digital",
+          "Creación de Centros Regionales de Innovación Educativa (CRIE)",
+          "Bachillerato Digital Rural"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 8.5,
+        "justificacion": "Diagnóstico profundo sobre la fragmentación del sistema. Propone una integración operativa entre MINSA y EsSalud (Intercambio Prestacional Universal). Incluye un plan de infraestructura masivo ('Plan MIL') y reformas de gobernanza como la selección meritocrática de directores de hospitales.",
+        "propuestasDestacadas": [
+          "Autoridad Autónoma de Salud Pública y selección meritocrática de directores",
+          "Tarjeta Única de Salud con Historia Clínica Electrónica interoperable",
+          "Programa 'Médico en tu Región' para redistribución de especialistas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.5,
+        "justificacion": "Es la prioridad máxima política y discursiva ('Fuerza'). Presenta un plan muy detallado que incluye reestructuración policial, reforma del sistema judicial y penitenciario, y medidas de emergencia para los primeros 100 días. Propone leyes específicas (Ley contra el Crimen Organizado, Ley de Refundación Policial).",
+        "propuestasDestacadas": [
+          "Creación del Comando Unificado contra la Criminalidad",
+          "Construcción de Megapenal para reos de alta peligrosidad",
+          "Policía de Inteligencia separada de la Policía de Orden Público"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 9.5,
+        "justificacion": "Presenta una cartera de proyectos específica valorizada en US$ 84,910 millones para el periodo 2026-2035. Detalla proyectos por nombre (Líneas de Metro, Trenes, Puertos) y fechas de adjudicación. Es el área con mayor nivel de detalle técnico y financiero.",
+        "propuestasDestacadas": [
+          "Cartera de proyectos por US$ 84.9 mil millones (Trenes, Metros, Aeropuertos)",
+          "Corredor Bioceánico y Trenes de Cercanías",
+          "Plan Nacional de Infraestructura Productiva y Social"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 7.5,
+        "justificacion": "Aborda el tema con un enfoque económico (economía circular y bonos verdes). Propone un sistema nacional de financiamiento verde y metas de reforestación. Aunque detallado, el enfoque es más productivo/resiliente que conservacionista puro.",
+        "propuestasDestacadas": [
+          "Sistema Nacional de Financiamiento Verde y Bonos Verdes",
+          "Programa 100 Viveros para Reforestación Nacional",
+          "Economía Circular y Gestión de Residuos Sólidos"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque en inclusión productiva y reducción de brechas mediante empleo y tecnología, más que asistencialismo. Incluye propuestas fuertes en igualdad de género (brecha salarial, violencia) y protección infantil (nutrición, identidad digital).",
+        "propuestasDestacadas": [
+          "Guarderías del Futuro y Sistema Nacional de Cuidados",
+          "Programa 'Cero agresores libres' (violencia de género)",
+          "Salario Equitativo Automático para brecha de género"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 8.5,
+        "justificacion": "Muy desarrollado, con enfoque en la industrialización del pequeño agricultor y la gestión hídrica. Propone infraestructura de riego masiva (siembra y cosecha de agua) y digitalización del agro. Metas claras de incremento de productividad y reducción de pérdidas.",
+        "propuestasDestacadas": [
+          "Fondo de Garantía Agraria (FOGA-Agro)",
+          "Programa Nacional de Industrialización Rural (módulos de transformación)",
+          "Plan 100 Qochas y gestión de recursos hídricos"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "infraestructura",
+      "seguridad",
+      "economia"
+    ],
+    "areasDesatendidas": [
+      "Ninguna severamente (plan integral), pero Medio Ambiente y Desarrollo Social tienen un enfoque subordinado a la productividad económica"
+    ],
+    "perfilIdeologico": "Derecha liberal-tecnocrática con fuerte énfasis en el orden y la seguridad ('Mano dura'). Prioriza la inversión privada, las Asociaciones Público-Privadas (APP) y la modernización digital del Estado. Su enfoque social es la generación de riqueza y empleo formal más que la redistribución directa."
+  },
+  {
+    "partido": "Alianza Unidad Nacional",
+    "valores": {
+      "economia": 8.0,
+      "educacion": 6.0,
+      "salud": 6.5,
+      "seguridad": 9.5,
+      "infraestructura": 8.5,
+      "medioAmbiente": 3.0,
+      "desarrolloSocial": 6.0,
+      "agricultura": 8.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.0,
+        "justificacion": "Abordaje transversal fuerte en sectores productivos (Sectores 3, 4 y 7). Se enfoca en competitividad, comercio exterior (meta de US$ 100 mil millones en exportaciones) y minería (meta: primer productor mundial de cobre). Propone incentivos tributarios específicos para MYPES y contratación juvenil (cero impuestos primeros años).",
+        "propuestasDestacadas": [
+          "Meta de exportaciones de US$ 100 mil millones al 2031",
+          "Zonas Económicas Especiales (Callao-Chancay, La Libertad, Arequipa)",
+          "Incentivos tributarios (Cero tributos por 3 años) para nuevas MYPES que contraten jóvenes",
+          "Fusión de ministerios productivos (Producción, Agricultura y Comercio Exterior)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 6.0,
+        "justificacion": "Diagnóstico general en Sector 8. Se enfoca en currícula (cultura cívica), meritocracia docente y lucha contra la deserción. Propone un nuevo 'Viceministerio de Cumplimiento de la Docencia'. Aunque menciona problemas clave, el nivel de detalle técnico es menor que en seguridad o infraestructura.",
+        "propuestasDestacadas": [
+          "Revisión integral de la currícula escolar (enfoque en cultura cívica)",
+          "Creación del Viceministerio de Cumplimiento de la Docencia",
+          "Programa 'Una Laptop un Niño' relanzado con conectividad satelital (Starlink)",
+          "Nombramientos docentes estrictamente por mérito"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "salud": {
+        "calificacion": 6.5,
+        "justificacion": "Sector 8. Propone un Sistema Unificado de Salud y separación de financiamiento vs. prestación. Plantea crear un directorio tipo BCR para administrar fondos. Énfasis en atención primaria y lucha contra la anemia. Menciona meta de inversión del 7.5% del PBI (promedio Latam).",
+        "propuestasDestacadas": [
+          "Sistema Unificado de Salud (intercambio prestacional)",
+          "Creación de un Directorio autónomo (tipo BCR) para fondos de salud",
+          "Historias clínicas electrónicas unificadas",
+          "Fortalecimiento del primer nivel de atención (Redes Integradas)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.5,
+        "justificacion": "Prioridad absoluta del plan (Sector 1). Análisis exhaustivo y propuestas muy detalladas: reforma legal, policial y penitenciaria. Plan de emergencia de 100 días. Propuestas de 'mano dura', nuevos penales, militarización de fronteras y zonas de minería ilegal.",
+        "propuestasDestacadas": [
+          "Construcción de 3 megapenales y cárceles productivas (APP)",
+          "Creación de la división policial DINACOM (Apoyo Comunitario) con reservistas",
+          "Cadena perpetua para jefes de organizaciones criminales",
+          "Comando unificado de seguridad liderado por el Presidente"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.5,
+        "justificacion": "Sector 6 y 9. Propuesta ambiciosa de creación de un Ministerio de Infraestructura y uso del Fondo de Estabilización Fiscal. Metas numéricas altas (1.2 millones de viviendas). Enfoque en destrabe de proyectos y Asociaciones Público-Privadas.",
+        "propuestasDestacadas": [
+          "Creación del Ministerio de Infraestructura",
+          "Plan de construcción de 1'200,000 viviendas en 5 años",
+          "Trenes de cercanías (Chancay-Ica) y de penetración",
+          "Shock de inversiones en conectividad digital (fibra y satelital)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 3.0,
+        "justificacion": "Sector 5 ocupa solo 1 página (Pág. 60). Tratamiento superficial enfocado en reforestación y control de minería ilegal. Se subordina el tema ambiental a la producción económica. Menciona bonos de carbono pero sin desarrollo profundo.",
+        "propuestasDestacadas": [
+          "Interdicción de tala ilegal y minería aluvial",
+          "Concesiones de reforestación con especies nativas",
+          "Beneficios por bonos de carbono"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 6.0,
+        "justificacion": "Sector 10 y 12. Se enfoca en 'Plan 200' (200 distritos más pobres). Propuestas específicas para discapacidad (CONADIS) y adultos mayores (aumento de Pensión 65 a S/1,000). Enfoque asistencialista focalizado combinado con productivo.",
+        "propuestasDestacadas": [
+          "Plan 200: intervención focalizada en distritos de pobreza extrema",
+          "Aumento de Pensión 65 a S/ 1,000 mensuales",
+          "Reestructuración del Canon para asignar recursos directos a comunidades pobres",
+          "Fusión de MIDIS y Ministerio de la Mujer"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 8.0,
+        "justificacion": "Sector 7.1. Desarrollo extenso. Proyecto bandera 'Cosecha de aguas altoandinas' con presupuesto estimado de US$ 2,500 millones. Diferenciación clara entre agricultura familiar, pequeña y agroexportación. Propone un 'Banco de Insumos'.",
+        "propuestasDestacadas": [
+          "Proyecto de reservorios 'Cosecha de aguas' (US$ 2,500 MM)",
+          "Banco de Insumos (Fondo rotatorio de 100 millones de soles)",
+          "Titulación de tierras para comunidades nativas",
+          "Ampliación de frontera agrícola en 133,000 hectáreas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "infraestructura",
+      "agricultura"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente",
+      "cultura"
+    ],
+    "perfilIdeologico": "Derecha conservadora y tecnocrática. Prioriza el orden, la seguridad (mano dura) y el crecimiento económico mediante grandes obras de infraestructura y extractivismo (minería/agro). Promueve la reducción del aparato estatal (fusión de ministerios) y la participación privada (APPs, cárceles productivas), manteniendo programas sociales focalizados."
+  },
+  {
+    "partido": "Avanza País",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 7.5,
+      "salud": 7.5,
+      "seguridad": 8.5,
+      "infraestructura": 7.0,
+      "medioAmbiente": 5.5,
+      "desarrolloSocial": 6.0,
+      "agricultura": 6.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Es el eje central y más robusto del plan. Propone reformas estructurales profundas (Nuevo Código del Trabajo, Nuevo Código Minero). Plantea metas ambiciosas como formalizar 1.3 millones de empleos y un crecimiento anual no menor al 5%. Incluye desarrollo detallado de sectores productivos (minería, pesca, turismo) y reorientación del presupuesto nacional.",
+        "propuestasDestacadas": [
+          "Nuevo Código del Trabajo y Previsión Social",
+          "Formalización de la minería con 'licencia progresiva'",
+          "Creación de 5 nuevas Zonas Francas Especiales de Exportación",
+          "Reducción de tramitología y estabilidad regulatoria para inversiones"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Propone un incremento presupuestal específico (2,800 millones de soles) y un cambio de enfoque curricular hacia contenidos científicos ('Currículo Troncal Rígido') criticando el enfoque por competencias actual. Detalla infraestructura (4,000 módulos) y conexión laboral.",
+        "propuestasDestacadas": [
+          "Programa de Alimentación Escolar de Alto Impacto (shock proteico)",
+          "Creación de Colegios Deportivos de Alto Rendimiento",
+          "Bono 'trabajo por educación' condicionado",
+          "Incremento presupuestal de S/ 2,800 millones"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.5,
+        "justificacion": "Diagnóstico claro de fragmentación. Propone unificación mediante un Consejo Estratégico y una Historia Clínica Digital obligatoria. Asigna un incremento presupuestal de 2,000 millones de soles. Enfocado en gestión hospitalaria eficiente (APP 'Bata Blanca') y primer nivel de atención.",
+        "propuestasDestacadas": [
+          "Creación del Consejo Estratégico Nacional de Salud (CENS)",
+          "Historia Clínica Universal y Digital interoperable",
+          "Modelo de Gestión 'Bata Blanca' (APPs en hospitales)",
+          "Reducción de anemia y desnutrición en 10 puntos porcentuales"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.5,
+        "justificacion": "Prioridad alta con medidas de 'mano dura' y fuerte inversión. Propone incorporar 60,000 policías y construir 10 nuevos penales. Menciona explícitamente el 'Plan Mariano Santos' con un costo de S/ 18,600 millones y un incremento inmediato de S/ 1,250 millones al presupuesto PNP.",
+        "propuestasDestacadas": [
+          "Incorporación de 60,000 efectivos policiales adicionales",
+          "Construcción de 10 nuevos penales y 5 centros para menores",
+          "Retiro de la Corte IDH y aplicación de pena de muerte para delitos graves",
+          "Programa 'Escudo de Frontera' con bases militares operativas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 7.0,
+        "justificacion": "Fuerte énfasis en infraestructura de transporte (ferrocarriles y puertos) y vivienda. Propone reducir déficit de vivienda en 30% y destrabar megaproyectos. Plantea reformas en 'Invierte.pe' y contrataciones para agilizar obras.",
+        "propuestasDestacadas": [
+          "Tren de la Costa (Tumbes-Tacna) y Tren Lima-Ica",
+          "Programa 'Mejorando tu Casa' y comunidades urbanas autogestionarias",
+          "Plantas desalinizadoras para Lima Norte y Sur",
+          "Construcción del Puerto de Corio y modernización de otros puertos"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 5.5,
+        "justificacion": "Enfoque de reingeniería institucional (reemplazar MINAM por CONAPA y SNGA). Si bien propone 'Cero Mercurio' y reforestación, el enfoque es más administrativo y subordinado a la productividad. Propone moratoria a la colonización agrícola en la selva.",
+        "propuestasDestacadas": [
+          "Creación del Consejo Nacional de Política Ambiental (CONAPA) y SNGA",
+          "Programa Nacional 'Cero Mercurio' en minería",
+          "Moratoria de 10 años para colonización agrícola en selva",
+          "Reforestación de 180,000 hectáreas"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 6.0,
+        "justificacion": "Propone fusionar MIDIS y MIMP para reducir burocracia. Se enfoca en transferencias condicionadas (Nueva-Mamá) y empleabilidad, alejándose del asistencialismo. Atención a jóvenes (NiNis) y deporte.",
+        "propuestasDestacadas": [
+          "Fusión de ministerios (MIDIS + Mujer)",
+          "Programa 'Nueva-Mamá' (bonos para gestantes)",
+          "Pensión 65 con incremento del 30%",
+          "Becas técnicas para 'NiNis'"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 6.0,
+        "justificacion": "Distingue claramente entre agroexportación y agricultura familiar. Propone 'Escuelas de Formación Campesina' y reforma de la Autoridad Nacional del Agua (ANA). Busca convertir agricultura de subsistencia en excedentaria.",
+        "propuestasDestacadas": [
+          "Escuelas de Formación Campesina",
+          "Reforma de la ANA e integración a autoridad ambiental",
+          "Revisión de beneficios tributarios a gran agroexportación",
+          "Fondo agrario con excedentes del canon"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "seguridad",
+      "salud"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente"
+    ],
+    "perfilIdeologico": "Liberal reformista de centro-derecha. Prioriza el crecimiento económico mediante la inversión privada, la formalización y la reducción de la burocracia estatal (fusión de ministerios). En seguridad adopta una postura de mano dura (más policías, cárceles, pena de muerte). Busca un Estado eficiente y tecnocrático, con enfoque en infraestructura y meritocracia."
+  },
+  {
+    "partido": "Cooperación Popular",
+    "valores": {
+      "economia": 7.5,
+      "educacion": 7.0,
+      "salud": 7.0,
+      "seguridad": 8.5,
+      "infraestructura": 7.5,
+      "medioAmbiente": 6.0,
+      "desarrolloSocial": 7.5,
+      "agricultura": 6.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 7.5,
+        "justificacion": "Propone un modelo de 'Economía Social de Mercado' con fuerte intervención estatal. Incluye fechas específicas para renegociación de contratos de concesión (febrero 2027) y fortalecimiento de PetroPerú como empresa mixta. Destaca por el uso de fechas límite para solicitar facultades legislativas en temas tributarios y antimonopolio.",
+        "propuestasDestacadas": [
+          "Renegociación de contratos de concesión lesivos",
+          "Industrialización subsidiada por el Estado en áreas rurales",
+          "Fortalecimiento de PetroPerú sin privatización (capital mixto)",
+          "Eliminación de exoneraciones tributarias injustificadas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.0,
+        "justificacion": "Fuerte énfasis en infraestructura (reconstrucción de 27,000 colegios) y equipamiento tecnológico (compra de satélite). Establece plazos concretos (capacitación docente inicia enero 2027). Sin embargo, profundiza menos en reformas curriculares pedagógicas que en obra física.",
+        "propuestasDestacadas": [
+          "Compra de un satélite de telecomunicaciones (1er trimestre 2027)",
+          "Reconstrucción de 27,000 instituciones educativas",
+          "Capacitación masiva del magisterio"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Se centra en la cobertura horaria (atención mañana, tarde y noche) y la capacidad quirúrgica descentralizada. Define fechas exactas para el inicio de nuevos turnos (noviembre 2026) y abastecimiento de medicinas.",
+        "propuestasDestacadas": [
+          "Atención en turnos mañana, tarde y noche en centros de salud",
+          "Desplazamiento de especialistas a regiones",
+          "Hospitales regionales con capacidad de cirugías complejas al cierre del mandato"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.5,
+        "justificacion": "Eje prioritario vinculado a una reforma institucional profunda (Nueva Constitución). Incluye propuestas drásticas como la 'muerte civil' para funcionarios corruptos, militarización temporal de fronteras/zonas críticas, y reforma total del sistema penitenciario y judicial.",
+        "propuestasDestacadas": [
+          "Nueva Constitución vía Asamblea Constituyente",
+          "Muerte civil para funcionarios corruptos",
+          "Reforma de la Junta Nacional de Justicia",
+          "Construcción de penales y control territorial por FFAA/PNP"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 7.5,
+        "justificacion": "Lista proyectos de gran envergadura con fechas de licitación (diciembre 2026 para trenes). Apuesta por el mecanismo de Gobierno a Gobierno (G2G). Cubre vivienda rural, carreteras y saneamiento.",
+        "propuestasDestacadas": [
+          "Trenes de cercanía e interprovinciales (licitación dic 2026)",
+          "Autopistas Lima-Tacna y Lima-Junín",
+          "Viviendas térmicas rurales",
+          "Agua y saneamiento mediante G2G"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 6.0,
+        "justificacion": "Enfoque reactivo centrado en remediación y descontaminación (plantas de tratamiento). Se vincula fuertemente al control territorial contra minería ilegal. Propone fechas para licitar tecnologías de limpieza.",
+        "propuestasDestacadas": [
+          "Plantas de tratamiento para aguas servidas y relaves (licitación nov 2026)",
+          "Siembra y cosecha de agua",
+          "Remediación de pasivos ambientales"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.5,
+        "justificacion": "Aborda temas sensibles con propuestas directas: uniones civiles, aborto en casos específicos, y pensiones. Establece metas numéricas ambiciosas (pensión cubriendo 100% canasta básica para 2031) y creación de empleo.",
+        "propuestasDestacadas": [
+          "Pensión mínima que cubra 100% de canasta básica al 2031",
+          "Marco jurídico para unión de parejas del mismo sexo",
+          "Creación de un millón de empleos nuevos",
+          "Aumento del sueldo mínimo (enero 2027)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 6.0,
+        "justificacion": "No se presenta como un capítulo de reforma agraria tradicional, sino bajo la 'industrialización rural'. Propone plantas de procesamiento subsidiadas por el Estado para dar valor agregado a productos como café y cacao.",
+        "propuestasDestacadas": [
+          "Plantas de industrialización rural con subsidio estatal",
+          "Licitaciones para infraestructura de riego (represas/cochas)",
+          "Apoyo empresarial a agricultura familiar"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "infraestructura",
+      "economia"
+    ],
+    "areasDesatendidas": [
+      "cultura",
+      "transformacionDigital"
+    ],
+    "perfilIdeologico": "Populismo de centro-izquierda con fuerte tendencia estatista. Prioriza la intervención del Estado en la economía (subsidios, empresas mixtas, regulación de precios), el cambio constitucional (Asamblea Constituyente) y la obra pública masiva, combinando esto con cierto progresismo social (uniones civiles)."
+  },
+  {
+    "partido": "Fe en el Perú",
+    "valores": {
+      "economia": 7.0,
+      "educacion": 5.5,
+      "salud": 6.0,
+      "seguridad": 6.0,
+      "infraestructura": 5.0,
+      "medioAmbiente": 6.5,
+      "desarrolloSocial": 7.5,
+      "agricultura": 4.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 7.0,
+        "justificacion": "Se dedica el Capítulo VI completo. Enfoque claro en estabilidad macroeconómica, responsabilidad fiscal y libre mercado con responsabilidad social. Propone 'Ventanillas únicas' y regímenes simplificados para MYPEs. Buen diagnóstico estructural, aunque carece de metas numéricas precisas (ej. % de crecimiento o déficit exacto).",
+        "propuestasDestacadas": [
+          "Ventanillas únicas de inversión",
+          "Regímenes tributarios simplificados para MYPE",
+          "Incentivos a la innovación y transferencia tecnológica"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "educacion": {
+        "calificacion": 5.5,
+        "justificacion": "Tratado como subsección (5.5.2) dentro de la Dimensión Social. Diagnóstico correcto sobre brechas digitales y capacitación docente. Las propuestas son generales (mejorar infraestructura, capacitación meritocrática) sin detallar programas específicos de gran escala o cifras de inversión.",
+        "propuestasDestacadas": [
+          "Capacitación continua y meritocrática del docente",
+          "Acceso equitativo a tecnologías educativas",
+          "Fortalecimiento del sistema de becas"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "salud": {
+        "calificacion": 6.0,
+        "justificacion": "Subsección (5.5.1) de la Dimensión Social. Énfasis en el primer nivel de atención (primaria) y prevención. Menciona indicadores claros (mortalidad materna, cobertura), pero no detalla planes de construcción hospitalaria masiva ni montos de inversión.",
+        "propuestasDestacadas": [
+          "Fortalecimiento del primer nivel de atención",
+          "Incentivos para personal de salud en zonas rurales",
+          "Atención transversal a la salud mental"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "seguridad": {
+        "calificacion": 6.0,
+        "justificacion": "Evaluación mixta: Muy alto énfasis en 'Justicia' y 'Corrupción' dentro del Capítulo VIII (Institucional), proponiendo modernización judicial y meritocracia. Sin embargo, el componente de 'Seguridad Ciudadana' (policía, lucha contra el crimen callejero) tiene un perfil muy bajo y carece de estrategias operativas detalladas en comparación con la reforma institucional.",
+        "propuestasDestacadas": [
+          "Modernización de procesos judiciales",
+          "Transparencia en compras públicas (anticorrupción)",
+          "Fortalecimiento del servicio civil meritocrático"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "infraestructura": {
+        "calificacion": 5.0,
+        "justificacion": "Abordado transversalmente en secciones de Vivienda (5.5.4) y Economía (6.6.5). Se prioriza agua/saneamiento y vivienda social. Menciona 'infraestructura productiva' y cierre de brechas, pero no lista grandes proyectos viales, ferroviarios o energéticos específicos.",
+        "propuestasDestacadas": [
+          "Programas de vivienda social y mejoramiento urbano",
+          "Inversión en infraestructura de agua y saneamiento",
+          "Infraestructura productiva regional"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "medioAmbiente": {
+        "calificacion": 6.5,
+        "justificacion": "Cuenta con un Capítulo propio (VII), lo cual denota mayor importancia que en otros planes promedio. Estructura clara con diagnóstico, estrategias (economía circular, gestión de riesgos) e indicadores (superficie protegida).",
+        "propuestasDestacadas": [
+          "Economía circular y tecnologías limpias",
+          "Planificación preventiva del territorio",
+          "Gestión integrada de recursos hídricos"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.5,
+        "justificacion": "Es uno de los ejes más fuertes (Capítulo V). Incluye un compromiso explícito 'Perú Hambre Cero' y un enfoque articulado de ciclo de vida. Diagnóstico profundo sobre pobreza multidimensional y seguridad alimentaria.",
+        "propuestasDestacadas": [
+          "Compromiso Perú Hambre Cero",
+          "Integración de programas sociales con enfoque de ciclo de vida",
+          "Compras públicas a productores locales para nutrición"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 4.0,
+        "justificacion": "No tiene capítulo propio. Se menciona dispersamente vinculado a 'seguridad alimentaria' y 'desarrollo económico territorial'. Se habla de cadenas productivas locales, pero falta una estrategia agraria integral.",
+        "propuestasDestacadas": [
+          "Promoción de cadenas productivas locales",
+          "Articulación de producción local con programas sociales"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      }
+    },
+    "top3Prioridades": [
+      "desarrolloSocial",
+      "economia",
+      "seguridad"
+    ],
+    "areasDesatendidas": [
+      "agricultura",
+      "infraestructura"
+    ],
+    "perfilIdeologico": "Humanismo centrista con economía social de mercado. El plan prioriza la reforma institucional (lucha contra la corrupción y eficiencia estatal) y el desarrollo humano (Hambre Cero) sobre grandes obras de infraestructura física. Destaca un capítulo inusual dedicado exclusivamente a los peruanos en el exterior (PEX)."
+  },
+  {
+    "partido": "Frente de la Esperanza",
+    "valores": {
+      "economia": 8.0,
+      "educacion": 7.5,
+      "salud": 8.0,
+      "seguridad": 9.0,
+      "infraestructura": 7.0,
+      "medioAmbiente": 4.0,
+      "desarrolloSocial": 6.0,
+      "agricultura": 5.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.0,
+        "justificacion": "Propone metas numéricas ambiciosas: crecimiento sostenido del PBI al 8% hacia 2031, generación de 1 millón de empleos formales al año e inflación menor al 2%. Incluye una reforma tributaria agresiva (reducción gradual del IGV al 10%) y la creación de un Viceministerio de Microeconomía.",
+        "propuestasDestacadas": [
+          "Reducción del IGV al 10% para ampliar base tributaria",
+          "Generación de 1 millón de empleos formales por año",
+          "Eliminación de impuestos anti técnicos y régimen especial para MYPEs"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Se alinea al Proyecto Educativo Nacional 2036. Pone fuerte énfasis en la conexión entre nutrición y aprendizaje, y en la Ciencia y Tecnología (creación del Ministerio de CTI). Propone auditoría a Beca 18 y educación física obligatoria.",
+        "propuestasDestacadas": [
+          "Creación del Ministerio de Ciencia, Tecnología e Innovación",
+          "Educación física obligatoria a nivel nacional",
+          "Programa de alimentación escolar (desayunos y almuerzos) articulado"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "salud": {
+        "calificacion": 8.0,
+        "justificacion": "Diagnóstico extenso y propuestas estructurales. Plantea metas de inversión específicas per cápita (subir de US$500 a US$1000) y de infraestructura (2 camas por mil habitantes). Propone la creación de organismos estatales para fármacos.",
+        "propuestasDestacadas": [
+          "Creación de la Droguería Nacional y Laboratorio Farmacéutico Nacional",
+          "Meta de inversión de US$ 1,000 anuales por habitante",
+          "Programa 'Mi médico de Cabecera' por distrito"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.0,
+        "justificacion": "Es el eje prioritario del plan. Inicia con reformas constitucionales agresivas ('Ley Patriota') y reestructuración total del sistema de justicia y policial. Gran cantidad de propuestas legislativas específicas y operativas (reducción de escuelas policiales, laboratorios de criminalística).",
+        "propuestasDestacadas": [
+          "Ley Patriota y reformas constitucionales (revocatoria, eliminación de inmunidad)",
+          "Reforma policial: reducción de 25 a 7 escuelas y nueva malla curricular",
+          "Pena de 25 años para delito de perjuro y eliminación de beneficios penitenciarios"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 7.0,
+        "justificacion": "Enfoque en cierre de brechas de agua y saneamiento con propuesta de aumentar 30% el presupuesto del sector. Plantea un Plan Nacional de Infraestructura Sostenible 2025-2030 y programas de vivienda joven.",
+        "propuestasDestacadas": [
+          "Incrementar presupuesto de agua y saneamiento en un 30% (llegar a 8 mil millones de soles)",
+          "Creación del programa VIVIENDA JOVEN",
+          "Reestructuración del OTASS"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 4.0,
+        "justificacion": "Tratado brevemente bajo el título 'Biodiversidad'. Se centra en la cuantificación de riqueza natural y bonos de carbono. Es conceptualmente correcto pero carece de la profundidad operativa de los otros sectores.",
+        "propuestasDestacadas": [
+          "Canje de deuda externa por conservación",
+          "Monitoreo de emisiones de CO2 para mercado de valores transables",
+          "Identificación y cuantificación de riquezas naturales"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 6.0,
+        "justificacion": "Establece la meta de eliminar la pobreza extrema para 2030. Se enfoca en fortalecer la clase media y alianzas público-privadas. Aborda temas de nutrición y deporte como herramientas sociales.",
+        "propuestasDestacadas": [
+          "Eliminar la pobreza extrema para el 2030",
+          "Microcréditos para jubilados y tercera edad",
+          "Reducción de anemia y desnutrición a cero"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 5.5,
+        "justificacion": "Propuestas específicas pero limitadas a ciertas cadenas (algodón, camélidos). Plantea un fondo específico para el algodón y fortalecimiento de SENASA/INIA, además de sustitución de cultivos de coca.",
+        "propuestasDestacadas": [
+          "Fondo de US$ 1.2 millones anuales para reactivación del algodón",
+          "Conversión del marco jurídico promotor en permanente",
+          "Sustitución de cultivos de coca con incentivos tributarios"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "economia",
+      "salud"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente",
+      "agricultura"
+    ],
+    "perfilIdeologico": "Reformista institucional con enfoque en seguridad ('mano dura' y reformas legales) y economía social de mercado. Combina propuestas liberales en economía (reducción de impuestos, fomento a la inversión privada) con un rol estatal activo en salud e industrialización estratégica (farmacéutica nacional)."
+  },
+  {
+    "partido": "Fuerza Popular",
+    "valores": {
+      "economia": 8.5,
+      "educacion": 7.5,
+      "salud": 7.0,
+      "seguridad": 9.0,
+      "infraestructura": 8.0,
+      "medioAmbiente": 6.0,
+      "desarrolloSocial": 7.5,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.5,
+        "justificacion": "Eje central bajo el pilar 'Orden Económico'. Propone un 'Shock Desregulatorio' agresivo y disciplina fiscal estricta (déficit al 1%). Incluye políticas detalladas para minería, hidrocarburos y MYPEs (Licencia 0).",
+        "propuestasDestacadas": [
+          "Ventanilla Única Digital Nacional con IA",
+          "Reducción del déficit fiscal al 1% del PBI al 2031",
+          "Licencia 0 para MYPEs y eliminación de 500 trámites",
+          "Impulso a proyectos mineros y Polo Energético del Norte"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Propuestas ambiciosas en infraestructura y tecnología. Plantea construir 3,000 colegios y entregar 6 millones de laptops. Enfoque en educación técnica y el idioma inglés.",
+        "propuestasDestacadas": [
+          "Construcción de 3,000 colegios y Escuelas Bicentenario",
+          "Política Nacional 'Inglés, Puertas al Mundo'",
+          "Entrega de 6 millones de laptops/tablets",
+          "Rumbo Técnico Joven (certificación técnica en secundaria)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Enfoque en el primer nivel de atención y lucha contra la anemia. Propone modernizar hospitales y ampliar horarios. Incluye medidas específicas para medicamentos y salud mental.",
+        "propuestasDestacadas": [
+          "Reducción de la anemia infantil al 20%",
+          "Programa 'Bebés que Nacen Fuertes' (paquete 1,000 días)",
+          "Historia clínica electrónica interoperable (80% de integración)",
+          "Centros de Salud Materno-Infantiles Rurales"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.0,
+        "justificacion": "Prioridad máxima del plan ('Perú con Orden'). Diagnóstico extenso y propuestas muy agresivas en infraestructura penitenciaria y legal ('mano dura'). Uso de tecnología C5i.",
+        "propuestasDestacadas": [
+          "Construcción de 4 mega penales y administración temporal por FF.AA.",
+          "Centros de Comando y Videovigilancia (C5i) nacionales",
+          "Programa 'Distrito Seguro' y patrullaje integrado",
+          "Reforma del sistema judicial y fiscalía (Flagrancia Express)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.0,
+        "justificacion": "Amplio catálogo de obras viales, portuarias y de vivienda. Se apoya fuertemente en APPs y Obras por Impuestos. Metas claras en titulación y vivienda social.",
+        "propuestasDestacadas": [
+          "Tren Bioceánico y Tren de la Costa",
+          "Megapuerto de Chancay y Clúster Logístico",
+          "Construcción de 1.25 millones de viviendas",
+          "Titulación de 1 millón de predios ('Mi Título, Mi Hogar Seguro')"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 6.0,
+        "justificacion": "Aborda temas como deforestación y economía circular con propuestas concretas (Fondo Verde), aunque el énfasis general del plan es fuertemente extractivista (minería/petróleo), lo que modera la calificación ecológica.",
+        "propuestasDestacadas": [
+          "Fondo Verde Amazónico",
+          "Programa Nacional de Cero Deforestación Ilegal",
+          "Gestión de residuos sólidos con economía circular",
+          "Bonos verdes y de carbono"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.5,
+        "justificacion": "Propuestas muy específicas de aumento monetario en programas sociales y pensiones. Enfoque en alivio de pobreza y adultos mayores.",
+        "propuestasDestacadas": [
+          "Aumento de Pensión 65 a S/ 700 bimestrales",
+          "Pensión mínima ONP a S/ 800",
+          "Reducción de pobreza al 15%",
+          "Programa 'Agua que Cuida la Vida'"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Fuerte componente de infraestructura hídrica (grandes represas) y mecanización. Busca conectar al pequeño agricultor con mercados formales.",
+        "propuestasDestacadas": [
+          "Destrabe de grandes proyectos (Chavimochic III, Majes Siguas II)",
+          "Entrega de 5,000 tractores financiados",
+          "Siembra y Cosecha de Agua (reservorios/qochas)",
+          "Plan de Cadenas de Frío"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "economia",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente"
+    ],
+    "perfilIdeologico": "Derecha conservadora y liberal en lo económico (Fujimorismo). Prioriza el orden público ('mano dura'), la inversión privada en sectores extractivos e infraestructura, y programas sociales asistencialistas focalizados. El Estado tiene un rol fuerte en seguridad y justicia, pero subsidiario en la economía."
+  },
+  {
+    "partido": "Integridad Democrática",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 8.0,
+      "salud": 7.5,
+      "seguridad": 9.5,
+      "infraestructura": 8.5,
+      "medioAmbiente": 6.5,
+      "desarrolloSocial": 7.5,
+      "agricultura": 7.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Eje central del plan con un enfoque marcado en la inversión privada como motor de crecimiento. Propone una cartera de proyectos por más de US$ 50,000 millones y reformas tributarias específicas.",
+        "propuestasDestacadas": [
+          "Exoneración del Impuesto a la Renta por 2 años para nuevas MYPEs",
+          "Destrabe de proyectos mineros por US$ 25,000 millones",
+          "Prohibición de rescates financieros a Petroperú",
+          "Reforma tributaria para ampliar la base y reducir el déficit fiscal al 1% del PIB"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 8.0,
+        "justificacion": "Propone una reestructuración mayor del Estado fusionando el MINEDU con Cultura y el IPD. Incluye un plan agresivo de infraestructura con presupuesto explícito.",
+        "propuestasDestacadas": [
+          "Fusión de ministerios para crear el Ministerio de Educación, Ciencia, Cultura y Deporte",
+          "Plan de Infraestructura con inversión de S/ 32,000 millones en 7 años",
+          "Currículo con énfasis en educación financiera, cívica e inglés/programación",
+          "Fortalecimiento de Beca 18 con enfoque en empleabilidad"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque en la unificación del sistema y el uso de tecnología (telesalud). Plantea reformas logísticas para la compra de medicamentos.",
+        "propuestasDestacadas": [
+          "Creación de un Sistema Unificado de Salud (integración MINSA-EsSalud)",
+          "Historia Clínica Digital única nacional",
+          "Operador logístico único para compra corporativa de medicamentos",
+          "Meta de reducir la anemia infantil a menos del 5% en 5 años"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.5,
+        "justificacion": "Es la prioridad máxima del plan ('No hay libertad si vives con miedo'). Propuestas muy detalladas, de mano dura y reformas institucionales profundas en policía y justicia.",
+        "propuestasDestacadas": [
+          "Construcción del mega penal 'Challapalca II' para 10,000 internos",
+          "Cadena perpetua para funcionarios corruptos y crimen organizado grave",
+          "Militarización temporal de fronteras y zonas de minería ilegal",
+          "Expulsión inmediata de extranjeros en situación irregular o delictiva"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.5,
+        "justificacion": "Amplio desarrollo de proyectos específicos por macrorregiones y sectores (vial, portuario, aeroportuario).",
+        "propuestasDestacadas": [
+          "Tren Sur Peruano y Tren de la Costa",
+          "Consolidación del Hub Portuario Callao-Chancay",
+          "Parque Industrial de Ancón",
+          "Destrabe de 2,300 obras públicas paralizadas (S/ 27,000 millones)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 6.5,
+        "justificacion": "Aborda el tema desde una perspectiva de 'ordenamiento productivo' y lucha contra economías ilegales, más que de conservación per se. Buen nivel técnico en gestión hídrica.",
+        "propuestasDestacadas": [
+          "Trazabilidad digital (Blockchain) para madera",
+          "Gestión de minerales críticos para transición energética",
+          "Política Nacional de Resiliencia Hídrica y siembra de agua"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.5,
+        "justificacion": "Reforma administrativa mayor mediante la fusión del MIDIS y el MIMP. Enfoque en salir del asistencialismo hacia la productividad.",
+        "propuestasDestacadas": [
+          "Fusión del Ministerio de la Mujer con el MIDIS",
+          "Unificación de programas sociales (Juntos, Pensión 65) en 'Perú Crece Contigo'",
+          "Programa 'Hambre Cero' con enfoque nutricional y productivo"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "agricultura": {
+        "calificacion": 7.0,
+        "justificacion": "Integrado a la visión económica de desarrollo territorial. Énfasis en agroexportación y tecnificación del riego.",
+        "propuestasDestacadas": [
+          "Destrabe de megaproyectos de irrigación (Chavimochic III, Majes Siguas II)",
+          "Programa de invernaderos productivos para jóvenes rurales",
+          "Titulación masiva y catastro rural"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "economia",
+      "reforma del estado"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente"
+    ],
+    "perfilIdeologico": "Centro-derecha liberal con fuerte énfasis en autoridad y orden ('Mano dura'). Prioriza la eficiencia del Estado mediante fusiones ministeriales, la inversión privada como motor de desarrollo y la meritocracia. Enfoque tecnocrático y pro-mercado."
+  },
+  {
+    "partido": "Juntos por el Perú",
+    "valores": {
+      "economia": 8.5,
+      "educacion": 8.5,
+      "salud": 8.0,
+      "seguridad": 7.5,
+      "infraestructura": 6.0,
+      "medioAmbiente": 7.5,
+      "desarrolloSocial": 7.0,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.5,
+        "justificacion": "Propone un cambio estructural del modelo económico ('ruptura con el modelo primario-exportador'). Incluye metas numéricas ambiciosas como elevar la presión tributaria al 25% del PBI y aumentar regalías minero-energéticas en un 20%. Plantea industrialización nacional y sustitución de importaciones.",
+        "propuestasDestacadas": [
+          "Sistema tributario progresivo e impuesto a grandes fortunas",
+          "Incrementar regalías minero-energéticas en 20%",
+          "Creación de 20 Centros de Innovación Productiva (CITE)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 8.5,
+        "justificacion": "Define la educación como derecho universal con metas financieras claras (6% del PBI). Enfoca en la educación intercultural bilingüe y el cierre de brechas de infraestructura. Propone ingreso libre a universidades y aumento de matrícula pública en 50%.",
+        "propuestasDestacadas": [
+          "Inversión del 6% del PBI en educación",
+          "Programa de 'Escuelas Dignas' (100% con servicios básicos)",
+          "Analfabetismo cero y reducción de deserción a <2%"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 8.0,
+        "justificacion": "Prioridad alta con meta de inversión del 8% del PBI. Diagnóstico detallado sobre la fragmentación del sistema y el alto gasto de bolsillo. Propone un sistema único y fortalecimiento del primer nivel de atención.",
+        "propuestasDestacadas": [
+          "Destinar 8% del PBI a salud pública",
+          "Reducir el gasto de bolsillo a menos del 15%",
+          "Redes Integradas de Salud (RIS) operativas al 70%"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque en depuración policial y derogación de leyes consideradas 'pro-crimen'. Vincula la seguridad con la justicia social y comunitaria. Propone reformas al sistema judicial y control de fronteras/migración.",
+        "propuestasDestacadas": [
+          "Reforma estructural de la PNP y depuración de mandos",
+          "Derogación de leyes que favorecen el crimen organizado (Ley 32108, etc.)",
+          "Sistema Nacional Integrado de Información Criminal"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 6.0,
+        "justificacion": "Se enfoca principalmente en vivienda social y saneamiento, con menos énfasis en grandes megaproyectos viales comparado con otros sectores. Prioriza la recuperación de obras paralizadas (20%).",
+        "propuestasDestacadas": [
+          "Construcción de 50,000 viviendas nuevas con crédito estatal",
+          "Formalización del 70% de la propiedad predial urbana",
+          "Recuperar el 20% de obras paralizadas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 7.5,
+        "justificacion": "Fuerte contenido ideológico ('Eco-humanismo'). Prioriza la defensa del agua y las cabeceras de cuenca sobre la minería. Plantea una transición energética y gestión de riesgos de desastres con presupuesto específico.",
+        "propuestasDestacadas": [
+          "Intangibilidad de cabeceras de cuenca",
+          "Elevar energía renovable al 20% de la matriz",
+          "Revisión de concesiones mineras en zonas protegidas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.0,
+        "justificacion": "Transversal a todo el plan bajo el concepto de Estado Plurinacional. Énfasis en derechos de pueblos originarios, cultura y reparaciones a víctimas de conflictos sociales.",
+        "propuestasDestacadas": [
+          "Fondo Nacional de Reparaciones Integrales",
+          "Sistema Nacional de Cuidados",
+          "Reforma del Ministerio de Cultura hacia uno Plurinacional"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Plantea la soberanía alimentaria y el apoyo a la agricultura familiar frente a la agroexportación. Propone compras estatales a pequeños productores y gestión hídrica.",
+        "propuestasDestacadas": [
+          "Programa nacional de irrigaciones para cooperativas",
+          "50% de comunidades con empresas comunales de producción",
+          "Compras estatales dirigidas a la agricultura familiar"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "educacion",
+      "salud"
+    ],
+    "areasDesatendidas": [
+      "infraestructura"
+    ],
+    "perfilIdeologico": "Izquierda democrática y progresista. Propone un cambio de Constitución y un modelo de 'Socialismo Andino Amazónico'. Fuerte intervencionismo estatal en economía, nacionalismo de recursos naturales y enfoque plurinacional/intercultural."
+  },
+  {
+    "partido": "Libertad Popular",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 7.5,
+      "salud": 8.0,
+      "seguridad": 9.0,
+      "infraestructura": 8.5,
+      "medioAmbiente": 6.0,
+      "desarrolloSocial": 7.0,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Es el pilar ideológico y programático más fuerte. Propone un 'shock de inversiones' y una reforma fiscal profunda. Plantea la creación de un Consejo Fiscal Independiente con capacidad vinculante ('semáforos fiscales'), digitalización total de SUNAT y simplificación de trámites (reducción de barreras burocráticas).",
+        "propuestasDestacadas": [
+          "Regla Fiscal Independiente y Comité Fiscal con poder de veto",
+          "Ventanilla Única Minero-Energética digital",
+          "Plan de Atracción de Inversiones (SINAICE) y Zonas Económicas Especiales (ZEE)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque pragmático orientado a la productividad y el mercado. Propone cambios curriculares específicos (finanzas, emprendimiento, idioma chino) y meritocracia docente. Menos énfasis en infraestructura física escolar masiva comparado con otros ejes.",
+        "propuestasDestacadas": [
+          "Cursos obligatorios de Libertad Financiera y Chino Mandarín",
+          "Evaluación docente vinculada a incentivos",
+          "Enfoque en comprensión lectora y matemáticas (metas numéricas al 2031)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 8.0,
+        "justificacion": "Diagnóstico claro de la fragmentación del sistema. Propone una reestructuración profunda de EsSalud (autonomía técnica) y la unificación digital del sistema. Gran énfasis en la lucha contra la anemia con enfoque territorial.",
+        "propuestasDestacadas": [
+          "Historia Clínica Electrónica Única e interoperable",
+          "Reestructuración de EsSalud para gestión técnica y no política",
+          "Reducción de anemia al 35% y desnutrición crónica al 10%"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.0,
+        "justificacion": "Propuesta de 'mano dura' muy detallada. Plantea un cambio de doctrina hacia el control territorial y el uso de inteligencia financiera. Incluye medidas polémicas como 'Penales de Altura' y militarización de fronteras.",
+        "propuestasDestacadas": [
+          "Comando Unificado de Seguridad (tipo GEIN)",
+          "Delito de 'Permisividad Financiera' para bancos que no congelen cuentas de extorsión",
+          "Penales de alta seguridad en zonas remotas y bloqueo total de señal"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.5,
+        "justificacion": "Vincula la infraestructura directamente a la productividad económica. Propone mecanismos rápidos (Gobierno a Gobierno, Obras por Impuestos) y proyectos específicos en transporte y vivienda.",
+        "propuestasDestacadas": [
+          "Duplicar bonos Techo Propio (50,000 anuales)",
+          "Línea 3 del Metro de Lima y Trenes de Cercanías",
+          "Agencia Nacional de Infraestructura Competitiva"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 6.0,
+        "justificacion": "El enfoque es más económico ('Bioeconomía') y de seguridad (lucha contra tala ilegal) que conservacionista puro. Se centra en el ordenamiento territorial y la titulación para prevenir conflictos.",
+        "propuestasDestacadas": [
+          "Comando Unificado contra la Tala Ilegal (fuerza militar/policial)",
+          "Trazabilidad digital obligatoria de madera",
+          "Bioeconomía amazónica y bonos verdes"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.0,
+        "justificacion": "Rechaza el asistencialismo tradicional, proponiendo 'Capitalismo Popular' y empoderamiento a través de títulos de propiedad y servicios básicos (agua/saneamiento). Fuerte componente en lucha contra violencia a la mujer.",
+        "propuestasDestacadas": [
+          "Programa 'Cero Pisos de Tierra' (pisos de cemento)",
+          "Agua y saneamiento mediante Bloques Regionales y APPs",
+          "Reducción de tasa de feminicidios en 30%"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque en agroexportación y tecnificación del riego. Propone destrabar grandes proyectos de irrigación y usar el canon ('Cheque Minero') para infraestructura productiva.",
+        "propuestasDestacadas": [
+          "Destrabe de Chavimochic III y Majes Siguas",
+          "Cheque Minero para familias en zonas de influencia",
+          "Fondo Sierra Azul modernizado"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "economia",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente",
+      "desarrolloSocial"
+    ],
+    "perfilIdeologico": "Liberalismo clásico y tecnocrático. Prioriza el crecimiento económico impulsado por la inversión privada, un Estado pequeño pero fuerte en seguridad y justicia ('mano dura'), y la eficiencia técnica sobre la red de protección social tradicional. Enfoque marcado en la productividad y la formalización."
+  },
+  {
+    "partido": "Partido Aprista Peruano",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 7.0,
+      "salud": 7.0,
+      "seguridad": 8.5,
+      "infraestructura": 8.0,
+      "medioAmbiente": 6.0,
+      "desarrolloSocial": 7.5,
+      "agricultura": 6.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Es el eje central y más extenso del plan. Propone un modelo basado en la 'inversión productiva' con metas fiscales muy estrictas (déficit fiscal al 1% para 2029). Detalla reformas tributarias, laborales y una agresiva promoción de la inversión minera (destrabe de US$ 60,000 millones).",
+        "propuestasDestacadas": [
+          "Reducción del déficit fiscal al 1% del PBI para 2029",
+          "Destrabe de proyectos mineros por US$ 60,000 millones",
+          "Creación de Zonas Económicas Especiales (Puerto de Chancay)",
+          "Reforma tributaria para eliminar exoneraciones regresivas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.0,
+        "justificacion": "Se enfoca en articular la educación con la demanda productiva. Propone reformar la Ley General de Educación y fortalecer la educación técnica. Plantea metas numéricas para PISA y cobertura, aunque con menos volumen de propuestas operativas que en economía.",
+        "propuestasDestacadas": [
+          "Articulación de educación técnica con sectores productivos",
+          "Mejora de resultados PISA en 30%",
+          "Cobertura escolar al 98% hacia 2031"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Diagnóstico claro sobre la fragmentación del sistema. Propone una Ley de Atención Universal y un enfoque en atención primaria y preventiva para reducir el gasto de bolsillo. Metas claras de reducción de colas y anemia.",
+        "propuestasDestacadas": [
+          "Ley de atención universal en salud",
+          "Creación del programa 'Pronta atención en salud'",
+          "Disminución del 90% en colas y citas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.5,
+        "justificacion": "Propuestas muy detalladas y de 'mano dura'. Incluye la militarización de fronteras, creación de nuevas unidades de inteligencia (similar al GEIN) y reformas al código penal. Gran nivel de detalle operativo y legislativo.",
+        "propuestasDestacadas": [
+          "Creación de un GEIN contra el crimen transnacional",
+          "Aumento de 30 mil a 60 mil efectivos del Ejército para control fronterizo",
+          "Cadena perpetua para sicariato y extorsión",
+          "Construcción de penales de máxima seguridad"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.0,
+        "justificacion": "Amplio catálogo de megaproyectos específicos (trenes, puertos, irrigación). Se enfoca en la conectividad logística para apoyar el modelo económico. Menciona proyectos con nombre propio como Tren de la Costa y nuevas líneas del Metro.",
+        "propuestasDestacadas": [
+          "Tren de Cercanías Lima-Ica y Tren de la Costa Norte",
+          "Anillo Vial Periférico y nuevas líneas del Metro de Lima",
+          "Pavimentación del 80% de la red vial nacional al 2031"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 6.0,
+        "justificacion": "El tema se aborda principalmente desde una perspectiva productiva (plantaciones forestales comerciales) y regulatoria (minería ilegal). Si bien hay propuestas de bonos de carbono y economía circular, el enfoque conservacionista es secundario al desarrollo económico.",
+        "propuestasDestacadas": [
+          "Fomento de plantaciones forestales comerciales (1 millón de hectáreas)",
+          "Fiscalización de OEFA reforzada",
+          "Economía circular como matriz productiva"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.5,
+        "justificacion": "Propone una reestructuración institucional mayor (fusión MIDIS-MIMP). Conceptúa lo social como una 'membrana' sostenida por la producción. Metas ambiciosas de reducción de pobreza monetaria y extrema.",
+        "propuestasDestacadas": [
+          "Fusión del MIDIS con el Ministerio de la Mujer",
+          "Reducir pobreza monetaria a menos del 20% y extrema a <3%",
+          "Programa 'Hambre Cero' y fortalecimiento de ollas comunes"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 6.5,
+        "justificacion": "Fuerte énfasis en grandes proyectos de irrigación para agroexportación (Majes Siguas II, Chavimochic). La agricultura familiar recibe menciones en torno a riego tecnificado y titulación, pero el peso está en la infraestructura hídrica mayor.",
+        "propuestasDestacadas": [
+          "Destrabe de proyectos de irrigación (Chinecas, Alto Piura)",
+          "Programa de Riego Tecnificado (80,000 ha)",
+          "Titulación de tierras"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "seguridad",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente",
+      "cultura"
+    ],
+    "perfilIdeologico": "Aprismo renovado con enfoque desarrollista. Combina una retórica de justicia social ('Pan con Libertad') con una praxis económica liberal, priorizando la inversión privada minera, la disciplina fiscal estricta y la mano dura en seguridad. El Estado se ve como un facilitador de la inversión y constructor de infraestructura más que como un gestor empresarial directo."
+  },
+  {
+    "partido": "Partido Cívico Obras",
+    "valores": {
+      "economia": 6.5,
+      "educacion": 6.0,
+      "salud": 7.0,
+      "seguridad": 7.0,
+      "infraestructura": 9.0,
+      "medioAmbiente": 5.5,
+      "desarrolloSocial": 7.5,
+      "agricultura": 6.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 6.5,
+        "justificacion": "El enfoque económico es pragmático y microeconómico, centrado en la formalización de MYPES y la economía local productiva más que en grandes políticas macroeconómicas. Destaca la vinculación de obras públicas con empleo formal.",
+        "propuestasDestacadas": [
+          "Ley de Obra Pública con Mano de Obra Formal",
+          "Formalización de 20,000 MYPES vinculadas al sector construcción",
+          "Aumentar en 30% la recaudación tributaria de contratistas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 6.0,
+        "justificacion": "Se aborda específicamente en la Dimensión Social con métricas claras enfocadas en la brecha rural y la infraestructura. Aunque las metas son concretas, el desarrollo pedagógico es limitado comparado con el enfoque en 'obras'.",
+        "propuestasDestacadas": [
+          "Disminuir deserción escolar rural al 5%",
+          "Mejorar infraestructura en 55% de escuelas urbanas",
+          "Capacitación continua para el 100% de docentes rurales"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Propuestas muy específicas orientadas a la atención primaria, abastecimiento y cobertura. Se prioriza la rehabilitación de infraestructura existente y la reducción de anemia/desnutrición con cifras exactas.",
+        "propuestasDestacadas": [
+          "Aumentar cobertura al 85% en 5 años",
+          "Garantizar abastecimiento del 90% de medicamentos esenciales",
+          "Reducir tasa de desnutrición al 10%"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 7.0,
+        "justificacion": "Combina seguridad ciudadana preventiva (tejido social) con reforma del sistema de justicia. Propone medidas drásticas como la no prescripción de delitos y métricas de percepción de seguridad.",
+        "propuestasDestacadas": [
+          "No prescripción de delitos contra el Estado",
+          "Constituir 5,000 Comités Cívicos de Vigilancia",
+          "Resolver el 50% de denuncias presentadas"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 9.0,
+        "justificacion": "Es el eje central y la identidad del partido ('Obras'). Propone un 'Plan de Choque' masivo para destrabar proyectos paralizados y enfoca gran parte de las dimensiones económica y social en construcción física (caminos, losas, saneamiento).",
+        "propuestasDestacadas": [
+          "Culminar 1,500 obras paralizadas (escuelas y postas)",
+          "Intervenir 10,000 km de caminos rurales",
+          "Plataforma Digital Única de Obras Públicas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 5.5,
+        "justificacion": "Enfoque utilitario y de gestión territorial. Se centra en residuos sólidos, zonificación y resiliencia de obras ante desastres, con menos énfasis en conservación pura o transición energética global.",
+        "propuestasDestacadas": [
+          "Construir/mejorar 15 rellenos sanitarios intermunicipales",
+          "Instalar 50 plantas de valorización de residuos",
+          "Código de Construcción Sismo-Resistente y resiliente"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.5,
+        "justificacion": "Fuerte énfasis en reconstruir el tejido social comunitario. Propone indicadores claros para participación ciudadana, espacios públicos y atención a grupos vulnerables mediante microcréditos.",
+        "propuestasDestacadas": [
+          "Recuperar 1,000 plazas y espacios públicos",
+          "Acceso a microcréditos para 60% de familias en pobreza extrema",
+          "Atender a 50,000 personas en vulnerabilidad extrema"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 6.5,
+        "justificacion": "Abordado desde la dimensión económica con un enfoque logístico: caminos rurales para sacar productos y centros de acopio. Busca agregar valor a la producción local.",
+        "propuestasDestacadas": [
+          "Reducir en 25% el costo de transporte de productos agrícolas",
+          "Construir 100 plantas de procesamiento o centros de acopio",
+          "Conectar 500 centros poblados aislados"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "infraestructura",
+      "desarrolloSocial",
+      "salud"
+    ],
+    "areasDesatendidas": [
+      "politicaExterior",
+      "cienciaTecnologia"
+    ],
+    "perfilIdeologico": "Humanista y pragmático con enfoque en 'Hacer Obras'. Ideología de Centro con tendencia a la descentralización y economía social de mercado. Prioriza la gestión, la infraestructura tangible y la participación ciudadana vecinal sobre debates ideológicos abstractos."
+  },
+  {
+    "partido": "Partido de los Trabajadores y Emprendedores del Perú",
+    "valores": {
+      "economia": 7.5,
+      "educacion": 4.0,
+      "salud": 5.5,
+      "seguridad": 6.5,
+      "infraestructura": 6.5,
+      "medioAmbiente": 4.5,
+      "desarrolloSocial": 6.0,
+      "agricultura": 5.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 7.5,
+        "justificacion": "Se presenta como un pilar fuerte bajo la 'Dimensión económica'. Propone una 'Revolución del emprendimiento' con metas cuantitativas ambiciosas (+500,000 nuevas MYPES) y enfoque en industrialización (+25% valor agregado).",
+        "propuestasDestacadas": [
+          "Creación de 500,000 nuevas MYPES",
+          "Apoyo financiero y técnico a 1 millón de emprendedores",
+          "Desarrollo de cadenas productivas para industrialización"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 4.0,
+        "justificacion": "Abordaje limitado. Identifica la 'Educación desarticulada' pero se centra casi exclusivamente en reformar universidades e institutos, dejando de lado detalles sobre educación básica.",
+        "propuestasDestacadas": [
+          "Reformar universidades e institutos públicos",
+          "Subir 20 posiciones en el ranking de calidad educativa en Latinoamérica"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 5.5,
+        "justificacion": "Enfoque claro en la prevención ('Déficit en salud preventiva') y la descentralización. Establece una meta de cobertura total en zonas rurales.",
+        "propuestasDestacadas": [
+          "Implementar red nacional de atención médica preventiva",
+          "Cobertura de atención primaria al 100% en zonas rurales"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 6.5,
+        "justificacion": "Combina seguridad ciudadana con medidas anticorrupción drásticas (cadena perpetua). Propone fortalecer la justicia comunitaria y tiene metas de reducción de criminalidad.",
+        "propuestasDestacadas": [
+          "Cadena perpetua para delitos graves de corrupción",
+          "Fortalecer justicia comunitaria y seguridad preventiva",
+          "Reducir índice de criminalidad en 40%"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 6.5,
+        "justificacion": "Destaca por una meta muy ambiciosa en vivienda (1 millón de hogares) y un enfoque estratégico de infraestructura en zonas fronterizas.",
+        "propuestasDestacadas": [
+          "Programa de vivienda digna (1 millón de familias beneficiadas)",
+          "Cobertura vial y sanitaria al 100% en zonas fronterizas",
+          "Plan nacional de infraestructura pública"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 4.5,
+        "justificacion": "Mención única pero específica orientada a la recaudación fiscal verde más que a la conservación per se.",
+        "propuestasDestacadas": [
+          "Crear impuesto ecológico",
+          "Recaudación ambiental de S/. 500 millones anuales"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 6.0,
+        "justificacion": "Aborda desnutrición, derechos laborales y un 'Nuevo pacto social'. Las metas son claras (reducir desnutrición al 5%).",
+        "propuestasDestacadas": [
+          "Programa nacional de nutrición escolar",
+          "Nuevo pacto social nacional con 80% de participación regional",
+          "Fortalecimiento de derechos laborales (100% cumplimiento)"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 5.0,
+        "justificacion": "Identifica una 'Crisis agraria' y propone impulsar la micro y pequeña agricultura con una meta de crecimiento productivo.",
+        "propuestasDestacadas": [
+          "Impulsar micro y pequeña agricultura",
+          "Aumentar producción agropecuaria en 30% en 5 años"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "infraestructura",
+      "seguridad"
+    ],
+    "areasDesatendidas": [
+      "educacion",
+      "medioAmbiente"
+    ],
+    "perfilIdeologico": "Perfil populista con énfasis en el emprendedurismo y la mano dura institucional. Combina propuestas de libre mercado para MYPES (apoyo financiero) con fuerte intervención estatal en vivienda y medidas punitivas severas (cadena perpetua), además de reivindicaciones laborales."
+  },
+  {
+    "partido": "Partido del Buen Gobierno",
+    "valores": {
+      "economia": 8.5,
+      "educacion": 7.5,
+      "salud": 7.0,
+      "seguridad": 8.5,
+      "infraestructura": 6.5,
+      "medioAmbiente": 8.0,
+      "desarrolloSocial": 7.0,
+      "agricultura": 6.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.5,
+        "justificacion": "Es un eje central (Dimension Económica ocupa 28 páginas). Propone una transición de un modelo extractivo a una economía diversificada. Incluye reformas tributarias detalladas (impuestos verdes, eliminación de exoneraciones), una nueva arquitectura financiera (fusión SMV-SBS, Ley Fintech) y metas macroeconómicas claras.",
+        "propuestasDestacadas": [
+          "Fusión de SMV y SBS para crear un Supervisor Financiero Integrado",
+          "Ley Marco Fintech y Open Finance",
+          "Impuestos al carbono y eliminación de subsidios a combustibles fósiles",
+          "Fondo Soberano de Riqueza"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque en 'trayectorias educativas completas' y cierre de brecha digital. Diagnóstico claro sobre deserción y calidad. Propone reformas curriculares y fortalecimiento docente con metas numéricas para 2031.",
+        "propuestasDestacadas": [
+          "Universalización de la educación superior (técnica o universitaria)",
+          "Sistema nacional de alerta temprana para deserción escolar",
+          "Becas para maestrías y doctorados en áreas STEM con enfoque territorial"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Propone un sistema único e integrado. Se enfoca fuertemente en la digitalización (historia clínica electrónica única) y el primer nivel de atención. Las metas son ambiciosas (anemia <10%).",
+        "propuestasDestacadas": [
+          "Sistema prestacional único e integrado (MINSA, EsSalud, FFAA, Privados)",
+          "Historia Clínica Electrónica Única interoperable",
+          "Producción nacional de medicamentos e insumos estratégicos"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.5,
+        "justificacion": "Muy alto nivel de detalle, especialmente en la lucha contra la extorsión y reforma policial/judicial. Dedica secciones específicas a 'Lucha contra la extorsión' y reforma del sistema de justicia. Diagnóstico crudo sobre leyes 'pro crimen'.",
+        "propuestasDestacadas": [
+          "Derogación inmediata de leyes 'pro crimen'",
+          "Bloqueadores de señal al 100% en penales para 2028",
+          "Creación de la Plataforma Nacional de Análisis Criminal (PNAC)",
+          "Grupo Operativo de respuesta inmediata a la extorsión (GOREX-PNP)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 6.5,
+        "justificacion": "Enfoque multimodal (puertos, trenes, carreteras). Menciona proyectos específicos como el Tren de Cercanías y Puerto de Chancay. Integra la infraestructura con la sostenibilidad (infraestructura verde/azul).",
+        "propuestasDestacadas": [
+          "Hoja de ruta nacional de electromovilidad",
+          "Red Dorsal Nacional de Fibra Óptica y satélite propio",
+          "Tren de Cercanías y trenes de integración amazónica"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 8.0,
+        "justificacion": "Tema transversal y prioritario. Dedica una dimensión completa (Territorial-Ambiental) y secciones específicas como 'Amazonía Viva'. Propone una economía 'carbono neutral' y justicia ambiental.",
+        "propuestasDestacadas": [
+          "Impuesto a las emisiones de carbono",
+          "Juzgados ambientales especializados",
+          "Eliminación progresiva de subsidios a combustibles fósiles",
+          "Gobernanza indígena amazónica"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.0,
+        "justificacion": "Fuerte énfasis en igualdad de género, juventud y poblaciones indígenas. Propone un Sistema Nacional de Cuidados y cuotas de participación. Vincula lo social con lo económico (empleo juvenil).",
+        "propuestasDestacadas": [
+          "Sistema Nacional de Cuidados con enfoque de género",
+          "Ley de Paridad y Alternancia efectiva",
+          "Titulación de territorios indígenas al 100%"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 6.0,
+        "justificacion": "Desarrollo correcto pero con menos extensión que otros ejes. Se centra en el pequeño productor, siembra y cosecha de agua, y reforma de Agrobanco. Conectado a la bioeconomía.",
+        "propuestasDestacadas": [
+          "Reconceptualización y reorganización de Agrobanco",
+          "Seguro agrario y fondos diferenciados",
+          "Masificación de la siembra y cosecha de agua"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "seguridad",
+      "medioAmbiente"
+    ],
+    "areasDesatendidas": [
+      "agricultura"
+    ],
+    "perfilIdeologico": "Progresista / Socialdemócrata Verde. El plan enfatiza una transición ecológica de la economía, fuerte regulación estatal en finanzas y medio ambiente, derechos sociales (género, indígenas) y una reforma institucional profunda (justicia, policía) bajo el concepto de 'Buen Gobierno'."
+  },
+  {
+    "partido": "Partido Demócrata Unido Perú",
+    "valores": {
+      "economia": 7.5,
+      "educacion": 7.5,
+      "salud": 6.0,
+      "seguridad": 9.0,
+      "infraestructura": 6.5,
+      "medioAmbiente": 3.0,
+      "desarrolloSocial": 5.0,
+      "agricultura": 6.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 7.5,
+        "justificacion": "Se propone una 'Reforma Económica' con medidas drásticas como reducir el gasto público al 20% del PBI y eliminar restricciones cambiarias. Promueve un 'capitalismo popular' e industrialización masiva.",
+        "propuestasDestacadas": [
+          "Reducción del gasto público al 20% del PBI",
+          "Creación del Banco Mypes",
+          "Intervención estatal para bajar tasas de interés bancarias"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Se declara en emergencia y establece una meta presupuestal del 6% del PBI. Enfoque fuertemente técnico, militarizado y conservador (eliminación de ideología de género).",
+        "propuestasDestacadas": [
+          "Inversión del 6% del PBI",
+          "Currículo 75% práctico y 25% teórico",
+          "Instrucción premilitar y eliminación de ideología de género"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 6.0,
+        "justificacion": "Propuestas de descentralización y construcción de infraestructura ('hospitales en cada provincia'), pero con menos métricas financieras que educación. Enfoque en infraestructura física.",
+        "propuestasDestacadas": [
+          "Hospitales de nivel 1, 2 y 3 en cada provincia",
+          "Descentralización del Hospital de Neoplásicas",
+          "SERUMS remunerado"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "seguridad": {
+        "calificacion": 9.0,
+        "justificacion": "Es el eje más agresivo y detallado del plan. Propone cambios constitucionales radicales, salida de tratados internacionales y militarización. Gran cantidad de medidas punitivas específicas.",
+        "propuestasDestacadas": [
+          "Retiro del Pacto de San José y pena de muerte",
+          "Trabajos forzados para presos y cárceles en desiertos",
+          "Jueces sin rostro y militarización de fronteras"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 6.5,
+        "justificacion": "Promete una 'Revolución de obras públicas' con proyectos megaproyectos (trenes bala, túneles bajo ciudades), aunque carece de sustento técnico o financiero detallado sobre cómo se pagarán.",
+        "propuestasDestacadas": [
+          "Tren bala Tumbes-Tacna (inversión G2G)",
+          "Tren transoceánico y de levitación magnética",
+          "Túneles subterráneos debajo de las ciudades"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "medioAmbiente": {
+        "calificacion": 3.0,
+        "justificacion": "Mencionado tangencialmente. Se habla de energía solar/eólica para combatir el friaje y algo de reforestación educativa, pero no hay una política central de conservación o cambio climático.",
+        "propuestasDestacadas": [
+          "Uso de paneles solares para combatir el friaje",
+          "Forestación en colegios rurales"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 5.0,
+        "justificacion": "Enfoque asistencialista focalizado en veteranos (Licenciados FF.AA.) y adultos mayores. Menciona 'Pensión 65 universal' pero mezcla lo social con lo militar.",
+        "propuestasDestacadas": [
+          "Pensión 65 universal con aumento",
+          "Beneficios amplios para Licenciados de las FF.AA.",
+          "Hambre cero"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "agricultura": {
+        "calificacion": 6.5,
+        "justificacion": "Propone una 'Segunda Reforma Agraria' con enfoque crediticio y de industrialización. Medidas concretas de exoneración tributaria.",
+        "propuestasDestacadas": [
+          "Eliminación de impuestos agrícolas",
+          "Planta industrializadora de fertilizantes",
+          "Créditos universales vía Banco Mypes"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "educacion",
+      "economia"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente",
+      "desarrolloSocial"
+    ],
+    "perfilIdeologico": "Populismo conservador y nacionalista. Combina un enfoque de 'mano dura' extrema en seguridad (pena de muerte, militarización) con un modelo económico mercantilista que busca industrialización dirigida por el Estado y proteccionismo, junto a valores sociales tradicionales."
+  },
+  {
+    "partido": "Partido Demócrata Verde",
+    "valores": {
+      "economia": 8.5,
+      "educacion": 8.0,
+      "salud": 8.0,
+      "seguridad": 9.0,
+      "infraestructura": 8.5,
+      "medioAmbiente": 9.5,
+      "desarrolloSocial": 8.0,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.5,
+        "justificacion": "Propone una transformación del modelo hacia una economía verde, bioeconomía y economía circular. Destaca por su enfoque en la diversificación productiva y la industrialización sostenible.",
+        "propuestasDestacadas": [
+          "Creación de Parques Industriales Verdes y Centros Regionales de Desarrollo Productivo",
+          "Programa Nacional 'Emprende Perú' para MIPYMES",
+          "Impulso a la bioeconomía amazónica y andina",
+          "Meta de incrementar el valor agregado en exportaciones en un 40% al 2030"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 8.0,
+        "justificacion": "Aborda la educación desde un enfoque territorial e intercultural. Pone énfasis en la salud mental estudiantil y la transformación digital.",
+        "propuestasDestacadas": [
+          "Programa 'Escuelas Dignas' para infraestructura resiliente",
+          "Educación Intercultural Bilingüe como política transversal",
+          "Meta 2030: 100% de instituciones educativas conectadas a internet",
+          "Incorporación de educación emocional obligatoria"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 8.0,
+        "justificacion": "Plantea un sistema universal integrado (MINSA-ESSALUD) con fuerte énfasis en salud mental y ambiental (metales pesados).",
+        "propuestasDestacadas": [
+          "Programa 'Mente Perú' para salud mental comunitaria",
+          "Historia clínica electrónica única nacional",
+          "Meta de reducción de anemia infantil al 25% para 2030",
+          "Unidades fluviales de salud para la Amazonía"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.0,
+        "justificacion": "Realiza un diagnóstico estructural diferenciando orden público, seguridad ciudadana y política criminal. Propone reformas profundas en policía, justicia y sistema penitenciario.",
+        "propuestasDestacadas": [
+          "Reingeniería de la PNP separando funciones administrativas de operativas",
+          "Programa 'Justicia Digital' con expediente electrónico total",
+          "Creación de la Unidad Nacional Antitráfico de Terrenos",
+          "Reforma penitenciaria con enfoque de 'cárceles productivas' y bloqueo total de señales"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.5,
+        "justificacion": "Vincula la infraestructura con el ordenamiento territorial y la resiliencia climática. Abarca vivienda, saneamiento y conectividad digital.",
+        "propuestasDestacadas": [
+          "Programa 'Perú Conectado y Logístico' (trenes, puertos, corredores)",
+          "Meta de construir 120,000 viviendas sociales por año",
+          "Cierre de brechas de agua y saneamiento con tecnologías modulares",
+          "Infraestructura verde y drenajes sostenibles en ciudades"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 9.5,
+        "justificacion": "Eje central y transversal del plan (coherente con el nombre del partido). Propuestas muy detalladas sobre cambio climático, gestión hídrica y biodiversidad.",
+        "propuestasDestacadas": [
+          "Zonificación Ecológica Económica (ZEE) vinculante",
+          "Reducción de la deforestación a menos de 80,000 ha/año para 2030",
+          "Protección de cabeceras de cuenca y bofedales",
+          "Programa 'Aire Limpio' con monitoreo moderno en tiempo real"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 8.0,
+        "justificacion": "Cambio de enfoque de asistencia a 'inclusión productiva'. Énfasis en poblaciones vulnerables y diversidad cultural.",
+        "propuestasDestacadas": [
+          "Sistema Nacional de Cuidados",
+          "Rediseño de programas sociales (Juntos, Pensión 65) hacia autonomía económica",
+          "Meta de reducir la pobreza extrema al 2% para 2030",
+          "Creación de Centros Territoriales de Inclusión Productiva"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Integrado fuertemente en los ejes de economía y territorio. Se enfoca en seguridad alimentaria y protección de suelos agrícolas frente a la expansión urbana.",
+        "propuestasDestacadas": [
+          "Declaratoria de intangibilidad de valles agrícolas",
+          "Programa 'AgroPerú Inteligente' (riego tecnificado, semillas certificadas)",
+          "Corredores urbano-rurales productivos",
+          "Protección de suelos ante la erosión y degradación"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "medioAmbiente",
+      "seguridad",
+      "economia"
+    ],
+    "areasDesatendidas": [],
+    "perfilIdeologico": "Ecologismo político moderno y humanista. Promueve una economía social de mercado con fuerte regulación estatal en temas ambientales y territoriales. Prioriza la planificación, la descentralización y la modernización digital del Estado, alejándose de posturas extractivistas tradicionales."
+  },
+  {
+  "partido": "Perú Moderno",
+  "valores": {
+    "economia": 8.5,
+    "educacion": 8.0,
+    "salud": 7.0,
+    "seguridad": 9.0,
+    "infraestructura": 7.5,
+    "medioAmbiente": 5.5,
+    "desarrolloSocial": 6.5,
+    "agricultura": 6.5
+  },
+  "analisisDetallado": {
+    "economia": {
+      "calificacion": 8.5,
+      "justificacion": "Propone un modelo de Economía Social de Mercado con un fuerte componente de industrialización de recursos naturales (Litio). Incluye tablas con metas macroeconómicas específicas (Déficit fiscal 2.5%, Deuda 34% PIB, Crecimiento 4-6%). Destaca la propuesta de reducir el impuesto corporativo a PYMES al 10% y la creación de Zonas Económicas Especiales.",        
+      "propuestasDestacadas": [
+        "Impuesto corporativo a PYMES del 10%",
+        "Industrialización del Litio con participación estatal",
+        "Zonas Económicas Especiales en fronteras con excepción tributaria de 15 años"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "educacion": {
+      "calificacion": 8.0,
+      "justificacion": "Plantea una reforma estructural 'Nueva Escuela Peruana' enfocada en educación dual (técnica-académica) tipo modelo alemán. Menciona cifras salariales concretas para docentes (base S/ 4,500). Incluye tablas de indicadores para reducción de brecha digital y deserción escolar.",
+      "propuestasDestacadas": [
+        "Sueldo básico docente de 4,500 soles",
+        "Educación secundaria dual con certificación técnica",
+        "Creación de Centros Regionales de Pedagogía"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "salud": {
+      "calificacion": 7.0,
+      "justificacion": "Se enfoca en la digitalización ('Ficha clínica electrónica') y reducción de tiempos de espera. Propone infraestructura hospitalaria en todas las regiones. Presenta metas claras de reducción de anemia (al 15%) y desnutrición crónica (al 8%).",
+      "propuestasDestacadas": [
+        "Ficha clínica electrónica e historia clínica digital",
+        "Índice de Desempeño Hospitalario con ranking trimestral",
+        "Reducción de anemia infantil al 15%"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "seguridad": {
+      "calificacion": 9.0,
+      "justificacion": "Es el pilar más fuerte del plan. Propone una reingeniería total de la policía (división en Guardia Civil, Republicana y PIP) y medidas drásticas como cadena perpetua y construcción de cárceles de alta seguridad. Incluye el 'Plan Mariano Santos' y metas numéricas de reducción de homicidios y extorsión.",
+      "propuestasDestacadas": [
+        "División de la PNP en tres cuerpos especializados (retorno de la PIP)",
+        "Construcción de cárceles industrializadas de alta seguridad",
+        "Cadena perpetua para traición a la patria y sicariato"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "infraestructura": {
+      "calificacion": 7.5,
+      "justificacion": "Apuesta por megaproyectos específicos y ambiciosos. El 'Tren Transandino' es presentado como la columna vertebral de la integración. También menciona un 'Tren bala de Tumbes a Tacna' y desarrollo de megapuertos. Vincula infraestructura con integración territorial.",
+      "propuestasDestacadas": [
+        "Construcción del Tren Transandino (Puno-Cajamarca)",
+        "Tren bala de Tumbes a Tacna",
+        "Megapuertos y supercarreteras transversales"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "medioAmbiente": {
+      "calificacion": 5.5,
+      "justificacion": "Aunque el énfasis general es extractivista, incluye una sección de dimensiones con indicadores ambientales claros: reducción de deforestación (95,000 ha/año) y minería ilegal. Propone gestión de cuencas y reforestación, pero subordinado al desarrollo económico.", 
+      "propuestasDestacadas": [
+        "Reducción de deforestación en 95,000 hectáreas/año",
+        "Reducción de minería ilegal en 35%",
+        "Gestión integrada de cuencas prioritarias"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "desarrolloSocial": {
+      "calificacion": 6.5,
+      "justificacion": "Propone la erradicación de la pobreza en 5 años (meta muy ambiciosa). Se enfoca en programas para 'NINI's y adultos mayores (cobertura 90%). Incluye metas de reducción de violencia de género.",
+      "propuestasDestacadas": [
+        "Erradicación de la pobreza en un máximo de 5 años",
+        "Programa de formación para 1 millón de jóvenes NINI",
+        "Cobertura del 90% en programas para adultos mayores"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "agricultura": {
+      "calificacion": 6.5,
+      "justificacion": "Incluye tablas técnicas detalladas sobre ganadería y agricultura (manejo de pastos, suelos, riego). Propone 'Agro Banco' con mayor cobertura y tasas reducidas. El enfoque es tecnocrático y productivo.",
+      "propuestasDestacadas": [
+        "Incrementar cobertura de financiamiento al 70%",
+        "Recuperación de pastos naturales y suelos degradados",
+        "Titulación de tierras comunales"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    }
+  },
+  "top3Prioridades": [
+    "seguridad",
+    "economia",
+    "educacion"
+  ],
+  "areasDesatendidas": [
+    "medioAmbiente",
+    "cultura"
+  ],
+  "perfilIdeologico": "Partido de centro/centro-derecha con enfoque nacionalista y desarrollista. Prioriza la 'mano dura' en seguridad (reforma policial, cárceles), la meritocracia estatal (SERVIR), y la infraestructura a gran escala. Económicamente liberal en apoyo a PYMES, pero estatista en recursos estratégicos (Litio)."
+},
+  {
+    "partido": "Partido Morado",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 8.5,
+      "salud": 9.5,
+      "seguridad": 9.5,
+      "infraestructura": 8.0,
+      "medioAmbiente": 8.0,
+      "desarrolloSocial": 8.5,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Propone una reestructuración profunda mediante una Reforma Tributaria Integral y una Estrategia Nacional de Formalización. Detalla cambios en el Impuesto a la Renta con tasas progresivas, eliminación de exoneraciones y un régimen único simplificado. Incluye un enfoque de Bioeconomía y diversificación productiva.",
+        "propuestasDestacadas": [
+          "Reforma Tributaria Integral con tasas progresivas (15% a 31% para empresas)",
+          "Estrategia 'Mi Formalización' en 24 horas y Régimen Único Simplificado Digital (RUSD)",
+          "Creación de Clústeres Productivos Inclusivos y zonas económicas especiales",
+          "Planificación Estratégica vía CONAPLÁN vinculante al presupuesto"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 8.5,
+        "justificacion": "Enfoque fuerte en educación digital universal y fortalecimiento de la SUNEDU. Propone una transformación curricular hacia STEM+H y educación para la vida. Vincula la educación técnica con la demanda laboral mediante clústeres.",
+        "propuestasDestacadas": [
+          "Sistema Nacional de Educación Digital Inclusiva (S/ 4,200 millones)",
+          "Recuperación de la función rectora y fiscalizadora de SUNEDU",
+          "Beca 18 ampliada y Fondo Nacional de Crédito Educativo Universal",
+          "Conectividad de alta velocidad en 100% de instituciones educativas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 9.5,
+        "justificacion": "Es una de las reformas más detalladas del plan (Parte 5 completa). Propone un cambio de paradigma de curativo a preventivo y una reingeniería del sistema para separar financiador (EsSalud) de prestador (MINSA), con una ruta de convergencia de 10 años.",
+        "propuestasDestacadas": [
+          "Historia Clínica Digital Única e interoperable (S/ 2,850 millones)",
+          "Creación de 6 Macrorregiones de Salud con hospitales de alta complejidad",
+          "Articuladores de Salud como nueva carrera profesional (15,000 contratados)",
+          "Fusión progresiva de fondos de aseguramiento (SIS y EsSalud)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.5,
+        "justificacion": "Prioridad máxima con enfoque sistémico. Plantea derogar leyes 'pro-crimen', reforma penitenciaria masiva y digitalización total de la justicia y la policía para eliminar la impunidad. Presupuestos detallados para infraestructura y tecnología.",
+        "propuestasDestacadas": [
+          "Derogación inmediata del paquete de leyes 'pro-crimen' del Congreso 2021-2026",
+          "Sistema Integrado de Justicia y Seguridad Ciudadana (SIJUSEC) con IA",
+          "Construcción de cárceles de máxima seguridad y colonias agrícolas",
+          "Unidades de élite antiextorsión y policía comunitaria con patrullaje predictivo"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.0,
+        "justificacion": "Fuerte énfasis en vivienda social y conectividad digital. Propone un enfoque de 'habitabilidad' que integra servicios básicos. Incluye proyectos de transporte masivo y corredores logísticos.",
+        "propuestasDestacadas": [
+          "Programa 'Vivienda Digna Para Todos' (S/ 12,500 millones)",
+          "Plataforma 'Mi Vivienda Digital' para trámites y licencias",
+          "Red Vial Inteligente y Resiliente (5 Ejes Transandinos)",
+          "Infraestructura crítica resiliente ante desastres"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 8.0,
+        "justificacion": "Tratado como eje transversal económico (Bioeconomía). Propone monetizar la conservación mediante bonos de carbono social y turismo regenerativo. Enfocado en combatir economías ilegales (minería, tala).",
+        "propuestasDestacadas": [
+          "Bonos de Carbono Social para pequeños agricultores",
+          "Institución Nacional de Plantaciones Forestales (INAPLAF)",
+          "Economía Circular y gestión de residuos (S/ 3,700 millones)",
+          "Justicia Ambiental Efectiva y protección de defensores"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 8.5,
+        "justificacion": "Propone un sistema de protección social universal ('desde la cuna hasta la vejez'). Incluye pensión universal, sistema de cuidados y lucha contra la anemia mediante tecnología.",
+        "propuestasDestacadas": [
+          "Pensión Universal para Adultos Mayores (S/ 500 mensuales)",
+          "Sistema Nacional de Identidad Digital Inclusiva",
+          "Renta Básica Universal para extrema pobreza",
+          "Seguridad Alimentaria Digital contra la anemia"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Enfocado en la 'Soberanía Alimentaria Nutricional' y la agricultura familiar vinculada a compras estatales. Menor énfasis en gran agroexportación y más en cadenas productivas locales y bionegocios.",
+        "propuestasDestacadas": [
+          "Microcréditos para agricultura nutricional",
+          "Programa 'Del Campo al Trabajo' vinculado a Qali Warma",
+          "Zonificación de Tierras Agrícolas Productivas",
+          "Infraestructura hídrica natural (siembra y cosecha de agua)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "salud",
+      "economia"
+    ],
+    "areasDesatendidas": [],
+    "perfilIdeologico": "Republicanismo de Centro. Combina un enfoque de mercado con fuerte regulación estatal, énfasis en la institucionalidad, meritocracia y derechos sociales universales. Propone un Estado Digital, transparente y descentralizado funcionalmente."
+  },
+  {
+  "partido": "Podemos Perú",
+  "valores": {
+    "economia": 8.5,
+    "educacion": 7.5,
+    "salud": 7.0,
+    "seguridad": 8.0,
+    "infraestructura": 7.0,
+    "medioAmbiente": 5.0,
+    "desarrolloSocial": 6.5,
+    "agricultura": 6.0
+  },
+  "analisisDetallado": {
+    "economia": {
+      "calificacion": 8.5,
+      "justificacion": "Es el pilar más extenso (Pág. 22-45). Plantea un 'Shock de inversiones' públicas y privadas. Destaca por el enfoque detallado en las MYPEs (Banco de Desarrollo), la industrialización minera (joyería de oro/plata) y metas de crecimiento del PBI (6-8%).",
+      "propuestasDestacadas": [
+        "Creación del Banco de Desarrollo para MYPEs",
+        "Fondos no reembolsables de S/ 100 millones para startups jóvenes",
+        "Reforma de la Ley Minera para industrialización local",
+        "Shock de destrabe de obras paralizadas"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "educacion": {
+      "calificacion": 7.5,
+      "justificacion": "Propuestas ambiciosas centradas en la educación superior y técnica (Pág. 55-59). Incluye metas numéricas claras como duplicar vacantes universitarias y S/ 500 millones adicionales para I+D.",
+      "propuestasDestacadas": [
+        "Aumento de presupuesto a universidades públicas para duplicar vacantes",
+        "Beca 18 ampliada",
+        "Plan nacional de recuperación de aprendizajes",
+        "Conectividad digital educativa"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "salud": {
+      "calificacion": 7.0,
+      "justificacion": "Se enfoca en el primer nivel de atención y la desnutrición (Pág. 59-63). Propone metas agresivas (Anemia Cero, reducción de TBC). Aunque el diagnóstico es bueno, el 'cómo' financiar la infraestructura masiva es menos detallado que en economía.",
+      "propuestasDestacadas": [
+        "Programa 'Anemia Cero'",
+        "Fortalecimiento del primer nivel de atención (postas médicas)",
+        "Reducción de tiempos de espera con sistema digital",
+        "Atención universal de emergencias"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "seguridad": {
+      "calificacion": 8.0,
+      "justificacion": "Eje prioritario bajo el lema 'Guerra frontal'. Propone cambios estructurales y operativos (Pág. 46-50) con metas de reducción de victimización al 5%. Enfatiza el uso de las FF.AA. y tecnología.",
+      "propuestasDestacadas": [
+        "Creación del 'Comando Perú' (Inteligencia + Acción Rápida)",
+        "Apoyo de las Fuerzas Armadas en zonas críticas",
+        "Laboratorios de criminalística regionales y reconocimiento facial",
+        "Reforma del sistema penitenciario y 'muerte civil' para corruptos"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "infraestructura": {
+      "calificacion": 7.0,
+      "justificacion": "Combina infraestructura productiva con vivienda social (Pág. 33, 52-54). Propone titular 1 millón de viviendas y cerrar brechas de agua. Hay énfasis en corredores logísticos y trenes.",
+      "propuestasDestacadas": [
+        "Titulación masiva de 1 millón de predios",
+        "Shock de inversiones para agua y saneamiento",
+        "Tren de la costa y corredores logísticos",
+        "Pavimentación de la red vial departamental"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "medioAmbiente": {
+      "calificacion": 5.0,
+      "justificacion": "Se menciona en la sección territorial (Pág. 71-74). El enfoque es de gestión de recursos y zonificación (ZEE) más que conservacionista puro. Propone frenar la deforestación, pero entra en conflicto potencial con la propuesta de minería agresiva.",
+      "propuestasDestacadas": [
+        "Zonificación Ecológica y Económica (ZEE) en 100% de provincias",
+        "Gestión efectiva de ecosistemas frágiles",
+        "Fiscalización ambiental descentralizada"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "desarrolloSocial": {
+      "calificacion": 6.5,
+      "justificacion": "Enfocado en la transición de programas sociales al empleo productivo (Pág. 27, 35-37). Plantea 'Pensión Digna' y capacitación técnica para beneficiarios de programas sociales.",
+      "propuestasDestacadas": [
+        "Convertir programas sociales en puentes al empleo",
+        "Pensión mínima universal digna",
+        "Capital semilla para emprendimientos de subsistencia"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "agricultura": {
+      "calificacion": 6.0,
+      "justificacion": "Denominada 'Revolución Agraria' (Pág. 43-44). Se centra fuertemente en el riego y la infraestructura hídrica con una meta de 4 millones de hectáreas bajo riego eficiente.",
+      "propuestasDestacadas": [
+        "Ampliación de la frontera agrícola bajo riego",
+        "Programa nacional de recuperación de suelos",
+        "Titulación de predios agrarios",
+        "Tecnificación del riego parcelario"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    }
+  },
+  "top3Prioridades": [
+    "economia",
+    "seguridad",
+    "educacion"
+  ],
+  "areasDesatendidas": [
+    "medioAmbiente",
+    "cultura"
+  ],
+  "perfilIdeologico": "Populismo de centro-derecha con énfasis en el emprendedurismo (MYPEs) y 'mano dura' en seguridad. Combina una economía social de mercado con fuerte intervención estatal en sectores estratégicos (minería, seguridad, infraestructura) y programas de asistencia social vinculados a la productividad."
+},
+  {
+    "partido": "Partido Patriótico del Perú",
+    "valores": {
+      "economia": 7.0,
+      "educacion": 8.0,
+      "salud": 2.0,
+      "seguridad": 8.5,
+      "infraestructura": 7.5,
+      "medioAmbiente": 3.5,
+      "desarrolloSocial": 3.0,
+      "agricultura": 4.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 7.0,
+        "justificacion": "Se enfoca en la 'Industrialización' y la 'Producción' más que en política fiscal tradicional. Propone traer bancos extranjeros (Alemania, Francia, Corea) para bajar tasas de interés al 5% y fortalecer a las MYPE. Incluye un capítulo sobre trabajo y productividad.",
+        "propuestasDestacadas": [
+          "Industrializar todos los sectores productivos",
+          "Traer bancos mundiales para ofrecer tasas menores al 5%",
+          "Regla fiscal del 2.2% del PBI"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 8.0,
+        "justificacion": "Es uno de los tres ejes estratégicos ('Revolución Educativa'). Plantea metodologías específicas (Sugestopedia, neurociencia) y descentralización universitaria agresiva con nombres propios de instituciones.",
+        "propuestasDestacadas": [
+          "Metodologías de Súper Aprendizaje (Sugestopedia)",
+          "Sedes de la San Marcos, UNI y Agraria en las 25 regiones",
+          "Enseñanza obligatoria de Quechua e Inglés al 100% para 2031"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 2.0,
+        "justificacion": "Aunque se menciona como un 'Pilar de Acción Fundamental' en la introducción y se habla de 'hospitales de alta complejidad' en la presentación, no existe un capítulo o sección dedicada a propuestas de Salud en el desarrollo del plan (Parte II).",
+        "propuestasDestacadas": [
+          "Hospitales de alta complejidad (mencionado solo en presentación)"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "seguridad": {
+        "calificacion": 8.5,
+        "justificacion": "Es la prioridad número uno del plan. Diagnóstico extenso con estadísticas. Propuestas muy específicas sobre cárceles, uso de FF.AA. y tecnología.",
+        "propuestasDestacadas": [
+          "Cárceles productivas (100% de penales)",
+          "Incorporar licenciados de las FF.AA. a la policía y seguridad ciudadana",
+          "Reducir tasa de victimización a menos del 10%"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 7.5,
+        "justificacion": "Aborda vivienda, transporte y grandes obras. Propone la creación de líneas de bandera y mega puertos, con un enfoque fuerte en inversión privada y simplificación administrativa.",
+        "propuestasDestacadas": [
+          "Línea Aérea y Flota Mercante de Bandera Nacional",
+          "Trenes de Bandera Nacional",
+          "Mega puerto de Corio y desarrollo de Chancay"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 3.5,
+        "justificacion": "Se dedica solo una página al final (Dimensión Ambiental). El enfoque es casi exclusivamente sobre la erradicación de la minería ilegal, sin profundizar en cambio climático, energías renovables o gestión de residuos generales.",
+        "propuestasDestacadas": [
+          "Desterrar la minería ilegal",
+          "Prevención contra contaminación por mercurio"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 3.0,
+        "justificacion": "Bajo la 'Dimensión Social' el plan desarrolla temas de Vivienda y Transporte. No hay un desarrollo específico de programas de alivio a la pobreza, inclusión social o asistencia a vulnerables más allá de menciones generales en los principios.",
+        "propuestasDestacadas": [
+          "Programa de reubicación de zonas de alto riesgo",
+          "Titulación y servicios básicos"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "agricultura": {
+        "calificacion": 4.5,
+        "justificacion": "Se aborda bajo el concepto de 'Soberanía Alimentaria'. Se enfoca en la propiedad de la tierra y el agua frente a la inversión extranjera. Se menciona crédito agrario en la introducción.",
+        "propuestasDestacadas": [
+          "Control en la transferencia de propiedad de tierras a capital extranjero",
+          "Crédito MYPE a través del Banco de la Nación para agricultores"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "educacion",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [
+      "salud",
+      "desarrolloSocial",
+      "medioAmbiente"
+    ],
+    "perfilIdeologico": "Nacionalismo productivo con fuerte énfasis en seguridad (mano dura, militarización de seguridad) e intervención estatal estratégica en infraestructura (líneas de bandera), combinado con fomento a la inversión privada regulada."
+  },
+  {
+    "partido": "Partido Político PRIN",
+    "valores": {
+      "economia": 7.5,
+      "educacion": 7.0,
+      "salud": 7.0,
+      "seguridad": 8.0,
+      "infraestructura": 5.5,
+      "medioAmbiente": 6.5,
+      "desarrolloSocial": 6.0,
+      "agricultura": 5.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 7.5,
+        "justificacion": "Propone reformas concretas como aumentar la presión tributaria al 19% (promedio Latam) y reducir gastos improductivos. Enfoque fuerte en la formalización de MYPES mediante incentivos y simplificación administrativa. Plantea la creación de una Comisión de Desarrollo multisectorial.",
+        "propuestasDestacadas": [
+          "Aumentar presión tributaria al 19%",
+          "Reducción drástica de gastos estatales no productivos",
+          "Simplificación administrativa y tributaria para MYPES"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.0,
+        "justificacion": "Diagnóstico extenso sobre brechas digitales y de infraestructura. Propone vincular la educación técnica con sectores productivos (minería, agro) y crear centros de desarrollo de conocimientos técnicos. Énfasis en educación dual.",
+        "propuestasDestacadas": [
+          "Centros de desarrollo técnico vinculados a minería y agro",
+          "Educación técnica dual",
+          "Currículo con talleres de ética y denuncia ciudadana"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Establece una meta presupuestal clara (6% del PBI). Se enfoca en el primer nivel de atención, salud mental y lucha contra la desnutrición/anemia. Propone una autoridad nacional de coordinación y digitalización de historias clínicas.",
+        "propuestasDestacadas": [
+          "Incrementar presupuesto al 6% del PBI",
+          "Creación de la Autoridad Nacional de Coordinación del Sistema de Salud",
+          "Telemedicina en regiones de difícil acceso"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.0,
+        "justificacion": "Es el área con propuestas más específicas tecnológicamente. Menciona uso de software de Machine Learning (IBM Watson, Palantir), drones, reconocimiento facial y militarización de zonas críticas (VRAEM). Propone cárceles productivas y un Centro de Lucha contra la Criminalidad.",
+        "propuestasDestacadas": [
+          "Uso de IA y Machine Learning para inteligencia criminal",
+          "Control territorial con despliegue de FF.AA. en zonas críticas",
+          "Construcción de cárceles productivas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 5.5,
+        "justificacion": "Se menciona un Sistema Multimodal de servicios logísticos (puertos, aeropuertos, trenes) y cierre de brecha de conectividad digital, pero con menos detalle operativo que en seguridad o salud.",
+        "propuestasDestacadas": [
+          "Sistema Multimodal de Servicios Logísticos",
+          "Conectividad digital universal",
+          "Parques Industriales Sostenibles"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "medioAmbiente": {
+        "calificacion": 6.5,
+        "justificacion": "Diagnóstico detallado sobre deforestación y minería ilegal (Madre de Dios). Propone una Comisión de Protección y leyes drásticas para sancionar delitos ambientales. Enfocado en recuperación de pasivos ambientales y siembra de agua.",
+        "propuestasDestacadas": [
+          "Siembra y cosecha de agua",
+          "Remediación de pasivos ambientales mineros",
+          "Sanciones drásticas para tala y minería ilegal"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 6.0,
+        "justificacion": "Enfoque en servicios básicos (agua, desagüe) y reducción de pobreza monetaria. Propone programas de vivienda digna y atención a grupos vulnerables, aunque muchas propuestas son declarativas.",
+        "propuestasDestacadas": [
+          "Acceso universal a servicios básicos",
+          "Programas de vivienda digna y resiliente",
+          "Protección integral con recompensas en casos de corrupción"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "agricultura": {
+        "calificacion": 5.0,
+        "justificacion": "Se aborda transversalmente dentro de economía y medio ambiente. Foco en asociatividad, agricultura familiar y exportación. Falta un eje autónomo fuerte con presupuesto propio detallado.",
+        "propuestasDestacadas": [
+          "Promoción de la asociatividad",
+          "Innovación agraria colaborativa",
+          "Gestión de recursos hídricos"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "economia",
+      "salud"
+    ],
+    "areasDesatendidas": [
+      "agricultura",
+      "infraestructura"
+    ],
+    "perfilIdeologico": "Regionalista y tecnocrático. Propone una Economía Social de Mercado con fuerte énfasis en la modernización digital, el orden (seguridad con mano dura y tecnología) y la eficiencia del gasto público. Muestra preocupación por la descentralización y el medio ambiente vinculado a la minería."
+  },
+  {
+    "partido": "País para todos",
+    "valores": {
+      "economia": 8.5,
+      "educacion": 6.0,
+      "salud": 7.0,
+      "seguridad": 9.5,
+      "infraestructura": 7.5,
+      "medioAmbiente": 5.5,
+      "desarrolloSocial": 7.0,
+      "agricultura": 5.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.5,
+        "justificacion": "Se presenta como uno de los pilares fundamentales con una matriz detallada de indicadores macroeconómicos. Propone un 'Plan Crecer Productivo', reforma tributaria para ampliar la base sin subir tasas, y un fuerte enfoque en el destrabe de inversiones y formalización de MYPEs.",
+        "propuestasDestacadas": [
+          "Reforma tributaria progresiva y simplificación para MYPEs",
+          "Destrabe de proyectos de inversión mediante mesas ejecutivas",
+          "Plan Crecer Productivo enfocado en diversificación"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 6.0,
+        "justificacion": "Abordada dentro de la dimensión social y de capital humano. El enfoque está muy vinculado a la empleabilidad y la formación técnica. Aunque menciona metas de logros de aprendizaje y conectividad, tiene menos desarrollo autónomo comparado con seguridad o economía.",
+        "propuestasDestacadas": [
+          "Formación técnica y superior alineada a sectores productivos",
+          "Becas y formación técnica territorial",
+          "Cierre de brechas de infraestructura y conectividad escolar"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Cuenta con una sección de reforma específica y metas claras en la matriz social (anemia, abastecimiento). Propone un sistema de 'Salud Universal' integrando MINSA y EsSalud, con énfasis en el primer nivel de atención y telemedicina.",
+        "propuestasDestacadas": [
+          "Salud universal con financiamiento y prestación integrada",
+          "Ciudades de la salud y redes territoriales",
+          "Historia clínica interoperable y telemedicina"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.5,
+        "justificacion": "Es el eje central y prioritario del plan ('Sin seguridad no hay país posible'). Dedica la mayor cantidad de diagnóstico y propuestas detalladas, incluyendo reforma policial, penitenciaria y de justicia. Establece metas numéricas precisas para la reducción de homicidios y victimización.",
+        "propuestasDestacadas": [
+          "Pacto nacional por la seguridad y contra las mafias",
+          "Reforma penitenciaria con bloqueo real de comunicaciones",
+          "Reforma del servicio de justicia para reducir impunidad"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 7.5,
+        "justificacion": "Fuerte enfoque técnico en la gestión de inversión pública ('Invierte.pe'). Se prioriza el cierre de brechas en agua, saneamiento y conectividad vial/digital. Se plantea como una reforma estructural para evitar obras paralizadas.",
+        "propuestasDestacadas": [
+          "Destrabe de obras paralizadas y lucha contra sobrecostos",
+          "Cierre de brechas de agua y saneamiento urbano-rural",
+          "Conectividad física y digital nacional"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 5.5,
+        "justificacion": "Se aborda principalmente desde la 'Dimensión territorial-ambiental' con enfoque en agua y lucha contra economías ilegales (minería ilegal, tala). Vincula lo ambiental fuertemente a la seguridad y formalización más que a la conservación per se.",
+        "propuestasDestacadas": [
+          "Recuperación del control en la Amazonía frente a economías ilegales",
+          "Gestión de riesgos climáticos y resiliencia",
+          "Formalización de minería con estándares ambientales"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.0,
+        "justificacion": "Matriz detallada sobre reducción de pobreza, anemia y atención a vulnerables. Propone un 'Sistema Nacional de Cuidados' y reformas a programas sociales (Pensión 65, Juntos) con enfoque de salida de la pobreza.",
+        "propuestasDestacadas": [
+          "Pacto nacional por alimentación y cuidado de la niñez",
+          "Sistema Nacional de Cuidados",
+          "Reforma de pensiones con pilar universal y contributivo"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 5.0,
+        "justificacion": "No tiene un capítulo exclusivo como tal, sino que se integra en 'Transformación productiva' y 'Sectores estratégicos'. Se enfoca en la agroexportación y la productividad, vinculando el desarrollo rural a la conectividad y saneamiento.",
+        "propuestasDestacadas": [
+          "Impulso a la agroexportación moderna",
+          "Proyectos de irrigación y gestión hídrica",
+          "CITEs y transferencia tecnológica para el agro"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "economia",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [
+      "agricultura",
+      "medioAmbiente"
+    ],
+    "perfilIdeologico": "Derecha liberal-conservadora con enfoque tecnocrático. Prioriza el orden, la autoridad ('mano firme') y la eficiencia del Estado. Su modelo de desarrollo se basa en la inversión privada, el destrabe de proyectos y la seguridad jurídica, con políticas sociales focalizadas y basadas en resultados."
+  },
+  {
+    "partido": "Perú Acción",
+    "valores": {
+      "economia": 8.0,
+      "educacion": 7.0,
+      "salud": 7.0,
+      "seguridad": 9.5,
+      "infraestructura": 5.5,
+      "medioAmbiente": 5.0,
+      "desarrolloSocial": 5.5,
+      "agricultura": 4.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.0,
+        "justificacion": "Propone reformas estructurales profundas: reducción a solo 10 ministerios, eliminación de burocracia y reforma tributaria específica (IGV al 16%, eliminación del ISC a combustibles). Busca crecimiento mayor al 5% y liquidación de activos de Petroperú.",
+        "propuestasDestacadas": [
+          "Reducción del IGV al 16%",
+          "Consolidación en solo 10 ministerios",
+          "Privatización/reestructuración de Petroperú"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.0,
+        "justificacion": "Plantea un cambio radical de modelo: fusión del MINEDU con el MIDIS, eliminación del enfoque por competencias y de la 'ideología de género'. Propone metas numéricas de construcción de escuelas.",
+        "propuestasDestacadas": [
+          "Fusión de MINEDU y MIDIS",
+          "Construcción de 50 unidades educativas integrales por año",
+          "Eliminación de la ideología de género y enfoque por competencias"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Propone un cambio estructural hacia el 'Modelo Singapur' en atención primaria y la fusión de MINSA y ESSALUD. Incluye metas físicas de construcción de hospitales y postas.",
+        "propuestasDestacadas": [
+          "Fusión de MINSA y ESSALUD en sistema único",
+          "Implementación del modelo de Singapur en atención primaria",
+          "Construcción de 10 hospitales de alta complejidad por año"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.5,
+        "justificacion": "Es el eje central y homónimo del plan ('Mano de Hierro'). Propuestas extremadamente detalladas y agresivas: salida de la CIDH, pena de muerte, construcción de 12 mega cárceles y militarización de fronteras.",
+        "propuestasDestacadas": [
+          "Salida de la CIDH y pena de muerte",
+          "Construcción de 12 mega cárceles en zonas remotas",
+          "Jueces sin rostro y cadena perpetua para corrupción"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 5.5,
+        "justificacion": "Se enfoca principalmente en infraestructura de riego (represas) e infraestructura social (colegios/hospitales) vía APPs. No hay un plan detallado de vivienda social o transporte urbano masivo.",
+        "propuestasDestacadas": [
+          "Culminación de 14 proyectos de irrigación (Chinecas, Majes Siguas)",
+          "Infraestructura vía Asociaciones Público Privadas (APP)",
+          "Construcción de cárceles y bases militares fronterizas"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 5.0,
+        "justificacion": "Enfoque mixto: seguridad ambiental (contra minería ilegal y pesca extranjera) pero con fuerte impulso a la explotación petrolera y minera. Propone vigilancia naval y reestructuración del REINFO.",
+        "propuestasDestacadas": [
+          "Eliminación de minería ilegal con intervención militar",
+          "Vigilancia de las 200 millas por la Marina de Guerra",
+          "Reestructuración del REINFO"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 5.5,
+        "justificacion": "Propuestas puntuales como aumento de Pensión 65 y créditos a mujeres, pero estructuralmente propone fusionar el ministerio social con educación, sugiriendo una reducción del aparato burocrático dedicado al tema.",
+        "propuestasDestacadas": [
+          "Aumento del 60% en Pensión 65",
+          "Créditos para mujeres emprendedoras",
+          "Centros de asistencia al adulto mayor"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 4.5,
+        "justificacion": "El énfasis está puesto casi exclusivamente en grandes proyectos de irrigación para la agroexportación. Falta detalle sobre apoyo técnico al pequeño agricultor o desarrollo rural integral.",
+        "propuestasDestacadas": [
+          "Destrabe de grandes proyectos de irrigación (Chinecas, Majes Siguas II)",
+          "Construcción de nuevas represas",
+          "Potencia de exportación agroindustrial"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "economia",
+      "educacion"
+    ],
+    "areasDesatendidas": [
+      "vivienda",
+      "agricultura (pequeña escala)",
+      "transporte"
+    ],
+    "perfilIdeologico": "Derecha conservadora y autoritaria ('Mano de Hierro'). Combina un enfoque radical en seguridad (Bukele-style) con un liberalismo económico ortodoxo (reducción del Estado, impuestos bajos, libre mercado) y conservadurismo social (anti-ideología de género)."
+  },
+  {
+    "partido": "Perú Libre",
+    "valores": {
+      "economia": 8.0,
+      "educacion": 7.5,
+      "salud": 8.5,
+      "seguridad": 8.0,
+      "infraestructura": 6.0,
+      "medioAmbiente": 7.5,
+      "desarrolloSocial": 8.0,
+      "agricultura": 7.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.0,
+        "justificacion": "Propone un cambio radical de modelo económico hacia una 'Economía Popular con Mercados' y un Estado planificador. Establece metas industriales específicas como elevar la manufactura al 20% del PBI y aumentar la presión tributaria al 20% mediante una reforma progresiva.",
+        "propuestasDestacadas": [
+          "Reforma tributaria progresiva para grandes rentas",
+          "Industrialización con sustitución de importaciones",
+          "Recuperación de la soberanía sobre recursos naturales (revisión de contratos ley)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Se enfoca en el acceso universal gratuito a universidades y la erradicación del analfabetismo. Plantea indicadores claros como reducir la deserción escolar a ≤ 5% y lograr 0% de analfabetismo al 2031.",
+        "propuestasDestacadas": [
+          "Ingreso libre a universidades (ampliación de oferta)",
+          "Creación de nuevas universidades públicas regionales",
+          "Currículo con enfoque ambiental obligatorio"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 8.5,
+        "justificacion": "Es una de las áreas más detalladas y ambiciosas, proponiendo unificar el sistema de salud y asignar un presupuesto explícito del 10% del PBI. Incluye metas concretas como reducir el gasto de bolsillo de los hogares a menos del 10%.",
+        "propuestasDestacadas": [
+          "Creación del Sistema Único de Salud",
+          "Incrementar gasto público en salud al 10% del PBI",
+          "Médicos de la Familia y enfoque preventivo"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.0,
+        "justificacion": "Plantea una reestructuración de la seguridad con metas numéricas muy altas, como incorporar 200,000 efectivos policiales al 2031 y desarticular 200 organizaciones criminales antes de 2028.",
+        "propuestasDestacadas": [
+          "Incorporar 200,000 nuevos policías al 2031",
+          "Sistemas integrados de videovigilancia bajo control estatal",
+          "Participación vecinal organizada"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 6.0,
+        "justificacion": "Se centra en infraestructura estratégica (energía y riego) y vivienda (titulación), pero tiene menos detalle en infraestructura de transporte general comparado con los ejes sociales. Destaca la conclusión del Gasoducto Sur Peruano.",
+        "propuestasDestacadas": [
+          "Conclusión del Gasoducto Sur Peruano antes de 2030",
+          "Otorgar 500,000 títulos de propiedad urbana",
+          "Masificación del gas natural"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 7.5,
+        "justificacion": "Sorprendentemente detallado para el perfil del partido, dedicando una sección completa (Dimensión Territorial-Ambiental) con metas como 'deforestación neta cero' en la Amazonía al 2030 y alcanzar un 40% de energías renovables en la matriz eléctrica.",
+        "propuestasDestacadas": [
+          "Deforestación neta cero en la Amazonía al 2030",
+          "Planta nacional de fertilizantes",
+          "Protección de cabeceras de cuenca y glaciares"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 8.0,
+        "justificacion": "Eje ideológico central enfocado en derechos laborales, reducción de pobreza y pensiones. Propone reducir la informalidad laboral al 50% y garantizar una pensión o ingreso básico al 2030.",
+        "propuestasDestacadas": [
+          "Nueva Ley General del Trabajo",
+          "Sistema de pensiones solidario y público",
+          "Paridad de género en altos cargos públicos"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.0,
+        "justificacion": "Vinculado a la soberanía alimentaria e industrialización. Propone incorporar 1 millón de hectáreas con riego tecnificado y construir una planta nacional de fertilizantes operativa al 2028.",
+        "propuestasDestacadas": [
+          "Planta nacional de fertilizantes al 2028",
+          "1 millón de hectáreas con riego tecnificado",
+          "Incrementar rendimiento agrícola en 30%"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "salud",
+      "economia",
+      "seguridad"
+    ],
+    "areasDesatendidas": [
+      "infraestructura",
+      "inversionPrivadaTradicional"
+    ],
+    "perfilIdeologico": "Izquierda socialista/marxista-leninista. El plan prioriza fuertemente el rol planificador y empresario del Estado, la soberanía de recursos (nacionalización/revisión de contratos), el cambio de constitución y la inversión masiva en servicios sociales (Salud/Educación), con un enfoque anti-neoliberal explícito."
+  },
+  {
+    "partido": "Perú Primero",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 7.5,
+      "salud": 8.0,
+      "seguridad": 9.0,
+      "infraestructura": 8.5,
+      "medioAmbiente": 7.0,
+      "desarrolloSocial": 8.0,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Es un eje prioritario con diagnóstico exhaustivo macroeconómico y fiscal. Plantea metas numéricas claras (déficit fiscal, recaudación, inversión privada al 20% del PBI). Propone la creación de comandos especiales para destrabe de inversión y reformas tributarias específicas.",
+        "propuestasDestacadas": [
+          "Comando Temporal de Destrabe de Inversiones a cargo del MEF",
+          "Régimen Simplificado Progresivo para MYPE",
+          "Sistema de Compras Abiertas 360 para monitoreo en tiempo real",
+          "Promoción del nearshoring y atracción de inversión extranjera"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Propuestas estructuradas con enfoque en gestión (PMO) e infraestructura. Introduce el concepto de 'Nueva educación rural' y becas. Hay indicadores claros de cobertura y evaluación docente.",
+        "propuestasDestacadas": [
+          "Creación de la Oficina Nacional de Proyectos Educativos (PMO)",
+          "Programa 'Becas Talento Joven' y créditos educativos",
+          "Nueva educación rural con modelos de alternancia y residencias",
+          "Evaluación de desempeño docente obligatoria"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 8.0,
+        "justificacion": "Diagnóstico detallado de brechas. Propone reformas estructurales como el Centro Nacional de Inteligencia en Salud y redes integradas (RIS). Establece una meta ambiciosa de presupuesto del 7% del PBI.",
+        "propuestasDestacadas": [
+          "Creación del Centro Nacional de Inteligencia en Salud Pública",
+          "Incremento del presupuesto del sector salud al 7% del PBI",
+          "Fortalecimiento de la telesalud y redes integradas (RIS)",
+          "Plan nacional de emergencia frente a epidemias"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.0,
+        "justificacion": "Prioridad máxima. Plantea medidas drásticas como nuevas cárceles en zonas remotas y militarización de seguridad externa de penales. Enfoque integral que incluye control territorial, reforma policial y tecnología.",
+        "propuestasDestacadas": [
+          "Construcción de cárceles de máxima seguridad en Puno, Amazonas y Loreto",
+          "Creación de una Unidad Élite Interinstitucional contra la Minería Ilegal",
+          "Programa nacional 'Camino Seguro' en zonas rojas",
+          "Reforma integral del sistema penitenciario (INPE) y policial"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.5,
+        "justificacion": "Muy alto nivel de detalle técnico. Propone el uso obligatorio de metodología BIM y aborda vivienda, agua y transporte con programas específicos y metas cuantificables.",
+        "propuestasDestacadas": [
+          "Programa de Vivienda Social 'Una Casita Para Ti'",
+          "Programa Nacional 'Agua 100' para cobertura universal",
+          "Adopción masiva de BIM/DFMA para proyectos públicos",
+          "Implementación de plantas modulares de tratamiento de aguas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 7.0,
+        "justificacion": "Buen desarrollo enfocado en zonificación, deforestación y minería ilegal. Vincula la gestión ambiental con la prevención de conflictos. Propone bonos de ecoeficiencia.",
+        "propuestasDestacadas": [
+          "Fondo de Adaptación al cambio climático descentralizado",
+          "Reforestación de 100,000 ha con especies nativas comerciales",
+          "Remediación de pasivos ambientales mineros",
+          "Bonos de ecoeficiencia industrial"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 8.0,
+        "justificacion": "Abordaje exhaustivo de poblaciones vulnerables (mujeres, LGTBI, indígenas, afroperuanos). Propone sistemas de información interoperables y programas específicos de inclusión productiva.",
+        "propuestasDestacadas": [
+          "Programa 'Mujer Produce Perú'",
+          "Padrón Único Nacional de Familias Vulnerables",
+          "Centros Territoriales de Inclusión Social (CTIS)",
+          "Sistema Nacional de Información de Género"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque en la agricultura familiar y la agroexportación. Propone nueva institucionalidad (INDA) y fondos financieros específicos.",
+        "propuestasDestacadas": [
+          "Fondo rotatorio 'Mi Chacra Crece'",
+          "Creación del Instituto Nacional de Desarrollo Agrario (INDA)",
+          "Programa 'Perú AgroSostenible' para agroexportación",
+          "Plataforma Agro-Asiste con inteligencia artificial"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "seguridad",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [],
+    "perfilIdeologico": "Humanismo pragmático con enfoque en Economía Social de Mercado. Combina una fuerte apuesta por la inversión privada (minería, infraestructura, agro) y la eficiencia tecnocrática (BIM, digitalización) con políticas sociales focalizadas y un rol fuerte del Estado en seguridad y control territorial."
+  },
+  {
+    "partido": "Progresemos",
+    "valores": {
+      "economia": 8.0,
+      "educacion": 9.0,
+      "salud": 7.5,
+      "seguridad": 9.0,
+      "infraestructura": 6.5,
+      "medioAmbiente": 8.5,
+      "desarrolloSocial": 7.0,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.0,
+        "justificacion": "Se propone una economía social de mercado con fuerte énfasis en las MYPES y el empleo juvenil. Incluye propuestas de responsabilidad fiscal (regla de 'Inversión Social Protegida') y digitalización total de trámites ('Papel Cero').",
+        "propuestasDestacadas": [
+          "Ventanilla única digital 'Papel Cero' para formalización en 24 horas",
+          "Regla fiscal de crecimiento del PBI superior al 3%",
+          "Ley de Acceso Juvenil al Mercado Laboral con incentivos tributarios"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 9.0,
+        "justificacion": "Es uno de los ejes más detallados (Eje 6). Aborda desde infraestructura y transporte escolar rural hasta currículo, tecnología y sueldos docentes. Propone bonos específicos y créditos educativos a tasa 0%.",
+        "propuestasDestacadas": [
+          "Crédito de Honor Progresamos con tasa 0% de interés",
+          "Transporte Escolar Rural Seguro (flotas de buses y motonaves)",
+          "Bono de especialización del 25% para docentes EIB"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque en atención primaria, salud mental y lucha contra la anemia. Propone modernización tecnológica con historia clínica electrónica universal y descentralización de UCIN neonatales.",
+        "propuestasDestacadas": [
+          "Red Nacional de Salud Mental Comunitaria 'Mente Sana'",
+          "Historia Clínica Electrónica Universal interoperable",
+          "Programa 'Primeros 1000 Días' contra la anemia"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.0,
+        "justificacion": "Es el Eje 1 del plan. Propuestas drásticas y polémicas como la salida de la Corte IDH y pena de muerte para delitos graves. Enfoque de 'mano dura' combinado con inteligencia y ciberseguridad.",
+        "propuestasDestacadas": [
+          "Salida del Perú de la Corte Interamericana de Derechos Humanos",
+          "Restablecimiento de la pena de muerte para delitos de extrema gravedad",
+          "Cárceles de máxima seguridad y bloqueo de flujos financieros extorsivos"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 6.5,
+        "justificacion": "Se enfoca más en infraestructura social (escuelas, hospitales veterinarios) y rural (caminos, agua) que en megaobras de transporte masivo urbano. Incluye titulación masiva y acceso a internet satelital.",
+        "propuestasDestacadas": [
+          "Programa 'Internet para el Progreso Rural' (Starlink/baja órbita)",
+          "Campaña nacional de titulación masiva",
+          "Infraestructura de siembra y cosecha de agua"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "medioAmbiente": {
+        "calificacion": 8.5,
+        "justificacion": "Distingue al partido por su eje 'Perú Ambientalista y Animalista'. Propuestas muy específicas sobre bienestar animal (hospitales veterinarios públicos) y gestión hídrica.",
+        "propuestasDestacadas": [
+          "Red Nacional de Hospitales y Farmacias Veterinarias Populares",
+          "Esterilización masiva como política de salud pública",
+          "Retroceso de 10 millas marinas para protección de pesca artesanal"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.0,
+        "justificacion": "Enfoque en seguridad alimentaria y reducción de pobreza mediante emprendimiento ('Semilla de la Dignidad') más que solo asistencialismo. Atención a grupos vulnerables y discapacidad.",
+        "propuestasDestacadas": [
+          "Red de 'Mercados de la Gente' con cadena de frío",
+          "Programa 'Semilla de la Dignidad' (capital semilla)",
+          "Sistema Nacional de Almacenamiento Estratégico 'Reserva de Vida'"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Sólido enfoque en el desarrollo rural y agricultura familiar. Propone eliminación de intermediarios mediante tecnología y asistencia técnica in situ ('Ingenieros en la comunidad').",
+        "propuestasDestacadas": [
+          "Riego tecnificado con energía solar",
+          "Centros de Acopio y Transformación Primaria en cada provincia agrícola",
+          "Mercados virtuales regionales para eliminar intermediarios"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "Seguridad y Justicia",
+      "Educación y Cultura",
+      "Medio Ambiente y Bienestar Animal"
+    ],
+    "areasDesatendidas": [
+      "Transporte Urbano Masivo (Metro/Trenes de cercanías poco detallados)",
+      "Industria pesada o minería a gran escala (enfoque mayor en MYPE y Agro)"
+    ],
+    "perfilIdeologico": "Humanismo con fuertes matices de seguridad autoritaria (Salida Corte IDH, Pena de Muerte) y una identidad distintiva 'Animalista'. En lo económico, promueve el emprendimiento popular y la reducción de burocracia (Liberalismo popular)."
+  },
+  {
+    "partido": "Renovación Popular",
+    "valores": {
+      "economia": 8.0,
+      "educacion": 5.0,
+      "salud": 6.0,
+      "seguridad": 8.5,
+      "infraestructura": 7.5,
+      "medioAmbiente": 6.5,
+      "desarrolloSocial": 6.0,
+      "agricultura": 5.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.0,
+        "justificacion": "El plan establece metas macroeconómicas muy específicas al final del documento (inflación < 2.5%, crecimiento PBI 7%). Propone reformas tributarias concretas como la eliminación de exoneraciones, reducción de tasas del IGV para formalización y creación de Zonas Francas. Dedica cerca de 5 páginas al tema.",
+        "propuestasDestacadas": [
+          "Crecimiento anual del PBI al 7% al culminar mandato",
+          "Inflación inferior al 2.5%",
+          "Creación del Banco PYME de capital privado",
+          "Zonas Libres de Impuestos en Selva y Sur Andino"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 5.0,
+        "justificacion": "El tema se aborda de manera transversal pero con menor profundidad técnica que otros ejes. Se enfoca mucho en la gestión/supervisión de los padres y valores familiares más que en infraestructura educativa masiva o reforma curricular detallada.",
+        "propuestasDestacadas": [
+          "Supervisión de calidad educativa por parte de padres de familia",
+          "Inclusión de deporte recreativo y formativo en currícula",
+          "Conectividad digital educativa"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "salud": {
+        "calificacion": 6.0,
+        "justificacion": "Se centra en la atención primaria y el acceso a medicamentos. Propone cambios específicos en la gestión (médicos de familia) y lucha contra el cobro excesivo de medicamentos, aunque falta detalle en grandes inversiones hospitalarias.",
+        "propuestasDestacadas": [
+          "Impulso a la especialidad de Salud Familiar (Médicos de Familia)",
+          "Medicamentos básicos y genéricos obligatorios en farmacias",
+          "Fortalecimiento de postas médicas con infraestructura"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "seguridad": {
+        "calificacion": 8.5,
+        "justificacion": "Es uno de los ejes más fuertes y detallados. Propone la creación de nuevos organismos con 'plenos poderes' (CCC), reestructuración de ministerios (Migraciones pasa a RREE) y militarización de ciertas zonas (VRAEM/Putumayo). Hay un enfoque de 'mano dura'.",
+        "propuestasDestacadas": [
+          "Creación de la Central de lucha Contra la Corrupción (CCC) con plenos poderes",
+          "Unidades Itinerantes de Pacificación Ciudadana",
+          "Transferencia de Migraciones al Ministerio de Relaciones Exteriores",
+          "Ingreso directo de licenciados de las FFAA a la PNP"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 7.5,
+        "justificacion": "Menciona proyectos ferroviarios de gran envergadura con rutas específicas (Tumbes-Tacna) y mejora de puertos. Es ambicioso en 'qué' hacer, aunque breve en el 'cómo' financiarlo específicamente.",
+        "propuestasDestacadas": [
+          "Tren de la Costa (Tumbes a Tacna) para el 5to año",
+          "Tren Bioceánico",
+          "Segunda pista del Aeropuerto Jorge Chávez",
+          "Autopistas de cuatro carriles de penetración"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 6.5,
+        "justificacion": "Sorprendentemente detallado en ciertas metas cuantitativas (reforestación) y gestión de agua, aunque con un enfoque muy ligado a la producción (recursos naturales). Dedica varias páginas al tema.",
+        "propuestasDestacadas": [
+          "Reforestación de 500 mil hectáreas anuales",
+          "Masificación del gas de Camisea a domicilio",
+          "Creación de la Autoridad de Cuencas"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 6.0,
+        "justificacion": "Enfoque asistencialista combinado con emprendimiento ('convertirlos en clase pujante'). Prioriza la nutrición y el fortalecimiento de la familia tradicional.",
+        "propuestasDestacadas": [
+          "Apoyo a organizaciones populares (comedores) para distribuir ayuda",
+          "Clubes Zonales en todo el país",
+          "Erradicación de la anemia y desnutrición infantil"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "agricultura": {
+        "calificacion": 5.5,
+        "justificacion": "Propuestas de carácter institucional y organizativo (clusters, defensoría). Busca modernizar la gestión más que subsidios directos masivos.",
+        "propuestasDestacadas": [
+          "Creación de la Defensoría del Campesino",
+          "Agro libre de transgénicos",
+          "Sistema de investigación desde cada valle y cuenca"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "economia",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [
+      "educacion",
+      "agricultura"
+    ],
+    "perfilIdeologico": "Derecha conservadora con enfoque en 'Humanismo Cristiano'. Prioriza el orden, la seguridad y la autoridad (reformas policiales/militares), promueve la economía de mercado con apoyo al emprendimiento familiar y grandes proyectos de infraestructura, manteniendo una visión tradicional de la sociedad."
+  },
+  {
+    "partido": "Salvemos al Perú",
+    "valores": {
+      "economia": 8.5,
+      "educacion": 7.5,
+      "salud": 7.0,
+      "seguridad": 8.0,
+      "infraestructura": 7.5,
+      "medioAmbiente": 7.5,
+      "desarrolloSocial": 7.0,
+      "agricultura": 6.0
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.5,
+        "justificacion": "La Dimensión Económica es extensa y detallada. Propone un crecimiento sostenido con estabilidad macroeconómica, fijando metas precisas para el déficit fiscal (≤ 1,0 % del PBI) y la inflación (1-3%). Aborda la diversificación productiva, el apoyo a las PyMES mediante digitalización y la formalización laboral con incentivos. Incluye una estrategia de 'diversificación verde'.",
+        "propuestasDestacadas": [
+          "Déficit fiscal ≤ 1,0 % del PBI y autonomía del BCRP",
+          "Incrementar participación de inversión privada no minera al 65%",
+          "Formalización de mineros inscritos en REINFO al 90%"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Se enfoca en la calidad y el cierre de brechas tecnológicas. Propone la metodología STEAM en el 50% de IIEE y una fuerte inversión en educación inicial (Cuna 'EduCuna'). Establece metas claras sobre pruebas PISA y acreditación universitaria.",
+        "propuestasDestacadas": [
+          "Metodología STEAM y laboratorios en 50% de IIEE",
+          "Atención completa en 100% de puntos de Cunas y Cunas Jardín",
+          "Reducir deserción escolar permanente en 50% al 2031"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Prioriza la atención primaria y preventiva, con fuerte componente tecnológico (telesalud e historia clínica electrónica). Aborda la anemia infantil y la salud mental. Las metas son cuantitativas, enfocadas en disponibilidad de medicamentos y reducción de anemia.",
+        "propuestasDestacadas": [
+          "Historia Clínica Electrónica interoperable (40% de usuarios)",
+          "Disponibilidad de medicamentos esenciales superior al 95%",
+          "Reducción de anemia en menores de 36 meses (meta <30% en zonas vulnerables)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.0,
+        "justificacion": "Es un pilar central bajo la 'Dimensión Institucional'. Plantea metas extremadamente ambiciosas (reducción del 70% de homicidios). Propone un enfoque de 'mano dura' legal (elevar penas) combinado con tecnología y control migratorio estricto.",
+        "propuestasDestacadas": [
+          "Reducir en 70% la tasa de homicidios y 90% la extorsión",
+          "Control biométrico y cuotas para migrantes extranjeros",
+          "Incrementar en 50% la tasa de condenas efectivas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 7.5,
+        "justificacion": "Tratada transversalmente en lo social (vivienda) y económico (conectividad). Se enfoca en cerrar la brecha digital y vial, con énfasis en zonas rurales. Metas claras en cobertura de internet y estado de carreteras.",
+        "propuestasDestacadas": [
+          "90% de hogares a nivel nacional con internet fijo",
+          "Reducir a la mitad carreteras en condiciones inadecuadas",
+          "Reducir al 40% la proporción de hogares sin acceso seguro a agua"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 7.5,
+        "justificacion": "Sorprendentemente detallado, cuenta con su propia 'Dimensión Territorial-Ambiental'. Abarca gestión de cuencas, seguridad hídrica, economía circular y energías renovables con metas porcentuales específicas.",
+        "propuestasDestacadas": [
+          "Alcanzar al menos 20% de generación eléctrica con renovables no convencionales",
+          "Incrementar al 70% cuerpos de agua superficiales con buena calidad",
+          "60% de residuos sólidos valorizados y reciclados"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.0,
+        "justificacion": "Se integra con salud y educación, pero añade metas específicas sobre pobreza multidimensional y violencia contra la mujer. El enfoque es de 'Desarrollo Humano' y lucha contra la discriminación.",
+        "propuestasDestacadas": [
+          "Reducir la pobreza multidimensional en al menos 30%",
+          "Reducir en 100% la tasa de feminicidios (meta aspiracional)",
+          "Reducir la tasa de 'Ninis' al 10%"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 6.0,
+        "justificacion": "No tiene un capítulo exclusivo de reforma agraria, sino que se integra en 'Sectores Productivos' y 'Gestión de Cuencas'. Se enfoca en la sostenibilidad, reducción de pesticidas y seguridad hídrica para el agro.",
+        "propuestasDestacadas": [
+          "60% de cultivos y bosques bajo prácticas sostenibles",
+          "Gestión integrada de recursos hídricos para agricultura",
+          "Impulso a la bioeconomía y agroindustria sostenible"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "seguridad",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [
+      "agricultura"
+    ],
+    "perfilIdeologico": "Partido de centro con enfoque tecnocrático y modernizador. Promueve una Economía Social de Mercado con fuerte énfasis en la transformación digital del Estado, la seguridad ciudadana (mano dura y tecnología) y el desarrollo sostenible (economía verde y circular). Prioriza la eficiencia institucional y la formalización."
+  },
+  {
+    "partido": "SiCreo",
+    "valores": {
+      "economia": 9.0,
+      "educacion": 7.5,
+      "salud": 7.0,
+      "seguridad": 8.5,
+      "infraestructura": 8.0,
+      "medioAmbiente": 6.0,
+      "desarrolloSocial": 5.0,
+      "agricultura": 6.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 9.0,
+        "justificacion": "Es el eje vertebral del plan. Propone un cambio estructural hacia el libre mercado con propuestas agresivas como Zonas Económicas Especiales (ZEE) con 0% de Impuesto a la Renta e IGV. Plantea una reforma laboral flexibilizadora y la simplificación de trabas burocráticas.",
+        "propuestasDestacadas": [
+          "Crear 5 millones de puestos de trabajo formales en 5 años",
+          "Zonas Económicas Especiales (ZEE) con 0% IGV y 0% IR",
+          "Reducción de impuestos antitécnicos (ITF) y eliminación de barreras burocráticas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Plantea un cambio de modelo hacia la demanda (vouchers/bonos). Enfatiza la meritocracia docente y la educación STEM. Incluye metas de infraestructura tecnológica.",
+        "propuestasDestacadas": [
+          "Programa de Bono Educativo (sistema de vouchers para elección de familias)",
+          "Reserva de vacantes para estudiantes de escuelas rurales en COARs",
+          "Reforma meritocrática magisterial y capacitación en STEM"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Enfoque en la eficiencia mediante la participación del sector privado y la digitalización. Diagnóstico claro sobre la anemia y la gestión logística.",
+        "propuestasDestacadas": [
+          "Historia Clínica Electrónica Única (sistema GNU Health)",
+          "Participación del sector privado en logística y distribución de medicamentos",
+          "Meta de eliminar la anemia infantil en más del 90% en 5 años"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.5,
+        "justificacion": "Propuestas de 'mano dura' y reformas institucionales profundas. Incluye la creación de una figura de supervisión ('Zar') y construcción de infraestructura penitenciaria específica lejos de ciudades.",
+        "propuestasDestacadas": [
+          "Construcción de 3 penales de máxima seguridad en zonas alejadas",
+          "Nombramiento de un 'Zar Anticorrupción'",
+          "Privatización de la videovigilancia en penales y bloqueo de comunicaciones"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.0,
+        "justificacion": "Fuerte énfasis en destrabar megaproyectos y cerrar brechas mediante inversión privada y Obras por Impuestos. Conexión directa con la reactivación económica.",
+        "propuestasDestacadas": [
+          "Desbloqueo de proyectos mineros (Tía María, Conga) y de irrigación",
+          "Construcción del ramal del gasoducto (SITGAS) hacia Puno",
+          "Titulación de 500,000 propiedades (COFOPRI)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 6.0,
+        "justificacion": "Enfoque pragmático vinculado al agua para la agricultura y la formalización minera. Propuestas técnicas específicas sobre recursos hídricos.",
+        "propuestasDestacadas": [
+          "Construcción de 7,500 qochas (siembra y cosecha de agua)",
+          "Control de insumos químicos (mercurio) para combatir minería ilegal",
+          "Bonos de Carbono y mecanismos de retribución por servicios ecosistémicos"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 5.0,
+        "justificacion": "El plan aborda lo social principalmente desde la generación de empleo y el acceso a servicios básicos, alejándose de programas de subsidios tradicionales. Se enfoca en 'prosperidad compartida' vía mercado.",
+        "propuestasDestacadas": [
+          "Empleo como principal motor de inclusión",
+          "Acceso a agua y saneamiento para cerrar brechas sociales",
+          "Empoderamiento económico de la mujer"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "agricultura": {
+        "calificacion": 6.5,
+        "justificacion": "Busca replicar el modelo agroexportador de la costa en la sierra. Conecta infraestructura hídrica con productividad.",
+        "propuestasDestacadas": [
+          "Extender el modelo agroexportador a la Sierra",
+          "Riego tecnificado y mecanización del agro",
+          "Meta de 200,000 nuevas hectáreas bajo riego"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "seguridad",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [
+      "desarrolloSocial",
+      "cultura"
+    ],
+    "perfilIdeologico": "Derecha liberal/libertaria. Prioriza la reducción del Estado (fusionar ministerios), el fomento de la inversión privada (ZEE, impuestos bajos), la mano dura en seguridad y soluciones de mercado (vouchers educativos, gestión privada en salud) por encima del asistencialismo estatal."
+  },
+  {
+    "partido": "Somos Perú",
+    "valores": {
+      "economia": 8.5,
+      "educacion": 7.5,
+      "salud": 7.0,
+      "seguridad": 8.0,
+      "infraestructura": 8.0,
+      "medioAmbiente": 7.0,
+      "desarrolloSocial": 7.0,
+      "agricultura": 7.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 8.5,
+        "justificacion": "Propone una reforma detallada para las MYPEs con un régimen tributario único (1% sobre ventas), bonos de formalización (S/ 2,000) y un sistema de 'matching' para pensiones. Incluye una estrategia de industrialización ('Hecho en Perú') vinculada al Puerto de Chancay y zonas económicas especiales.",
+        "propuestasDestacadas": [
+          "Régimen Único MYPE (1% sobre ventas brutas)",
+          "Bono de Formalización Efectiva escalonado (S/ 2,000 el primer año)",
+          "Parque Industrial de Ancón y Zona Económica Especial Chancay-Ancón"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque fuerte en educación técnica y digital. Propone becas específicas (30,000 anuales para tecnología), incremento del piso salarial docente a S/ 4,000 y un programa de 'Oficios del Futuro' para reducir el número de jóvenes 'ninis'.",
+        "propuestasDestacadas": [
+          "Programa Nacional 'Oficios del Futuro' (50,000 becas técnicas anuales)",
+          "Distribución de 800,000 laptops en 5 años",
+          "Incremento del piso salarial docente a S/ 4,000 al 2031"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 7.0,
+        "justificacion": "Centrado en el primer nivel de atención y lucha contra la anemia. Propone bonos de retención del 50% para médicos en zonas rurales y expansión de horarios de atención. Plantea metas numéricas claras para la reducción de anemia y desnutrición.",
+        "propuestasDestacadas": [
+          "Bono de retención rural (50% adicional al salario)",
+          "Expansión del programa PADOMI a nivel nacional",
+          "Programa 'Anemia Cero' con monitoreo de hemoglobina"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 8.0,
+        "justificacion": "Diagnóstico crudo y propuestas contundentes. Incluye el cierre definitivo del REINFO (minería ilegal) para diciembre 2027, reforma del sistema penitenciario con 20,000 nuevas plazas y un enfoque de 'ahogo financiero' al crimen organizado mediante la UIF.",
+        "propuestasDestacadas": [
+          "Cierre definitivo del REINFO en diciembre de 2027",
+          "Construcción de 20,000 nuevas plazas penitenciarias",
+          "Eliminación de exoneraciones de IGV e ISC a combustibles en Amazonía (minería ilegal)"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 8.0,
+        "justificacion": "Lista exhaustiva de proyectos ferroviarios, viales y portuarios. Propone la culminación de Líneas del Metro, trenes de cercanías (Lima-Ica) y una nueva Carretera Central. Vincula infraestructura con logística agroexportadora.",
+        "propuestasDestacadas": [
+          "Ferrocarril Lima-Ica y tren de cercanías Lima-Barranca",
+          "Culminación de Línea 2 y adjudicación de Líneas 3 y 4 del Metro",
+          "Red ferroviaria conectando zonas productivas"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "medioAmbiente": {
+        "calificacion": 7.0,
+        "justificacion": "Propuestas sólidas en gestión hídrica y energías renovables. Plantea aumentar la matriz renovable al 30% y un plan agresivo de gestión de residuos ('Basura Cero') y tratamiento de aguas residuales.",
+        "propuestasDestacadas": [
+          "Meta de 30% de energías renovables no convencionales al 2031",
+          "Construcción de 4 plantas desalinizadoras con energía solar",
+          "Plan de segregación en fuente 'Mi Casa Recicla' en 6 millones de hogares"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "desarrolloSocial": {
+        "calificacion": 7.0,
+        "justificacion": "Focalizado en seguridad alimentaria. Propone la 'Tarjeta Solidaria' para zonas rurales y la formalización de comedores populares bajo el programa 'Perú Alimenta', con infraestructura y servicios básicos.",
+        "propuestasDestacadas": [
+          "Programa 'Perú Alimenta' (Comedores solidarios dignificados)",
+          "Tarjeta Solidaria (transferencia de S/ 100 mensuales para alimentos)",
+          "Incremento de transferencia programa Juntos a S/ 200"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "agricultura": {
+        "calificacion": 7.5,
+        "justificacion": "Enfoque productivo y exportador. Prioriza grandes proyectos de irrigación destrabados (Chavimochic III, Majes Siguas II) y subsidios para riego tecnificado en pequeñas parcelas.",
+        "propuestasDestacadas": [
+          "Destrabe de megaproyectos de irrigación (USD 15,000 millones)",
+          "Programa 'Cada Gota Cuenta' (subsidio 80% para riego tecnificado)",
+          "Corredores logísticos agroexportadores"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "economia",
+      "seguridad",
+      "infraestructura"
+    ],
+    "areasDesatendidas": [],
+    "perfilIdeologico": "Centro-derecha pragmático con énfasis en la reactivación económica a través de la infraestructura y la formalización empresarial. Combina políticas de libre mercado (fomento a la inversión privada, agroexportación) con intervención estatal fuerte en seguridad (mano dura con minería ilegal) y programas sociales focalizados (tarjetas alimentarias)."
+  },
+  {
+    "partido": "Un Camino Diferente",
+    "valores": {
+      "economia": 6.0,
+      "educacion": 7.5,
+      "salud": 6.5,
+      "seguridad": 9.0,
+      "infraestructura": 6.0,
+      "medioAmbiente": 4.5,
+      "desarrolloSocial": 5.0,
+      "agricultura": 5.5
+    },
+    "analisisDetallado": {
+      "economia": {
+        "calificacion": 6.0,
+        "justificacion": "Se enfoca fuertemente en sectores específicos como Minería y Forestal (detallando incluso especies de madera y procesos de paneles solares), pero carece de un desarrollo macroeconómico profundo. Propone reducir ministerios para bajar gasto corriente.",
+        "propuestasDestacadas": [
+          "Créditos al 2% anual para turismo y vivienda social",
+          "Zona económica especial Lago Titicaca",
+          "Simplificación regulatoria para inversión privada"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "educacion": {
+        "calificacion": 7.5,
+        "justificacion": "Dedica varias páginas (3-6) a una reforma específica del sistema universitario ('Bachillerato Automático') con cronograma de implementación 2026-2030 y modelos de referencia europeos. Propone ampliar educación básica en 2 años con fines técnicos.",
+        "propuestasDestacadas": [
+          "Bachillerato automático y homologación universitaria con Europa",
+          "Ampliación de vacantes en universidades nacionales",
+          "Comedores en todos los colegios nacionales"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "salud": {
+        "calificacion": 6.5,
+        "justificacion": "Propuestas concretas y populistas como clínicas veterinarias gratuitas y unificación de sistemas. Establece requisitos numéricos para postas médicas.",
+        "propuestasDestacadas": [
+          "Unificación de ESSALUD y MINSA",
+          "Mínimo cuatro ambulancias por posta médica",
+          "Clínicas veterinarias públicas gratuitas"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      },
+      "seguridad": {
+        "calificacion": 9.0,
+        "justificacion": "Es el eje central y más radical del plan. Propone reformas estructurales extremas (fusión de ministerios en 'Ministerio de GUERRA'), estados de excepción prolongados y creación de grupos especiales.",
+        "propuestasDestacadas": [
+          "Fusión de Mindef e Interior en el 'Ministerio de GUERRA'",
+          "Declaratoria de Estado de Sitio por 12 meses",
+          "Creación de 10 grupos de inteligencia 'Escuadrones de la Vida'",
+          "Construcción de 10 penales de máxima seguridad en Challapalca"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": true
+      },
+      "infraestructura": {
+        "calificacion": 6.0,
+        "justificacion": "Lista grandes megaproyectos conocidos y propuestas de transporte masivo, aunque sin detalles técnicos de viabilidad financiera.",
+        "propuestasDestacadas": [
+          "Tren de Alta Velocidad Tumbes-Tacna",
+          "Integración ferroviaria costa-selva-Brasil",
+          "Ejecución total de proyectos Chavimochic III, Alto Piura y Olmos"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "medioAmbiente": {
+        "calificacion": 4.5,
+        "justificacion": "Aborda el tema principalmente desde la perspectiva de la minería (cierre de minas contaminantes) y gestión de residuos. Menciona un presupuesto específico bajo (7 millones para negocios sostenibles).",
+        "propuestasDestacadas": [
+          "Cierre de mineras que contaminan",
+          "Economía circular y gestión de residuos",
+          "Promoción de negocios sostenibles"
+        ],
+        "presupuestoMencionado": true,
+        "metasEspecificas": false
+      },
+      "desarrolloSocial": {
+        "calificacion": 5.0,
+        "justificacion": "Se aborda transversalmente a través del empleo (programas temporales) y servicios básicos. No hay un capítulo robusto de políticas de inclusión más allá de obras y empleo.",
+        "propuestasDestacadas": [
+          "Programa de empleo temporal 'Lurawi Perú'",
+          "Casas de protección a mujeres vulnerables en todas las provincias",
+          "Bibliotecas públicas gratuitas de última generación"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": false
+      },
+      "agricultura": {
+        "calificacion": 5.5,
+        "justificacion": "Énfasis en el sector forestal (análisis detallado de maderas) y grandes proyectos de irrigación para duplicar tierras agrícolas.",
+        "propuestasDestacadas": [
+          "Duplicación de tierras agrícolas",
+          "Industrialización de la madera peruana (Foresta Peruana)",
+          "Represas multipropósito por región"
+        ],
+        "presupuestoMencionado": false,
+        "metasEspecificas": true
+      }
+    },
+    "top3Prioridades": [
+      "seguridad",
+      "educacion",
+      "salud"
+    ],
+    "areasDesatendidas": [
+      "medioAmbiente",
+      "desarrolloSocial"
+    ],
+    "perfilIdeologico": "Autoritario en seguridad (Mano dura, Estado de Sitio, Ministerio de Guerra) con tintes populistas en servicios sociales (veterinarias gratis, bachillerato automático) y enfoque desarrollista en infraestructura."
+  }
+]

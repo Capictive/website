@@ -15,9 +15,10 @@ export default function Nav() {
   };
 
   return (
-    <div className="text-center grid grid-cols-1 sm:grid-cols-3 gap-2 font-bold font-body">
+    <div className="text-center grid grid-cols-2 sm:grid-cols-4 gap-2 font-bold font-body">
       {item("/", "Inicio")}
       {item("/partidos", "Partidos Politicos")}
+      {item("/comparar", "Comparar")}
       {item("/candidatos", "Candidatos")}
     </div>
   );

@@ -1,0 +1,8327 @@
+[
+  {
+    "partido": "Ahora Nación",
+    "palabras": [
+      {
+        "text": "Nación",
+        "value": 41,
+        "categoria": "politica"
+      },
+      {
+        "text": "desarrollo",
+        "value": 39,
+        "categoria": "general"
+      },
+      {
+        "text": "Estado",
+        "value": 38,
+        "categoria": "politica"
+      },
+      {
+        "text": "salud",
+        "value": 37,
+        "categoria": "social"
+      },
+      {
+        "text": "regiones",
+        "value": 31,
+        "categoria": "politica"
+      },
+      {
+        "text": "políticas",
+        "value": 31,
+        "categoria": "politica"
+      },
+      {
+        "text": "servicios",
+        "value": 30,
+        "categoria": "general"
+      },
+      {
+        "text": "economía",
+        "value": 27,
+        "categoria": "economia"
+      },
+      {
+        "text": "inversión",
+        "value": 27,
+        "categoria": "economia"
+      },
+      {
+        "text": "social",
+        "value": 26,
+        "categoria": "social"
+      },
+      {
+        "text": "educación",
+        "value": 25,
+        "categoria": "social"
+      },
+      {
+        "text": "sistema",
+        "value": 25,
+        "categoria": "general"
+      },
+      {
+        "text": "calidad",
+        "value": 24,
+        "categoria": "general"
+      },
+      {
+        "text": "derechos",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "mercados",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "públicas",
+        "value": 19,
+        "categoria": "politica"
+      },
+      {
+        "text": "seguridad",
+        "value": 18,
+        "categoria": "social"
+      },
+      {
+        "value": 18,
+        "text": "gestión",
+        "categoria": "general"
+      },
+      {
+        "text": "MIPYMES",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "ambiental",
+        "value": 17,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "Mundo",
+        "value": 15,
+        "categoria": "general"
+      },
+      {
+        "text": "población",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "justicia",
+        "value": 14,
+        "categoria": "social"
+      },
+      {
+        "text": "empleo",
+        "value": 14,
+        "categoria": "economia"
+      },
+      {
+        "text": "sostenibilidad",
+        "value": 14,
+        "categoria": "general"
+      },
+      {
+        "text": "Militar",
+        "value": 14,
+        "categoria": "defensa"
+      },
+      {
+        "text": "agua",
+        "value": 13,
+        "categoria": "social"
+      },
+      {
+        "text": "MIPYME",
+        "value": 13,
+        "categoria": "economia"
+      },
+      {
+        "text": "transparencia",
+        "value": 12,
+        "categoria": "politica"
+      },
+      {
+        "text": "producción",
+        "value": 12,
+        "categoria": "economia"
+      },
+      {
+        "text": "minería",
+        "value": 12,
+        "categoria": "economia"
+      },
+      {
+        "text": "recursos",
+        "value": 12,
+        "categoria": "general"
+      },
+      {
+        "text": "tecnología",
+        "value": 12,
+        "categoria": "general"
+      },
+      {
+        "text": "internacional",
+        "value": 12,
+        "categoria": "politica"
+      },
+      {
+        "text": "vivienda",
+        "value": 11,
+        "categoria": "social"
+      },
+      {
+        "text": "ambiental",
+        "value": 11,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "MUNA",
+        "value": 10,
+        "categoria": "cultura"
+      },
+      {
+        "text": "cadenas",
+        "value": 10,
+        "categoria": "economia"
+      },
+      {
+        "text": "Mecanismos",
+        "value": 10,
+        "categoria": "general"
+      },
+      {
+        "text": "energía",
+        "value": 10,
+        "categoria": "economia"
+      },
+      {
+        "text": "PNP",
+        "value": 9,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "clima",
+        "value": 9,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "democracia",
+        "value": 8,
+        "categoria": "politica"
+      },
+      {
+        "text": "cultural",
+        "value": 8,
+        "categoria": "cultura"
+      },
+      {
+        "text": "Manejo",
+        "value": 8,
+        "categoria": "general"
+      },
+      {
+        "text": "transporte",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "productiva",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "agricultura",
+        "value": 8,
+        "categoria": "economia"
+      }
+    ],
+    "totalPalabras": 13919,
+    "palabrasUnicas": 2486,
+    "top10": [
+      "Nación",
+      "desarrollo",
+      "Estado",
+      "salud",
+      "regiones",
+      "políticas",
+      "servicios",
+      "economía",
+      "inversión",
+      "educación"
+    ],
+    "enfoquePrincipal": "El plan de gobierno del partido AHORA NACIÓN se centra en el desarrollo integral del Perú, priorizando la consolidación de la Nación y el Estado a través de dimensiones sociales, económicas, institucionales y ambientales. Busca fortalecer servicios esenciales como salud y educación, impulsar una economía productiva y descentralizada con énfasis en MIPYMES y sectores clave, garantizar la seguridad ciudadana y la justicia, y promover la sostenibilidad y el cuidado del medio ambiente. La transparencia, la equidad y la innovación son valores transversales."
+  },
+  {
+    "partido": "Alianza Electoral Venceremos",
+    "palabras": [
+      {
+        "text": "Pueblo",
+        "value": 95,
+        "categoria": "social"
+      },
+      {
+        "text": "Estado",
+        "value": 80,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Desarrollo",
+        "value": 75,
+        "categoria": "economia"
+      },
+      {
+        "text": "Derechos",
+        "value": 70,
+        "categoria": "social"
+      },
+      {
+        "text": "Corrupción",
+        "value": 65,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Seguridad",
+        "value": 60,
+        "categoria": "social"
+      },
+      {
+        "text": "Economía",
+        "value": 55,
+        "categoria": "economia"
+      },
+      {
+        "text": "Educación",
+        "value": 50,
+        "categoria": "social"
+      },
+      {
+        "text": "Salud",
+        "value": 50,
+        "categoria": "social"
+      },
+      {
+        "text": "Justicia",
+        "value": 48,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Soberanía",
+        "value": 45,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Territorio",
+        "value": 40,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Trabajo",
+        "value": 38,
+        "categoria": "social"
+      },
+      {
+        "text": "Mujer",
+        "value": 35,
+        "categoria": "social"
+      },
+      {
+        "text": "Reforma",
+        "value": 33,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Constitución",
+        "value": 30,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Ambiente",
+        "value": 28,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Agua",
+        "value": 25,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Producción",
+        "value": 25,
+        "categoria": "economia"
+      },
+      {
+        "text": "Minería",
+        "value": 22,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Agricultura",
+        "value": 20,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Vivienda",
+        "value": 18,
+        "categoria": "social"
+      },
+      {
+        "text": "Originarios",
+        "value": 18,
+        "categoria": "social"
+      },
+      {
+        "text": "Inversión",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "Calidad",
+        "value": 16,
+        "categoria": "social"
+      },
+      {
+        "text": "Dignidad",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "Tecnología",
+        "value": 15,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Desigualdad",
+        "value": 14,
+        "categoria": "social"
+      },
+      {
+        "text": "Servicios",
+        "value": 14,
+        "categoria": "social"
+      },
+      {
+        "text": "Recursos",
+        "value": 13,
+        "categoria": "economia"
+      },
+      {
+        "text": "Infraestructura",
+        "value": 13,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Participación",
+        "value": 12,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Criminalidad",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "Integración",
+        "value": 11,
+        "categoria": "internacional"
+      },
+      {
+        "text": "Internacional",
+        "value": 10,
+        "categoria": "internacional"
+      },
+      {
+        "text": "Familiar",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "Comunidad",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "Transporte",
+        "value": 9,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Paz",
+        "value": 8,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Transparencia",
+        "value": 8,
+        "categoria": "politica/gobernanza"
+      },
+      {
+        "text": "Rural",
+        "value": 7,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Urbano",
+        "value": 7,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Cultura",
+        "value": 6,
+        "categoria": "infraestructura/ambiente"
+      },
+      {
+        "text": "Tributaria",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "Bancos",
+        "value": 5,
+        "categoria": "economia"
+      }
+    ],
+    "totalPalabras": 15000,
+    "palabrasUnicas": 2800,
+    "top10": [
+      "Pueblo",
+      "Estado",
+      "Desarrollo",
+      "Derechos",
+      "Corrupción",
+      "Seguridad",
+      "Economía",
+      "Educación",
+      "Salud",
+      "Justicia"
+    ],
+    "enfoquePrincipal": "El plan de gobierno se centra en la 'Refundación de la República' a través de cambios estructurales profundos. Prioriza la lucha contra la corrupción y la desigualdad, buscando fortalecer el Estado y la soberanía nacional. Enfatiza la garantía de derechos sociales universales (educación, salud, trabajo, vivienda), la protección del ambiente y el impulso a una economía productiva, diversificada y participativa, con especial atención a los pueblos originarios y la justicia."
+  },
+  {
+    "partido": "Alianza Para el Progreso",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 113,
+        "categoria": "general"
+      },
+      {
+        "text": "inversión",
+        "value": 90,
+        "categoria": "economia"
+      },
+      {
+        "text": "seguridad",
+        "value": 75,
+        "categoria": "social"
+      },
+      {
+        "text": "justicia",
+        "value": 68,
+        "categoria": "social"
+      },
+      {
+        "text": "educación",
+        "value": 67,
+        "categoria": "social"
+      },
+      {
+        "text": "reforma",
+        "value": 56,
+        "categoria": "politica"
+      },
+      {
+        "text": "formalización",
+        "value": 54,
+        "categoria": "economia"
+      },
+      {
+        "text": "ciudadana",
+        "value": 50,
+        "categoria": "social"
+      },
+      {
+        "text": "digital",
+        "value": 49,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "corrupción",
+        "value": 46,
+        "categoria": "politica"
+      },
+      {
+        "text": "sistema",
+        "value": 46,
+        "categoria": "politica"
+      },
+      {
+        "text": "pobreza",
+        "value": 37,
+        "categoria": "social"
+      },
+      {
+        "text": "empleo",
+        "value": 36,
+        "categoria": "economia"
+      },
+      {
+        "text": "salud",
+        "value": 33,
+        "categoria": "social"
+      },
+      {
+        "text": "instituciones",
+        "value": 30,
+        "categoria": "politica"
+      },
+      {
+        "text": "productividad",
+        "value": 29,
+        "categoria": "economia"
+      },
+      {
+        "text": "competitividad",
+        "value": 28,
+        "categoria": "economia"
+      },
+      {
+        "text": "agua",
+        "value": 27,
+        "categoria": "social"
+      },
+      {
+        "text": "saneamiento",
+        "value": 26,
+        "categoria": "social"
+      },
+      {
+        "text": "infraestructura",
+        "value": 25,
+        "categoria": "general"
+      },
+      {
+        "text": "mype",
+        "value": 25,
+        "categoria": "economia"
+      },
+      {
+        "text": "control",
+        "value": 23,
+        "categoria": "politica"
+      },
+      {
+        "text": "minería",
+        "value": 22,
+        "categoria": "economia"
+      },
+      {
+        "text": "tecnología",
+        "value": 22,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "servicios",
+        "value": 21,
+        "categoria": "general"
+      },
+      {
+        "text": "sector",
+        "value": 21,
+        "categoria": "general"
+      },
+      {
+        "text": "vivienda",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "turismo",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "energético",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "transparencia",
+        "value": 17,
+        "categoria": "politica"
+      },
+      {
+        "text": "fiscal",
+        "value": 16,
+        "categoria": "economia"
+      },
+      {
+        "text": "común",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "progreso",
+        "value": 15,
+        "categoria": "general"
+      },
+      {
+        "text": "regional",
+        "value": 14,
+        "categoria": "politica"
+      },
+      {
+        "text": "descentralización",
+        "value": 12,
+        "categoria": "politica"
+      },
+      {
+        "text": "equidad",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "bienestar",
+        "value": 11,
+        "categoria": "social"
+      },
+      {
+        "text": "conectividad",
+        "value": 11,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "ciberseguridad",
+        "value": 11,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "agroindustrial",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "forestal",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "democrático",
+        "value": 8,
+        "categoria": "politica"
+      }
+    ],
+    "totalPalabras": 15998,
+    "palabrasUnicas": 1695,
+    "top10": [
+      "desarrollo",
+      "inversión",
+      "seguridad",
+      "justicia",
+      "educación",
+      "reforma",
+      "formalización",
+      "ciudadana",
+      "digital",
+      "corrupción"
+    ],
+    "enfoquePrincipal": "El plan de gobierno se centra en la transformación del Estado, promoviendo el desarrollo económico con énfasis en la inversión privada, la formalización y la productividad. Prioriza la seguridad ciudadana, la justicia y la educación, así como la infraestructura y la transformación digital para mejorar la calidad de vida y combatir la corrupción. También busca un enfoque regional y descentralizado."
+  },
+  {
+    "partido": "Alianza Unidad Nacional",
+    "palabras": [
+      {
+        "text": "seguridad",
+        "value": 113,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "desarrollo",
+        "value": 105,
+        "categoria": "economia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 90,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "minería",
+        "value": 68,
+        "categoria": "economia"
+      },
+      {
+        "text": "policía",
+        "value": 63,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "justicia",
+        "value": 60,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "empleo",
+        "value": 55,
+        "categoria": "economia"
+      },
+      {
+        "text": "educación",
+        "value": 54,
+        "categoria": "educacion"
+      },
+      {
+        "text": "recursos",
+        "value": 52,
+        "categoria": "economia"
+      },
+      {
+        "text": "comercio",
+        "value": 46,
+        "categoria": "economia"
+      },
+      {
+        "text": "estado",
+        "value": 45,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "formalización",
+        "value": 44,
+        "categoria": "economia"
+      },
+      {
+        "text": "tecnología",
+        "value": 42,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "sociales",
+        "value": 41,
+        "categoria": "social"
+      },
+      {
+        "text": "salud",
+        "value": 41,
+        "categoria": "salud"
+      },
+      {
+        "text": "criminalidad",
+        "value": 37,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "mypes",
+        "value": 36,
+        "categoria": "economia"
+      },
+      {
+        "text": "turismo",
+        "value": 35,
+        "categoria": "economia"
+      },
+      {
+        "text": "militar",
+        "value": 32,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "agua",
+        "value": 29,
+        "categoria": "social"
+      },
+      {
+        "text": "fronteras",
+        "value": 28,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "administración",
+        "value": 27,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "deporte",
+        "value": 27,
+        "categoria": "social"
+      },
+      {
+        "text": "organizaciones",
+        "value": 26,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "pobreza",
+        "value": 26,
+        "categoria": "social"
+      },
+      {
+        "text": "competitividad",
+        "value": 25,
+        "categoria": "economia"
+      },
+      {
+        "text": "mantenimiento",
+        "value": 25,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "política",
+        "value": 24,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "agricultura",
+        "value": 24,
+        "categoria": "economia"
+      },
+      {
+        "text": "ingresos",
+        "value": 23,
+        "categoria": "economia"
+      },
+      {
+        "text": "cárceles",
+        "value": 22,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "inclusión",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "energía",
+        "value": 22,
+        "categoria": "economia"
+      },
+      {
+        "text": "narcotráfico",
+        "value": 21,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "vivienda",
+        "value": 20,
+        "categoria": "social"
+      },
+      {
+        "text": "ciudades",
+        "value": 20,
+        "categoria": "social"
+      },
+      {
+        "text": "peru",
+        "value": 19,
+        "categoria": "geopolitica"
+      },
+      {
+        "text": "sistemas",
+        "value": 19,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "transparencia",
+        "value": 19,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "capacitación",
+        "value": 18,
+        "categoria": "educacion"
+      },
+      {
+        "text": "comunicaciones",
+        "value": 17,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "derechos",
+        "value": 17,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "penal",
+        "value": 17,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "población",
+        "value": 16,
+        "categoria": "social"
+      },
+      {
+        "text": "modernización",
+        "value": 15,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "acuicultura",
+        "value": 15,
+        "categoria": "economia"
+      },
+      {
+        "text": "producción",
+        "value": 15,
+        "categoria": "economia"
+      },
+      {
+        "text": "trabajadores",
+        "value": 15,
+        "categoria": "economia"
+      },
+      {
+        "text": "democracia",
+        "value": 14,
+        "categoria": "gobernanza"
+      }
+    ],
+    "totalPalabras": 13919,
+    "palabrasUnicas": 4272,
+    "top10": [
+      "seguridad",
+      "desarrollo",
+      "infraestructura",
+      "minería",
+      "policía",
+      "justicia",
+      "empleo",
+      "educación",
+      "recursos",
+      "comercio"
+    ],
+    "enfoquePrincipal": "El plan de gobierno se centra en la seguridad ciudadana y nacional, el desarrollo económico sostenible con énfasis en la minería, agricultura, pesca y turismo, y la mejora de la infraestructura. Prioriza la reforma de la justicia, la modernización del Estado, y la promoción del empleo, la educación, la salud y los programas sociales, buscando la formalización y el uso de tecnología e innovación."
+  },
+  {
+    "partido": "Avanza País",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 150,
+        "categoria": "economia"
+      },
+      {
+        "text": "estado",
+        "value": 130,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "salud",
+        "value": 110,
+        "categoria": "social"
+      },
+      {
+        "text": "educación",
+        "value": 105,
+        "categoria": "social"
+      },
+      {
+        "text": "seguridad",
+        "value": 95,
+        "categoria": "social"
+      },
+      {
+        "text": "gestión",
+        "value": 90,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "política",
+        "value": 85,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "inversión",
+        "value": 80,
+        "categoria": "economia"
+      },
+      {
+        "text": "recurso",
+        "value": 78,
+        "categoria": "economia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 75,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "economía",
+        "value": 70,
+        "categoria": "economia"
+      },
+      {
+        "text": "justicia",
+        "value": 65,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "digital",
+        "value": 60,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "programa",
+        "value": 58,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "comunidad",
+        "value": 55,
+        "categoria": "social"
+      },
+      {
+        "text": "ambiente",
+        "value": 52,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "persona",
+        "value": 50,
+        "categoria": "social"
+      },
+      {
+        "text": "región",
+        "value": 48,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "empleo",
+        "value": 45,
+        "categoria": "economia"
+      },
+      {
+        "text": "calidad",
+        "value": 42,
+        "categoria": "social"
+      },
+      {
+        "text": "reforma",
+        "value": 40,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "capacidad",
+        "value": 38,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "MYPE",
+        "value": 35,
+        "categoria": "economia"
+      },
+      {
+        "text": "urbano",
+        "value": 33,
+        "categoria": "social"
+      },
+      {
+        "text": "rural",
+        "value": 32,
+        "categoria": "social"
+      },
+      {
+        "text": "corrupción",
+        "value": 30,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "transparencia",
+        "value": 28,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "productividad",
+        "value": 27,
+        "categoria": "economia"
+      },
+      {
+        "text": "turismo",
+        "value": 25,
+        "categoria": "economia"
+      },
+      {
+        "text": "agricultura",
+        "value": 23,
+        "categoria": "economia"
+      },
+      {
+        "text": "innovación",
+        "value": 22,
+        "categoria": "economia"
+      },
+      {
+        "text": "violencia",
+        "value": 20,
+        "categoria": "social"
+      },
+      {
+        "text": "frontera",
+        "value": 18,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "energía",
+        "value": 17,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "comercio",
+        "value": 16,
+        "categoria": "economia"
+      },
+      {
+        "text": "gobierno",
+        "value": 15,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "institución",
+        "value": 14,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "vivienda",
+        "value": 13,
+        "categoria": "social"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "libertad",
+        "value": 11,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "derecho",
+        "value": 10,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "valor",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "saneamiento",
+        "value": 9,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "clima",
+        "value": 8,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "descentralización",
+        "value": 8,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "riesgo",
+        "value": 7,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "militar",
+        "value": 6,
+        "categoria": "política/institucional"
+      },
+      {
+        "text": "pobreza",
+        "value": 5,
+        "categoria": "social"
+      },
+      {
+        "text": "experiencia",
+        "value": 5,
+        "categoria": "social"
+      }
+    ],
+    "totalPalabras": 18000,
+    "palabrasUnicas": 2800,
+    "top10": [
+      "desarrollo",
+      "estado",
+      "salud",
+      "educación",
+      "seguridad",
+      "gestión",
+      "política",
+      "inversión",
+      "recurso",
+      "infraestructura"
+    ],
+    "enfoquePrincipal": "El plan de gobierno de Avanza País se centra en un desarrollo integral y sostenible para el Perú, abordando las dimensiones social, económica, ambiental e institucional. Prioriza la mejora de la calidad de vida de las personas a través de políticas en salud, educación, seguridad y vivienda; el fomento de la economía, inversión y productividad, especialmente para MYPEs; la gestión sostenible de recursos naturales y la adaptación al cambio climático; y la reforma del Estado para combatir la corrupción y fortalecer la institucionalidad y la descentralización."
+  },
+  {
+    "partido": "Cooperación Popular",
+    "palabras": [
+      {
+        "text": "estado",
+        "value": 70,
+        "categoria": "institucional_politica"
+      },
+      {
+        "text": "desarrollo",
+        "value": 53,
+        "categoria": "general"
+      },
+      {
+        "text": "participación",
+        "value": 39,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "población",
+        "value": 33,
+        "categoria": "social"
+      },
+      {
+        "text": "educación",
+        "value": 32,
+        "categoria": "social"
+      },
+      {
+        "text": "inversión",
+        "value": 30,
+        "categoria": "economía"
+      },
+      {
+        "text": "justicia",
+        "value": 29,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "recurso",
+        "value": 27,
+        "categoria": "economía_ambiente"
+      },
+      {
+        "text": "agua",
+        "value": 26,
+        "categoria": "ambiente_servicios"
+      },
+      {
+        "text": "salud",
+        "value": 25,
+        "categoria": "social"
+      },
+      {
+        "text": "tecnología",
+        "value": 25,
+        "categoria": "ciencia_tecnologia"
+      },
+      {
+        "text": "norma",
+        "value": 23,
+        "categoria": "institucional_politica"
+      },
+      {
+        "text": "ambiente",
+        "value": 22,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "corrupción",
+        "value": 21,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "infraestructura",
+        "value": 20,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "derecho",
+        "value": 19,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "economía",
+        "value": 19,
+        "categoria": "economía"
+      },
+      {
+        "text": "región",
+        "value": 16,
+        "categoria": "territorial"
+      },
+      {
+        "text": "capacitación",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "comunicación",
+        "value": 14,
+        "categoria": "ciencia_tecnologia"
+      },
+      {
+        "text": "reforma",
+        "value": 14,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "licitación",
+        "value": 13,
+        "categoria": "economía_institucional"
+      },
+      {
+        "text": "vivienda",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "policía",
+        "value": 12,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "control",
+        "value": 11,
+        "categoria": "institucional_politica"
+      },
+      {
+        "text": "empresa",
+        "value": 11,
+        "categoria": "economía"
+      },
+      {
+        "text": "actividad",
+        "value": 11,
+        "categoria": "general"
+      },
+      {
+        "text": "ordenamiento",
+        "value": 10,
+        "categoria": "territorial"
+      },
+      {
+        "text": "seguridad",
+        "value": 10,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "saneamiento",
+        "value": 10,
+        "categoria": "ambiente_servicios"
+      },
+      {
+        "text": "contrato",
+        "value": 10,
+        "categoria": "economía_institucional"
+      },
+      {
+        "text": "inteligencia_artificial",
+        "value": 10,
+        "categoria": "ciencia_tecnologia"
+      },
+      {
+        "text": "obra",
+        "value": 10,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "bienestar",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "igualdad",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "diversidad",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "inclusión",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "gobernanza",
+        "value": 9,
+        "categoria": "institucional_politica"
+      },
+      {
+        "text": "ética",
+        "value": 9,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "transparencia",
+        "value": 9,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "financiero",
+        "value": 9,
+        "categoria": "economía"
+      },
+      {
+        "text": "minería",
+        "value": 9,
+        "categoria": "economía_ambiente"
+      },
+      {
+        "text": "tala",
+        "value": 8,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "narcotráfico",
+        "value": 8,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "descontaminación",
+        "value": 8,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "reservorio",
+        "value": 8,
+        "categoria": "ambiente_servicios"
+      },
+      {
+        "text": "pobreza",
+        "value": 8,
+        "categoria": "social"
+      },
+      {
+        "text": "anemia",
+        "value": 8,
+        "categoria": "social"
+      },
+      {
+        "text": "desnutrición",
+        "value": 8,
+        "categoria": "social"
+      },
+      {
+        "text": "pensión",
+        "value": 8,
+        "categoria": "social"
+      }
+    ],
+    "totalPalabras": 1391,
+    "palabrasUnicas": 240,
+    "top10": [
+      "estado",
+      "desarrollo",
+      "participación",
+      "población",
+      "educación",
+      "inversión",
+      "justicia",
+      "recurso",
+      "agua",
+      "salud"
+    ],
+    "enfoquePrincipal": "El plan de Cooperación Popular se centra en el desarrollo integral del estado, promoviendo la participación ciudadana y mejorando servicios clave como la educación, salud y el acceso al agua. Aborda la lucha contra la corrupción, impulsa la inversión económica, la ciencia y tecnología, y busca una gestión responsable del ambiente y los recursos."
+  },
+  {
+    "partido": "Fe en el Perú",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 66,
+        "categoria": "general"
+      },
+      {
+        "text": "estado",
+        "value": 37,
+        "categoria": "institucional"
+      },
+      {
+        "text": "servicios",
+        "value": 33,
+        "categoria": "social"
+      },
+      {
+        "text": "brechas",
+        "value": 24,
+        "categoria": "social"
+      },
+      {
+        "text": "población",
+        "value": 23,
+        "categoria": "social"
+      },
+      {
+        "text": "derechos",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "social",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "económico",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "pobreza",
+        "value": 20,
+        "categoria": "social"
+      },
+      {
+        "text": "calidad",
+        "value": 18,
+        "categoria": "general"
+      },
+      {
+        "text": "sostenibilidad",
+        "value": 18,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 17,
+        "categoria": "institucional"
+      },
+      {
+        "text": "políticas",
+        "value": 17,
+        "categoria": "institucional"
+      },
+      {
+        "text": "acceso",
+        "value": 16,
+        "categoria": "social"
+      },
+      {
+        "text": "inversión",
+        "value": 16,
+        "categoria": "economia"
+      },
+      {
+        "text": "gestión",
+        "value": 16,
+        "categoria": "institucional"
+      },
+      {
+        "text": "territorial",
+        "value": 16,
+        "categoria": "territorio"
+      },
+      {
+        "text": "instituciones",
+        "value": 15,
+        "categoria": "institucional"
+      },
+      {
+        "text": "confianza",
+        "value": 11,
+        "categoria": "institucional"
+      },
+      {
+        "text": "empleo",
+        "value": 11,
+        "categoria": "economia"
+      },
+      {
+        "text": "desigualdad",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "protección",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "transparencia",
+        "value": 10,
+        "categoria": "institucional"
+      },
+      {
+        "text": "productividad",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "corrupción",
+        "value": 7,
+        "categoria": "institucional"
+      },
+      {
+        "text": "recursos",
+        "value": 7,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "competitividad",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "salud",
+        "value": 6,
+        "categoria": "salud"
+      },
+      {
+        "text": "educación",
+        "value": 5,
+        "categoria": "educacion"
+      },
+      {
+        "text": "democrática",
+        "value": 5,
+        "categoria": "institucional"
+      },
+      {
+        "text": "fiscal",
+        "value": 5,
+        "categoria": "economia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 5,
+        "categoria": "territorio"
+      },
+      {
+        "text": "vida",
+        "value": 5,
+        "categoria": "social"
+      },
+      {
+        "text": "bienestar",
+        "value": 4,
+        "categoria": "social"
+      },
+      {
+        "text": "descentralización",
+        "value": 4,
+        "categoria": "institucional"
+      },
+      {
+        "text": "justicia",
+        "value": 4,
+        "categoria": "institucional"
+      },
+      {
+        "text": "modernización",
+        "value": 4,
+        "categoria": "institucional"
+      },
+      {
+        "text": "oportunidades",
+        "value": 4,
+        "categoria": "social"
+      },
+      {
+        "text": "riesgos",
+        "value": 4,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "alimentaria",
+        "value": 3,
+        "categoria": "salud"
+      },
+      {
+        "text": "cambio",
+        "value": 3,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "climático",
+        "value": 3,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "coordinación",
+        "value": 3,
+        "categoria": "institucional"
+      },
+      {
+        "text": "mercado",
+        "value": 3,
+        "categoria": "economia"
+      },
+      {
+        "text": "nutrición",
+        "value": 3,
+        "categoria": "salud"
+      },
+      {
+        "text": "agua",
+        "value": 2,
+        "categoria": "social"
+      },
+      {
+        "text": "vivienda",
+        "value": 2,
+        "categoria": "social"
+      }
+    ],
+    "totalPalabras": 2244,
+    "palabrasUnicas": 415,
+    "top10": [
+      "desarrollo",
+      "estado",
+      "servicios",
+      "brechas",
+      "población",
+      "derechos",
+      "social",
+      "económico",
+      "pobreza",
+      "calidad"
+    ],
+    "enfoquePrincipal": "El plan se centra en un desarrollo humano integral y sostenible, buscando reducir brechas sociales y territoriales, fortalecer la institucionalidad democrática y promover un crecimiento económico inclusivo, con énfasis en la transparencia, la justicia y la gestión eficiente de los recursos."
+  },
+  {
+    "partido": "Frente de la Esperanza",
+    "palabras": [
+      {
+        "text": "salud",
+        "value": 110,
+        "categoria": "social"
+      },
+      {
+        "text": "desarrollo",
+        "value": 96,
+        "categoria": "general"
+      },
+      {
+        "text": "educación",
+        "value": 95,
+        "categoria": "social"
+      },
+      {
+        "text": "seguridad",
+        "value": 81,
+        "categoria": "social"
+      },
+      {
+        "text": "justicia",
+        "value": 72,
+        "categoria": "social"
+      },
+      {
+        "text": "económica",
+        "value": 71,
+        "categoria": "economia"
+      },
+      {
+        "text": "inversión",
+        "value": 65,
+        "categoria": "economia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 61,
+        "categoria": "obras"
+      },
+      {
+        "text": "pobreza",
+        "value": 46,
+        "categoria": "social"
+      },
+      {
+        "text": "corrupción",
+        "value": 43,
+        "categoria": "politica"
+      },
+      {
+        "text": "producción",
+        "value": 43,
+        "categoria": "economia"
+      },
+      {
+        "text": "trabajo",
+        "value": 42,
+        "categoria": "economia"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 41,
+        "categoria": "social"
+      },
+      {
+        "text": "empleo",
+        "value": 40,
+        "categoria": "economia"
+      },
+      {
+        "text": "agua",
+        "value": 40,
+        "categoria": "servicios publicos"
+      },
+      {
+        "text": "saneamiento",
+        "value": 39,
+        "categoria": "servicios publicos"
+      },
+      {
+        "text": "reforma",
+        "value": 39,
+        "categoria": "politica"
+      },
+      {
+        "text": "policía",
+        "value": 38,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "recursos",
+        "value": 37,
+        "categoria": "medio ambiente"
+      },
+      {
+        "text": "derechos",
+        "value": 37,
+        "categoria": "social"
+      },
+      {
+        "text": "calidad",
+        "value": 36,
+        "categoria": "general"
+      },
+      {
+        "text": "política",
+        "value": 34,
+        "categoria": "politica"
+      },
+      {
+        "text": "fomento",
+        "value": 30,
+        "categoria": "economia"
+      },
+      {
+        "text": "democracia",
+        "value": 29,
+        "categoria": "politica"
+      },
+      {
+        "text": "fuerzas armadas",
+        "value": 28,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "turismo",
+        "value": 27,
+        "categoria": "economia"
+      },
+      {
+        "text": "narcotráfico",
+        "value": 27,
+        "categoria": "politica"
+      },
+      {
+        "text": "creación",
+        "value": 26,
+        "categoria": "general"
+      },
+      {
+        "text": "actividades",
+        "value": 26,
+        "categoria": "general"
+      },
+      {
+        "text": "vivienda",
+        "value": 25,
+        "categoria": "social"
+      },
+      {
+        "text": "control",
+        "value": 24,
+        "categoria": "politica"
+      },
+      {
+        "text": "ambiente",
+        "value": 23,
+        "categoria": "medio ambiente"
+      },
+      {
+        "text": "impulso",
+        "value": 23,
+        "categoria": "general"
+      },
+      {
+        "text": "promoción",
+        "value": 23,
+        "categoria": "general"
+      },
+      {
+        "text": "internacional",
+        "value": 23,
+        "categoria": "politica exterior"
+      },
+      {
+        "text": "violencia",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "sector",
+        "value": 22,
+        "categoria": "economia"
+      },
+      {
+        "text": "capacitación",
+        "value": 21,
+        "categoria": "educacion"
+      },
+      {
+        "text": "delito",
+        "value": 21,
+        "categoria": "politica"
+      },
+      {
+        "text": "sistema",
+        "value": 21,
+        "categoria": "general"
+      },
+      {
+        "text": "tecnología",
+        "value": 20,
+        "categoria": "ciencia y tecnologia"
+      },
+      {
+        "text": "eliminación",
+        "value": 20,
+        "categoria": "politica"
+      },
+      {
+        "text": "regiones",
+        "value": 20,
+        "categoria": "general"
+      },
+      {
+        "text": "cultura",
+        "value": 20,
+        "categoria": "social"
+      },
+      {
+        "text": "transparencia",
+        "value": 19,
+        "categoria": "politica"
+      },
+      {
+        "text": "agricultura",
+        "value": 19,
+        "categoria": "economia"
+      },
+      {
+        "text": "impuesto",
+        "value": 19,
+        "categoria": "economia"
+      },
+      {
+        "text": "municipio",
+        "value": 19,
+        "categoria": "politica"
+      },
+      {
+        "text": "ingresos",
+        "value": 19,
+        "categoria": "economia"
+      },
+      {
+        "text": "concesiones",
+        "value": 18,
+        "categoria": "economia"
+      }
+    ],
+    "totalPalabras": 11370,
+    "palabrasUnicas": 1974,
+    "top10": [
+      "salud",
+      "desarrollo",
+      "educación",
+      "seguridad",
+      "justicia",
+      "económica",
+      "inversión",
+      "infraestructura",
+      "pobreza",
+      "corrupción"
+    ],
+    "enfoquePrincipal": "El plan de gobierno se centra en el desarrollo económico y social del país, priorizando la mejora en salud, educación y seguridad. Combate la corrupción y la pobreza, y busca fortalecer la infraestructura, la producción y la inversión con un enfoque en la descentralización y la innovación."
+  },
+  {
+    "partido": "Fuerza Popular",
+    "palabras": [
+      {
+        "text": "orden",
+        "value": 105,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "desarrollo",
+        "value": 98,
+        "categoria": "general"
+      },
+      {
+        "text": "perú",
+        "value": 87,
+        "categoria": "pais"
+      },
+      {
+        "text": "seguridad",
+        "value": 78,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "economía",
+        "value": 72,
+        "categoria": "economia"
+      },
+      {
+        "text": "estado",
+        "value": 65,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "inversión",
+        "value": 60,
+        "categoria": "economia"
+      },
+      {
+        "text": "educación",
+        "value": 55,
+        "categoria": "social"
+      },
+      {
+        "text": "salud",
+        "value": 50,
+        "categoria": "social"
+      },
+      {
+        "text": "empleo",
+        "value": 48,
+        "categoria": "economia"
+      },
+      {
+        "text": "justicia",
+        "value": 42,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "infraestructura",
+        "value": 42,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "calidad",
+        "value": 40,
+        "categoria": "general"
+      },
+      {
+        "text": "mype",
+        "value": 37,
+        "categoria": "economia"
+      },
+      {
+        "text": "confianza",
+        "value": 32,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "crecimiento",
+        "value": 32,
+        "categoria": "economia"
+      },
+      {
+        "text": "formalización",
+        "value": 31,
+        "categoria": "economia"
+      },
+      {
+        "text": "digital",
+        "value": 30,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "población",
+        "value": 30,
+        "categoria": "social"
+      },
+      {
+        "text": "corrupción",
+        "value": 28,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "vivienda",
+        "value": 27,
+        "categoria": "social"
+      },
+      {
+        "text": "agua",
+        "value": 27,
+        "categoria": "social"
+      },
+      {
+        "text": "saneamiento",
+        "value": 25,
+        "categoria": "social"
+      },
+      {
+        "text": "transporte",
+        "value": 24,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "turismo",
+        "value": 23,
+        "categoria": "economia"
+      },
+      {
+        "text": "minería",
+        "value": 22,
+        "categoria": "economia"
+      },
+      {
+        "text": "agricultura",
+        "value": 22,
+        "categoria": "economia"
+      },
+      {
+        "text": "energía",
+        "value": 21,
+        "categoria": "economia"
+      },
+      {
+        "text": "trabajo",
+        "value": 21,
+        "categoria": "economia"
+      },
+      {
+        "text": "oportunidades",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "ambiente",
+        "value": 20,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "comunidades",
+        "value": 19,
+        "categoria": "social"
+      },
+      {
+        "text": "pensiones",
+        "value": 18,
+        "categoria": "social"
+      },
+      {
+        "text": "bienestar",
+        "value": 18,
+        "categoria": "social"
+      },
+      {
+        "text": "lucha",
+        "value": 17,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "territorio",
+        "value": 16,
+        "categoria": "general"
+      },
+      {
+        "text": "policía",
+        "value": 16,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "jóvenes",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "pobreza",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "anemia",
+        "value": 13,
+        "categoria": "social"
+      },
+      {
+        "text": "conectividad",
+        "value": 13,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "producción",
+        "value": 13,
+        "categoria": "economia"
+      },
+      {
+        "text": "gestión",
+        "value": 13,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "regulación",
+        "value": 11,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "democracia",
+        "value": 11,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "alimentaria",
+        "value": 11,
+        "categoria": "social"
+      },
+      {
+        "text": "derechos",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "niños",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "emprendedor",
+        "value": 10,
+        "categoria": "economia"
+      },
+      {
+        "text": "fiscal",
+        "value": 9,
+        "categoria": "economia"
+      }
+    ],
+    "totalPalabras": 18000,
+    "palabrasUnicas": 2800,
+    "top10": [
+      "orden",
+      "desarrollo",
+      "perú",
+      "seguridad",
+      "economía",
+      "estado",
+      "inversión",
+      "educación",
+      "salud",
+      "empleo"
+    ],
+    "enfoquePrincipal": "El plan se centra en restablecer el orden en todas sus dimensiones (ciudadano, económico, jurídico), impulsando el desarrollo y la economía a través de la inversión, el empleo y la formalización, y garantizando el bienestar social mediante la mejora de educación, salud, vivienda y saneamiento, todo ello en un marco de seguridad, justicia y transparencia."
+  },
+  {
+    "partido": "Integridad Democrática",
+    "palabras": [
+      {
+        "text": "Estado",
+        "value": 290,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "seguridad",
+        "value": 182,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "desarrollo",
+        "value": 175,
+        "categoria": "economia"
+      },
+      {
+        "text": "sistema",
+        "value": 169,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "salud",
+        "value": 158,
+        "categoria": "salud"
+      },
+      {
+        "text": "política",
+        "value": 149,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "nacional",
+        "value": 148,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "educación",
+        "value": 121,
+        "categoria": "educacion"
+      },
+      {
+        "text": "criminal",
+        "value": 90,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "inversión",
+        "value": 85,
+        "categoria": "economia"
+      },
+      {
+        "text": "gestión",
+        "value": 84,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "infraestructura",
+        "value": 82,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "públicos",
+        "value": 73,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "justicia",
+        "value": 72,
+        "categoria": "justicia"
+      },
+      {
+        "text": "organizaciones",
+        "value": 68,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "reforma",
+        "value": 68,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "control",
+        "value": 67,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "población",
+        "value": 64,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "territorial",
+        "value": 63,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "servicios",
+        "value": 63,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "PNP",
+        "value": 62,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "personas",
+        "value": 56,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "Ministerio",
+        "value": 54,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "efectiva",
+        "value": 53,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "digital",
+        "value": 53,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "empleo",
+        "value": 52,
+        "categoria": "economia"
+      },
+      {
+        "text": "transparencia",
+        "value": 49,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "FFAA",
+        "value": 46,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "económico",
+        "value": 46,
+        "categoria": "economia"
+      },
+      {
+        "text": "comunidad",
+        "value": 44,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "protección",
+        "value": 44,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "calidad",
+        "value": 44,
+        "categoria": "general"
+      },
+      {
+        "text": "sociedad",
+        "value": 41,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "normativa",
+        "value": 39,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "tecnología",
+        "value": 39,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "riesgos",
+        "value": 39,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "atención",
+        "value": 39,
+        "categoria": "salud"
+      },
+      {
+        "text": "MYPEs",
+        "value": 36,
+        "categoria": "economia"
+      },
+      {
+        "text": "rurales",
+        "value": 35,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "derechos",
+        "value": 34,
+        "categoria": "justicia"
+      },
+      {
+        "text": "autonomía",
+        "value": 34,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "prevención",
+        "value": 33,
+        "categoria": "salud"
+      },
+      {
+        "text": "minería",
+        "value": 33,
+        "categoria": "economia"
+      },
+      {
+        "text": "capacidades",
+        "value": 32,
+        "categoria": "general"
+      },
+      {
+        "text": "urbana",
+        "value": 30,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "médicos",
+        "value": 29,
+        "categoria": "salud"
+      }
+    ],
+    "totalPalabras": 18274,
+    "palabrasUnicas": 4323,
+    "top10": [
+      "Estado",
+      "seguridad",
+      "desarrollo",
+      "sistema",
+      "salud",
+      "política",
+      "nacional",
+      "educación",
+      "criminal",
+      "inversión"
+    ],
+    "enfoquePrincipal": "El plan de gobierno se centra en la transformación y modernización del Estado para garantizar seguridad, desarrollo sostenible, salud y educación de calidad, y fortalecer la economía mediante la inversión y el emprendimiento, combatiendo la corrupción y la informalidad en todos los niveles."
+  },
+  {
+    "partido": "Juntos por el Perú",
+    "palabras": [
+      {
+        "text": "salud",
+        "value": 115,
+        "categoria": "salud"
+      },
+      {
+        "text": "estado",
+        "value": 110,
+        "categoria": "politica"
+      },
+      {
+        "text": "desarrollo",
+        "value": 105,
+        "categoria": "general"
+      },
+      {
+        "text": "educación",
+        "value": 98,
+        "categoria": "educacion"
+      },
+      {
+        "text": "agua",
+        "value": 85,
+        "categoria": "medioambiente"
+      },
+      {
+        "text": "recursos",
+        "value": 80,
+        "categoria": "medioambiente"
+      },
+      {
+        "text": "democracia",
+        "value": 55,
+        "categoria": "politica"
+      },
+      {
+        "text": "soberanía",
+        "value": 54,
+        "categoria": "politica"
+      },
+      {
+        "text": "justicia",
+        "value": 52,
+        "categoria": "politica"
+      },
+      {
+        "text": "agricultura",
+        "value": 50,
+        "categoria": "economia"
+      },
+      {
+        "text": "población",
+        "value": 48,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "minería",
+        "value": 47,
+        "categoria": "economia"
+      },
+      {
+        "text": "economía",
+        "value": 46,
+        "categoria": "economia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 44,
+        "categoria": "general"
+      },
+      {
+        "text": "derecho",
+        "value": 43,
+        "categoria": "politica"
+      },
+      {
+        "text": "sociedad",
+        "value": 40,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "vida",
+        "value": 38,
+        "categoria": "general"
+      },
+      {
+        "text": "territorio",
+        "value": 37,
+        "categoria": "general"
+      },
+      {
+        "text": "cultura",
+        "value": 35,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "seguridad",
+        "value": 33,
+        "categoria": "politica"
+      },
+      {
+        "text": "comunidad",
+        "value": 32,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "trabajo",
+        "value": 30,
+        "categoria": "economia"
+      },
+      {
+        "text": "constitución",
+        "value": 29,
+        "categoria": "politica"
+      },
+      {
+        "text": "pueblo",
+        "value": 28,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "violencia",
+        "value": 27,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "protección",
+        "value": 26,
+        "categoria": "general"
+      },
+      {
+        "text": "inversión",
+        "value": 25,
+        "categoria": "economia"
+      },
+      {
+        "text": "familia",
+        "value": 24,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "pobreza",
+        "value": 23,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "tecnología",
+        "value": 22,
+        "categoria": "general"
+      },
+      {
+        "text": "mujeres",
+        "value": 21,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "innovación",
+        "value": 20,
+        "categoria": "general"
+      },
+      {
+        "text": "jóvenes",
+        "value": 19,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "mercado",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "calidad",
+        "value": 17,
+        "categoria": "general"
+      },
+      {
+        "text": "productividad",
+        "value": 16,
+        "categoria": "economia"
+      },
+      {
+        "text": "indígenas",
+        "value": 15,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "empleo",
+        "value": 14,
+        "categoria": "economia"
+      },
+      {
+        "text": "dignidad",
+        "value": 13,
+        "categoria": "general"
+      },
+      {
+        "text": "ambiente",
+        "value": 12,
+        "categoria": "medioambiente"
+      }
+    ],
+    "totalPalabras": 15600,
+    "palabrasUnicas": 1200,
+    "top10": [
+      "salud",
+      "estado",
+      "desarrollo",
+      "educación",
+      "agua",
+      "recursos",
+      "democracia",
+      "soberanía",
+      "justicia",
+      "agricultura"
+    ],
+    "enfoquePrincipal": "El plan de gobierno se centra en la transformación del Estado para garantizar derechos fundamentales como salud y educación, impulsar un desarrollo económico sostenible basado en la agricultura y minería con justicia social y ambiental, y fortalecer la democracia y soberanía nacional, priorizando a la población vulnerable y la interculturalidad."
+  },
+  {
+    "partido": "Libertad Popular",
+    "palabras": [
+      {
+        "text": "estado",
+        "value": 68,
+        "categoria": "institucional"
+      },
+      {
+        "text": "servicios",
+        "value": 56,
+        "categoria": "social"
+      },
+      {
+        "text": "seguridad",
+        "value": 55,
+        "categoria": "social"
+      },
+      {
+        "text": "infraestructura",
+        "value": 53,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "inversión",
+        "value": 51,
+        "categoria": "economia"
+      },
+      {
+        "text": "desarrollo",
+        "value": 49,
+        "categoria": "general"
+      },
+      {
+        "text": "políticas",
+        "value": 47,
+        "categoria": "institucional"
+      },
+      {
+        "text": "instituciones",
+        "value": 45,
+        "categoria": "institucional"
+      },
+      {
+        "text": "economía",
+        "value": 45,
+        "categoria": "economia"
+      },
+      {
+        "text": "libertad",
+        "value": 42,
+        "categoria": "valores"
+      },
+      {
+        "text": "calidad",
+        "value": 41,
+        "categoria": "general"
+      },
+      {
+        "text": "justicia",
+        "value": 37,
+        "categoria": "institucional"
+      },
+      {
+        "text": "educación",
+        "value": 34,
+        "categoria": "educacion"
+      },
+      {
+        "text": "regiones",
+        "value": 34,
+        "categoria": "territorial"
+      },
+      {
+        "text": "agua",
+        "value": 34,
+        "categoria": "social"
+      },
+      {
+        "text": "mercado",
+        "value": 34,
+        "categoria": "economia"
+      },
+      {
+        "text": "saneamiento",
+        "value": 33,
+        "categoria": "social"
+      },
+      {
+        "text": "democracia",
+        "value": 32,
+        "categoria": "institucional"
+      },
+      {
+        "text": "salud",
+        "value": 31,
+        "categoria": "social"
+      },
+      {
+        "text": "vivienda",
+        "value": 30,
+        "categoria": "social"
+      },
+      {
+        "text": "territorial",
+        "value": 30,
+        "categoria": "territorial"
+      },
+      {
+        "text": "gestión",
+        "value": 29,
+        "categoria": "institucional"
+      },
+      {
+        "text": "pobreza",
+        "value": 28,
+        "categoria": "social"
+      },
+      {
+        "text": "productividad",
+        "value": 28,
+        "categoria": "economia"
+      },
+      {
+        "text": "ciudad",
+        "value": 28,
+        "categoria": "social"
+      },
+      {
+        "text": "empleo",
+        "value": 25,
+        "categoria": "economia"
+      },
+      {
+        "text": "corrupción",
+        "value": 24,
+        "categoria": "institucional"
+      },
+      {
+        "text": "turismo",
+        "value": 23,
+        "categoria": "economia"
+      },
+      {
+        "text": "derechos",
+        "value": 23,
+        "categoria": "social"
+      },
+      {
+        "text": "tecnología",
+        "value": 21,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "transparencia",
+        "value": 21,
+        "categoria": "institucional"
+      },
+      {
+        "text": "energía",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "minería",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "comunidades",
+        "value": 19,
+        "categoria": "social"
+      },
+      {
+        "text": "agricultura",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "innovación",
+        "value": 18,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "violencia",
+        "value": 18,
+        "categoria": "social"
+      },
+      {
+        "text": "crecimiento",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "financiamiento",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "patrimonio",
+        "value": 17,
+        "categoria": "cultura"
+      },
+      {
+        "text": "mujeres",
+        "value": 16,
+        "categoria": "social"
+      },
+      {
+        "text": "bosques",
+        "value": 15,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "formalización",
+        "value": 15,
+        "categoria": "economia"
+      },
+      {
+        "text": "operaciones",
+        "value": 14,
+        "categoria": "institucional"
+      },
+      {
+        "text": "públicas",
+        "value": 14,
+        "categoria": "institucional"
+      },
+      {
+        "text": "competitividad",
+        "value": 14,
+        "categoria": "economia"
+      },
+      {
+        "text": "digitalización",
+        "value": 13,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "sostenibilidad",
+        "value": 13,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "ambiente",
+        "value": 13,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "recursos",
+        "value": 13,
+        "categoria": "general"
+      }
+    ],
+    "totalPalabras": 15651,
+    "palabrasUnicas": 3033,
+    "top10": [
+      "estado",
+      "servicios",
+      "seguridad",
+      "infraestructura",
+      "inversión",
+      "desarrollo",
+      "políticas",
+      "instituciones",
+      "economía",
+      "libertad"
+    ],
+    "enfoquePrincipal": "El plan de gobierno de Libertad Popular se enfoca en fortalecer el Estado, la institucionalidad y la democracia, priorizando el desarrollo económico sostenible, la inversión, la seguridad ciudadana y la mejora de servicios esenciales como salud, educación, agua y saneamiento. Destaca la lucha contra la corrupción, la promoción de la libertad, la productividad y la competitividad, así como la innovación y la gestión territorial y ambiental."
+  },
+  {
+    "partido": "Partido Aprista Peruano",
+    "palabras": [
+      {
+        "text": "producción",
+        "value": 139,
+        "categoria": "economia"
+      },
+      {
+        "text": "economía",
+        "value": 115,
+        "categoria": "economia"
+      },
+      {
+        "text": "seguridad",
+        "value": 98,
+        "categoria": "social"
+      },
+      {
+        "text": "justicia",
+        "value": 85,
+        "categoria": "social"
+      },
+      {
+        "text": "educación",
+        "value": 83,
+        "categoria": "social"
+      },
+      {
+        "text": "salud",
+        "value": 82,
+        "categoria": "social"
+      },
+      {
+        "text": "pobreza",
+        "value": 78,
+        "categoria": "social"
+      },
+      {
+        "text": "inversión",
+        "value": 77,
+        "categoria": "economia"
+      },
+      {
+        "text": "vivienda",
+        "value": 73,
+        "categoria": "social"
+      },
+      {
+        "text": "minería",
+        "value": 68,
+        "categoria": "economia"
+      },
+      {
+        "text": "empleo",
+        "value": 62,
+        "categoria": "economia"
+      },
+      {
+        "text": "democracia",
+        "value": 57,
+        "categoria": "politica"
+      },
+      {
+        "text": "ambiente",
+        "value": 56,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "tecnología",
+        "value": 54,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "defensa",
+        "value": 51,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "tributación",
+        "value": 49,
+        "categoria": "economia"
+      },
+      {
+        "text": "fiscal",
+        "value": 49,
+        "categoria": "economia"
+      },
+      {
+        "text": "criminalidad",
+        "value": 48,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "comunidad",
+        "value": 47,
+        "categoria": "social"
+      },
+      {
+        "text": "energía",
+        "value": 47,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "violencia",
+        "value": 46,
+        "categoria": "social"
+      },
+      {
+        "text": "policía",
+        "value": 43,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "inclusión",
+        "value": 42,
+        "categoria": "social"
+      },
+      {
+        "text": "mype",
+        "value": 40,
+        "categoria": "economia"
+      },
+      {
+        "text": "patrimonio",
+        "value": 37,
+        "categoria": "cultura"
+      },
+      {
+        "text": "conectividad",
+        "value": 36,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "turismo",
+        "value": 35,
+        "categoria": "cultura"
+      },
+      {
+        "text": "constitucion",
+        "value": 34,
+        "categoria": "politica"
+      },
+      {
+        "text": "región",
+        "value": 34,
+        "categoria": "politica"
+      },
+      {
+        "text": "ciberseguridad",
+        "value": 33,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "calidad",
+        "value": 32,
+        "categoria": "social"
+      },
+      {
+        "text": "desigualdad",
+        "value": 32,
+        "categoria": "social"
+      },
+      {
+        "text": "trabajo",
+        "value": 32,
+        "categoria": "social"
+      },
+      {
+        "text": "frontera",
+        "value": 29,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "datos",
+        "value": 28,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "gas",
+        "value": 28,
+        "categoria": "economia"
+      },
+      {
+        "text": "ejecución",
+        "value": 27,
+        "categoria": "gestion_publica"
+      },
+      {
+        "text": "cárcel",
+        "value": 26,
+        "categoria": "justicia"
+      },
+      {
+        "text": "reforma",
+        "value": 26,
+        "categoria": "politica"
+      },
+      {
+        "text": "pesca",
+        "value": 25,
+        "categoria": "economia"
+      },
+      {
+        "text": "descentralización",
+        "value": 24,
+        "categoria": "politica"
+      },
+      {
+        "text": "mantenimiento",
+        "value": 23,
+        "categoria": "gestion_publica"
+      },
+      {
+        "text": "penal",
+        "value": 23,
+        "categoria": "justicia"
+      },
+      {
+        "text": "cohesión",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "corrupción",
+        "value": 22,
+        "categoria": "politica"
+      },
+      {
+        "text": "agua",
+        "value": 21,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "petróleo",
+        "value": 21,
+        "categoria": "economia"
+      },
+      {
+        "text": "ética",
+        "value": 20,
+        "categoria": "politica"
+      },
+      {
+        "text": "competitividad",
+        "value": 19,
+        "categoria": "economia"
+      }
+    ],
+    "totalPalabras": 13915,
+    "palabrasUnicas": 1137,
+    "top10": [
+      "producción",
+      "economía",
+      "seguridad",
+      "justicia",
+      "educación",
+      "salud",
+      "pobreza",
+      "inversión",
+      "vivienda",
+      "minería"
+    ],
+    "enfoquePrincipal": "El plan del Partido Aprista Peruano se centra en el fortalecimiento de la producción y la economía, con un fuerte énfasis en la justicia social, la reducción de la pobreza y la mejora de servicios básicos como educación, salud y vivienda. También busca reformar la seguridad, la administración pública, la fiscalización y la infraestructura, promoviendo la tecnología, la innovación y la sostenibilidad ambiental."
+  },
+  {
+    "partido": "Partido Cívico Obras",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 32,
+        "categoria": "general"
+      },
+      {
+        "text": "educación",
+        "value": 17,
+        "categoria": "educacion"
+      },
+      {
+        "text": "salud",
+        "value": 15,
+        "categoria": "salud"
+      },
+      {
+        "text": "justicia",
+        "value": 9,
+        "categoria": "justicia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 11,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "inversión",
+        "value": 10,
+        "categoria": "economia"
+      },
+      {
+        "text": "calidad",
+        "value": 6,
+        "categoria": "general"
+      },
+      {
+        "text": "corrupción",
+        "value": 6,
+        "categoria": "justicia"
+      },
+      {
+        "text": "pobreza",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "municipalidades",
+        "value": 4,
+        "categoria": "gestion_publica"
+      },
+      {
+        "text": "democracia",
+        "value": 6,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "servicios",
+        "value": 6,
+        "categoria": "general"
+      },
+      {
+        "text": "económica",
+        "value": 4,
+        "categoria": "economia"
+      },
+      {
+        "text": "social",
+        "value": 7,
+        "categoria": "social"
+      },
+      {
+        "text": "comunidades",
+        "value": 4,
+        "categoria": "social"
+      },
+      {
+        "text": "trabajadores",
+        "value": 2,
+        "categoria": "laboral"
+      },
+      {
+        "text": "territorial",
+        "value": 5,
+        "categoria": "territorio"
+      },
+      {
+        "text": "ambiente",
+        "value": 3,
+        "categoria": "medio_ambiente"
+      },
+      {
+        "text": "capacitación",
+        "value": 3,
+        "categoria": "educacion"
+      },
+      {
+        "text": "formalización",
+        "value": 3,
+        "categoria": "economia"
+      },
+      {
+        "text": "mypes",
+        "value": 3,
+        "categoria": "economia"
+      },
+      {
+        "text": "recursos",
+        "value": 5,
+        "categoria": "general"
+      },
+      {
+        "text": "producción",
+        "value": 3,
+        "categoria": "economia"
+      },
+      {
+        "text": "urbano",
+        "value": 2,
+        "categoria": "territorio"
+      },
+      {
+        "text": "ciudadana",
+        "value": 6,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "vulnerables",
+        "value": 4,
+        "categoria": "social"
+      },
+      {
+        "text": "seguridad",
+        "value": 4,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "democrático",
+        "value": 2,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "tecnología",
+        "value": 2,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "empleo",
+        "value": 2,
+        "categoria": "economia"
+      },
+      {
+        "text": "cívico",
+        "value": 3,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "transparencia",
+        "value": 2,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "libertad",
+        "value": 3,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "valores",
+        "value": 2,
+        "categoria": "social"
+      },
+      {
+        "text": "crecimiento",
+        "value": 3,
+        "categoria": "economia"
+      },
+      {
+        "text": "saneamiento",
+        "value": 2,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "agua",
+        "value": 2,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "residuos",
+        "value": 2,
+        "categoria": "medio_ambiente"
+      },
+      {
+        "text": "comunicación",
+        "value": 2,
+        "categoria": "social"
+      },
+      {
+        "text": "construcción",
+        "value": 3,
+        "categoria": "infraestructura"
+      }
+    ],
+    "totalPalabras": 4912,
+    "palabrasUnicas": 1357,
+    "top10": [
+      "desarrollo",
+      "educación",
+      "salud",
+      "infraestructura",
+      "inversión",
+      "justicia",
+      "social",
+      "calidad",
+      "corrupción",
+      "pobreza"
+    ],
+    "enfoquePrincipal": "El Partido Cívico Obras enfoca su plan en el desarrollo económico, social y ambiental, priorizando la mejora de la educación, salud e infraestructura. Propone fortalecer la justicia, combatir la corrupción y la pobreza, e impulsar la inversión y formalización, con énfasis en la descentralización y la participación ciudadana."
+  },
+  {
+    "partido": "Partido de los Trabajadores y Emprendedores del Perú",
+    "palabras": [
+      {
+        "text": "nacional",
+        "value": 6,
+        "categoria": "gestion"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 4,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "emprendimiento",
+        "value": 4,
+        "categoria": "economia"
+      },
+      {
+        "text": "pública",
+        "value": 4,
+        "categoria": "gestion"
+      },
+      {
+        "text": "agricultura",
+        "value": 3,
+        "categoria": "economia"
+      },
+      {
+        "text": "economía",
+        "value": 3,
+        "categoria": "economia"
+      },
+      {
+        "text": "laborales",
+        "value": 3,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "preventiva",
+        "value": 3,
+        "categoria": "salud"
+      },
+      {
+        "text": "social",
+        "value": 3,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "ambiental",
+        "value": 2,
+        "categoria": "medioambiente"
+      },
+      {
+        "text": "corrupción",
+        "value": 2,
+        "categoria": "institucional"
+      },
+      {
+        "text": "cumplimiento",
+        "value": 2,
+        "categoria": "gestion"
+      },
+      {
+        "text": "derechos",
+        "value": 2,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "desarrollo",
+        "value": 2,
+        "categoria": "economia"
+      },
+      {
+        "text": "educación",
+        "value": 2,
+        "categoria": "educacion"
+      },
+      {
+        "text": "estatales",
+        "value": 2,
+        "categoria": "gestion"
+      },
+      {
+        "text": "financiero",
+        "value": 2,
+        "categoria": "economia"
+      },
+      {
+        "text": "industrial",
+        "value": 2,
+        "categoria": "economia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 2,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "nutrición",
+        "value": 2,
+        "categoria": "salud"
+      },
+      {
+        "text": "número",
+        "value": 2,
+        "categoria": "gestion"
+      },
+      {
+        "text": "pacto",
+        "value": 2,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "participación",
+        "value": 2,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "programa",
+        "value": 2,
+        "categoria": "gestion"
+      },
+      {
+        "text": "técnico",
+        "value": 2,
+        "categoria": "economia"
+      },
+      {
+        "text": "vivienda",
+        "value": 2,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "cadenas",
+        "value": 1,
+        "categoria": "economia"
+      },
+      {
+        "text": "calidad",
+        "value": 1,
+        "categoria": "educacion"
+      },
+      {
+        "text": "carrera",
+        "value": 1,
+        "categoria": "gestion"
+      },
+      {
+        "text": "comunitaria",
+        "value": 1,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "congreso",
+        "value": 1,
+        "categoria": "politica"
+      },
+      {
+        "text": "contaminación",
+        "value": 1,
+        "categoria": "medioambiente"
+      },
+      {
+        "text": "cuentas",
+        "value": 1,
+        "categoria": "gestion"
+      },
+      {
+        "text": "delitos",
+        "value": 1,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "digitales",
+        "value": 1,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "digna",
+        "value": 1,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "ecológico",
+        "value": 1,
+        "categoria": "medioambiente"
+      },
+      {
+        "text": "eficiencia",
+        "value": 1,
+        "categoria": "institucional"
+      },
+      {
+        "text": "electoral",
+        "value": 1,
+        "categoria": "politica"
+      },
+      {
+        "text": "entidades",
+        "value": 1,
+        "categoria": "institucional"
+      },
+      {
+        "text": "evaluación",
+        "value": 1,
+        "categoria": "gestion"
+      },
+      {
+        "text": "instituciones",
+        "value": 1,
+        "categoria": "institucional"
+      },
+      {
+        "text": "institutos",
+        "value": 1,
+        "categoria": "educacion"
+      },
+      {
+        "text": "justicia",
+        "value": 1,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "MYPES",
+        "value": 1,
+        "categoria": "economia"
+      },
+      {
+        "text": "organización",
+        "value": 1,
+        "categoria": "institucional"
+      },
+      {
+        "text": "partido",
+        "value": 1,
+        "categoria": "politica"
+      },
+      {
+        "text": "plataformas",
+        "value": 1,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "política",
+        "value": 1,
+        "categoria": "politica"
+      },
+      {
+        "text": "producción",
+        "value": 1,
+        "categoria": "economia"
+      },
+      {
+        "text": "recaudación",
+        "value": 1,
+        "categoria": "economia"
+      },
+      {
+        "text": "rendición",
+        "value": 1,
+        "categoria": "gestion"
+      },
+      {
+        "text": "salud",
+        "value": 1,
+        "categoria": "salud"
+      },
+      {
+        "text": "seguridad",
+        "value": 1,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "trabajadores",
+        "value": 1,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "universidades",
+        "value": 1,
+        "categoria": "educacion"
+      }
+    ],
+    "totalPalabras": 600,
+    "palabrasUnicas": 180,
+    "top10": [
+      "nacional",
+      "ciudadanía",
+      "emprendimiento",
+      "pública",
+      "agricultura",
+      "economía",
+      "laborales",
+      "preventiva",
+      "social",
+      "ambiental"
+    ],
+    "enfoquePrincipal": "El plan se enfoca en el fortalecimiento nacional y de las instituciones públicas, promoviendo el emprendimiento y la participación ciudadana, con atención especial a temas económicos, laborales, de salud preventiva y agricultura."
+  },
+  {
+    "partido": "Partido del Buen Gobierno",
+    "palabras": [
+      {
+        "text": "digital",
+        "value": 113,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "ambiental",
+        "value": 109,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "ciudadana",
+        "value": 90,
+        "categoria": "social"
+      },
+      {
+        "text": "personas",
+        "value": 81,
+        "categoria": "social"
+      },
+      {
+        "text": "financiero",
+        "value": 77,
+        "categoria": "finanzas"
+      },
+      {
+        "text": "productiva",
+        "value": 72,
+        "categoria": "economia"
+      },
+      {
+        "text": "riesgo",
+        "value": 68,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "pobreza",
+        "value": 43,
+        "categoria": "social"
+      },
+      {
+        "text": "minera",
+        "value": 42,
+        "categoria": "mineria"
+      },
+      {
+        "text": "humanos",
+        "value": 41,
+        "categoria": "social"
+      },
+      {
+        "text": "calidad",
+        "value": 37,
+        "categoria": "general"
+      },
+      {
+        "text": "climatico",
+        "value": 36,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "competitividad",
+        "value": 35,
+        "categoria": "economia"
+      },
+      {
+        "text": "empleo",
+        "value": 34,
+        "categoria": "social"
+      },
+      {
+        "text": "microfinanciero",
+        "value": 31,
+        "categoria": "finanzas"
+      },
+      {
+        "text": "industrial",
+        "value": 30,
+        "categoria": "economia"
+      },
+      {
+        "text": "empresas",
+        "value": 30,
+        "categoria": "economia"
+      },
+      {
+        "text": "credito",
+        "value": 29,
+        "categoria": "finanzas"
+      },
+      {
+        "text": "recursos",
+        "value": 28,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "conectividad",
+        "value": 26,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "urbana",
+        "value": 25,
+        "categoria": "vivienda"
+      },
+      {
+        "text": "agua",
+        "value": 24,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "rurales",
+        "value": 24,
+        "categoria": "social"
+      },
+      {
+        "text": "extraccion",
+        "value": 23,
+        "categoria": "mineria"
+      },
+      {
+        "text": "indigenas",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "derecho",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "infraestructura",
+        "value": 21,
+        "categoria": "general"
+      },
+      {
+        "text": "mineria",
+        "value": 21,
+        "categoria": "mineria"
+      },
+      {
+        "text": "bienes",
+        "value": 20,
+        "categoria": "general"
+      },
+      {
+        "text": "bosque",
+        "value": 20,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "comunidades",
+        "value": 20,
+        "categoria": "social"
+      },
+      {
+        "text": "extorsion",
+        "value": 20,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "genero",
+        "value": 19,
+        "categoria": "social"
+      },
+      {
+        "text": "inclusiva",
+        "value": 19,
+        "categoria": "social"
+      },
+      {
+        "text": "productores",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "residenciales",
+        "value": 18,
+        "categoria": "vivienda"
+      },
+      {
+        "text": "economica",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "mype",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "productivo",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "urbano",
+        "value": 17,
+        "categoria": "vivienda"
+      },
+      {
+        "text": "financiamiento",
+        "value": 16,
+        "categoria": "finanzas"
+      },
+      {
+        "text": "matricula",
+        "value": 16,
+        "categoria": "educacion"
+      },
+      {
+        "text": "actividades",
+        "value": 15,
+        "categoria": "general"
+      },
+      {
+        "text": "educativa",
+        "value": 15,
+        "categoria": "educacion"
+      },
+      {
+        "text": "regimen",
+        "value": 15,
+        "categoria": "general"
+      },
+      {
+        "text": "saludables",
+        "value": 15,
+        "categoria": "salud"
+      }
+    ],
+    "totalPalabras": 15000,
+    "palabrasUnicas": 2500,
+    "top10": [
+      "digital",
+      "ambiental",
+      "ciudadana",
+      "personas",
+      "financiero",
+      "productiva",
+      "riesgo",
+      "pobreza",
+      "minera",
+      "humanos"
+    ],
+    "enfoquePrincipal": "El plan se centra en la transformación del país hacia un modelo equitativo, sostenible y libre de corrupción. Las palabras más frecuentes resaltan la importancia de la digitalización, la protección ambiental, la participación ciudadana y el fortalecimiento de los sistemas financiero, productivo, de seguridad y justicia. Se enfatiza un desarrollo inclusivo y territorial, abordando la pobreza y los derechos humanos."
+  },
+  {
+    "partido": "Partido Demócrata Unido Perú",
+    "palabras": [
+      {
+        "text": "educación",
+        "value": 45,
+        "categoria": "educación"
+      },
+      {
+        "text": "estado",
+        "value": 27,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "inversión",
+        "value": 19,
+        "categoria": "economía"
+      },
+      {
+        "text": "seguridad",
+        "value": 15,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "industrialización",
+        "value": 15,
+        "categoria": "producción"
+      },
+      {
+        "text": "salud",
+        "value": 15,
+        "categoria": "salud"
+      },
+      {
+        "text": "producción",
+        "value": 15,
+        "categoria": "economía"
+      },
+      {
+        "text": "tecnología",
+        "value": 13,
+        "categoria": "educación"
+      },
+      {
+        "text": "emprendimiento",
+        "value": 13,
+        "categoria": "economía"
+      },
+      {
+        "text": "agricultura",
+        "value": 13,
+        "categoria": "producción"
+      },
+      {
+        "text": "construcción",
+        "value": 12,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "reforma",
+        "value": 11,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "peruano",
+        "value": 10,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "familia",
+        "value": 10,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "ministerio",
+        "value": 10,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "cárcel",
+        "value": 10,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "corrupción",
+        "value": 9,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "infraestructura",
+        "value": 9,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "empresa",
+        "value": 9,
+        "categoria": "economía"
+      },
+      {
+        "text": "docente",
+        "value": 9,
+        "categoria": "educación"
+      },
+      {
+        "text": "justicia",
+        "value": 8,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "universidad",
+        "value": 8,
+        "categoria": "educación"
+      },
+      {
+        "text": "policía",
+        "value": 8,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "corrupto",
+        "value": 8,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "trabajo",
+        "value": 7,
+        "categoria": "economía"
+      },
+      {
+        "text": "ejército",
+        "value": 7,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "servicio",
+        "value": 6,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "profesional",
+        "value": 6,
+        "categoria": "educación"
+      },
+      {
+        "text": "nacional",
+        "value": 6,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "sicario",
+        "value": 5,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "cupo",
+        "value": 5,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "extorsionador",
+        "value": 5,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "secuestrador",
+        "value": 5,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "investigación",
+        "value": 5,
+        "categoria": "educación"
+      },
+      {
+        "text": "innovación",
+        "value": 5,
+        "categoria": "educación"
+      },
+      {
+        "text": "transporte",
+        "value": 5,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "turismo",
+        "value": 5,
+        "categoria": "producción"
+      },
+      {
+        "text": "minería",
+        "value": 5,
+        "categoria": "producción"
+      },
+      {
+        "text": "región",
+        "value": 5,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "pena",
+        "value": 4,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "delito",
+        "value": 4,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "robo",
+        "value": 4,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "simplificación",
+        "value": 4,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "fiscal",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "mype",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "licenciado",
+        "value": 4,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "ganadería",
+        "value": 4,
+        "categoria": "producción"
+      },
+      {
+        "text": "pesca",
+        "value": 4,
+        "categoria": "producción"
+      },
+      {
+        "text": "colegio",
+        "value": 4,
+        "categoria": "educación"
+      },
+      {
+        "text": "estudiante",
+        "value": 4,
+        "categoria": "educación"
+      }
+    ],
+    "totalPalabras": 2792,
+    "palabrasUnicas": 435,
+    "top10": [
+      "educación",
+      "estado",
+      "inversión",
+      "seguridad",
+      "industrialización",
+      "salud",
+      "producción",
+      "tecnología",
+      "emprendimiento",
+      "agricultura"
+    ],
+    "enfoquePrincipal": "El plan de UNIDO PERÚ se centra en la reforma del Estado para combatir la corrupción y fortalecer la seguridad. Promueve un fuerte desarrollo económico mediante la industrialización, la inversión y el apoyo a sectores productivos como la agricultura y la minería. La educación y la salud son pilares fundamentales para el desarrollo humano y la equidad."
+  },
+  {
+    "partido": "Partido Demócrata Verde",
+    "palabras": [
+      {
+        "text": "salud",
+        "value": 158,
+        "categoria": "salud"
+      },
+      {
+        "text": "educación",
+        "value": 157,
+        "categoria": "educacion"
+      },
+      {
+        "text": "cultura",
+        "value": 140,
+        "categoria": "cultura"
+      },
+      {
+        "text": "seguridad",
+        "value": 139,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 118,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "agua",
+        "value": 105,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "riesgo",
+        "value": 101,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "violencia",
+        "value": 94,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "vivienda",
+        "value": 90,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "justicia",
+        "value": 85,
+        "categoria": "justicia"
+      },
+      {
+        "text": "corrupción",
+        "value": 76,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "personas",
+        "value": 68,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "social",
+        "value": 68,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "conectividad",
+        "value": 56,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "transporte",
+        "value": 55,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "pobreza",
+        "value": 53,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "tecnología",
+        "value": 50,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "recursos",
+        "value": 48,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "comunidad",
+        "value": 47,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "empleo",
+        "value": 46,
+        "categoria": "economia"
+      },
+      {
+        "text": "reconocimiento",
+        "value": 45,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "derecho",
+        "value": 44,
+        "categoria": "justicia"
+      },
+      {
+        "text": "calidad",
+        "value": 41,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "población",
+        "value": 41,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "infraestructura",
+        "value": 39,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "atención",
+        "value": 37,
+        "categoria": "salud"
+      },
+      {
+        "text": "igualdad",
+        "value": 36,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "diversidad",
+        "value": 35,
+        "categoria": "cultura"
+      },
+      {
+        "text": "informalidad",
+        "value": 34,
+        "categoria": "economia"
+      },
+      {
+        "text": "innovación",
+        "value": 33,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "saneamiento",
+        "value": 33,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "interculturalidad",
+        "value": 31,
+        "categoria": "cultura"
+      },
+      {
+        "text": "clima",
+        "value": 31,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "cuencas",
+        "value": 30,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "comercio",
+        "value": 26,
+        "categoria": "economia"
+      },
+      {
+        "text": "policía",
+        "value": 26,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "espacio",
+        "value": 25,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "protección",
+        "value": 24,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "control",
+        "value": 24,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "productividad",
+        "value": 23,
+        "categoria": "economia"
+      }
+    ],
+    "totalPalabras": 42721,
+    "palabrasUnicas": 1695,
+    "top10": [
+      "salud",
+      "educación",
+      "cultura",
+      "seguridad",
+      "ciudadanía",
+      "agua",
+      "riesgo",
+      "violencia",
+      "vivienda",
+      "justicia"
+    ],
+    "enfoquePrincipal": "El plan de gobierno del Partido Demócrata Verde se centra en el desarrollo integral de las personas y el territorio, con un fuerte énfasis en la sostenibilidad ambiental. Sus principales ejes son la mejora de la educación, salud, seguridad ciudadana y justicia, así como el fomento de la innovación, la competitividad económica y una gobernanza transparente y descentralizada. La lucha contra la corrupción y la reducción de desigualdades son temas transversales."
+  },
+  {
+    "partido": "Partido Morado",
+    "palabras": [
+      {
+        "text": "salud",
+        "value": 113,
+        "categoria": "salud"
+      },
+      {
+        "text": "educación",
+        "value": 98,
+        "categoria": "educacion"
+      },
+      {
+        "text": "justicia",
+        "value": 85,
+        "categoria": "justicia"
+      },
+      {
+        "text": "seguridad",
+        "value": 78,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "pobreza",
+        "value": 62,
+        "categoria": "social"
+      },
+      {
+        "text": "nutrición",
+        "value": 59,
+        "categoria": "salud"
+      },
+      {
+        "text": "vivienda",
+        "value": 55,
+        "categoria": "social"
+      },
+      {
+        "text": "transparencia",
+        "value": 52,
+        "categoria": "estado"
+      },
+      {
+        "text": "ambiental",
+        "value": 49,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "infraestructura",
+        "value": 48,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "financiera",
+        "value": 46,
+        "categoria": "economia"
+      },
+      {
+        "text": "reformas",
+        "value": 44,
+        "categoria": "estado"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 43,
+        "categoria": "social"
+      },
+      {
+        "text": "corrupción",
+        "value": 41,
+        "categoria": "estado"
+      },
+      {
+        "text": "movilidad",
+        "value": 39,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "empleo",
+        "value": 37,
+        "categoria": "economia"
+      },
+      {
+        "text": "energía",
+        "value": 35,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "derechos",
+        "value": 34,
+        "categoria": "social"
+      },
+      {
+        "text": "tecnología",
+        "value": 32,
+        "categoria": "digital"
+      },
+      {
+        "text": "protección",
+        "value": 31,
+        "categoria": "social"
+      },
+      {
+        "text": "informalidad",
+        "value": 29,
+        "categoria": "economia"
+      },
+      {
+        "text": "pensiones",
+        "value": 28,
+        "categoria": "social"
+      },
+      {
+        "text": "residuos",
+        "value": 27,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "territorio",
+        "value": 26,
+        "categoria": "estado"
+      },
+      {
+        "text": "preventiva",
+        "value": 25,
+        "categoria": "salud"
+      },
+      {
+        "text": "ambientalistas",
+        "value": 24,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "republicanismo",
+        "value": 23,
+        "categoria": "politica"
+      },
+      {
+        "text": "comunidad",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "descentralización",
+        "value": 21,
+        "categoria": "estado"
+      },
+      {
+        "text": "criminalidad",
+        "value": 20,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "saneamiento",
+        "value": 19,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "mercados",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "agricultura",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "universidades",
+        "value": 16,
+        "categoria": "educacion"
+      },
+      {
+        "text": "bosques",
+        "value": 15,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "planificación",
+        "value": 14,
+        "categoria": "estado"
+      },
+      {
+        "text": "calidad",
+        "value": 13,
+        "categoria": "estado"
+      },
+      {
+        "text": "urbana",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "activos",
+        "value": 11,
+        "categoria": "economia"
+      },
+      {
+        "text": "riesgos",
+        "value": 10,
+        "categoria": "social"
+      }
+    ],
+    "totalPalabras": 23500,
+    "palabrasUnicas": 4200,
+    "top10": [
+      "salud",
+      "educación",
+      "justicia",
+      "seguridad",
+      "pobreza",
+      "nutrición",
+      "vivienda",
+      "transparencia",
+      "ambiental",
+      "infraestructura"
+    ],
+    "enfoquePrincipal": "El Partido Morado propone una transformación integral del Estado, priorizando el bienestar humano a través de políticas en salud, educación, justicia y seguridad, con un fuerte énfasis en la sostenibilidad ambiental y la inclusión social. El plan busca reducir la informalidad económica y la corrupción, impulsando la digitalización y la descentralización para garantizar derechos fundamentales y oportunidades para todos los ciudadanos."
+  },
+  {
+    "partido": "Partido Patriótico del Perú",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 65,
+        "categoria": "economia"
+      },
+      {
+        "text": "educación",
+        "value": 58,
+        "categoria": "educacion"
+      },
+      {
+        "text": "seguridad",
+        "value": 52,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "inversión",
+        "value": 48,
+        "categoria": "economia"
+      },
+      {
+        "text": "producción",
+        "value": 45,
+        "categoria": "economia"
+      },
+      {
+        "text": "corrupción",
+        "value": 39,
+        "categoria": "justicia"
+      },
+      {
+        "text": "justicia",
+        "value": 35,
+        "categoria": "justicia"
+      },
+      {
+        "text": "trabajo",
+        "value": 32,
+        "categoria": "economia"
+      },
+      {
+        "text": "salud",
+        "value": 28,
+        "categoria": "salud"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 27,
+        "categoria": "social"
+      },
+      {
+        "text": "derecho",
+        "value": 26,
+        "categoria": "justicia"
+      },
+      {
+        "text": "empresa",
+        "value": 24,
+        "categoria": "economia"
+      },
+      {
+        "text": "institución",
+        "value": 23,
+        "categoria": "institucional"
+      },
+      {
+        "text": "calidad",
+        "value": 22,
+        "categoria": "general"
+      },
+      {
+        "text": "servicio",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "economía",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 19,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "capacidad",
+        "value": 18,
+        "categoria": "general"
+      },
+      {
+        "text": "comunidades",
+        "value": 17,
+        "categoria": "social"
+      },
+      {
+        "text": "reforma",
+        "value": 16,
+        "categoria": "institucional"
+      },
+      {
+        "text": "crecimiento",
+        "value": 15,
+        "categoria": "economia"
+      },
+      {
+        "text": "descentralización",
+        "value": 14,
+        "categoria": "institucional"
+      },
+      {
+        "text": "ambiente",
+        "value": 13,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "vivienda",
+        "value": 13,
+        "categoria": "social"
+      },
+      {
+        "text": "recurso",
+        "value": 12,
+        "categoria": "economia"
+      },
+      {
+        "text": "innovación",
+        "value": 11,
+        "categoria": "educacion"
+      },
+      {
+        "text": "tecnología",
+        "value": 11,
+        "categoria": "educacion"
+      },
+      {
+        "text": "proyecto",
+        "value": 10,
+        "categoria": "general"
+      },
+      {
+        "text": "población",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "oportunidad",
+        "value": 9,
+        "categoria": "general"
+      },
+      {
+        "text": "transparencia",
+        "value": 9,
+        "categoria": "justicia"
+      },
+      {
+        "text": "minería",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "agricultura",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "pesca",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "libertad",
+        "value": 7,
+        "categoria": "justicia"
+      },
+      {
+        "text": "respeto",
+        "value": 7,
+        "categoria": "valores"
+      },
+      {
+        "text": "integridad",
+        "value": 6,
+        "categoria": "justicia"
+      },
+      {
+        "text": "equidad",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "bienestar",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "delincuencia",
+        "value": 6,
+        "categoria": "seguridad"
+      }
+    ],
+    "totalPalabras": 3800,
+    "palabrasUnicas": 550,
+    "top10": [
+      "desarrollo",
+      "educación",
+      "seguridad",
+      "inversión",
+      "producción",
+      "corrupción",
+      "justicia",
+      "trabajo",
+      "salud",
+      "ciudadanía"
+    ],
+    "enfoquePrincipal": "El partido se centra en el desarrollo económico y productivo del país, priorizando la educación y la seguridad ciudadana. Busca el fortalecimiento institucional, la lucha frontal contra la corrupción y la justicia, impulsando la inversión y la infraestructura para el bienestar social."
+  },
+  {
+    "partido": "Partido Político PRIN",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 55,
+        "categoria": "economia"
+      },
+      {
+        "text": "educación",
+        "value": 45,
+        "categoria": "educacion"
+      },
+      {
+        "text": "población",
+        "value": 45,
+        "categoria": "social"
+      },
+      {
+        "text": "salud",
+        "value": 40,
+        "categoria": "salud"
+      },
+      {
+        "text": "servicios",
+        "value": 35,
+        "categoria": "social"
+      },
+      {
+        "text": "infraestructura",
+        "value": 30,
+        "categoria": "desarrollo"
+      },
+      {
+        "text": "economía",
+        "value": 30,
+        "categoria": "economia"
+      },
+      {
+        "text": "tecnología",
+        "value": 28,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "región",
+        "value": 25,
+        "categoria": "territorio"
+      },
+      {
+        "text": "estado",
+        "value": 25,
+        "categoria": "politica"
+      },
+      {
+        "text": "derechos",
+        "value": 22,
+        "categoria": "justicia"
+      },
+      {
+        "text": "corrupción",
+        "value": 18,
+        "categoria": "institucional"
+      },
+      {
+        "text": "seguridad",
+        "value": 18,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "ambiente",
+        "value": 17,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "minería",
+        "value": 15,
+        "categoria": "economia"
+      },
+      {
+        "text": "pobreza",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "desigualdad",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "gestión",
+        "value": 14,
+        "categoria": "institucional"
+      },
+      {
+        "text": "calidad",
+        "value": 14,
+        "categoria": "general"
+      },
+      {
+        "text": "justicia",
+        "value": 12,
+        "categoria": "justicia"
+      },
+      {
+        "text": "participación",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "vulnerable",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "sostenibilidad",
+        "value": 12,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "criminalidad",
+        "value": 10,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "delito",
+        "value": 10,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "territorio",
+        "value": 10,
+        "categoria": "territorio"
+      },
+      {
+        "text": "nacional",
+        "value": 10,
+        "categoria": "politica"
+      },
+      {
+        "text": "sistema",
+        "value": 10,
+        "categoria": "institucional"
+      },
+      {
+        "text": "comunidades",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "inclusión",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "recursos",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "inversión",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "trabajo",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "brechas",
+        "value": 8,
+        "categoria": "general"
+      },
+      {
+        "text": "violencia",
+        "value": 7,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "democracia",
+        "value": 7,
+        "categoria": "politica"
+      },
+      {
+        "text": "oportunidades",
+        "value": 7,
+        "categoria": "social"
+      },
+      {
+        "text": "empresas",
+        "value": 7,
+        "categoria": "economia"
+      },
+      {
+        "text": "política",
+        "value": 7,
+        "categoria": "politica"
+      },
+      {
+        "text": "productividad",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "innovación",
+        "value": 6,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "acciones",
+        "value": 6,
+        "categoria": "general"
+      },
+      {
+        "text": "protección",
+        "value": 5,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "control",
+        "value": 5,
+        "categoria": "institucional"
+      },
+      {
+        "text": "transparencia",
+        "value": 5,
+        "categoria": "institucional"
+      },
+      {
+        "text": "rural",
+        "value": 4,
+        "categoria": "territorio"
+      },
+      {
+        "text": "urbano",
+        "value": 4,
+        "categoria": "territorio"
+      },
+      {
+        "text": "reforma",
+        "value": 4,
+        "categoria": "politica"
+      },
+      {
+        "text": "fiscal",
+        "value": 4,
+        "categoria": "economia"
+      },
+      {
+        "text": "turismo",
+        "value": 4,
+        "categoria": "economia"
+      }
+    ],
+    "totalPalabras": 12000,
+    "palabrasUnicas": 2000,
+    "top10": [
+      "desarrollo",
+      "educación",
+      "población",
+      "salud",
+      "servicios",
+      "infraestructura",
+      "economía",
+      "tecnología",
+      "región",
+      "estado"
+    ],
+    "enfoquePrincipal": "El plan se enfoca en el desarrollo social, económico e institucional, priorizando la reducción de la pobreza y desigualdad. Busca mejorar servicios básicos (educación, salud, saneamiento), fortalecer la seguridad ciudadana, combatir la corrupción y fomentar la sostenibilidad con un enfoque regional y tecnológico."
+  },
+  {
+    "partido": "País para todos",
+    "palabras": [
+      {
+        "text": "estado",
+        "value": 90,
+        "categoria": "estado"
+      },
+      {
+        "text": "seguridad",
+        "value": 75,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "justicia",
+        "value": 56,
+        "categoria": "justicia"
+      },
+      {
+        "text": "desarrollo",
+        "value": 47,
+        "categoria": "desarrollo"
+      },
+      {
+        "text": "corrupción",
+        "value": 46,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "trabajo",
+        "value": 46,
+        "categoria": "economia"
+      },
+      {
+        "text": "inversión",
+        "value": 43,
+        "categoria": "economia"
+      },
+      {
+        "text": "familia",
+        "value": 39,
+        "categoria": "social"
+      },
+      {
+        "text": "economía",
+        "value": 37,
+        "categoria": "economia"
+      },
+      {
+        "text": "servicio",
+        "value": 36,
+        "categoria": "estado"
+      },
+      {
+        "text": "oportunidad",
+        "value": 36,
+        "categoria": "social"
+      },
+      {
+        "text": "reforma",
+        "value": 34,
+        "categoria": "estado"
+      },
+      {
+        "text": "ciudadano",
+        "value": 33,
+        "categoria": "estado"
+      },
+      {
+        "text": "control",
+        "value": 33,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "política",
+        "value": 32,
+        "categoria": "estado"
+      },
+      {
+        "text": "brecha",
+        "value": 31,
+        "categoria": "social"
+      },
+      {
+        "text": "pobreza",
+        "value": 29,
+        "categoria": "social"
+      },
+      {
+        "text": "calidad",
+        "value": 28,
+        "categoria": "general"
+      },
+      {
+        "text": "niño",
+        "value": 26,
+        "categoria": "social"
+      },
+      {
+        "text": "salud",
+        "value": 25,
+        "categoria": "salud"
+      },
+      {
+        "text": "producción",
+        "value": 25,
+        "categoria": "economia"
+      },
+      {
+        "text": "educación",
+        "value": 24,
+        "categoria": "educacion"
+      },
+      {
+        "text": "territorio",
+        "value": 24,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "capacidades",
+        "value": 23,
+        "categoria": "estado"
+      },
+      {
+        "text": "transparencia",
+        "value": 22,
+        "categoria": "estado"
+      },
+      {
+        "text": "violencia",
+        "value": 21,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "cuidado",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "pública",
+        "value": 20,
+        "categoria": "estado"
+      },
+      {
+        "text": "región",
+        "value": 20,
+        "categoria": "estado"
+      },
+      {
+        "text": "digitalización",
+        "value": 18,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "formalización",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "extorsión",
+        "value": 17,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "institución",
+        "value": 17,
+        "categoria": "estado"
+      },
+      {
+        "text": "prevención",
+        "value": 17,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "infraestructura",
+        "value": 16,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "mujer",
+        "value": 16,
+        "categoria": "social"
+      },
+      {
+        "text": "productividad",
+        "value": 16,
+        "categoria": "economia"
+      },
+      {
+        "text": "derecho",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "efectividad",
+        "value": 15,
+        "categoria": "estado"
+      },
+      {
+        "text": "gestión",
+        "value": 15,
+        "categoria": "estado"
+      },
+      {
+        "text": "resultado",
+        "value": 15,
+        "categoria": "estado"
+      },
+      {
+        "text": "juventud",
+        "value": 14,
+        "categoria": "educacion"
+      },
+      {
+        "text": "cárcel",
+        "value": 13,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "conectividad",
+        "value": 13,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "agua",
+        "value": 12,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "incentivo",
+        "value": 12,
+        "categoria": "economia"
+      },
+      {
+        "text": "saneamiento",
+        "value": 12,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "tributaria",
+        "value": 12,
+        "categoria": "economia"
+      },
+      {
+        "text": "innovación",
+        "value": 11,
+        "categoria": "educacion"
+      },
+      {
+        "text": "riesgo",
+        "value": 11,
+        "categoria": "seguridad"
+      }
+    ],
+    "totalPalabras": 2210,
+    "palabrasUnicas": 242,
+    "top10": [
+      "estado",
+      "seguridad",
+      "justicia",
+      "desarrollo",
+      "corrupción",
+      "trabajo",
+      "inversión",
+      "familia",
+      "economía",
+      "servicio"
+    ],
+    "enfoquePrincipal": "El plan se centra en la 'seguridad', 'justicia' y 'corrupción' como pilares fundamentales para la estabilidad del 'estado' y el 'desarrollo'. También prioriza la 'economía', el 'trabajo' y la 'inversión' para generar 'oportunidades', así como el 'bienestar social' a través de 'salud', 'educación' y la reducción de 'brechas', todo ello bajo un marco de 'transparencia' y 'fortalecimiento' institucional."
+  },
+  {
+    "partido": "Perú Acción",
+    "palabras": [
+      {
+        "text": "peruanos",
+        "value": 110,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "estado",
+        "value": 45,
+        "categoria": "institucion"
+      },
+      {
+        "text": "seguridad",
+        "value": 31,
+        "categoria": "politica_publica"
+      },
+      {
+        "text": "educación",
+        "value": 29,
+        "categoria": "politica_publica"
+      },
+      {
+        "text": "desarrollo",
+        "value": 23,
+        "categoria": "economia"
+      },
+      {
+        "text": "corrupción",
+        "value": 16,
+        "categoria": "problema_social"
+      },
+      {
+        "text": "social",
+        "value": 16,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "salud",
+        "value": 14,
+        "categoria": "politica_publica"
+      },
+      {
+        "text": "democracia",
+        "value": 9,
+        "categoria": "valores"
+      },
+      {
+        "text": "inversión",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "justicia",
+        "value": 8,
+        "categoria": "politica_publica"
+      },
+      {
+        "text": "infraestructura",
+        "value": 8,
+        "categoria": "politica_publica"
+      },
+      {
+        "text": "delincuencia",
+        "value": 8,
+        "categoria": "problema_social"
+      },
+      {
+        "text": "pobreza",
+        "value": 8,
+        "categoria": "problema_social"
+      },
+      {
+        "text": "derechos",
+        "value": 8,
+        "categoria": "valores"
+      },
+      {
+        "text": "economía",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "revolución",
+        "value": 7,
+        "categoria": "conceptos_clave"
+      },
+      {
+        "text": "mercado",
+        "value": 7,
+        "categoria": "economia"
+      },
+      {
+        "text": "servicios",
+        "value": 6,
+        "categoria": "politica_publica"
+      },
+      {
+        "text": "moral",
+        "value": 6,
+        "categoria": "valores"
+      },
+      {
+        "text": "libertad",
+        "value": 6,
+        "categoria": "valores"
+      },
+      {
+        "text": "ambiental",
+        "value": 6,
+        "categoria": "politica_publica"
+      },
+      {
+        "text": "crecimiento",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "minería",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "trabajo",
+        "value": 6,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "deuda social",
+        "value": 5,
+        "categoria": "politica_publica"
+      },
+      {
+        "text": "ciudadanos",
+        "value": 5,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "policial",
+        "value": 5,
+        "categoria": "institucion"
+      },
+      {
+        "text": "inmigración",
+        "value": 5,
+        "categoria": "problema_social"
+      },
+      {
+        "text": "impuestos",
+        "value": 5,
+        "categoria": "economia"
+      },
+      {
+        "text": "familia",
+        "value": 4,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "juventud",
+        "value": 4,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "reestructuración",
+        "value": 4,
+        "categoria": "conceptos_clave"
+      },
+      {
+        "text": "emprendedores",
+        "value": 4,
+        "categoria": "economia"
+      },
+      {
+        "text": "calidad",
+        "value": 4,
+        "categoria": "valores"
+      },
+      {
+        "text": "control",
+        "value": 4,
+        "categoria": "institucion"
+      },
+      {
+        "text": "violencia",
+        "value": 4,
+        "categoria": "problema_social"
+      },
+      {
+        "text": "represas",
+        "value": 3,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "ley",
+        "value": 3,
+        "categoria": "institucion"
+      },
+      {
+        "text": "pacífica",
+        "value": 2,
+        "categoria": "valores"
+      },
+      {
+        "text": "integración",
+        "value": 2,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "tecnología",
+        "value": 2,
+        "categoria": "ciencia_tecnologia"
+      },
+      {
+        "text": "presupuesto",
+        "value": 2,
+        "categoria": "economia"
+      },
+      {
+        "text": "derecho",
+        "value": 2,
+        "categoria": "valores"
+      },
+      {
+        "text": "policía",
+        "value": 2,
+        "categoria": "institucion"
+      }
+    ],
+    "totalPalabras": 4902,
+    "palabrasUnicas": 1563,
+    "top10": [
+      "peruanos",
+      "estado",
+      "seguridad",
+      "educación",
+      "desarrollo",
+      "corrupción",
+      "social",
+      "salud",
+      "democracia",
+      "inversión"
+    ],
+    "enfoquePrincipal": "El plan de gobierno 'Perú Acción' se enfoca en una 'revolución' para reestructurar el estado, combatir la corrupción y la delincuencia, y promover el desarrollo económico y social para los ciudadanos peruanos. Prioriza la seguridad, educación, salud e infraestructura, buscando la justicia y la libertad, y enfatizando el pago de la 'deuda social'."
+  },
+  {
+    "partido": "Perú Libre",
+    "palabras": [
+      {
+        "text": "pueblo",
+        "value": 100,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "estado",
+        "value": 95,
+        "categoria": "politica_gestion"
+      },
+      {
+        "text": "salud",
+        "value": 78,
+        "categoria": "social"
+      },
+      {
+        "text": "educación",
+        "value": 73,
+        "categoria": "social"
+      },
+      {
+        "text": "desarrollo",
+        "value": 68,
+        "categoria": "economia_general"
+      },
+      {
+        "text": "social",
+        "value": 63,
+        "categoria": "social"
+      },
+      {
+        "text": "derecho",
+        "value": 58,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "nacional",
+        "value": 53,
+        "categoria": "general_politica"
+      },
+      {
+        "text": "región",
+        "value": 48,
+        "categoria": "territorial_politica"
+      },
+      {
+        "text": "seguridad",
+        "value": 43,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "economía",
+        "value": 40,
+        "categoria": "economia"
+      },
+      {
+        "text": "producción",
+        "value": 37,
+        "categoria": "economia"
+      },
+      {
+        "text": "agua",
+        "value": 35,
+        "categoria": "ambiente_social"
+      },
+      {
+        "text": "protección",
+        "value": 32,
+        "categoria": "social_ambiente"
+      },
+      {
+        "text": "neoliberalismo",
+        "value": 30,
+        "categoria": "politica_ideologia"
+      },
+      {
+        "text": "trabajo",
+        "value": 29,
+        "categoria": "economia_social"
+      },
+      {
+        "text": "desigualdad",
+        "value": 28,
+        "categoria": "social_economia"
+      },
+      {
+        "text": "pobreza",
+        "value": 27,
+        "categoria": "social_economia"
+      },
+      {
+        "text": "soberanía",
+        "value": 26,
+        "categoria": "politica_ideologia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 25,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "ambiente",
+        "value": 24,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "justicia",
+        "value": 23,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "participación",
+        "value": 22,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "vivienda",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "energía",
+        "value": 20,
+        "categoria": "economia_ambiente"
+      },
+      {
+        "text": "control",
+        "value": 19,
+        "categoria": "gestion_politica"
+      },
+      {
+        "text": "territorio",
+        "value": 18,
+        "categoria": "territorial"
+      },
+      {
+        "text": "calidad",
+        "value": 17,
+        "categoria": "social_general"
+      },
+      {
+        "text": "acceso",
+        "value": 16,
+        "categoria": "social_general"
+      },
+      {
+        "text": "modelo",
+        "value": 15,
+        "categoria": "politica_ideologia"
+      },
+      {
+        "text": "inversión",
+        "value": 14,
+        "categoria": "economia_gestion"
+      },
+      {
+        "text": "servicios",
+        "value": 13,
+        "categoria": "social_general"
+      },
+      {
+        "text": "violencia",
+        "value": 12,
+        "categoria": "seguridad_social"
+      },
+      {
+        "text": "criminalidad",
+        "value": 11,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "clima",
+        "value": 10,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "democracia",
+        "value": 9,
+        "categoria": "politica_ideologia"
+      },
+      {
+        "text": "atención",
+        "value": 8,
+        "categoria": "social_gestion"
+      },
+      {
+        "text": "igualdad",
+        "value": 7,
+        "categoria": "social_politica"
+      },
+      {
+        "text": "oportunidades",
+        "value": 6,
+        "categoria": "social_economia"
+      },
+      {
+        "text": "mujer",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "joven",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "gestión",
+        "value": 5,
+        "categoria": "gestion_politica"
+      },
+      {
+        "text": "reformas",
+        "value": 5,
+        "categoria": "politica_gestion"
+      },
+      {
+        "text": "analfabetismo",
+        "value": 4,
+        "categoria": "social_educacion"
+      },
+      {
+        "text": "infantil",
+        "value": 4,
+        "categoria": "social_salud"
+      },
+      {
+        "text": "agricultura",
+        "value": 3,
+        "categoria": "economia"
+      },
+      {
+        "text": "minería",
+        "value": 3,
+        "categoria": "ambiente_economia"
+      },
+      {
+        "text": "corrupción",
+        "value": 3,
+        "categoria": "politica_gestion"
+      },
+      {
+        "text": "plurinacional",
+        "value": 3,
+        "categoria": "politica_ideologia"
+      },
+      {
+        "text": "conectividad",
+        "value": 3,
+        "categoria": "infraestructura"
+      }
+    ],
+    "totalPalabras": 15000,
+    "palabrasUnicas": 2500,
+    "top10": [
+      "pueblo",
+      "estado",
+      "salud",
+      "educación",
+      "desarrollo",
+      "social",
+      "derecho",
+      "nacional",
+      "región",
+      "seguridad"
+    ],
+    "enfoquePrincipal": "El plan se centra en desmantelar el modelo neoliberal para establecer un Estado plurinacional que priorice los derechos sociales, la soberanía económica y el desarrollo integral del pueblo. Enfatiza la inversión pública en salud, educación, seguridad y gestión ambiental sostenible."
+  },
+  {
+    "partido": "Perú Moderno",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 62,
+        "categoria": "economia"
+      },
+      {
+        "text": "corrupción",
+        "value": 58,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "estado",
+        "value": 53,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "seguridad",
+        "value": 48,
+        "categoria": "justicia_seguridad"
+      },
+      {
+        "text": "educación",
+        "value": 42,
+        "categoria": "social"
+      },
+      {
+        "text": "economía",
+        "value": 39,
+        "categoria": "economia"
+      },
+      {
+        "text": "Perú",
+        "value": 36,
+        "categoria": "identidad_pais"
+      },
+      {
+        "text": "justicia",
+        "value": 32,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "emprendimiento",
+        "value": 29,
+        "categoria": "economia"
+      },
+      {
+        "text": "pobreza",
+        "value": 28,
+        "categoria": "social"
+      },
+      {
+        "text": "tecnología",
+        "value": 26,
+        "categoria": "desarrollo"
+      },
+      {
+        "text": "salud",
+        "value": 26,
+        "categoria": "social"
+      },
+      {
+        "text": "infraestructura",
+        "value": 23,
+        "categoria": "desarrollo"
+      },
+      {
+        "text": "reforma",
+        "value": 21,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "trabajo",
+        "value": 19,
+        "categoria": "social"
+      },
+      {
+        "text": "nacional",
+        "value": 19,
+        "categoria": "identidad_pais"
+      },
+      {
+        "text": "criminalidad",
+        "value": 18,
+        "categoria": "justicia_seguridad"
+      },
+      {
+        "text": "inversión",
+        "value": 16,
+        "categoria": "economia"
+      },
+      {
+        "text": "regional",
+        "value": 16,
+        "categoria": "territorial_ambiental"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 15,
+        "categoria": "social"
+      },
+      {
+        "text": "sistema",
+        "value": 14,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "democracia",
+        "value": 13,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "política",
+        "value": 13,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "producción",
+        "value": 12,
+        "categoria": "economia"
+      },
+      {
+        "text": "comunidad",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "medio ambiente",
+        "value": 10,
+        "categoria": "territorial_ambiental"
+      },
+      {
+        "text": "descentralización",
+        "value": 10,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "industrialización",
+        "value": 10,
+        "categoria": "economia"
+      },
+      {
+        "text": "turismo",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "Andes",
+        "value": 9,
+        "categoria": "territorial_ambiental"
+      },
+      {
+        "text": "agricultura",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "innovación",
+        "value": 8,
+        "categoria": "desarrollo"
+      },
+      {
+        "text": "transparencia",
+        "value": 8,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "derecho",
+        "value": 7,
+        "categoria": "social"
+      },
+      {
+        "text": "valores",
+        "value": 7,
+        "categoria": "social"
+      },
+      {
+        "text": "control",
+        "value": 7,
+        "categoria": "justicia_seguridad"
+      },
+      {
+        "text": "gestión",
+        "value": 6,
+        "categoria": "gobernabilidad"
+      },
+      {
+        "text": "vivienda",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "jóvenes",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "agua",
+        "value": 6,
+        "categoria": "social"
+      }
+    ],
+    "totalPalabras": 20500,
+    "palabrasUnicas": 3200,
+    "top10": [
+      "desarrollo",
+      "corrupción",
+      "estado",
+      "seguridad",
+      "educación",
+      "economía",
+      "Perú",
+      "justicia",
+      "emprendimiento",
+      "pobreza"
+    ],
+    "enfoquePrincipal": "El plan de gobierno de PERÚ MODERNO se centra en el desarrollo integral del país, combatiendo la corrupción sistémica y fortaleciendo el rol del Estado. Prioriza la seguridad ciudadana, la mejora de la educación y la salud, e impulsa una economía dinámica basada en el emprendimiento y la inversión."
+  },
+  {
+    "partido": "Perú Primero",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 115,
+        "categoria": "general"
+      },
+      {
+        "text": "política",
+        "value": 100,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "social",
+        "value": 90,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "infraestructura",
+        "value": 85,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "educación",
+        "value": 75,
+        "categoria": "educacion"
+      },
+      {
+        "text": "minería",
+        "value": 70,
+        "categoria": "economia"
+      },
+      {
+        "text": "salud",
+        "value": 68,
+        "categoria": "salud"
+      },
+      {
+        "text": "gestión",
+        "value": 65,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "derechos",
+        "value": 60,
+        "categoria": "derechos_humanos"
+      },
+      {
+        "text": "territorio",
+        "value": 58,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "pobreza",
+        "value": 55,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "mujeres",
+        "value": 50,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "comunidades",
+        "value": 48,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "rurales",
+        "value": 45,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "públicos",
+        "value": 42,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "económica",
+        "value": 40,
+        "categoria": "economia"
+      },
+      {
+        "text": "ambiental",
+        "value": 38,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "reformas",
+        "value": 35,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "inversión",
+        "value": 34,
+        "categoria": "economia"
+      },
+      {
+        "text": "ciudadana",
+        "value": 33,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "servicios",
+        "value": 32,
+        "categoria": "general"
+      },
+      {
+        "text": "acceso",
+        "value": 30,
+        "categoria": "general"
+      },
+      {
+        "text": "cambio",
+        "value": 29,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "informalidad",
+        "value": 28,
+        "categoria": "economia"
+      },
+      {
+        "text": "transparencia",
+        "value": 27,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "turismo",
+        "value": 26,
+        "categoria": "economia"
+      },
+      {
+        "text": "digital",
+        "value": 25,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "empleo",
+        "value": 24,
+        "categoria": "economia"
+      },
+      {
+        "text": "riesgos",
+        "value": 23,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "agua",
+        "value": 22,
+        "categoria": "servicios_basicos"
+      },
+      {
+        "text": "justicia",
+        "value": 21,
+        "categoria": "justicia"
+      },
+      {
+        "text": "nacional",
+        "value": 20,
+        "categoria": "general"
+      },
+      {
+        "text": "población",
+        "value": 19,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "sostenible",
+        "value": 18,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "calidad",
+        "value": 17,
+        "categoria": "general"
+      },
+      {
+        "text": "regiones",
+        "value": 16,
+        "categoria": "territorial"
+      },
+      {
+        "text": "saneamiento",
+        "value": 15,
+        "categoria": "servicios_basicos"
+      },
+      {
+        "text": "violencia",
+        "value": 14,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "fiscal",
+        "value": 13,
+        "categoria": "economia"
+      },
+      {
+        "text": "indígenas",
+        "value": 12,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "transporte",
+        "value": 11,
+        "categoria": "infraestructura"
+      }
+    ],
+    "totalPalabras": 13184,
+    "palabrasUnicas": 1620,
+    "top10": [
+      "desarrollo",
+      "política",
+      "social",
+      "infraestructura",
+      "educación",
+      "minería",
+      "salud",
+      "gestión",
+      "derechos",
+      "territorio"
+    ],
+    "enfoquePrincipal": "El plan de gobierno del Partido Político Perú Primero se enfoca en el desarrollo integral del país a través de dimensiones social, institucional, económico-productiva y ambiental-territorial. Destaca la lucha contra la pobreza y desigualdad, fortalecimiento de la educación, salud y justicia, modernización del Estado, promoción de la economía sostenible con énfasis en minería e infraestructura, y la gestión de riesgos y el cambio climático."
+  },
+  {
+    "partido": "Podemos Perú",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 45,
+        "categoria": "general"
+      },
+      {
+        "text": "económico",
+        "value": 40,
+        "categoria": "economia"
+      },
+      {
+        "text": "empleo",
+        "value": 39,
+        "categoria": "social"
+      },
+      {
+        "text": "inversión",
+        "value": 37,
+        "categoria": "economia"
+      },
+      {
+        "text": "pobreza",
+        "value": 32,
+        "categoria": "social"
+      },
+      {
+        "text": "educación",
+        "value": 31,
+        "categoria": "educacion"
+      },
+      {
+        "text": "salud",
+        "value": 31,
+        "categoria": "social"
+      },
+      {
+        "text": "infraestructura",
+        "value": 27,
+        "categoria": "general"
+      },
+      {
+        "text": "corrupción",
+        "value": 26,
+        "categoria": "justicia"
+      },
+      {
+        "text": "seguridad",
+        "value": 26,
+        "categoria": "social"
+      },
+      {
+        "text": "productividad",
+        "value": 23,
+        "categoria": "economia"
+      },
+      {
+        "text": "social",
+        "value": 23,
+        "categoria": "social"
+      },
+      {
+        "text": "territorial",
+        "value": 22,
+        "categoria": "general"
+      },
+      {
+        "text": "descentralización",
+        "value": 20,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "informalidad",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "Estado",
+        "value": 20,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "justicia",
+        "value": 18,
+        "categoria": "justicia"
+      },
+      {
+        "text": "productivo",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "tecnología",
+        "value": 17,
+        "categoria": "educacion"
+      },
+      {
+        "text": "competencia",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "digno",
+        "value": 17,
+        "categoria": "social"
+      },
+      {
+        "text": "familias",
+        "value": 16,
+        "categoria": "social"
+      },
+      {
+        "text": "regiones",
+        "value": 16,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "ambiental",
+        "value": 15,
+        "categoria": "medioambiente"
+      },
+      {
+        "text": "emprendimiento",
+        "value": 14,
+        "categoria": "economia"
+      },
+      {
+        "text": "minería",
+        "value": 13,
+        "categoria": "economia"
+      },
+      {
+        "text": "sistema",
+        "value": 13,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "protección",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "agua",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "democracia",
+        "value": 11,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "industria",
+        "value": 11,
+        "categoria": "economia"
+      },
+      {
+        "text": "calidad",
+        "value": 11,
+        "categoria": "general"
+      },
+      {
+        "text": "saneamiento",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "mercado",
+        "value": 10,
+        "categoria": "economia"
+      },
+      {
+        "text": "trabajo",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "conectividad",
+        "value": 9,
+        "categoria": "general"
+      },
+      {
+        "text": "recursos",
+        "value": 9,
+        "categoria": "medioambiente"
+      },
+      {
+        "text": "atención",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "brecha",
+        "value": 9,
+        "categoria": "social"
+      },
+      {
+        "text": "comunidades",
+        "value": 8,
+        "categoria": "social"
+      },
+      {
+        "text": "universidad",
+        "value": 8,
+        "categoria": "educacion"
+      },
+      {
+        "text": "formal",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "adelante",
+        "value": 7,
+        "categoria": "general"
+      },
+      {
+        "text": "propiedad",
+        "value": 7,
+        "categoria": "social"
+      },
+      {
+        "text": "fiscalización",
+        "value": 7,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "principios",
+        "value": 6,
+        "categoria": "gobierno"
+      },
+      {
+        "text": "bienestar",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "población",
+        "value": 6,
+        "categoria": "social"
+      },
+      {
+        "text": "agricultura",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "digital",
+        "value": 6,
+        "categoria": "educacion"
+      }
+    ],
+    "totalPalabras": 13410,
+    "palabrasUnicas": 1642,
+    "top10": [
+      "desarrollo",
+      "económico",
+      "empleo",
+      "inversión",
+      "pobreza",
+      "educación",
+      "salud",
+      "infraestructura",
+      "corrupción",
+      "seguridad"
+    ],
+    "enfoquePrincipal": "El partido Podemos Perú enfoca su plan de gobierno en un desarrollo económico sostenible e inclusivo, priorizando la creación de empleo digno, la reducción de la pobreza y la informalidad. Destaca la inversión en infraestructura, educación, salud y el combate a la corrupción. Se promueve la descentralización, la justicia y el uso de tecnología para mejorar la productividad y el bienestar social, así como la gestión ambiental y la soberanía sobre recursos naturales."
+  },
+  {
+    "partido": "Progresemos",
+    "palabras": [
+      {
+        "text": "salud",
+        "value": 115,
+        "categoria": "salud_bienestar"
+      },
+      {
+        "text": "educación",
+        "value": 105,
+        "categoria": "educacion_cultura"
+      },
+      {
+        "text": "seguridad",
+        "value": 90,
+        "categoria": "seguridad_justicia"
+      },
+      {
+        "text": "estado",
+        "value": 85,
+        "categoria": "gobernabilidad_estado"
+      },
+      {
+        "text": "desarrollo",
+        "value": 75,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "ambiente",
+        "value": 70,
+        "categoria": "medioambiente_animales"
+      },
+      {
+        "text": "economía",
+        "value": 68,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "animal",
+        "value": 67,
+        "categoria": "medioambiente_animales"
+      },
+      {
+        "text": "digitalización",
+        "value": 58,
+        "categoria": "infraestructura_tecnologia"
+      },
+      {
+        "text": "pobreza",
+        "value": 55,
+        "categoria": "salud_bienestar"
+      },
+      {
+        "text": "programa",
+        "value": 52,
+        "categoria": "gobernabilidad_estado"
+      },
+      {
+        "text": "familia",
+        "value": 50,
+        "categoria": "salud_bienestar"
+      },
+      {
+        "text": "justicia",
+        "value": 48,
+        "categoria": "seguridad_justicia"
+      },
+      {
+        "text": "recurso",
+        "value": 47,
+        "categoria": "medioambiente_animales"
+      },
+      {
+        "text": "trabajo",
+        "value": 45,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "calidad",
+        "value": 44,
+        "categoria": "gobernabilidad_estado"
+      },
+      {
+        "text": "infraestructura",
+        "value": 42,
+        "categoria": "infraestructura_tecnologia"
+      },
+      {
+        "text": "comunidad",
+        "value": 40,
+        "categoria": "gobernabilidad_estado"
+      },
+      {
+        "text": "capacitación",
+        "value": 39,
+        "categoria": "educacion_cultura"
+      },
+      {
+        "text": "agua",
+        "value": 38,
+        "categoria": "medioambiente_animales"
+      },
+      {
+        "text": "crecimiento",
+        "value": 37,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "oportunidad",
+        "value": 36,
+        "categoria": "gobernabilidad_estado"
+      },
+      {
+        "text": "persona",
+        "value": 35,
+        "categoria": "gobernabilidad_estado"
+      },
+      {
+        "text": "corrupción",
+        "value": 35,
+        "categoria": "seguridad_justicia"
+      },
+      {
+        "text": "mype",
+        "value": 33,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "violencia",
+        "value": 32,
+        "categoria": "seguridad_justicia"
+      },
+      {
+        "text": "empleo",
+        "value": 31,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "tecnología",
+        "value": 30,
+        "categoria": "infraestructura_tecnologia"
+      },
+      {
+        "text": "inversión",
+        "value": 29,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "rural",
+        "value": 29,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "protección",
+        "value": 28,
+        "categoria": "seguridad_justicia"
+      },
+      {
+        "text": "estudiante",
+        "value": 27,
+        "categoria": "educacion_cultura"
+      },
+      {
+        "text": "integridad",
+        "value": 26,
+        "categoria": "gobernabilidad_estado"
+      },
+      {
+        "text": "producción",
+        "value": 26,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "docente",
+        "value": 25,
+        "categoria": "educacion_cultura"
+      },
+      {
+        "text": "alfabetización",
+        "value": 24,
+        "categoria": "educacion_cultura"
+      },
+      {
+        "text": "vivienda",
+        "value": 23,
+        "categoria": "salud_bienestar"
+      },
+      {
+        "text": "bienestar",
+        "value": 22,
+        "categoria": "salud_bienestar"
+      },
+      {
+        "text": "saneamiento",
+        "value": 21,
+        "categoria": "infraestructura_tecnologia"
+      },
+      {
+        "text": "innovación",
+        "value": 20,
+        "categoria": "infraestructura_tecnologia"
+      },
+      {
+        "text": "mercado",
+        "value": 19,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "salud_mental",
+        "value": 18,
+        "categoria": "salud_bienestar"
+      },
+      {
+        "text": "ciberseguridad",
+        "value": 18,
+        "categoria": "infraestructura_tecnologia"
+      },
+      {
+        "text": "agricultura",
+        "value": 17,
+        "categoria": "economia_empleo"
+      },
+      {
+        "text": "fiscalización",
+        "value": 17,
+        "categoria": "gobernabilidad_estado"
+      }
+    ],
+    "totalPalabras": 9687,
+    "palabrasUnicas": 427,
+    "top10": [
+      "salud",
+      "educación",
+      "seguridad",
+      "estado",
+      "desarrollo",
+      "ambiente",
+      "economía",
+      "animal",
+      "digitalización",
+      "pobreza"
+    ],
+    "enfoquePrincipal": "El plan de gobierno 'PROGRESEMOS' se centra en el fortalecimiento de la salud y educación, garantizando la seguridad ciudadana y la estabilidad del estado. Prioriza el desarrollo económico sostenible, la protección del medio ambiente y los animales, la digitalización y la reducción de la pobreza, con un fuerte énfasis en la familia, las oportunidades laborales y la justicia social."
+  },
+  {
+    "partido": "Renovación Popular",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 45,
+        "categoria": "general"
+      },
+      {
+        "text": "salud",
+        "value": 38,
+        "categoria": "social"
+      },
+      {
+        "text": "educacion",
+        "value": 35,
+        "categoria": "social"
+      },
+      {
+        "text": "seguridad",
+        "value": 34,
+        "categoria": "social"
+      },
+      {
+        "text": "economia",
+        "value": 29,
+        "categoria": "economia"
+      },
+      {
+        "text": "inversion",
+        "value": 29,
+        "categoria": "economia"
+      },
+      {
+        "text": "gestion",
+        "value": 27,
+        "categoria": "administracion"
+      },
+      {
+        "text": "recurso",
+        "value": 25,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "vivienda",
+        "value": 23,
+        "categoria": "social"
+      },
+      {
+        "text": "calidad",
+        "value": 22,
+        "categoria": "general"
+      },
+      {
+        "text": "comunidad",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "pobreza",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "produccion",
+        "value": 20,
+        "categoria": "economia"
+      },
+      {
+        "text": "corrupcion",
+        "value": 19,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "ministerio",
+        "value": 19,
+        "categoria": "administracion"
+      },
+      {
+        "text": "agua",
+        "value": 18,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "empleo",
+        "value": 18,
+        "categoria": "social"
+      },
+      {
+        "text": "familia",
+        "value": 18,
+        "categoria": "social"
+      },
+      {
+        "text": "transparencia",
+        "value": 17,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "nacional",
+        "value": 17,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "promocion",
+        "value": 17,
+        "categoria": "general"
+      },
+      {
+        "text": "peru",
+        "value": 16,
+        "categoria": "general"
+      },
+      {
+        "text": "infraestructura",
+        "value": 16,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "justicia",
+        "value": 16,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "ambiente",
+        "value": 15,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "modernizacion",
+        "value": 15,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "fortalecimiento",
+        "value": 15,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "transporte",
+        "value": 15,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "capacitacion",
+        "value": 14,
+        "categoria": "social"
+      },
+      {
+        "text": "atencion",
+        "value": 14,
+        "categoria": "social"
+      },
+      {
+        "text": "tecnologia",
+        "value": 13,
+        "categoria": "general"
+      },
+      {
+        "text": "control",
+        "value": 13,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "productos",
+        "value": 12,
+        "categoria": "economia"
+      },
+      {
+        "text": "mujer",
+        "value": 12,
+        "categoria": "social"
+      },
+      {
+        "text": "trabajo",
+        "value": 11,
+        "categoria": "social"
+      },
+      {
+        "text": "ciudadano",
+        "value": 10,
+        "categoria": "social"
+      },
+      {
+        "text": "regional",
+        "value": 10,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "sistema",
+        "value": 10,
+        "categoria": "general"
+      },
+      {
+        "text": "impuesto",
+        "value": 10,
+        "categoria": "economia"
+      },
+      {
+        "text": "energia",
+        "value": 10,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "agropecuaria",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "conectividad",
+        "value": 9,
+        "categoria": "infraestructura"
+      },
+      {
+        "text": "mineria",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "turismo",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "exportacion",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "informacion",
+        "value": 8,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "delincuencia",
+        "value": 8,
+        "categoria": "social"
+      },
+      {
+        "text": "biodiversidad",
+        "value": 7,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "sostenibilidad",
+        "value": 7,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "emprendedor",
+        "value": 7,
+        "categoria": "economia"
+      }
+    ],
+    "totalPalabras": 11451,
+    "palabrasUnicas": 435,
+    "top10": [
+      "desarrollo",
+      "salud",
+      "educacion",
+      "seguridad",
+      "economia",
+      "inversion",
+      "gestion",
+      "recurso",
+      "vivienda",
+      "calidad"
+    ],
+    "enfoquePrincipal": "El plan se centra en el desarrollo integral del país, con fuerte énfasis en la economía, educación, salud y seguridad ciudadana."
+  },
+  {
+    "partido": "Salvemos al Perú",
+    "palabras": [
+      {
+        "text": "salud",
+        "value": 113,
+        "categoria": "social"
+      },
+      {
+        "text": "educación",
+        "value": 98,
+        "categoria": "social"
+      },
+      {
+        "text": "ciudadana",
+        "value": 68,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "corrupción",
+        "value": 65,
+        "categoria": "institucional"
+      },
+      {
+        "text": "justicia",
+        "value": 60,
+        "categoria": "institucional"
+      },
+      {
+        "text": "inversión",
+        "value": 55,
+        "categoria": "economía"
+      },
+      {
+        "text": "calidad",
+        "value": 54,
+        "categoria": "transversal"
+      },
+      {
+        "text": "libertad",
+        "value": 46,
+        "categoria": "valores"
+      },
+      {
+        "text": "derecho",
+        "value": 45,
+        "categoria": "social"
+      },
+      {
+        "text": "vivienda",
+        "value": 44,
+        "categoria": "social"
+      },
+      {
+        "text": "agua",
+        "value": 44,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "territorial",
+        "value": 43,
+        "categoria": "territorio"
+      },
+      {
+        "text": "tecnología",
+        "value": 42,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "informalidad",
+        "value": 41,
+        "categoria": "economía"
+      },
+      {
+        "text": "digital",
+        "value": 40,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "riesgo",
+        "value": 40,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "brecha",
+        "value": 39,
+        "categoria": "transversal"
+      },
+      {
+        "text": "ambiental",
+        "value": 37,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "empleo",
+        "value": 37,
+        "categoria": "economía"
+      },
+      {
+        "text": "producción",
+        "value": 36,
+        "categoria": "economía"
+      },
+      {
+        "text": "pobreza",
+        "value": 36,
+        "categoria": "social"
+      },
+      {
+        "text": "PyMES",
+        "value": 35,
+        "categoria": "economía"
+      },
+      {
+        "text": "inseguridad",
+        "value": 35,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "productividad",
+        "value": 35,
+        "categoria": "economía"
+      },
+      {
+        "text": "control",
+        "value": 34,
+        "categoria": "institucional"
+      },
+      {
+        "text": "minería",
+        "value": 33,
+        "categoria": "economía"
+      },
+      {
+        "text": "bienestar",
+        "value": 30,
+        "categoria": "social"
+      },
+      {
+        "text": "conectividad",
+        "value": 29,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "recursos",
+        "value": 29,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "democracia",
+        "value": 28,
+        "categoria": "institucional"
+      },
+      {
+        "text": "violencia",
+        "value": 28,
+        "categoria": "social"
+      },
+      {
+        "text": "ciudadano",
+        "value": 27,
+        "categoria": "social"
+      },
+      {
+        "text": "saneamiento",
+        "value": 26,
+        "categoria": "social"
+      },
+      {
+        "text": "descentralización",
+        "value": 26,
+        "categoria": "institucional"
+      },
+      {
+        "text": "trabajo",
+        "value": 26,
+        "categoria": "economía"
+      },
+      {
+        "text": "infraestructura",
+        "value": 25,
+        "categoria": "economía"
+      },
+      {
+        "text": "transparencia",
+        "value": 24,
+        "categoria": "institucional"
+      },
+      {
+        "text": "familiar",
+        "value": 23,
+        "categoria": "social"
+      },
+      {
+        "text": "oportunidad",
+        "value": 23,
+        "categoria": "transversal"
+      },
+      {
+        "text": "familia",
+        "value": 23,
+        "categoria": "social"
+      },
+      {
+        "text": "clima",
+        "value": 23,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "innovación",
+        "value": 22,
+        "categoria": "innovacion"
+      },
+      {
+        "text": "confianza",
+        "value": 21,
+        "categoria": "institucional"
+      },
+      {
+        "text": "minero",
+        "value": 21,
+        "categoria": "economía"
+      },
+      {
+        "text": "riesgos",
+        "value": 20,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "mujeres",
+        "value": 19,
+        "categoria": "social"
+      },
+      {
+        "text": "cuencas",
+        "value": 19,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "regionales",
+        "value": 19,
+        "categoria": "institucional"
+      }
+    ],
+    "totalPalabras": 15638,
+    "palabrasUnicas": 1930,
+    "top10": [
+      "salud",
+      "educación",
+      "ciudadana",
+      "corrupción",
+      "justicia",
+      "inversión",
+      "calidad",
+      "libertad",
+      "derecho",
+      "vivienda"
+    ],
+    "enfoquePrincipal": "El plan se centra en el fortalecimiento del desarrollo humano y sostenible a través de mejoras en salud, educación, vivienda, y la lucha contra la corrupción e inseguridad ciudadana. Promueve la digitalización, la innovación y la gestión ambiental, con un enfoque en la economía, productividad y descentralización."
+  },
+  {
+    "partido": "SiCreo",
+    "palabras": [
+      {
+        "text": "desarrollo",
+        "value": 73,
+        "categoria": "economia"
+      },
+      {
+        "text": "educación",
+        "value": 68,
+        "categoria": "educacion"
+      },
+      {
+        "text": "seguridad",
+        "value": 56,
+        "categoria": "justicia"
+      },
+      {
+        "text": "corrupción",
+        "value": 46,
+        "categoria": "justicia"
+      },
+      {
+        "text": "infraestructura",
+        "value": 40,
+        "categoria": "economia"
+      },
+      {
+        "text": "conectividad",
+        "value": 31,
+        "categoria": "economia"
+      },
+      {
+        "text": "minería",
+        "value": 30,
+        "categoria": "economia"
+      },
+      {
+        "text": "agua",
+        "value": 29,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "democracia",
+        "value": 25,
+        "categoria": "politica"
+      },
+      {
+        "text": "salud",
+        "value": 24,
+        "categoria": "bienestar"
+      },
+      {
+        "text": "economía",
+        "value": 23,
+        "categoria": "economia"
+      },
+      {
+        "text": "justicia",
+        "value": 18,
+        "categoria": "justicia"
+      },
+      {
+        "text": "inversión",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "formalización",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "productividad",
+        "value": 16,
+        "categoria": "economia"
+      },
+      {
+        "text": "ambiente",
+        "value": 16,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "pobreza",
+        "value": 16,
+        "categoria": "bienestar"
+      },
+      {
+        "text": "informalidad",
+        "value": 15,
+        "categoria": "economia"
+      },
+      {
+        "text": "digital",
+        "value": 15,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "ciudadanía",
+        "value": 14,
+        "categoria": "politica"
+      },
+      {
+        "text": "tecnología",
+        "value": 13,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "calidad",
+        "value": 13,
+        "categoria": "bienestar"
+      },
+      {
+        "text": "trasparencia",
+        "value": 13,
+        "categoria": "justicia"
+      },
+      {
+        "text": "reforma",
+        "value": 13,
+        "categoria": "politica"
+      },
+      {
+        "text": "comercio",
+        "value": 12,
+        "categoria": "economia"
+      },
+      {
+        "text": "meritocracia",
+        "value": 11,
+        "categoria": "politica"
+      },
+      {
+        "text": "gobernanza",
+        "value": 11,
+        "categoria": "politica"
+      },
+      {
+        "text": "fiscalización",
+        "value": 10,
+        "categoria": "justicia"
+      },
+      {
+        "text": "sostenibilidad",
+        "value": 9,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "regiones",
+        "value": 9,
+        "categoria": "geografia"
+      },
+      {
+        "text": "empleo",
+        "value": 9,
+        "categoria": "economia"
+      },
+      {
+        "text": "tributación",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "agricultura",
+        "value": 8,
+        "categoria": "economia"
+      },
+      {
+        "text": "urbano",
+        "value": 8,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "capacidades",
+        "value": 7,
+        "categoria": "politica"
+      },
+      {
+        "text": "familia",
+        "value": 7,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "criminalidad",
+        "value": 7,
+        "categoria": "justicia"
+      },
+      {
+        "text": "recursos",
+        "value": 7,
+        "categoria": "economia"
+      },
+      {
+        "text": "corpac",
+        "value": 6,
+        "categoria": "institucion"
+      },
+      {
+        "text": "vivienda",
+        "value": 6,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "comunidades",
+        "value": 6,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "juventud",
+        "value": 6,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "mercado",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "turismo",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "zonas",
+        "value": 6,
+        "categoria": "geografia"
+      },
+      {
+        "text": "minería ilegal",
+        "value": 6,
+        "categoria": "economia"
+      },
+      {
+        "text": "fronteras",
+        "value": 6,
+        "categoria": "geografia"
+      }
+    ],
+    "totalPalabras": 4652,
+    "palabrasUnicas": 1157,
+    "top10": [
+      "desarrollo",
+      "educación",
+      "seguridad",
+      "corrupción",
+      "infraestructura",
+      "conectividad",
+      "minería",
+      "agua",
+      "democracia",
+      "salud"
+    ],
+    "enfoquePrincipal": "El partido SíCreo se centra en el desarrollo integral del país, priorizando la mejora de la educación, seguridad, y la lucha contra la corrupción. También busca fortalecer la economía, la infraestructura y la conectividad, con un enfoque en la formalización y la sostenibilidad ambiental."
+  },
+  {
+    "partido": "Somos Perú",
+    "palabras": [
+      {
+        "text": "Perú",
+        "value": 150,
+        "categoria": "pais"
+      },
+      {
+        "text": "desarrollo",
+        "value": 100,
+        "categoria": "general"
+      },
+      {
+        "text": "Estado",
+        "value": 80,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "social",
+        "value": 75,
+        "categoria": "social"
+      },
+      {
+        "text": "salud",
+        "value": 70,
+        "categoria": "salud"
+      },
+      {
+        "text": "educación",
+        "value": 65,
+        "categoria": "educacion"
+      },
+      {
+        "text": "seguridad",
+        "value": 60,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "economía",
+        "value": 55,
+        "categoria": "economia"
+      },
+      {
+        "text": "agua",
+        "value": 50,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "infraestructura",
+        "value": 45,
+        "categoria": "economia"
+      },
+      {
+        "text": "justicia",
+        "value": 40,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "MYPES",
+        "value": 40,
+        "categoria": "economia"
+      },
+      {
+        "text": "inversión",
+        "value": 38,
+        "categoria": "economia"
+      },
+      {
+        "text": "formalización",
+        "value": 35,
+        "categoria": "economia"
+      },
+      {
+        "text": "empleo",
+        "value": 35,
+        "categoria": "economia"
+      },
+      {
+        "text": "calidad",
+        "value": 32,
+        "categoria": "general"
+      },
+      {
+        "text": "tecnología",
+        "value": 30,
+        "categoria": "tecnologia"
+      },
+      {
+        "text": "población",
+        "value": 30,
+        "categoria": "social"
+      },
+      {
+        "text": "corrupción",
+        "value": 28,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "regiones",
+        "value": 28,
+        "categoria": "territorial"
+      },
+      {
+        "text": "pobreza",
+        "value": 27,
+        "categoria": "social"
+      },
+      {
+        "text": "democracia",
+        "value": 25,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "ambiental",
+        "value": 25,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "servicios",
+        "value": 24,
+        "categoria": "general"
+      },
+      {
+        "text": "niños",
+        "value": 24,
+        "categoria": "social"
+      },
+      {
+        "text": "participación",
+        "value": 23,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "familia",
+        "value": 22,
+        "categoria": "social"
+      },
+      {
+        "text": "sistema",
+        "value": 22,
+        "categoria": "general"
+      },
+      {
+        "text": "ciudadano",
+        "value": 21,
+        "categoria": "social"
+      },
+      {
+        "text": "prevención",
+        "value": 20,
+        "categoria": "general"
+      },
+      {
+        "text": "transporte",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "producción",
+        "value": 18,
+        "categoria": "economia"
+      },
+      {
+        "text": "recursos",
+        "value": 17,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "crecimiento",
+        "value": 17,
+        "categoria": "economia"
+      },
+      {
+        "text": "control",
+        "value": 16,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "territorial",
+        "value": 16,
+        "categoria": "territorial"
+      },
+      {
+        "text": "energía",
+        "value": 15,
+        "categoria": "ambiental"
+      },
+      {
+        "text": "transformación",
+        "value": 15,
+        "categoria": "general"
+      },
+      {
+        "text": "rural",
+        "value": 14,
+        "categoria": "social"
+      },
+      {
+        "text": "mujeres",
+        "value": 14,
+        "categoria": "social"
+      }
+    ],
+    "totalPalabras": 45000,
+    "palabrasUnicas": 6000,
+    "top10": [
+      "Perú",
+      "desarrollo",
+      "Estado",
+      "social",
+      "salud",
+      "educación",
+      "seguridad",
+      "economía",
+      "agua",
+      "infraestructura"
+    ],
+    "enfoquePrincipal": "El plan de gobierno del Partido Democrático Somos Perú para 2026-2031 se enfoca en el desarrollo integral del Perú, priorizando la mejora de la calidad de vida de los ciudadanos a través de la modernización del Estado, el fortalecimiento de la economía y la infraestructura, y la atención a las dimensiones social, ambiental e institucional, con un fuerte énfasis en la lucha contra la pobreza, la corrupción y la desigualdad."
+  },
+  {
+    "partido": "Un Camino Diferente",
+    "palabras": [
+      {
+        "text": "bachillerato",
+        "value": 14,
+        "categoria": "educación"
+      },
+      {
+        "text": "universidad",
+        "value": 11,
+        "categoria": "educación"
+      },
+      {
+        "text": "recurso",
+        "value": 11,
+        "categoria": "economía"
+      },
+      {
+        "text": "defensa",
+        "value": 10,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "electrificación",
+        "value": 8,
+        "categoria": "energía"
+      },
+      {
+        "text": "ciudadano",
+        "value": 8,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "energética",
+        "value": 7,
+        "categoria": "energía"
+      },
+      {
+        "text": "rural",
+        "value": 7,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "madera",
+        "value": 7,
+        "categoria": "economía"
+      },
+      {
+        "text": "cooperación",
+        "value": 7,
+        "categoria": "política_exterior"
+      },
+      {
+        "text": "homologación",
+        "value": 6,
+        "categoria": "educación"
+      },
+      {
+        "text": "eléctrico",
+        "value": 6,
+        "categoria": "energía"
+      },
+      {
+        "text": "movilidad",
+        "value": 5,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "médico",
+        "value": 5,
+        "categoria": "salud"
+      },
+      {
+        "text": "contaminación",
+        "value": 5,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "mineral",
+        "value": 5,
+        "categoria": "economía"
+      },
+      {
+        "text": "fiscal",
+        "value": 5,
+        "categoria": "economía"
+      },
+      {
+        "text": "gubernamental",
+        "value": 5,
+        "categoria": "política"
+      },
+      {
+        "text": "comercio",
+        "value": 5,
+        "categoria": "economía"
+      },
+      {
+        "text": "monetaria",
+        "value": 5,
+        "categoria": "economía"
+      },
+      {
+        "text": "descentralización",
+        "value": 5,
+        "categoria": "política"
+      },
+      {
+        "text": "región",
+        "value": 5,
+        "categoria": "geopolítica"
+      },
+      {
+        "text": "electricidad",
+        "value": 5,
+        "categoria": "energía"
+      },
+      {
+        "text": "climático",
+        "value": 5,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "conocimiento",
+        "value": 4,
+        "categoria": "educación"
+      },
+      {
+        "text": "medicamento",
+        "value": 4,
+        "categoria": "salud"
+      },
+      {
+        "text": "hospital",
+        "value": 4,
+        "categoria": "salud"
+      },
+      {
+        "text": "niño",
+        "value": 4,
+        "categoria": "sociedad"
+      },
+      {
+        "text": "estudiante",
+        "value": 4,
+        "categoria": "educación"
+      },
+      {
+        "text": "empresa",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "emprendimiento",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "habilidad",
+        "value": 4,
+        "categoria": "educación"
+      },
+      {
+        "text": "agua",
+        "value": 4,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "ecosistema",
+        "value": 4,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "riesgo",
+        "value": 4,
+        "categoria": "ambiente"
+      },
+      {
+        "text": "ilegal",
+        "value": 4,
+        "categoria": "seguridad"
+      },
+      {
+        "text": "artesanal",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "diálogo",
+        "value": 4,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "licencia",
+        "value": 4,
+        "categoria": "gobernanza"
+      },
+      {
+        "text": "producto",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "gasto",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "materia",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "prima",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "metal",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "construcción",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "electrónico",
+        "value": 4,
+        "categoria": "tecnología"
+      },
+      {
+        "text": "industrial",
+        "value": 4,
+        "categoria": "economía"
+      },
+      {
+        "text": "energético",
+        "value": 4,
+        "categoria": "energía"
+      },
+      {
+        "text": "humanidad",
+        "value": 4,
+        "categoria": "sociedad"
+      }
+    ],
+    "totalPalabras": 4976,
+    "palabrasUnicas": 1618,
+    "top10": [
+      "bachillerato",
+      "universidad",
+      "recurso",
+      "defensa",
+      "electrificación",
+      "ciudadano",
+      "energética",
+      "rural",
+      "madera",
+      "cooperación"
+    ],
+    "enfoquePrincipal": "El plan se centra en la modernización educativa, particularmente en el acceso universitario y el bachillerato automático, la gestión de recursos naturales, incluyendo la minería y energía (con énfasis en electrificación rural y renovables), y la defensa del país. También aborda temas de ciudadanía, desarrollo económico, e infraestructura con un enfoque en sostenibilidad y lucha contra la corrupción."
+  }
+]

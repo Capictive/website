@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
+import BlockedPartiesSheet from "../components/BlockedPartiesSheet";
 import {
   PARTIES,
   Party,
@@ -355,6 +356,13 @@ export default function PartidosPage() {
     }
   };
 
+  // Desbloquear partido
+  const unblockParty = (partyName: string) => {
+    const newBlocked = blockedParties.filter((n) => n !== partyName);
+    setBlockedParties(newBlocked);
+    localStorage.setItem("blocked-parties", JSON.stringify(newBlocked));
+  };
+
   // Cerrar modal
   const closeBlockModal = () => {
     setPartyToBlock(null);
@@ -559,6 +567,16 @@ export default function PartidosPage() {
           >
             🎯 Ver tutorial nuevamente
           </button>
+        )}
+
+        {/* Sección de partidos bloqueados */}
+        {blockedParties.length > 0 && (
+          <div className="mt-4">
+            <BlockedPartiesSheet
+              blockedParties={blockedParties}
+              onUnblock={unblockParty}
+            />
+          </div>
         )}
       </div>
 
@@ -794,12 +812,12 @@ export default function PartidosPage() {
                     >
                       🎥 Ver Entrevistas
                     </Link>
-                    <button
-                      className="btn-secondary text-sm opacity-60 cursor-not-allowed"
-                      disabled
+                    <Link
+                      href={`/comparar?partido=${encodeURIComponent(detailState.detail.partido)}`}
+                      className="btn-secondary text-sm flex items-center gap-1"
                     >
-                      ⚖️ Comparar - Próximamente
-                    </button>
+                      ⚖️ Comparar
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -1108,8 +1126,8 @@ export default function PartidosPage() {
                 Al confirmar, este partido desaparecerá de tu lista.
                 <br />
                 <span className="text-xs opacity-70 mt-2 block">
-                  (Podrás desbloquearlo borrando tus datos de navegación si
-                  cambias de opinión)
+                  (Podrás desbloquearlo desde la sección &quot;Partidos
+                  bloqueados&quot; debajo del encabezado)
                 </span>
               </p>
 
