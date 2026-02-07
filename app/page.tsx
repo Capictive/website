@@ -9,6 +9,45 @@ import { redirect } from "next/dist/server/api-utils";
 // import { navigate } from "next/dist/client/components/segment-cache/navigation";
 import { useRouter } from "next/navigation";
 
+const FechaActual = () => {
+  // Inicializamos con null para evitar errores de hidratación (diferencia servidor/cliente)
+  const [fecha, setFecha] = useState<Date | null>(null);
+
+  useEffect(() => {
+    setFecha(new Date()); // Seteamos fecha inicial en el cliente
+    const timer = setInterval(() => setFecha(new Date()), 60000); // Actualiza cada minuto
+    return () => clearInterval(timer);
+  }, []);
+
+  if (!fecha) return null; // O un skeleton loader si prefieres
+
+  const capitalizar = (str: string) =>
+    str.charAt(0).toUpperCase() + str.slice(1);
+
+  const partes = new Intl.DateTimeFormat("es-PE", {
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  }).formatToParts(fecha);
+
+  const diaSemana = capitalizar(
+    partes.find((p) => p.type === "weekday")?.value || "",
+  );
+  const diaMes = partes.find((p) => p.type === "day")?.value;
+  const mes = capitalizar(partes.find((p) => p.type === "month")?.value || "");
+  const anio = partes.find((p) => p.type === "year")?.value;
+
+  return (
+    <span>
+      {diaSemana},{" "}
+      <strong>
+        {diaMes} de {mes} del {anio}
+      </strong>
+    </span>
+  );
+};
+
 const timelineEvents = [
   {
     date: "2025-03-25",
@@ -181,9 +220,7 @@ export default function Home() {
 
       {/* Info bar */}
       <div className="p-3 text-sm font-body flex flex-wrap justify-between gap-2 ">
-        <p>
-          Miércoles, <strong>07 de Enero del 2026</strong>
-        </p>
+        <FechaActual />
         {nextEvent && (
           <p className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>

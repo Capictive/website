@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
+import { useRouter } from "next/navigation";
 import {
   PARTIES,
   Party,
@@ -262,6 +263,23 @@ const CustomTooltip = ({
     </div>
   </div>
 );
+
+function EntrevistasButton({ partido, id }: { partido?: string; id?: string }) {
+  const router = useRouter();
+  if (!partido) return null;
+  return (
+    <div className="border-t pt-4 flex justify-end">
+      <button
+        className="btn-primary text-sm"
+        onClick={() =>
+          router.push(`/entrevistas?partido=${encodeURIComponent(partido)}`)
+        }
+      >
+        🎤 Ver Entrevistas
+      </button>
+    </div>
+  );
+}
 
 async function fetchPartyDetail(
   partyName: string,
