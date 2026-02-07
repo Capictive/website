@@ -120,6 +120,119 @@
     "perfilIdeologico": "Centro-izquierda productivista / Socialdemocracia moderna. Propone un 'Estado Planificador' fuerte que impulsa la industrialización y la infraestructura estratégica, con énfasis en la descentralización ('Todo el poder a las regiones') y la soberanía de recursos, pero manteniendo el respeto a la propiedad privada y buscando alianzas público-privadas."
   },
   {
+  "partido": "Alianza Para el Progreso",
+  "valores": {
+    "economia": 9.0,
+    "educacion": 7.5,
+    "salud": 7.0,
+    "seguridad": 8.5,
+    "infraestructura": 8.0,
+    "medioAmbiente": 4.5,
+    "desarrolloSocial": 6.0,
+    "agricultura": 7.0
+  },
+  "analisisDetallado": {
+    "economia": {
+      "calificacion": 9.0,
+      "justificacion": "Es el eje central del plan. Propone un modelo agresivo de inversión privada con metas numéricas claras ($80 mil millones en APPs). Incluye reformas tributarias detalladas y planes específicos para minería, pesca y turismo. Los anexos contienen indicadores macroeconómicos precisos (crecimiento >6% anual).",
+      "propuestasDestacadas": [
+        "Plan de adjudicación de US$ 80 mil millones en proyectos APP y Proyectos en Activos",  
+        "Reforma tributaria: Régimen Tributario Progresivo y Régimen Simplificado para la Formalización (elimina RUS/RER)",
+        "Creación de Zonas Económicas Especiales (ZEE) y 16 Parques Industriales"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "educacion": {
+      "calificacion": 7.5,
+      "justificacion": "Propuestas claras orientadas a la educación técnica y la empleabilidad. Destaca la meta de becas y la infraestructura (COARs). Incluye indicadores de gestión en los anexos.",
+      "propuestasDestacadas": [
+        "Becas TEC: Masificación de becas técnicas (comparativa de 300 vs 20,000)",
+        "Creación de un COAR en cada región",
+        "Certificación de dominio de inglés e Inteligencia Artificial"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "salud": {
+      "calificacion": 7.0,
+      "justificacion": "Enfoque en el primer nivel de atención y uso de mecanismos de inversión privada (APP/OXI) para infraestructura. Diagnóstico claro sobre la fragmentación del sistema y propuestas de digitalización.",
+      "propuestasDestacadas": [
+        "Plan Mil: Mejorar 1000 centros de salud de primer nivel vía APP",
+        "Historia Clínica Digital interoperable y telemedicina con IA",
+        "Reforma del modelo logístico de medicamentos (modelo Salog)"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "seguridad": {
+      "calificacion": 8.5,
+      "justificacion": "Prioridad máxima como pre-requisito para la economía. Plantea reformas estructurales mayores (fusión de ministerios) y uso intensivo de tecnología. Hay indicadores detallados de reducción de victimización.",
+      "propuestasDestacadas": [
+        "Creación del Ministerio de Defensa y Seguridad Interna (fusión)",
+        "Cárceles productivas mediante Obras por Impuestos (OXI)",
+        "Zar de Tecnología e Infraestructura Digital para ciberseguridad y vigilancia"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "infraestructura": {
+      "calificacion": 8.0,
+      "justificacion": "Muy detallado en vivienda y transporte. Metas cuantitativas ambiciosas (1.25 millones de viviendas). Cartera de proyectos territoriales específicos y reestructuración de entidades ejecutoras.",
+      "propuestasDestacadas": [
+        "Construcción de 1.25 millones de viviendas en el quinquenio",
+        "Creación del Ministerio de Infraestructura (absorbiendo ARCC, Provias, etc.)",
+        "Portafolio territorial de 72 proyectos por S/ 143 mil millones"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "medioAmbiente": {
+      "calificacion": 4.5,
+      "justificacion": "El enfoque es principalmente utilitario: agilizar permisos para inversión. Se propone fusionar entidades ambientales (SENACE, ANA, SERFOR) para reducir trabas burocráticas, lo cual prioriza la eficiencia administrativa sobre la protección ecológica per se.",      
+      "propuestasDestacadas": [
+        "Fusión de SENACE, ANA, SERFOR y SERNANP",
+        "Ventanilla única digital para certificaciones ambientales",
+        "Impulso a bosques de producción permanente"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "desarrolloSocial": {
+      "calificacion": 6.0,
+      "justificacion": "Enfoque de 'salida de la pobreza' a través del mercado y empleo más que asistencialismo. Se vincula fuertemente a vivienda y servicios básicos. Se menciona la reestructuración de programas sociales hacia un enfoque productivo.",
+      "propuestasDestacadas": [
+        "Enfoque productivo en programas sociales (inserción laboral)",
+        "Masificación del deporte vía OXI y APP",
+        "Bonos de vivienda para jóvenes"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "agricultura": {
+      "calificacion": 7.0,
+      "justificacion": "Fuerte énfasis en la agroexportación y grandes proyectos de irrigación. Metas ambiciosas de exportación ($45 mil millones). El enfoque es empresarial y de infraestructura hídrica.",
+      "propuestasDestacadas": [
+        "Plan Selva Productiva y bioeconomía",
+        "Destrabe de 21 grandes presas para riego",
+        "Nueva ley de promoción agroexportadora"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    }
+  },
+  "top3Prioridades": [
+    "economia",
+    "seguridad",
+    "infraestructura"
+  ],
+  "areasDesatendidas": [
+    "medioAmbiente",
+    "cultura"
+  ],
+  "perfilIdeologico": "Liberalismo económico tecnocrático. El plan apuesta decididamente por la inversión privada (APP, OXI, Proyectos en Activos) como motor de solución para casi todos los sectores (salud, cárceles, agua, deporte). Propone un Estado más pequeño (reducción de ministerios) pero fuerte en seguridad y facilitación de inversiones."
+},
+  {
     "partido": "Alianza Electoral Venceremos",
     "valores": {
       "economia": 9.0,
@@ -1616,7 +1729,7 @@
     "perfilIdeologico": "Humanista y pragmático con enfoque en 'Hacer Obras'. Ideología de Centro con tendencia a la descentralización y economía social de mercado. Prioriza la gestión, la infraestructura tangible y la participación ciudadana vecinal sobre debates ideológicos abstractos."
   },
   {
-    "partido": "Partido de los Trabajadores y Emprendedores del Perú",
+    "partido": "Partido de los Trabajadores y Emprendedores PTE - PERU",
     "valores": {
       "economia": 7.5,
       "educacion": 4.0,

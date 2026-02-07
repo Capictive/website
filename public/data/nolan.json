@@ -60,7 +60,7 @@
     "descripcion": "Coalición de izquierda radical que combina un fuerte intervencionismo estatal y nacionalismo económico con una agenda social progresista enfocada en derechos de minorías, laicismo y justicia social distributiva."
   },
   {
-  "nombre": "Avanza País - Partido de Integración Social",
+  "nombre": "Avanza País",
   "siglas": "AP",
   "libertadEconomica": 8.2,
   "libertadPersonal": 4.2,
@@ -90,7 +90,7 @@
   "descripcion": "Avanza País se define como una opción de centro-derecha que combina un liberalismo económico robusto (pro-mercado y pro-privatización) con una postura social conservadora y de 'mano dura' en seguridad. Su discurso apela a la libertad individual frente al Estado, pero prioriza el orden público y la soberanía jurídica nacional sobre los tratados internacionales de derechos humanos."
 },
 {
-  "nombre": "Partido Político Perú Acción",
+  "nombre": "Perú Acción",
   "siglas": "Perú Acción",
   "libertadEconomica": 7.5,
   "libertadPersonal": 2.0,
@@ -121,7 +121,7 @@
   "descripcion": "El partido se ubica en el cuadrante conservador (derecha autoritaria), combinando una política económica de libre mercado, baja presión tributaria y estado pequeño con una política social de 'mano dura', punitivismo penal extremo y defensa de valores tradicionales frente a derechos civiles progresistas."
 },
 {
-  "nombre": "Partido Político Nacional Perú Libre",
+  "nombre": "Perú Libre",
   "siglas": "PL",
   "libertadEconomica": 1.5,
   "libertadPersonal": 4.0,
@@ -149,7 +149,7 @@
   "descripcion": "Partido de orientación marxista-leninista y soberanista que busca desmantelar el modelo económico liberal para reemplazarlo por un sistema de planificación estatal y nacionalizaciones, subordinando las libertades individuales al bienestar colectivo y a la rectoría del Estado."
 },
 {
-  "nombre": "Partido Político Perú Primero",
+  "nombre": "Perú Primero",
   "siglas": "Perú Primero",
   "libertadEconomica": 7.0,
   "libertadPersonal": 7.5,
@@ -179,7 +179,7 @@
   "descripcion": "Perú Primero se posiciona como una organización socioliberal de centro. Combina una visión económica pro-mercado y de eficiencia técnica (uso de APPs, digitalización y disciplina fiscal) con una agenda social progresista que enfatiza la inclusión de minorías y la defensa de los derechos humanos bajo un marco humanista."
 },
 {
-  "nombre": "Partido Político Integridad Democrática",
+  "nombre": "Integridad Democrática",
   "siglas": "ID",
   "libertadEconomica": 7.8,
   "libertadPersonal": 5.5,
@@ -240,7 +240,7 @@
     "descripcion": "El partido se define por una ideología de derecha liberal o liberalismo conservador. Combina una agenda económica pro-mercado, orientada a la eficiencia tecnológica y la atracción de capitales, con una visión de seguridad basada en la ley, el orden y el fortalecimiento de la autoridad estatal. Su enfoque es tecnocrático y modernizador, buscando digitalizar el Estado para reducir la corrupción y mejorar la competitividad."
   },
   {
-    "nombre": "Alianza para el Progreso",
+    "nombre": "Alianza Para el Progreso",
     "siglas": "APP",
     "libertadEconomica": 7.8,
     "libertadPersonal": 5.5,
@@ -302,7 +302,7 @@
     "descripcion": "Se define como una alianza humanista de centroderecha que combina una fuerte orientación al libre mercado con valores sociales tradicionales (familia, religión, vida) y una política de seguridad punitiva basada en el orden y el respeto a la autoridad."
   },
   {
-    "nombre": "Partido Cooperación Popular",
+    "nombre": "Cooperación Popular",
     "siglas": "CP",
     "libertadEconomica": 4.0,
     "libertadPersonal": 7.5,
@@ -332,7 +332,7 @@
     "descripcion": "El partido presenta una ideología de centro-izquierda o progresista, combinando una agenda social liberal en derechos civiles con una economía de fuerte matiz estatista, reguladora y redistributiva."
   },
   {
-    "nombre": "Partido Político Fe en el Perú",
+    "nombre": "Fe en el Perú",
     "siglas": "Fe en el Perú",
     "libertadEconomica": 7.2,
     "libertadPersonal": 6.0,
@@ -362,7 +362,7 @@
     "descripcion": "El partido se posiciona en el centro político con una tendencia a la derecha en lo económico. Rechaza los extremos ideológicos y busca un equilibrio entre la libertad de mercado y el bienestar social, manteniendo un respeto institucional por los derechos fundamentales sin adoptar agendas sociales radicales."
   },
   {
-    "nombre": "Frente de la Esperanza 2021",
+    "nombre": "Frente de la Esperanza",
     "siglas": "FE",
     "libertadEconomica": 6.5,
     "libertadPersonal": 4.0,
@@ -538,7 +538,7 @@
     "descripcion": "El partido se define como humanista y biocéntrico, situándose en una centroderecha conservadora. Combina una apertura moderada al mercado y la eficiencia estatal con una visión social centrada en valores tradicionales, el orden público y la fiscalización moral de los medios y la educación."
   },
   {
-    "nombre": "Partido de los Trabajadores y Emprendedores",
+    "nombre": "Partido de los Trabajadores y Emprendedores PTE - PERU",
     "siglas": "PTE-PERÚ",
     "libertadEconomica": 4.5,
     "libertadPersonal": 4.0,
@@ -568,7 +568,7 @@
     "descripcion": "El partido presenta una ideología de corte nacionalista y estatista que combina la promoción de la pequeña empresa privada con un fuerte control estatal de la economía y un enfoque punitivo y tradicional en lo social."
   },
   {
-    "nombre": "PARTIDO DEL BUEN GOBIERNO",
+    "nombre": "Partido del Buen Gobierno",
     "siglas": "PBG",
     "libertadEconomica": 5.5,
     "libertadPersonal": 8.0,
@@ -598,7 +598,7 @@
     "descripcion": "El PBG se posiciona como un partido progresista que combina una economía mixta con fuerte regulación ambiental y redistribución tributaria con una agenda de expansión de libertades civiles y derechos individuales modernos."
   },
   {
-    "nombre": "Unido Perú",
+    "nombre": "Partido Demócrata Unido Perú",
     "siglas": "UP",
     "libertadEconomica": 6.8,
     "libertadPersonal": 2.2,
@@ -627,10 +627,10 @@
       }
     },
     "cuadrante": "conservador",
-    "descripcion": "Unido Perú presenta una ideología de derecha conservadora con matices de 'mano dura'. Combina una retórica de capitalismo popular y apertura económica con un enfoque de seguridad nacional autoritario, centralidad en la familia tradicional y una fuerte presencia estatal en proyectos de infraestructura e industria."
+    "descripcion": "Partido Demócrata Unido Perú presenta una ideología de derecha conservadora con matices de 'mano dura'. Combina una retórica de capitalismo popular y apertura económica con un enfoque de seguridad nacional autoritario, centralidad en la familia tradicional y una fuerte presencia estatal en proyectos de infraestructura e industria."
   },
   {
-    "nombre": "Partido Político Demócrata Verde",
+    "nombre": "Partido Demócrata Verde",
     "siglas": "DV",
     "libertadEconomica": 5.5,
     "libertadPersonal": 6.8,
@@ -718,7 +718,7 @@
     "descripcion": "El PPP se define por un nacionalismo patriótico que busca un Estado fuerte y regulador en sectores estratégicos, combinado con una visión social conservadora que enfatiza la seguridad, la disciplina y los valores familiares tradicionales."
   },
   {
-    "nombre": "Partido Regionalista de Integración Nacional",
+    "nombre": "Partido Político PRIN",
     "siglas": "PRIN",
     "libertadEconomica": 6.2,
     "libertadPersonal": 6.8,
@@ -748,7 +748,7 @@
     "descripcion": "El PRIN se presenta como una opción de centro-izquierda o progresista que combina el respeto a la economía de mercado con una fuerte agenda de derechos sociales e individuales. Su enfoque principal es la descentralización regional y la modernización del Estado mediante la tecnología, manteniendo una postura socialmente liberal pero con un enfoque de 'mano dura' tecnológica en seguridad ciudadana."
   },
   {
-    "nombre": "País para Todos",
+    "nombre": "País para todos",
     "siglas": "PPT",
     "libertadEconomica": 7.8,
     "libertadPersonal": 5.2,
@@ -808,7 +808,7 @@
     "descripcion": "Perú Moderno se define como un partido de centro, pero su programa de gobierno se alinea con el cuadrante conservador del diagrama de Nolan. Combina una visión económica liberal de mercado (bajos impuestos, apoyo al emprendimiento) con una visión social autoritaria o conservadora enfocada en la seguridad, el orden público y sanciones severas contra el crimen y la corrupción."
   },
   {
-    "nombre": "Partido Podemos Perú",
+    "nombre": "Podemos Perú",
     "siglas": "PP",
     "libertadEconomica": 5.5,
     "libertadPersonal": 4.0,
@@ -838,7 +838,7 @@
     "descripcion": "Podemos Perú se posiciona como una organización conservadora que combina la defensa de la economía social de mercado con un rol estatal regulador y soberano. Socialmente, se ancla en valores tradicionales pro-vida y una agenda de seguridad de 'mano dura' que involucra a las Fuerzas Armadas en tareas de orden interno."
   },
   {
-    "nombre": "Partido Político Progresemos",
+    "nombre": "Progresemos",
     "siglas": "PROGRESEMOS",
     "libertadEconomica": 6.0,
     "libertadPersonal": 3.5,
@@ -927,7 +927,7 @@
     "descripcion": "Organización política de centro que combina una política económica ortodoxa (liberalismo moderado) con una agenda social progresista en derechos, manteniendo el equilibrio institucional y democrático."
   },
   {
-    "nombre": "SíCreo",
+    "nombre": "SiCreo",
     "siglas": "SíCreo",
     "libertadEconomica": 8.5,
     "libertadPersonal": 4.5,
@@ -958,6 +958,34 @@
     "cuadrante": "conservador",
     "descripcion": "El partido SíCreo se define por una ideología de derecha conservadora o liberal-conservadora. Combina una propuesta económica de libre mercado agresiva (privatizaciones y desregulación) con una visión social centrada en el orden, la seguridad nacional, el control fronterizo y los valores familiares tradicionales."
   },
+  {
+  "nombre": "Somos Perú",
+  "siglas": "SP",
+  "libertadEconomica": 6.2,
+  "libertadPersonal": 5.8,
+  "analisis": {
+    "economico": {
+      "calificacion": 6.2,
+      "justificacion": "El partido propone una 'Economía Social de Mercado' que busca un equilibrio entre la inversión privada y un Estado promotor. Si bien defiende el libre mercado, la competitividad de las MYPES y las exportaciones, plantea una fuerte intervención estratégica del Estado en infraestructura, industrialización dirigida ('Hecho en Perú') y subsidios focalizados para la formalización y el agro.",
+      "evidencias": [
+        "La descentralización debe fortalecer las economía locales y regionales dentro de una economía social de mercado competitiva y abierta.",
+        "Incentivos tributarios: Otorgar crédito tributario del 50% sobre remuneraciones del primer año a empresas que contraten egresados del programa.",
+        "Garantizar financiamiento mixto: APP, contratos G2G... y fondo de cofinanciamiento estatal de S/ 5,000 millones."
+      ]
+    },
+    "personal": {
+      "calificacion": 5.8,
+      "justificacion": "Su postura es humanista y democrática, centrada en la primacía de la persona y el fortalecimiento de la institucionalidad. Muestra un equilibrio entre la defensa de los derechos humanos y un enfoque riguroso en el orden público y la seguridad ciudadana (uso de IA y drones). No aborda agendas progresistas radicales ni autoritarismo moral, manteniéndose en un centro institucionalista.",
+      "evidencias": [
+        "La primacía de la persona humana, que es el fin supremo de la sociedad y del Estado.", 
+        "La importancia de la familia, que es la célula básica de la sociedad, la raíz de su grandeza y el ámbito natural de la educación y de la cultura.",
+        "Impulsar un conjunto de reformas constitucionales y legislativas orientadas a fortalecer la democracia peruana, blindando los órganos constitucionales autónomos de la captura política."
+      ]
+    }
+  },
+  "cuadrante": "centro",
+  "descripcion": "Somos Perú se define como un partido demócrata, descentralista y humanista. Su ideología se sitúa en el centro del espectro político, promoviendo una economía social de mercado con un fuerte componente de gestión municipal y regional, priorizando la eficiencia institucional y la seguridad ciudadana sobre debates ideológicos polarizantes."
+},
   {
     "nombre": "Un Camino Diferente",
     "siglas": "UCD",
