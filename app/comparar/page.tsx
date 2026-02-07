@@ -83,9 +83,7 @@ function CompararContent() {
     );
     if (found) {
       // Use functional updater to avoid cascading render warning
-      setSelectedParties((prev) =>
-        prev.length === 0 ? [found.name] : prev,
-      );
+      setSelectedParties((prev) => (prev.length === 0 ? [found.name] : prev));
       setWordcloudParty((prev) => prev || found.name);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -93,11 +91,20 @@ function CompararContent() {
 
   // Party name list from data that exists in radar/nolan
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const availableRadarParties = useMemo(() => radarData.map((d: any) => d.partido), [radarData]);
+  const availableRadarParties = useMemo(
+    () => radarData.map((d: any) => d.partido),
+    [radarData],
+  );
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const availableNolanParties = useMemo(() => nolanData.map((d: any) => d.nombre), [nolanData]);
+  const availableNolanParties = useMemo(
+    () => nolanData.map((d: any) => d.nombre),
+    [nolanData],
+  );
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const availableWordcloudParties = useMemo(() => wordcloudData.map((d: any) => d.partido), [wordcloudData]);
+  const availableWordcloudParties = useMemo(
+    () => wordcloudData.map((d: any) => d.partido),
+    [wordcloudData],
+  );
 
   const filteredParties = useMemo(() => {
     const q = searchQuery.toLowerCase();

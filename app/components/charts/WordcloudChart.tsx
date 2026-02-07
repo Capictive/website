@@ -36,8 +36,12 @@ export default function WordcloudChart({ data, selectedParty }: Props) {
   );
 
   const words = useMemo(() => partyData?.palabras ?? [], [partyData]);
-  const maxValue = Math.max(...(words.length ? words.map((w) => w.value) : [1]));
-  const minValue = Math.min(...(words.length ? words.map((w) => w.value) : [0]));
+  const maxValue = Math.max(
+    ...(words.length ? words.map((w) => w.value) : [1]),
+  );
+  const minValue = Math.min(
+    ...(words.length ? words.map((w) => w.value) : [0]),
+  );
 
   // Generar tamaños de fuente proporcionales
   const getFontSize = (value: number) => {
@@ -91,7 +95,8 @@ export default function WordcloudChart({ data, selectedParty }: Props) {
                 className="inline-block cursor-default transition-all duration-200 hover:scale-110 hover:opacity-100"
                 style={{
                   fontSize: `${fontSize}px`,
-                  fontWeight: word.value > (maxValue + minValue) / 2 ? 800 : 500,
+                  fontWeight:
+                    word.value > (maxValue + minValue) / 2 ? 800 : 500,
                   color,
                   opacity: 0.6 + (word.value / maxValue) * 0.4,
                   transform: `rotate(${rotation}deg)`,
@@ -160,8 +165,7 @@ export default function WordcloudChart({ data, selectedParty }: Props) {
                     className="h-full rounded-full transition-all duration-500"
                     style={{
                       width: `${(w.value / maxValue) * 100}%`,
-                      backgroundColor:
-                        CATEGORY_COLORS[w.categoria] ?? "#999",
+                      backgroundColor: CATEGORY_COLORS[w.categoria] ?? "#999",
                     }}
                   />
                 </div>

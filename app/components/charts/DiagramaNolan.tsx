@@ -266,9 +266,7 @@ export default function DiagramaNolan({ data, selectedParties }: Props) {
                 onMouseEnter={() => setHoveredParty(d.nombre)}
                 onMouseLeave={() => setHoveredParty(null)}
                 onClick={() =>
-                  setDetailParty(
-                    detailParty === d.nombre ? null : d.nombre,
-                  )
+                  setDetailParty(detailParty === d.nombre ? null : d.nombre)
                 }
                 style={{ cursor: "pointer" }}
               >
@@ -416,16 +414,14 @@ export default function DiagramaNolan({ data, selectedParties }: Props) {
                     {detailData.analisis.economico.evidencias.length})
                   </summary>
                   <ul className="mt-2 space-y-1">
-                    {detailData.analisis.economico.evidencias.map(
-                      (ev) => (
-                        <li
-                          key={ev}
-                          className="font-body text-[11px] text-subtitle/60 italic pl-3 border-l-2 border-blue-200"
-                        >
-                          {ev}
-                        </li>
-                      ),
-                    )}
+                    {detailData.analisis.economico.evidencias.map((ev) => (
+                      <li
+                        key={ev}
+                        className="font-body text-[11px] text-subtitle/60 italic pl-3 border-l-2 border-blue-200"
+                      >
+                        {ev}
+                      </li>
+                    ))}
                   </ul>
                 </details>
               )}

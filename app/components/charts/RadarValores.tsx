@@ -131,10 +131,10 @@ export default function RadarValores({ data, selectedParties }: Props) {
                 fontSize: "12px",
                 fontFamily: "var(--font-google-sans)",
               }}
-              formatter={(value: number | undefined, name: string | undefined) => [
-                `${value ?? 0}/10`,
-                name ?? "",
-              ]}
+              formatter={(
+                value: number | undefined,
+                name: string | undefined,
+              ) => [`${value ?? 0}/10`, name ?? ""]}
             />
             <Legend
               wrapperStyle={{
@@ -283,9 +283,7 @@ export default function RadarValores({ data, selectedParties }: Props) {
             <span
               className={`px-2 py-1 rounded-full ${detailInfo.metasEspecificas ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}
             >
-              {detailInfo.metasEspecificas
-                ? "✅ Metas claras"
-                : "❌ Sin metas"}
+              {detailInfo.metasEspecificas ? "✅ Metas claras" : "❌ Sin metas"}
             </span>
           </div>
         </div>
