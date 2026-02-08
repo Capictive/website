@@ -5,7 +5,6 @@ import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
 import BlockedPartiesSheet from "../components/BlockedPartiesSheet";
-import PreguntalePanel from "../components/PreguntalePanel";
 import NotasPersonales from "../components/NotasPersonales";
 import {
   PARTIES,
@@ -312,9 +311,9 @@ export default function PartidosPage() {
   const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
   const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
   const [currentEscandaloIndex, setCurrentEscandaloIndex] = useState(0);
-  const [viewMode, setViewMode] = useState<
-    "ejes" | "problemas" | "escandalos" | "preguntale"
-  >("ejes");
+  const [viewMode, setViewMode] = useState<"ejes" | "problemas" | "escandalos">(
+    "ejes",
+  );
   const [blockedParties, setBlockedParties] = useState<string[]>([]);
   const [favoriteParties, setFavoriteParties] = useState<string[]>([]);
 
@@ -901,16 +900,7 @@ export default function PartidosPage() {
                   >
                     ⚠️ Problemas
                   </button>
-                  <button
-                    onClick={() => setViewMode("preguntale")}
-                    className={`flex-1 py-2 px-1 sm:px-2 rounded-md font-body text-xs sm:text-sm font-semibold transition-all border-2 ${
-                      viewMode === "preguntale"
-                        ? "bg-button-background-primary text-white shadow-md border-button-background-primary"
-                        : "text-subtitle hover:bg-button-background-secondary/30 border-transparent"
-                    }`}
-                  >
-                    🤖 Pregúntale
-                  </button>
+
                   <button
                     onClick={() => setViewMode("escandalos")}
                     className={`flex-1 py-2 px-1 sm:px-2 rounded-md font-body text-xs sm:text-sm font-semibold transition-all border-2 ${
@@ -1054,8 +1044,6 @@ export default function PartidosPage() {
                       seccion="problemas"
                     />
                   </>
-                ) : viewMode === "preguntale" ? (
-                  <PreguntalePanel partyName={selected.name} />
                 ) : (
                   <>
                     {scandalsState.loading ? (
