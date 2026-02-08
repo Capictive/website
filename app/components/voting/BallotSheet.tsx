@@ -968,52 +968,74 @@ const LegislativeRow = ({
 
       {/* Preference Boxes Cell (HORIZONTAL) */}
       <div
-        className="flex items-center justify-center gap-2 p-1"
+        className="flex flex-col items-center justify-center gap-1 p-1"
         style={{
           width: isMobile ? "100px" : "50%",
           flex: isMobile ? "none" : 1,
           backgroundColor: isSelected ? "transparent" : "#f9fafb",
-          flexDirection: "row",
         }}
       >
-        <input
-          type="text"
-          maxLength={2}
-          value={isSelected ? currentVote.preferences?.box1 : ""}
-          onChange={(e) =>
-            onPreference(voteType, party.id, "box1", e.target.value)
-          }
-          className="text-center font-bold focus:outline-none focus:bg-yellow-100 font-body"
-          style={{
-            width: isMobile ? "32px" : "40px",
-            height: isMobile ? "32px" : "40px",
-            fontSize: isMobile ? "14px" : "18px",
-            border: "1px solid #000000",
-            backgroundColor: "#ffffff",
-            color: "#000000",
-            borderRadius: 0,
-            fontFamily: "var(--font-google-sans)",
-          }}
-        />
-        <input
-          type="text"
-          maxLength={2}
-          value={isSelected ? currentVote.preferences?.box2 : ""}
-          onChange={(e) =>
-            onPreference(voteType, party.id, "box2", e.target.value)
-          }
-          className="text-center font-bold focus:outline-none focus:bg-yellow-100 font-body"
-          style={{
-            width: isMobile ? "32px" : "40px",
-            height: isMobile ? "32px" : "40px",
-            fontSize: isMobile ? "14px" : "18px",
-            border: "1px solid #000000",
-            backgroundColor: "#ffffff",
-            color: "#000000",
-            borderRadius: 0,
-            fontFamily: "var(--font-google-sans)",
-          }}
-        />
+        <div
+          className="flex items-center justify-center gap-2"
+          style={{ flexDirection: "row" }}
+        >
+          <input
+            type="text"
+            maxLength={2}
+            value={isSelected ? currentVote.preferences?.box1 : ""}
+            onChange={(e) =>
+              onPreference(voteType, party.id, "box1", e.target.value)
+            }
+            className="text-center font-bold focus:outline-none focus:bg-yellow-100 font-body"
+            style={{
+              width: isMobile ? "32px" : "40px",
+              height: isMobile ? "32px" : "40px",
+              fontSize: isMobile ? "14px" : "18px",
+              border: "1px solid #000000",
+              backgroundColor: "#ffffff",
+              color: "#000000",
+              borderRadius: 0,
+              fontFamily: "var(--font-google-sans)",
+            }}
+          />
+          <input
+            type="text"
+            maxLength={2}
+            value={isSelected ? currentVote.preferences?.box2 : ""}
+            onChange={(e) =>
+              onPreference(voteType, party.id, "box2", e.target.value)
+            }
+            className="text-center font-bold focus:outline-none focus:bg-yellow-100 font-body"
+            style={{
+              width: isMobile ? "32px" : "40px",
+              height: isMobile ? "32px" : "40px",
+              fontSize: isMobile ? "14px" : "18px",
+              border: "1px solid #000000",
+              backgroundColor: "#ffffff",
+              color: "#000000",
+              borderRadius: 0,
+              fontFamily: "var(--font-google-sans)",
+            }}
+          />
+        </div>
+        {/* Favorite candidate number hints */}
+        {matchingCandidates.length > 0 && (
+          <div
+            className="text-center leading-tight"
+            style={{ maxWidth: isMobile ? "96px" : "100%" }}
+          >
+            <span
+              className="font-body font-bold"
+              style={{ fontSize: isMobile ? "7px" : "9px", color: "#ef4444" }}
+            >
+              ❤️{" "}
+              {matchingCandidates
+                .filter((c) => c.numeroCandidato != null)
+                .map((c) => `N°${c.numeroCandidato}`)
+                .join(", ")}
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
