@@ -1612,7 +1612,7 @@ export default function CandidatosPage() {
                     "_blank",
                   );
                 }}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 cursor-pointer bg-yellow-500 hover:bg-amber-700  rounded-lg font-body text-sm font-bold transition-colors"
+                className="w-full flex items-center text-gray-200 justify-center gap-2 px-4 py-2.5 cursor-pointer bg-yellow-500 hover:bg-amber-700  rounded-lg font-body text-sm font-bold transition-colors"
               >
                 <span>🌐</span>
                 Busca más información del candidato
