@@ -73,7 +73,11 @@ const CrossMark = () => (
   </svg>
 );
 
-export default function BallotSheet() {
+export default function BallotSheet({
+  favoritePartyIds = [],
+}: {
+  readonly favoritePartyIds?: string[];
+}) {
   const ballotRef = useRef<HTMLDivElement>(null);
   const summaryRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
@@ -627,6 +631,7 @@ export default function BallotSheet() {
             <div className="flex-1" style={{ backgroundColor: "#ffffff" }}>
               {mockParties.map((party, idx) => {
                 const isSelected = votes.president.partyId === party.id;
+                const isFav = favoritePartyIds.includes(party.id);
                 return (
                   <div
                     key={`pres-${party.id}`}
@@ -637,10 +642,24 @@ export default function BallotSheet() {
                           ? "none"
                           : "1px solid #000000",
                       height: isMobile ? "112px" : "150px",
-                      backgroundColor: isSelected ? "#FFF9C4" : "#ffffff",
+                      backgroundColor: isSelected
+                        ? "#FFF9C4"
+                        : isFav
+                          ? "#FFF0F0"
+                          : "#ffffff",
+                      borderLeft: isFav ? "4px solid #ef4444" : "none",
                     }}
                     onClick={() => handleVote("president", party.id)}
                   >
+                    {/* Favorite badge */}
+                    {isFav && (
+                      <span
+                        className="absolute top-1 right-1 z-30 text-xs"
+                        style={{ lineHeight: 1 }}
+                      >
+                        ❤️
+                      </span>
+                    )}
                     {/* NAME SECTION */}
                     <div
                       className="flex items-center justify-start p-3 overflow-hidden  lg:justify-center lg:text-center lg:border-r-0 lg:border-b"

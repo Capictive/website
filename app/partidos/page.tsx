@@ -6,6 +6,7 @@ import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
 import BlockedPartiesSheet from "../components/BlockedPartiesSheet";
 import PreguntalePanel from "../components/PreguntalePanel";
+import NotasPersonales from "../components/NotasPersonales";
 import {
   PARTIES,
   Party,
@@ -315,6 +316,7 @@ export default function PartidosPage() {
     "ejes" | "problemas" | "escandalos" | "preguntale"
   >("ejes");
   const [blockedParties, setBlockedParties] = useState<string[]>([]);
+  const [favoriteParties, setFavoriteParties] = useState<string[]>([]);
 
   // Estado para el modal de bloqueo
   const [partyToBlock, setPartyToBlock] = useState<string | null>(null);
@@ -322,7 +324,7 @@ export default function PartidosPage() {
 
   const detailArticleRef = useRef<HTMLElement>(null);
 
-  // Cargar partidos bloqueados
+  // Cargar partidos bloqueados y favoritos
   useEffect(() => {
     const stored = localStorage.getItem("blocked-parties");
     if (stored) {
@@ -330,6 +332,14 @@ export default function PartidosPage() {
         setBlockedParties(JSON.parse(stored));
       } catch (e) {
         console.error("Error parsing blocked parties", e);
+      }
+    }
+    const storedFavs = localStorage.getItem("capictive-favoritos");
+    if (storedFavs) {
+      try {
+        setFavoriteParties(JSON.parse(storedFavs));
+      } catch (e) {
+        console.error("Error parsing favorite parties", e);
       }
     }
   }, []);
@@ -368,6 +378,17 @@ export default function PartidosPage() {
   const closeBlockModal = () => {
     setPartyToBlock(null);
     setShowBlockModal(false);
+  };
+
+  // Toggle favorito
+  const toggleFavorite = (e: React.MouseEvent, partyName: string) => {
+    e.stopPropagation();
+    const isFav = favoriteParties.includes(partyName);
+    const updated = isFav
+      ? favoriteParties.filter((n) => n !== partyName)
+      : [...favoriteParties, partyName];
+    setFavoriteParties(updated);
+    localStorage.setItem("capictive-favoritos", JSON.stringify(updated));
   };
 
   // Estado del tour
@@ -651,27 +672,61 @@ export default function PartidosPage() {
                     </span>
                   </div>
 
-                  {/* Botón de bloquear */}
-                  <button
-                    onClick={(e) => initiateBlockParty(e, p.name)}
-                    className="p-2 text-subtitle/40 hover:text-button-background-primary hover:bg-button-background-secondary/50 rounded-full transition-colors"
-                    title="Bloquear partido (No ver más)"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                  {/* Botones de favorito y bloquear */}
+                  <div className="flex items-center gap-0.5">
+                    <button
+                      onClick={(e) => toggleFavorite(e, p.name)}
+                      className={`p-2 rounded-full transition-colors ${
+                        favoriteParties.includes(p.name)
+                          ? "text-red-500 hover:text-red-600"
+                          : "text-subtitle/30 hover:text-red-400 hover:bg-button-background-secondary/50"
+                      }`}
+                      title={
+                        favoriteParties.includes(p.name)
+                          ? "Quitar de favoritos"
+                          : "Marcar como favorito"
+                      }
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        fill={
+                          favoriteParties.includes(p.name)
+                            ? "currentColor"
+                            : "none"
+                        }
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={(e) => initiateBlockParty(e, p.name)}
+                      className="p-2 text-subtitle/40 hover:text-button-background-primary hover:bg-button-background-secondary/50 rounded-full transition-colors"
+                      title="Bloquear partido (No ver más)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
@@ -923,6 +978,7 @@ export default function PartidosPage() {
                         {detailState.detail.ejes.length}
                       </p>
                     </div>
+                    <NotasPersonales partyName={selected.name} seccion="ejes" />
                   </>
                 ) : viewMode === "problemas" ? (
                   <>
@@ -993,6 +1049,10 @@ export default function PartidosPage() {
                         </p>
                       </div>
                     )}
+                    <NotasPersonales
+                      partyName={selected.name}
+                      seccion="problemas"
+                    />
                   </>
                 ) : viewMode === "preguntale" ? (
                   <PreguntalePanel partyName={selected.name} />
@@ -1072,6 +1132,10 @@ export default function PartidosPage() {
                         </p>
                       </div>
                     )}
+                    <NotasPersonales
+                      partyName={selected.name}
+                      seccion="escandalos"
+                    />
                   </>
                 )}
               </div>

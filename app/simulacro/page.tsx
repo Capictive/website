@@ -1,11 +1,54 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import BallotSheet from "@/app/components/voting/BallotSheet";
 import Nav from "@/app/components/Nav";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { mockParties } from "@/app/data/mockParties";
+import Image from "next/image";
+
+function normalize(s: string) {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
 
 export default function SimulacroPage() {
+  const [favoriteNames, setFavoriteNames] = useState<string[]>([]);
+  const [showFavs, setShowFavs] = useState(true);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("capictive-favoritos");
+      if (raw) setFavoriteNames(JSON.parse(raw));
+    } catch {
+      /* empty */
+    }
+  }, []);
+
+  // Map favorited party names → mockParties entries with ballot number
+  const favoritesWithBallot = favoriteNames
+    .map((favName) => {
+      const normFav = normalize(favName);
+      const idx = mockParties.findIndex((mp) => normalize(mp.name) === normFav);
+      if (idx === -1) return null;
+      return {
+        party: mockParties[idx],
+        ballotNumber: idx + 1,
+        partyId: mockParties[idx].id,
+      };
+    })
+    .filter(Boolean) as {
+    party: (typeof mockParties)[number];
+    ballotNumber: number;
+    partyId: string;
+  }[];
+
+  // Build set of mockParties IDs that are favorites
+  const favoritePartyIds = favoritesWithBallot.map((f) => f.partyId);
+
   return (
     <main className="min-h-screen pb-20 font-body">
       <Nav />
@@ -33,9 +76,58 @@ export default function SimulacroPage() {
           </p>
         </div>
 
+        {/* Favoritos panel */}
+        {favoritesWithBallot.length > 0 && (
+          <div className="container mx-auto mb-8">
+            <button
+              onClick={() => setShowFavs(!showFavs)}
+              className="flex items-center gap-2 mb-3 font-body text-sm font-semibold text-subtitle hover:text-[#b9832c] transition-colors"
+            >
+              <span>❤️</span> Mis partidos favoritos (
+              {favoritesWithBallot.length})
+              <span
+                className={`transition-transform text-xs ${showFavs ? "rotate-180" : ""}`}
+              >
+                ▼
+              </span>
+            </button>
+            {showFavs && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 animate-fadeIn">
+                {favoritesWithBallot.map(({ party, ballotNumber }) => (
+                  <div
+                    key={party.id}
+                    className="flex items-center gap-3 p-3 bg-white rounded-xl border-2 border-[#b9832c]/30 shadow-sm hover:border-[#b9832c] transition-colors"
+                  >
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#b9832c] text-white font-title font-extrabold text-lg shrink-0">
+                      {ballotNumber}
+                    </div>
+                    <div className="w-10 h-10 relative shrink-0">
+                      <Image
+                        src={party.logo}
+                        alt={party.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-body text-sm font-bold text-subtitle truncate">
+                        {party.name}
+                      </p>
+                      <p className="font-body text-[10px] text-subtitle/60">
+                        N° de orden en cédula: {ballotNumber}
+                      </p>
+                    </div>
+                    <span className="text-red-500 text-lg shrink-0">❤️</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Contenedor fluido sin max-w restrictivo en desktop */}
         <div className="w-full">
-          <BallotSheet />
+          <BallotSheet favoritePartyIds={favoritePartyIds} />
         </div>
       </div>
     </main>
