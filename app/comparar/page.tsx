@@ -204,6 +204,7 @@ function CompararContent() {
   const [selectorOpen, setSelectorOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [blockedParties, setBlockedParties] = useState<string[]>([]);
+  const [showNolanGuide, setShowNolanGuide] = useState(false);
 
   // JSON data
   const [radarData, setRadarData] = useState<unknown[]>([]);
@@ -531,10 +532,73 @@ function CompararContent() {
             />
           )}
           {activeTab === "nolan" && (
-            <DiagramaNolan
-              data={nolanData as never[]}
-              selectedParties={selectedParties}
-            />
+            <div className="space-y-4">
+              {/* Toggle guía de posiciones */}
+              <div className="flex justify-center">
+                <button
+                  onClick={() => setShowNolanGuide(!showNolanGuide)}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-subtitle/20 font-body text-sm text-subtitle hover:bg-gray-50 transition-colors"
+                >
+                  <span>❓</span>
+                  {showNolanGuide
+                    ? "Ocultar guía"
+                    : "¿Qué significa cada posición?"}
+                  <span
+                    className={`text-xs transition-transform ${showNolanGuide ? "rotate-180" : ""}`}
+                  >
+                    ▼
+                  </span>
+                </button>
+              </div>
+              {showNolanGuide && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 animate-fadeIn">
+                  <div className="p-3 rounded-xl bg-blue-50 border border-blue-200">
+                    <p className="font-body text-sm font-bold text-blue-800 mb-1">
+                      🗽 Libertario
+                    </p>
+                    <p className="font-body text-xs text-blue-700 leading-relaxed">
+                      Quiere más libertad en todo: que el Estado no se meta ni
+                      en tu economía ni en tu vida personal. Menos impuestos,
+                      menos regulaciones, más decisiones individuales.
+                    </p>
+                  </div>
+                  <div className="p-3 rounded-xl bg-red-50 border border-red-200">
+                    <p className="font-body text-sm font-bold text-red-800 mb-1">
+                      👊 Autoritario
+                    </p>
+                    <p className="font-body text-xs text-red-700 leading-relaxed">
+                      Quiere un Estado fuerte que controle tanto la economía
+                      como la vida personal. Más reglas, más orden, más
+                      intervención del gobierno en todo.
+                    </p>
+                  </div>
+                  <div className="p-3 rounded-xl bg-green-50 border border-green-200">
+                    <p className="font-body text-sm font-bold text-green-800 mb-1">
+                      🌿 Liberal (Izquierda)
+                    </p>
+                    <p className="font-body text-xs text-green-700 leading-relaxed">
+                      Defiende la libertad personal (cada quien vive como
+                      quiera), pero quiere que el Estado intervenga más en la
+                      economía para reducir la desigualdad.
+                    </p>
+                  </div>
+                  <div className="p-3 rounded-xl bg-amber-50 border border-amber-200">
+                    <p className="font-body text-sm font-bold text-amber-800 mb-1">
+                      🏛️ Conservador (Derecha)
+                    </p>
+                    <p className="font-body text-xs text-amber-700 leading-relaxed">
+                      Apoya la libertad económica (libre mercado, menos
+                      impuestos), pero quiere que el Estado regule más la vida
+                      personal con valores tradicionales.
+                    </p>
+                  </div>
+                </div>
+              )}
+              <DiagramaNolan
+                data={nolanData as never[]}
+                selectedParties={selectedParties}
+              />
+            </div>
           )}
           {activeTab === "wordcloud" && (
             <div className="space-y-4">
