@@ -1,13 +1,155 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import logo from "@/public/capictive.png";
 import Nav from "./components/Nav";
 import { ArrowRight } from "lucide-react";
-import { redirect } from "next/dist/server/api-utils";
-// import { navigate } from "next/dist/client/components/segment-cache/navigation";
 import { useRouter } from "next/navigation";
+import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
+
+/* ─── Tour Steps ─── */
+const TOUR_STEPS: Step[] = [
+  {
+    target: "body",
+    content:
+      "¡Bienvenido a Capictive! 🇵🇪 Tu plataforma para informarte sobre las elecciones Perú 2026. Te guiaremos por las funciones principales en unos segundos.",
+    placement: "center",
+    disableBeacon: true,
+  },
+  {
+    target: ".tour-nav-partidos",
+    content:
+      "🗳️ Partidos Políticos: Aquí puedes explorar los 34+ partidos, ver sus ejes de gobierno, problemas identificados, escándalos y hasta hacerle preguntas a la IA sobre sus propuestas.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-nav-comparar",
+    content:
+      "📊 Comparar: Utiliza gráficos interactivos (Radar, Diagrama de Nolan, Nube de Palabras) para comparar las posturas ideológicas de los partidos entre sí.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-nav-candidatos",
+    content:
+      "👤 Candidatos: Busca candidatos por departamento, cargo o partido. Ve su hoja de vida, experiencia, antecedentes, y marca tus favoritos.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-simulacro",
+    content:
+      "🗳️ Simulacro de Votación: Practica tu voto con una cédula interactiva idéntica a la real. Elige presidente, senadores, diputados y parlamento andino. Usa el voto preferencial escribiendo los números de tus candidatos favoritos en las casillas.",
+    placement: "top",
+  },
+  {
+    target: ".tour-timeline",
+    content:
+      "📅 Línea de Tiempo: Sigue el calendario electoral completo. Haz clic en cada punto para ver qué sucede en cada fecha importante hasta el día de la elección.",
+    placement: "top",
+  },
+  {
+    target: "body",
+    content:
+      "¡Listo! Ya conoces las herramientas principales. Explora, compara y decide con información. Tu voto importa. 🌟",
+    placement: "center",
+  },
+];
+
+const TOUR_IMAGES: Record<number, string> = {
+  0: "/pose/searching.png",
+  1: "/pose/reading.png",
+  2: "/pose/giveme.png",
+  3: "/pose/searching.png",
+  4: "/pose/sending.png",
+  5: "/pose/reading.png",
+  6: "/pose/lost.png",
+};
+
+/* ─── Custom Tooltip ─── */
+interface CustomTooltipProps {
+  continuous: boolean;
+  index: number;
+  step: Step;
+  backProps: React.HTMLAttributes<HTMLButtonElement>;
+  primaryProps: React.HTMLAttributes<HTMLButtonElement>;
+  skipProps: React.HTMLAttributes<HTMLButtonElement>;
+  tooltipProps: React.HTMLAttributes<HTMLDivElement>;
+  isLastStep: boolean;
+}
+
+const CustomTooltip = ({
+  continuous,
+  index,
+  step,
+  backProps,
+  primaryProps,
+  skipProps,
+  tooltipProps,
+  isLastStep,
+}: CustomTooltipProps) => (
+  <div
+    {...tooltipProps}
+    className="bg-white rounded-2xl shadow-2xl p-0 max-w-sm overflow-hidden"
+  >
+    {TOUR_IMAGES[index] && (
+      <div className="bg-linear-to-br from-button-background-primary/20 to-button-background-secondary flex justify-center py-4">
+        <Image
+          src={TOUR_IMAGES[index]}
+          alt="Tour illustration"
+          width={120}
+          height={120}
+          className="object-contain"
+        />
+      </div>
+    )}
+    <div className="p-5">
+      {step.title && (
+        <h3 className="font-title text-subtitle text-lg font-bold mb-2">
+          {step.title}
+        </h3>
+      )}
+      <p className="font-body text-subtitle/80 text-sm leading-relaxed">
+        {step.content}
+      </p>
+      <div className="flex gap-1 mt-4 mb-3">
+        {TOUR_STEPS.map((_, i) => (
+          <div
+            key={`step-${i}`}
+            className={`h-1 flex-1 rounded-full transition-colors ${
+              i <= index ? "bg-button-background-primary" : "bg-gray-200"
+            }`}
+          />
+        ))}
+      </div>
+      <div className="flex items-center justify-between mt-4">
+        <button
+          {...skipProps}
+          className="text-xs font-body text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          Saltar tour
+        </button>
+        <div className="flex gap-2">
+          {index > 0 && (
+            <button
+              {...backProps}
+              className="px-3 py-1.5 text-sm font-body text-subtitle hover:bg-gray-100 rounded-lg transition-colors"
+            >
+              Atrás
+            </button>
+          )}
+          {continuous && (
+            <button
+              {...primaryProps}
+              className="px-4 py-1.5 text-sm font-body font-bold bg-button-background-primary text-white rounded-lg hover:bg-button-background-primary/90 transition-colors"
+            >
+              {isLastStep ? "¡Explorar!" : "Siguiente"}
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 const timelineEvents = [
   {
@@ -166,6 +308,29 @@ export default function Home() {
   const [isAnimating, setIsAnimating] = useState(false);
   const router = useRouter();
 
+  // Tour state
+  const [runTour, setRunTour] = useState(false);
+  const [tourCompleted, setTourCompleted] = useState(false);
+
+  useEffect(() => {
+    const seen = localStorage.getItem("home-tour-completed");
+    if (!seen) {
+      const t = setTimeout(() => setRunTour(true), 1000);
+      return () => clearTimeout(t);
+    } else {
+      setTourCompleted(true);
+    }
+  }, []);
+
+  const handleTourCallback = useCallback((data: CallBackProps) => {
+    const finished: string[] = [STATUS.FINISHED, STATUS.SKIPPED];
+    if (finished.includes(data.status)) {
+      setRunTour(false);
+      setTourCompleted(true);
+      localStorage.setItem("home-tour-completed", "true");
+    }
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -201,6 +366,21 @@ export default function Home() {
 
   return (
     <main>
+      {/* Joyride */}
+      <Joyride
+        steps={TOUR_STEPS}
+        run={runTour}
+        continuous
+        showSkipButton
+        showProgress
+        callback={handleTourCallback}
+        tooltipComponent={CustomTooltip}
+        floaterProps={{ styles: { arrow: { color: "#fff" } } }}
+        styles={{
+          options: { overlayColor: "rgba(80, 50, 36, 0.5)", zIndex: 10000 },
+        }}
+      />
+
       <Nav />
       {/* Hero Header */}
       <div className="p-6 md:p-10 border-b border-subtitle   ">
@@ -241,6 +421,14 @@ export default function Home() {
         <p className="font-body text-lg mt-2 relative z-10">
           O bueno... varios 🤔
         </p>
+        {tourCompleted && (
+          <button
+            onClick={() => setRunTour(true)}
+            className="mt-3 text-xs font-body text-button-background-primary hover:underline relative z-10"
+          >
+            🎯 Ver tutorial nuevamente
+          </button>
+        )}
       </div>
 
       {/* Partidos Section */}
@@ -397,7 +585,7 @@ export default function Home() {
       </section>
 
       {/* Simulacro de Votación (CTA) */}
-      <section className="py-16  border-y border-subtitle relative overflow-hidden group">
+      <section className="tour-simulacro py-16  border-y border-subtitle relative overflow-hidden group">
         <div className="absolute inset-0  opacity-5 scale-150 rotate-12 blur-sm group-hover:opacity-10 transition-opacity"></div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -545,7 +733,7 @@ function TimelineElectoral() {
   const currentEventIndex = getCurrentEventIndex();
 
   return (
-    <div className="mt-6 py-8 border-y border-subtitle">
+    <div className="tour-timeline mt-6 py-8 border-y border-subtitle">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="font-title text-subtitle text-3xl md:text-4xl font-bold mb-2">

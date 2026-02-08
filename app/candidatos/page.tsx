@@ -335,6 +335,10 @@ export default function CandidatosPage() {
   const [isNacional, setIsNacional] = useState<boolean>(false);
   const [isExtranjero, setIsExtranjero] = useState<boolean>(false);
 
+  // Estado para búsqueda por nombre
+  const [searchInput, setSearchInput] = useState<string>("");
+  const [searchNombre, setSearchNombre] = useState<string>("");
+
   // Estados para datos de API
   // Eliminado: masterCandidatos ya no se usa
   const [loading, setLoading] = useState<boolean>(false);
@@ -476,6 +480,11 @@ export default function CandidatosPage() {
       selectedPartidos.forEach((p) => params.append("partido", p));
     }
 
+    // Filtro de nombre
+    if (searchNombre.trim()) {
+      params.append("nombreCompleto", searchNombre.trim().toUpperCase());
+    }
+
     return `${API_BASE_URL}/candidatos?${params.toString()}`;
   }, [
     currentPage,
@@ -484,6 +493,7 @@ export default function CandidatosPage() {
     isNacional,
     isExtranjero,
     selectedPartidos,
+    searchNombre,
   ]);
 
   // Estado para los candidatos de la página actual
@@ -536,7 +546,7 @@ export default function CandidatosPage() {
   // Reset de página cuando cambian los filtros principales (no partidos)
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedCargo, selectedRegion, isNacional, isExtranjero]);
+  }, [selectedCargo, selectedRegion, isNacional, isExtranjero, searchNombre]);
 
   // Cuando se aplican los partidos (al cerrar el dropdown), recargar la página 1
   useEffect(() => {
@@ -556,6 +566,19 @@ export default function CandidatosPage() {
       setIsExtranjero(false);
       setSelectedRegion(null);
     }
+  };
+
+  // Handler para búsqueda por nombre
+  const handleSearchSubmit = () => {
+    setSearchNombre(searchInput.trim().toUpperCase());
+    setCurrentPage(1);
+  };
+
+  // Handler para limpiar búsqueda
+  const handleClearSearch = () => {
+    setSearchInput("");
+    setSearchNombre("");
+    setCurrentPage(1);
   };
 
   // Toggle partido en la selección draft o real según estado del dropdown
@@ -643,6 +666,25 @@ export default function CandidatosPage() {
     setIsExtranjero(false);
   };
 
+  // Handler para click en candidato — abre modal y auto-selecciona departamento en el mapa
+  const handleCandidatoClick = (candidato: Candidato) => {
+    setSelectedCandidato(candidato);
+    const dep = candidato.postulaDepartamento;
+    if (dep === "Nacional") {
+      setIsNacional(true);
+      setIsExtranjero(false);
+      setSelectedRegion(null);
+    } else if (dep === "RESIDENTES EN EL EXTRANJERO") {
+      setIsExtranjero(true);
+      setIsNacional(false);
+      setSelectedRegion(null);
+    } else if (dep) {
+      setIsNacional(false);
+      setIsExtranjero(false);
+      setSelectedRegion(dep);
+    }
+  };
+
   // Agrupar candidatos por partido (usando los filtrados de la página actual)
   const candidatosPorPartido = useMemo<PartidoAgrupado[]>(() => {
     const grupos: Record<string, PartidoAgrupado> = {};
@@ -715,7 +757,12 @@ export default function CandidatosPage() {
     }
 
     // Sin filtros seleccionados
-    if (!selectedRegion && !isNacional && !isExtranjero) {
+    if (
+      !selectedRegion &&
+      !isNacional &&
+      !isExtranjero &&
+      !searchNombre.trim()
+    ) {
       return (
         <div className="h-full flex flex-col items-center justify-center text-center p-8">
           <p className="text-6xl mb-4">🗺️</p>
@@ -736,11 +783,13 @@ export default function CandidatosPage() {
         <div className="h-full flex flex-col items-center justify-center text-center p-8">
           <p className="text-6xl mb-4">📭</p>
           <h3 className="font-title text-subtitle text-xl font-bold">
-            {isNacional
-              ? "Nacional"
-              : isExtranjero
-                ? "Residentes en el Extranjero"
-                : selectedRegion}
+            {searchNombre && !selectedRegion && !isNacional && !isExtranjero
+              ? `🔍 "${searchNombre}"`
+              : isNacional
+                ? "Nacional"
+                : isExtranjero
+                  ? "Residentes en el Extranjero"
+                  : selectedRegion}
           </h3>
           <p className="font-body text-subtitle/60 mt-2">
             No hay candidatos con los filtros seleccionados
@@ -758,11 +807,13 @@ export default function CandidatosPage() {
         <div className="flex items-center justify-between mb-4 pb-3 border-b border-subtitle/20">
           <div>
             <h2 className="font-title text-subtitle text-2xl font-bold">
-              {isNacional
-                ? "🏛️ Nacional"
-                : isExtranjero
-                  ? "🌍 Residentes en el Extranjero"
-                  : selectedRegion}
+              {searchNombre && !selectedRegion && !isNacional && !isExtranjero
+                ? `🔍 Resultados para "${searchNombre}"`
+                : isNacional
+                  ? "🏛️ Nacional"
+                  : isExtranjero
+                    ? "🌍 Residentes en el Extranjero"
+                    : selectedRegion}
             </h2>
             <p className="font-body text-subtitle/60 text-sm mt-1">
               {candidatosFiltrados.length} candidato
@@ -807,7 +858,7 @@ export default function CandidatosPage() {
                   return (
                     <button
                       key={candidato.id}
-                      onClick={() => setSelectedCandidato(candidato)}
+                      onClick={() => handleCandidatoClick(candidato)}
                       className={`w-full flex items-center justify-between rounded-xl px-4 py-3 border hover:shadow-md transition-all duration-200 group text-left ${
                         isCandFav
                           ? "bg-red-50/80 border-red-200 hover:border-red-400"
@@ -921,27 +972,6 @@ export default function CandidatosPage() {
       />
 
       <Nav />
-
-      {/* Botones discretos de apoyo y compartir */}
-      <div className="flex justify-between py-3">
-        <a
-          href="https://wa.me/?text=%C2%A1Mira%20esta%20p%C3%A1gina%20para%20informarte%20sobre%20las%20elecciones%202026%21%20%F0%9F%97%B3%EF%B8%8F%20https%3A%2F%2Fcapictive.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm font-body underline p-1 hover:bg-transparent text-subtitle hover:text-green-600 transition-colors flex items-center gap-1"
-        >
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Compartir
-        </a>
-        <a
-          href="/apoyar"
-          className="text-sm font-body text-subtitle font-bold hover:text-button-background-primary transition-colors flex items-center gap-1"
-        >
-          ❤️ Apoyar la página
-        </a>
-      </div>
 
       {/* Header */}
       <div className="py-8 border-y text-center border-subtitle">
@@ -1075,6 +1105,46 @@ export default function CandidatosPage() {
                   </label>
                 ))}
               </div>
+            )}
+          </div>
+
+          {/* Búsqueda por nombre */}
+          <div className="flex-1 min-w-50">
+            <label className="block text-sm font-body text-subtitle/70 mb-1">
+              Buscar por nombre
+            </label>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleSearchSubmit();
+                }}
+                placeholder="Ej: ROBERTO"
+                className="flex-1 px-4 py-2 rounded-lg border border-subtitle/20 bg-white font-body text-subtitle focus:outline-none focus:border-button-background-primary"
+              />
+              <button
+                onClick={handleSearchSubmit}
+                className="px-4 py-2 rounded-lg bg-button-background-primary text-white font-body text-sm font-bold hover:bg-button-background-primary/90 transition-colors"
+                title="Buscar"
+              >
+                🔍
+              </button>
+              {searchNombre && (
+                <button
+                  onClick={handleClearSearch}
+                  className="px-3 py-2 rounded-lg bg-white border border-subtitle/20 text-subtitle hover:bg-gray-50 transition-colors"
+                  title="Limpiar búsqueda"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+            {searchNombre && (
+              <p className="mt-1 text-xs font-body text-button-background-primary">
+                Buscando: &quot;{searchNombre}&quot;
+              </p>
             )}
           </div>
         </div>
