@@ -21,27 +21,39 @@ const API_BASE_URL = "https://candidates.capictive.app";
 // Mapeo de logos de partidos políticos
 const logoMap: Record<string, string> = {
   "Ahora Nación": "/political parties/ahora_nacion_logo.png",
-  "Alianza Electoral Venceremos": "/political parties/alianza_electoral_venceremos_logo.jpg",
-  "Alianza Fuerza y Libertad": "/political parties/alianza_fuerza_y_libertad_logo.png",
-  "Alianza Para el Progreso": "/political parties/alianza_para_el_progreso_logo.png",
-  "Alianza Unidad Nacional": "/political parties/alianza_unidad_nacional_logo.jpg",
+  "Alianza Electoral Venceremos":
+    "/political parties/alianza_electoral_venceremos_logo.jpg",
+  "Alianza Fuerza y Libertad":
+    "/political parties/alianza_fuerza_y_libertad_logo.png",
+  "Alianza Para el Progreso":
+    "/political parties/alianza_para_el_progreso_logo.png",
+  "Alianza Unidad Nacional":
+    "/political parties/alianza_unidad_nacional_logo.jpg",
   "Avanza País": "/political parties/avanza_pais_logo.png",
   "Cooperación Popular": "/political parties/cooperacion_popular_logo.png",
   "Fe en el Perú": "/political parties/fe_en_el_peru_logo.png",
-  "Frente de la Esperanza": "/political parties/frente_de_la_esperanza_logo.png",
+  "Frente de la Esperanza":
+    "/political parties/frente_de_la_esperanza_logo.png",
   "Fuerza Popular": "/political parties/fuerza_popular_logo.png",
   "Integridad Democrática": "/political parties/integrida_democratica_logo.jpg",
   "Juntos por el Perú": "/political parties/juntos_por_el_peru_logo.png",
   "Libertad Popular": "/political parties/libertad_popular_logo.jpg",
-  "Partido Aprista Peruano": "/political parties/partido_aprista_peruano_logo.png",
+  "Partido Aprista Peruano":
+    "/political parties/partido_aprista_peruano_logo.png",
   "Partido Cívico Obras": "/political parties/partido_civico_obras_logo.png",
-  "Partido de los Trabajadores y Emprendedores PTE - PERU": "/political parties/partido_de_los_trabajadores_y_emprendedores_pte_-_peru_logo.jpg",
-  "Partido del Buen Gobierno": "/political parties/partido_del_buen_gobierno_logo.jpg",
-  "Partido Democrático Federal": "/political parties/partido_democratico_federal_logo.png",
-  "Partido Demócrata Unido Perú": "/political parties/partido_democrata_unido_peru_logo.jpg",
-  "Partido Demócrata Verde": "/political parties/partido_democrata_verde_logo.png",
+  "Partido de los Trabajadores y Emprendedores PTE - PERU":
+    "/political parties/partido_de_los_trabajadores_y_emprendedores_pte_-_peru_logo.jpg",
+  "Partido del Buen Gobierno":
+    "/political parties/partido_del_buen_gobierno_logo.jpg",
+  "Partido Democrático Federal":
+    "/political parties/partido_democratico_federal_logo.png",
+  "Partido Demócrata Unido Perú":
+    "/political parties/partido_democrata_unido_peru_logo.jpg",
+  "Partido Demócrata Verde":
+    "/political parties/partido_democrata_verde_logo.png",
   "Partido Morado": "/political parties/partido_morado_logo.png",
-  "Partido Patriótico del Perú": "/political parties/partido_patriotico_del_peru_logo.png",
+  "Partido Patriótico del Perú":
+    "/political parties/partido_patriotico_del_peru_logo.png",
   "Partido Político PRIN": "/political parties/partido_politico_prin_logo.png",
   "País para todos": "/political parties/pais_para_todos_logo.png",
   "Perú Acción": "/political parties/peru_accion_logo.png",
@@ -49,10 +61,10 @@ const logoMap: Record<string, string> = {
   "Perú Moderno": "/political parties/peru_moderno_logo.jpg",
   "Perú Primero": "/political parties/peru_primero_logo.png",
   "Podemos Perú": "/political parties/podemos_peru_logo.png",
-  "Progresemos": "/political parties/progresemos_logo.jpg",
+  Progresemos: "/political parties/progresemos_logo.jpg",
   "Renovación Popular": "/political parties/renovacion_popular_logo.png",
   "Salvemos al Perú": "/political parties/salvemos_al_peru_logo.png",
-  "SiCreo": "/political parties/sicreo_logo.png",
+  SiCreo: "/political parties/sicreo_logo.png",
   "Somos Perú": "/political parties/somos_peru_logo.svg",
   "Un Camino Diferente": "/political parties/un_camino_diferente_logo.jpg",
 };
@@ -68,7 +80,8 @@ const CARGO_OPTIONS = [
   },
   {
     label: "Fórmula Presidencial",
-    value: "PRESIDENTE DE LA REPÚBLICA,PRIMER VICEPRESIDENTE DE LA REPÚBLICA,SEGUNDO VICEPRESIDENTE DE LA REPÚBLICA",
+    value:
+      "PRESIDENTE DE LA REPÚBLICA,PRIMER VICEPRESIDENTE DE LA REPÚBLICA,SEGUNDO VICEPRESIDENTE DE LA REPÚBLICA",
   },
   {
     label: "Senador",
@@ -128,14 +141,14 @@ const getFillColor = (isSelected: boolean, isNacional: boolean): string => {
 
 // Mapeo de imágenes para cada paso del tour
 const TOUR_IMAGES: Record<number, string> = {
-  0: "/pose/searching.png",  // Bienvenida
-  1: "/pose/reading.png",    // Filtro cargo
-  2: "/pose/reading.png",    // Filtro partidos
-  3: "/pose/searching.png",  // Mapa
-  4: "/pose/giveme.png",     // Nacional
-  5: "/pose/sending.png",    // Extranjero
-  6: "/pose/reading.png",    // Panel candidatos
-  7: "/pose/lost.png",       // Peticiones
+  0: "/pose/searching.png", // Bienvenida
+  1: "/pose/reading.png", // Filtro cargo
+  2: "/pose/reading.png", // Filtro partidos
+  3: "/pose/searching.png", // Mapa
+  4: "/pose/giveme.png", // Nacional
+  5: "/pose/sending.png", // Extranjero
+  6: "/pose/reading.png", // Panel candidatos
+  7: "/pose/lost.png", // Peticiones
 };
 
 // Mapeo de audios para cada paso del tour
@@ -154,43 +167,51 @@ const TOUR_AUDIOS: Record<number, string> = {
 const TOUR_STEPS: Step[] = [
   {
     target: "body",
-    content: "¡Bienvenido a la página de Candidatos! Te guiaremos para que conozcas todas las funcionalidades. 🎉",
+    content:
+      "¡Bienvenido a la página de Candidatos! Te guiaremos para que conozcas todas las funcionalidades. 🎉",
     placement: "center",
     disableBeacon: true,
   },
   {
     target: ".tour-filtro-cargo",
-    content: "Aquí puedes filtrar por tipo de cargo: Fórmula Presidencial, Senador, Diputado o Parlamento Andino.",
+    content:
+      "Aquí puedes filtrar por tipo de cargo: Fórmula Presidencial, Senador, Diputado o Parlamento Andino.",
     placement: "bottom",
   },
   {
     target: ".tour-filtro-partidos",
-    content: "Selecciona uno o varios partidos políticos para ver solo sus candidatos.",
+    content:
+      "Selecciona uno o varios partidos políticos para ver solo sus candidatos.",
     placement: "bottom",
   },
   {
     target: ".tour-mapa",
-    content: "Haz clic en cualquier departamento del mapa para ver los candidatos de esa región.",
+    content:
+      "Haz clic en cualquier departamento del mapa para ver los candidatos de esa región.",
     placement: "left",
   },
   {
     target: ".tour-btn-nacional",
-    content: "Este botón muestra los candidatos a nivel Nacional (como la Fórmula Presidencial).",
+    content:
+      "Este botón muestra los candidatos a nivel Nacional (como la Fórmula Presidencial).",
     placement: "top",
   },
   {
     target: ".tour-btn-extranjero",
-    content: "Este botón muestra los candidatos para Residentes en el Extranjero.",
+    content:
+      "Este botón muestra los candidatos para Residentes en el Extranjero.",
     placement: "top",
   },
   {
     target: ".tour-panel-candidatos",
-    content: "Aquí aparecerán los candidatos según tus filtros. ¡Haz clic en uno para ver más detalles!",
+    content:
+      "Aquí aparecerán los candidatos según tus filtros. ¡Haz clic en uno para ver más detalles!",
     placement: "left",
   },
   {
     target: ".tour-peticiones",
-    content: "Recuerda que tienes 100 consultas diarias. ¡Úsalas sabiamente! 📊",
+    content:
+      "Recuerda que tienes 100 consultas diarias. ¡Úsalas sabiamente! 📊",
     placement: "bottom",
   },
 ];
@@ -207,17 +228,17 @@ interface CustomTooltipProps {
   isLastStep: boolean;
 }
 
-const CustomTooltip = ({ 
-  continuous, 
-  index, 
-  step, 
-  backProps, 
-  primaryProps, 
+const CustomTooltip = ({
+  continuous,
+  index,
+  step,
+  backProps,
+  primaryProps,
   skipProps,
   tooltipProps,
-  isLastStep 
+  isLastStep,
 }: CustomTooltipProps) => (
-  <div 
+  <div
     {...tooltipProps}
     className="bg-white rounded-2xl shadow-2xl p-0 max-w-sm overflow-hidden"
   >
@@ -233,7 +254,7 @@ const CustomTooltip = ({
         />
       </div>
     )}
-    
+
     {/* Contenido */}
     <div className="p-5">
       {step.title && (
@@ -244,7 +265,7 @@ const CustomTooltip = ({
       <p className="font-body text-subtitle/80 text-sm leading-relaxed">
         {step.content}
       </p>
-      
+
       {/* Indicador de progreso */}
       <div className="flex gap-1 mt-4 mb-3">
         {TOUR_STEPS.map((_, i) => (
@@ -256,7 +277,7 @@ const CustomTooltip = ({
           />
         ))}
       </div>
-      
+
       {/* Botones */}
       <div className="flex items-center justify-between mt-4">
         <button
@@ -265,7 +286,7 @@ const CustomTooltip = ({
         >
           Saltar tour
         </button>
-        
+
         <div className="flex gap-2">
           {index > 0 && (
             <button
@@ -291,7 +312,7 @@ const CustomTooltip = ({
 
 export default function CandidatosPage() {
   const router = useRouter();
-  
+
   // Hook de límite de API
   const {
     remainingRequests,
@@ -307,28 +328,39 @@ export default function CandidatosPage() {
   const [selectedPartidos, setSelectedPartidos] = useState<string[]>([]); // Los partidos realmente aplicados
   const [partidosDraft, setPartidosDraft] = useState<string[]>([]); // Los partidos seleccionados en el dropdown
   const [showPartidosDropdown, setShowPartidosDropdown] = useState(false);
-  
+
   // Estados para departamento/región
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
   const [isNacional, setIsNacional] = useState<boolean>(false);
   const [isExtranjero, setIsExtranjero] = useState<boolean>(false);
-  
+
   // Estados para datos de API
   // Eliminado: masterCandidatos ya no se usa
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [total, setTotal] = useState<number>(0);
-  
-  const [selectedCandidato, setSelectedCandidato] = useState<Candidato | null>(null);
+
+  const [selectedCandidato, setSelectedCandidato] = useState<Candidato | null>(
+    null,
+  );
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   // Candidatos favoritos
   const [favCandidatos, setFavCandidatos] = useState<
-    { id: number; nombreCompleto: string; numeroCandidato: number | null; partido: string; cargo: string }[]
+    {
+      id: number;
+      nombreCompleto: string;
+      numeroCandidato: number | null;
+      partido: string;
+      cargo: string;
+    }[]
   >([]);
-  const favCandidatoIds = useMemo(() => new Set(favCandidatos.map((f) => f.id)), [favCandidatos]);
+  const favCandidatoIds = useMemo(
+    () => new Set(favCandidatos.map((f) => f.id)),
+    [favCandidatos],
+  );
 
   // Constante para paginación local
   // Eliminado: PAGE_SIZE ya no se usa
@@ -336,7 +368,7 @@ export default function CandidatosPage() {
   // Estado del tour
   const [runTour, setRunTour] = useState<boolean>(false);
   const [tourCompleted, setTourCompleted] = useState<boolean>(false);
-  
+
   // Ref para el audio del tour
   const tourAudioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -347,12 +379,14 @@ export default function CandidatosPage() {
       tourAudioRef.current.pause();
       tourAudioRef.current.currentTime = 0;
     }
-    
+
     const audioSrc = TOUR_AUDIOS[stepIndex];
     if (audioSrc) {
       tourAudioRef.current = new Audio(audioSrc);
       tourAudioRef.current.volume = 0.7;
-      tourAudioRef.current.play().catch(err => console.log("Audio autoplay blocked:", err));
+      tourAudioRef.current
+        .play()
+        .catch((err) => console.log("Audio autoplay blocked:", err));
     }
   }, []);
 
@@ -391,7 +425,7 @@ export default function CandidatosPage() {
   const handleTourCallback = (data: CallBackProps) => {
     const { status, index, type } = data;
     const finishedStatuses: string[] = [STATUS.FINISHED, STATUS.SKIPPED];
-    
+
     // Reproducir audio cuando cambia el paso
     if (type === "step:after" || type === "tour:start") {
       const nextIndex = type === "tour:start" ? 0 : index + 1;
@@ -399,12 +433,12 @@ export default function CandidatosPage() {
         playTourAudio(nextIndex);
       }
     }
-    
+
     // Reproducir audio del primer paso al iniciar
     if (type === "tour:start") {
       playTourAudio(0);
     }
-    
+
     if (finishedStatuses.includes(status)) {
       stopTourAudio();
       setRunTour(false);
@@ -443,7 +477,14 @@ export default function CandidatosPage() {
     }
 
     return `${API_BASE_URL}/candidatos?${params.toString()}`;
-  }, [currentPage, selectedCargo, selectedRegion, isNacional, isExtranjero, selectedPartidos]);
+  }, [
+    currentPage,
+    selectedCargo,
+    selectedRegion,
+    isNacional,
+    isExtranjero,
+    selectedPartidos,
+  ]);
 
   // Estado para los candidatos de la página actual
   const [candidatos, setCandidatos] = useState<Candidato[]>([]);
@@ -455,7 +496,9 @@ export default function CandidatosPage() {
   // Fetch de candidatos de la página actual
   const fetchCandidatos = useCallback(async () => {
     if (!canMakeRequest) {
-      setError("Has agotado tus consultas de hoy. ¡Apoya al creador para seguir usando la plataforma!");
+      setError(
+        "Has agotado tus consultas de hoy. ¡Apoya al creador para seguir usando la plataforma!",
+      );
       router.push("/apoyar");
       return;
     }
@@ -505,7 +548,10 @@ export default function CandidatosPage() {
   const handleCargoChange = (cargo: string) => {
     setSelectedCargo(cargo);
     // Si es Fórmula Presidencial, activar automáticamente Nacional
-    if (cargo === "PRESIDENTE DE LA REPÚBLICA,PRIMER VICEPRESIDENTE DE LA REPÚBLICA,SEGUNDO VICEPRESIDENTE DE LA REPÚBLICA") {
+    if (
+      cargo ===
+      "PRESIDENTE DE LA REPÚBLICA,PRIMER VICEPRESIDENTE DE LA REPÚBLICA,SEGUNDO VICEPRESIDENTE DE LA REPÚBLICA"
+    ) {
       setIsNacional(true);
       setIsExtranjero(false);
       setSelectedRegion(null);
@@ -515,16 +561,16 @@ export default function CandidatosPage() {
   // Toggle partido en la selección draft o real según estado del dropdown
   const togglePartido = (partido: string) => {
     if (showPartidosDropdown) {
-      setPartidosDraft(prev =>
+      setPartidosDraft((prev) =>
         prev.includes(partido)
-          ? prev.filter(p => p !== partido)
-          : [...prev, partido]
+          ? prev.filter((p) => p !== partido)
+          : [...prev, partido],
       );
     } else {
-      setSelectedPartidos(prev =>
+      setSelectedPartidos((prev) =>
         prev.includes(partido)
-          ? prev.filter(p => p !== partido)
-          : [...prev, partido]
+          ? prev.filter((p) => p !== partido)
+          : [...prev, partido],
       );
     }
   };
@@ -553,16 +599,20 @@ export default function CandidatosPage() {
     try {
       await navigator.clipboard.writeText(nombreCompleto);
       // Mostrar notificación de copiado
-      const notification = document.createElement('div');
-      notification.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 font-body text-sm';
-      notification.textContent = '✓ Nombre copiado al portapapeles';
+      const notification = document.createElement("div");
+      notification.className =
+        "fixed bottom-4 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 font-body text-sm";
+      notification.textContent = "✓ Nombre copiado al portapapeles";
       document.body.appendChild(notification);
       setTimeout(() => notification.remove(), 2000);
     } catch (err) {
-      console.error('Error al copiar:', err);
+      console.error("Error al copiar:", err);
     }
     // Abrir página del JNE
-    window.open('https://plataformaelectoral.jne.gob.pe/candidatos/busqueda/buscar', '_blank');
+    window.open(
+      "https://plataformaelectoral.jne.gob.pe/candidatos/busqueda/buscar",
+      "_blank",
+    );
   };
 
   // Seleccionar región del mapa
@@ -630,7 +680,10 @@ export default function CandidatosPage() {
               cargo: candidato.cargo,
             },
           ];
-      localStorage.setItem("capictive-favoritos-candidatos", JSON.stringify(next));
+      localStorage.setItem(
+        "capictive-favoritos-candidatos",
+        JSON.stringify(next),
+      );
       return next;
     });
   };
@@ -670,7 +723,8 @@ export default function CandidatosPage() {
             Selecciona una ubicación
           </h3>
           <p className="font-body text-subtitle/60 mt-2">
-            Haz clic en un departamento del mapa, o usa los botones de Nacional 🏛️ o Extranjero 🌍
+            Haz clic en un departamento del mapa, o usa los botones de Nacional
+            🏛️ o Extranjero 🌍
           </p>
         </div>
       );
@@ -682,7 +736,11 @@ export default function CandidatosPage() {
         <div className="h-full flex flex-col items-center justify-center text-center p-8">
           <p className="text-6xl mb-4">📭</p>
           <h3 className="font-title text-subtitle text-xl font-bold">
-            {isNacional ? "Nacional" : isExtranjero ? "Residentes en el Extranjero" : selectedRegion}
+            {isNacional
+              ? "Nacional"
+              : isExtranjero
+                ? "Residentes en el Extranjero"
+                : selectedRegion}
           </h3>
           <p className="font-body text-subtitle/60 mt-2">
             No hay candidatos con los filtros seleccionados
@@ -700,10 +758,16 @@ export default function CandidatosPage() {
         <div className="flex items-center justify-between mb-4 pb-3 border-b border-subtitle/20">
           <div>
             <h2 className="font-title text-subtitle text-2xl font-bold">
-              {isNacional ? "🏛️ Nacional" : isExtranjero ? "🌍 Residentes en el Extranjero" : selectedRegion}
+              {isNacional
+                ? "🏛️ Nacional"
+                : isExtranjero
+                  ? "🌍 Residentes en el Extranjero"
+                  : selectedRegion}
             </h2>
             <p className="font-body text-subtitle/60 text-sm mt-1">
-              {candidatosFiltrados.length} candidato{candidatosFiltrados.length !== 1 ? "s" : ""} encontrado{candidatosFiltrados.length !== 1 ? "s" : ""}
+              {candidatosFiltrados.length} candidato
+              {candidatosFiltrados.length !== 1 ? "s" : ""} encontrado
+              {candidatosFiltrados.length !== 1 ? "s" : ""}
               {selectedPartidos.length > 0 && ` (de ${total} total)`}
             </p>
           </div>
@@ -733,9 +797,7 @@ export default function CandidatosPage() {
                 ) : (
                   <div className="w-6 h-6 rounded-full shrink-0 bg-gray-400" />
                 )}
-                <h3 className="font-body font-bold">
-                  {partido.nombre}
-                </h3>
+                <h3 className="font-body font-bold">{partido.nombre}</h3>
               </div>
 
               {/* Candidatos del partido */}
@@ -771,17 +833,27 @@ export default function CandidatosPage() {
                         <span
                           onClick={(e) => toggleFavCandidato(e, candidato)}
                           className="text-lg cursor-pointer hover:scale-125 transition-transform"
-                          title={isCandFav ? "Quitar de favoritos" : "Marcar como favorito"}
+                          title={
+                            isCandFav
+                              ? "Quitar de favoritos"
+                              : "Marcar como favorito"
+                          }
                         >
                           {isCandFav ? "❤️" : "🤍"}
                         </span>
                         {candidato.experienciaPolitica === 1 && (
-                          <span className="text-lg" title="Experiencia política">
+                          <span
+                            className="text-lg"
+                            title="Experiencia política"
+                          >
                             ⚖️
                           </span>
                         )}
                         {candidato.experienciaCongreso === 1 && (
-                          <span className="text-lg" title="Experiencia en Congreso">
+                          <span
+                            className="text-lg"
+                            title="Experiencia en Congreso"
+                          >
                             🏛️
                           </span>
                         )}
@@ -859,7 +931,7 @@ export default function CandidatosPage() {
           className="text-sm font-body underline p-1 hover:bg-transparent text-subtitle hover:text-green-600 transition-colors flex items-center gap-1"
         >
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
           </svg>
           Compartir
         </a>
@@ -898,7 +970,9 @@ export default function CandidatosPage() {
         <div className="flex flex-wrap gap-4">
           {/* Select de Cargo */}
           <div className="tour-filtro-cargo flex-1 min-w-[200px]">
-            <label className="block text-sm font-body text-subtitle/70 mb-1">Cargo</label>
+            <label className="block text-sm font-body text-subtitle/70 mb-1">
+              Cargo
+            </label>
             <select
               value={selectedCargo}
               onChange={(e) => handleCargoChange(e.target.value)}
@@ -914,7 +988,9 @@ export default function CandidatosPage() {
 
           {/* Dropdown de Partidos */}
           <div className="tour-filtro-partidos flex-1 min-w-[200px] relative">
-            <label className="block text-sm font-body text-subtitle/70 mb-1">Partidos</label>
+            <label className="block text-sm font-body text-subtitle/70 mb-1">
+              Partidos
+            </label>
             <button
               onClick={() => {
                 if (showPartidosDropdown) {
@@ -925,16 +1001,34 @@ export default function CandidatosPage() {
               }}
               className="w-full px-4 py-2 rounded-lg border border-subtitle/20 bg-white font-body text-subtitle text-left flex items-center justify-between focus:outline-none focus:border-button-background-primary"
               type="button"
-              title={showPartidosDropdown ? "Cerrar selección de partidos" : undefined}
+              title={
+                showPartidosDropdown
+                  ? "Cerrar selección de partidos"
+                  : undefined
+              }
               style={showPartidosDropdown ? { cursor: "pointer" } : {}}
             >
-              <span className={selectedPartidos.length === 0 ? "text-subtitle/50" : ""}>
+              <span
+                className={
+                  selectedPartidos.length === 0 ? "text-subtitle/50" : ""
+                }
+              >
                 {selectedPartidos.length === 0
                   ? "Todos los partidos"
                   : `${selectedPartidos.length} seleccionado${selectedPartidos.length > 1 ? "s" : ""}`}
               </span>
-              <svg className={`w-4 h-4 transition-transform ${showPartidosDropdown ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <svg
+                className={`w-4 h-4 transition-transform ${showPartidosDropdown ? "rotate-180" : ""}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
             {/* Dropdown content */}
@@ -975,7 +1069,9 @@ export default function CandidatosPage() {
                         />
                       </div>
                     )}
-                    <span className="font-body text-sm text-subtitle truncate">{partido}</span>
+                    <span className="font-body text-sm text-subtitle truncate">
+                      {partido}
+                    </span>
                   </label>
                 ))}
               </div>
@@ -995,9 +1091,13 @@ export default function CandidatosPage() {
                 <button
                   onClick={() => {
                     if (showPartidosDropdown) {
-                      setPartidosDraft(prev => prev.filter(p => p !== partido));
+                      setPartidosDraft((prev) =>
+                        prev.filter((p) => p !== partido),
+                      );
                     } else {
-                      setSelectedPartidos(prev => prev.filter(p => p !== partido));
+                      setSelectedPartidos((prev) =>
+                        prev.filter((p) => p !== partido),
+                      );
                     }
                   }}
                   className="hover:text-red-500 ml-1"
@@ -1062,14 +1162,41 @@ export default function CandidatosPage() {
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
-                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#503224" floodOpacity="0.4" />
+                <filter
+                  id="shadow"
+                  x="-20%"
+                  y="-20%"
+                  width="140%"
+                  height="140%"
+                >
+                  <feDropShadow
+                    dx="0"
+                    dy="2"
+                    stdDeviation="3"
+                    floodColor="#503224"
+                    floodOpacity="0.4"
+                  />
                 </filter>
                 {/* Filtro de pulso animado para región seleccionada */}
-                <filter id="selected-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <filter
+                  id="selected-glow"
+                  x="-50%"
+                  y="-50%"
+                  width="200%"
+                  height="200%"
+                >
                   <feGaussianBlur stdDeviation="4" result="blur" />
-                  <feFlood floodColor="#b9832c" floodOpacity="0.6" result="color" />
-                  <feComposite in="color" in2="blur" operator="in" result="glow" />
+                  <feFlood
+                    floodColor="#b9832c"
+                    floodOpacity="0.6"
+                    result="color"
+                  />
+                  <feComposite
+                    in="color"
+                    in2="blur"
+                    operator="in"
+                    result="glow"
+                  />
                   <feMerge>
                     <feMergeNode in="glow" />
                     <feMergeNode in="SourceGraphic" />
@@ -1078,13 +1205,20 @@ export default function CandidatosPage() {
               </defs>
               <ZoomableGroup>
                 <Geographies geography={GEO_URL}>
-                  {({ geographies }: { geographies: Array<{ rsmKey: string; properties: { NOMBDEP: string } }> }) =>
+                  {({
+                    geographies,
+                  }: {
+                    geographies: Array<{
+                      rsmKey: string;
+                      properties: { NOMBDEP: string };
+                    }>;
+                  }) =>
                     geographies.map((geo) => {
                       const depName = geo.properties.NOMBDEP;
                       const isSelected = selectedRegion === depName;
                       const isHovered = hoveredRegion === depName;
                       const fillColor = getFillColor(isSelected, isNacional);
-                      
+
                       // Determinar clase CSS para animación
                       const getRegionClass = () => {
                         if (isSelected) return "region-selected";
@@ -1106,7 +1240,9 @@ export default function CandidatosPage() {
                               stroke: isSelected ? "#503224" : "#8a6957",
                               strokeWidth: isSelected ? 2 : 0.5,
                               outline: "none",
-                              filter: isSelected ? "url(#selected-glow)" : "none",
+                              filter: isSelected
+                                ? "url(#selected-glow)"
+                                : "none",
                               transition: "all 0.3s ease-in-out",
                             },
                             hover: {
@@ -1173,13 +1309,13 @@ export default function CandidatosPage() {
       {totalPages > 1 && (
         <div className="mt-6 flex justify-center items-center gap-2">
           <button
-            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
             disabled={currentPage === 1}
             className="px-4 py-2 rounded-lg bg-white/50 text-subtitle font-body font-bold hover:bg-button-background-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             ←
           </button>
-          
+
           {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
             let pageNum: number;
             if (totalPages <= 5) {
@@ -1191,7 +1327,7 @@ export default function CandidatosPage() {
             } else {
               pageNum = currentPage - 2 + i;
             }
-            
+
             return (
               <button
                 key={pageNum}
@@ -1206,15 +1342,15 @@ export default function CandidatosPage() {
               </button>
             );
           })}
-          
+
           <button
-            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
             disabled={currentPage === totalPages}
             className="px-4 py-2 rounded-lg bg-white/50 text-subtitle font-body font-bold hover:bg-button-background-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             →
           </button>
-          
+
           <span className="ml-4 text-sm font-body text-subtitle/60">
             Página {currentPage} de {totalPages}
           </span>
@@ -1273,14 +1409,20 @@ export default function CandidatosPage() {
                   : "bg-gray-100 text-subtitle border border-subtitle/20 hover:bg-gray-200"
               }`}
             >
-              <span>{favCandidatoIds.has(selectedCandidato.id) ? "❤️" : "🤍"}</span>
-              {favCandidatoIds.has(selectedCandidato.id) ? "Candidato favorito" : "Marcar como favorito"}
+              <span>
+                {favCandidatoIds.has(selectedCandidato.id) ? "❤️" : "🤍"}
+              </span>
+              {favCandidatoIds.has(selectedCandidato.id)
+                ? "Candidato favorito"
+                : "Marcar como favorito"}
               {selectedCandidato.numeroCandidato != null && (
-                <span className="ml-1 opacity-70">(N° {selectedCandidato.numeroCandidato})</span>
+                <span className="ml-1 opacity-70">
+                  (N° {selectedCandidato.numeroCandidato})
+                </span>
               )}
             </button>
 
-            {/* Info básica */}}
+            {/* Info básica */}
             <div className="mt-4 bg-white/50 rounded-lg px-4 py-3 space-y-2">
               <p className="text-sm text-subtitle/60 font-body">
                 Postula a:{" "}
@@ -1369,7 +1511,9 @@ export default function CandidatosPage() {
             {/* Botones de acción */}
             <div className="mt-6 flex justify-between items-center gap-3">
               <button
-                onClick={() => handleCorroborar(selectedCandidato.nombreCompleto)}
+                onClick={() =>
+                  handleCorroborar(selectedCandidato.nombreCompleto)
+                }
                 className="flex items-center gap-2 px-4 py-2 cursor-pointer bg-orange-900/40 hover:bg-orange-900/50 text-white rounded-lg font-body text-sm transition-colors"
               >
                 <span>🔍</span>
