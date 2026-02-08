@@ -1,10 +1,17 @@
 "use client";
-import React, { useState, useEffect, useMemo, Suspense } from "react";
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+  Suspense,
+} from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import Nav from "../components/Nav";
 import { PARTIES } from "../lib/parties";
 import dynamic from "next/dynamic";
+import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 
 // Dynamic imports to avoid SSR issues with charts
 const RadarValores = dynamic(
@@ -44,6 +51,149 @@ function ChartSkeleton() {
 
 type Tab = "radar" | "nolan" | "wordcloud";
 
+/* ─── Tour Steps ─── */
+const TOUR_STEPS: Step[] = [
+  {
+    target: "body",
+    content:
+      "¡Bienvenido a la sección de Comparar Partidos! Aquí podrás analizar y comparar partidos usando gráficos interactivos. 🎉",
+    placement: "center",
+    disableBeacon: true,
+  },
+  {
+    target: ".tour-selector-partidos",
+    content:
+      "Primero agrega los partidos que quieras comparar. Puedes seleccionar varios al mismo tiempo y buscarlos por nombre.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-tabs",
+    content:
+      "Aquí cambias entre los 3 tipos de gráficos disponibles: Radar, Diagrama de Nolan y Nube de Palabras.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-tab-radar",
+    content:
+      "📊 El Radar de Valores muestra la posición ideológica de cada partido en diferentes ejes (economía, seguridad, medio ambiente, etc.). Mientras más grande el área, más énfasis pone el partido en ese tema.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-tab-nolan",
+    content:
+      "🧭 El Diagrama de Nolan ubica a cada partido en un plano de Libertad Económica vs Libertad Personal. Sirve para ver si un partido es más liberal, conservador, autoritario o libertario.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-tab-wordcloud",
+    content:
+      "☁️ La Nube de Palabras muestra los términos más usados en el plan de gobierno de un partido. Las palabras más grandes son las que más se repiten.",
+    placement: "bottom",
+  },
+  {
+    target: ".tour-chart-area",
+    content:
+      "El gráfico aparecerá aquí. Selecciona partidos arriba y explora cada pestaña para descubrir diferencias entre los partidos. ¡Compara y decide!",
+    placement: "top",
+  },
+];
+
+const TOUR_IMAGES: Record<number, string> = {
+  0: "/pose/searching.png",
+  1: "/pose/reading.png",
+  2: "/pose/giveme.png",
+  3: "/pose/reading.png",
+  4: "/pose/searching.png",
+  5: "/pose/reading.png",
+  6: "/pose/sending.png",
+};
+
+/* ─── Custom Tooltip ─── */
+interface CustomTooltipProps {
+  continuous: boolean;
+  index: number;
+  step: Step;
+  backProps: React.HTMLAttributes<HTMLButtonElement>;
+  primaryProps: React.HTMLAttributes<HTMLButtonElement>;
+  skipProps: React.HTMLAttributes<HTMLButtonElement>;
+  tooltipProps: React.HTMLAttributes<HTMLDivElement>;
+  isLastStep: boolean;
+}
+
+const CustomTooltip = ({
+  continuous,
+  index,
+  step,
+  backProps,
+  primaryProps,
+  skipProps,
+  tooltipProps,
+  isLastStep,
+}: CustomTooltipProps) => (
+  <div
+    {...tooltipProps}
+    className="bg-white rounded-2xl shadow-2xl p-0 max-w-sm overflow-hidden"
+  >
+    {TOUR_IMAGES[index] && (
+      <div className="bg-linear-to-br from-button-background-primary/20 to-button-background-secondary flex justify-center py-4">
+        <Image
+          src={TOUR_IMAGES[index]}
+          alt="Tour illustration"
+          width={120}
+          height={120}
+          className="object-contain"
+        />
+      </div>
+    )}
+    <div className="p-5">
+      {step.title && (
+        <h3 className="font-title text-subtitle text-lg font-bold mb-2">
+          {step.title}
+        </h3>
+      )}
+      <p className="font-body text-subtitle/80 text-sm leading-relaxed">
+        {step.content}
+      </p>
+      <div className="flex gap-1 mt-4 mb-3">
+        {TOUR_STEPS.map((_, i) => (
+          <div
+            key={`step-${i}`}
+            className={`h-1 flex-1 rounded-full transition-colors ${
+              i <= index ? "bg-button-background-primary" : "bg-gray-200"
+            }`}
+          />
+        ))}
+      </div>
+      <div className="flex items-center justify-between mt-4">
+        <button
+          {...skipProps}
+          className="text-xs font-body text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          Saltar tour
+        </button>
+        <div className="flex gap-2">
+          {index > 0 && (
+            <button
+              {...backProps}
+              className="px-3 py-1.5 text-sm font-body text-subtitle hover:bg-gray-100 rounded-lg transition-colors"
+            >
+              Atrás
+            </button>
+          )}
+          {continuous && (
+            <button
+              {...primaryProps}
+              className="px-4 py-1.5 text-sm font-body font-bold bg-button-background-primary text-white rounded-lg hover:bg-button-background-primary/90 transition-colors"
+            >
+              {isLastStep ? "¡Listo!" : "Siguiente"}
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 function CompararContent() {
   const searchParams = useSearchParams();
   const initialParty = searchParams.get("partido") || "";
@@ -59,6 +209,29 @@ function CompararContent() {
   const [nolanData, setNolanData] = useState<unknown[]>([]);
   const [wordcloudData, setWordcloudData] = useState<unknown[]>([]);
   const [loading, setLoading] = useState(true);
+
+  // Tour state
+  const [runTour, setRunTour] = useState(false);
+  const [tourCompleted, setTourCompleted] = useState(false);
+
+  useEffect(() => {
+    const seen = localStorage.getItem("comparar-tour-completed");
+    if (!seen) {
+      const t = setTimeout(() => setRunTour(true), 800);
+      return () => clearTimeout(t);
+    } else {
+      setTourCompleted(true);
+    }
+  }, []);
+
+  const handleTourCallback = useCallback((data: CallBackProps) => {
+    const finished: string[] = [STATUS.FINISHED, STATUS.SKIPPED];
+    if (finished.includes(data.status)) {
+      setRunTour(false);
+      setTourCompleted(true);
+      localStorage.setItem("comparar-tour-completed", "true");
+    }
+  }, []);
 
   // Load data
   useEffect(() => {
@@ -90,17 +263,17 @@ function CompararContent() {
   }, []);
 
   // Party name list from data that exists in radar/nolan
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   const availableRadarParties = useMemo(
     () => radarData.map((d: any) => d.partido),
     [radarData],
   );
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   const availableNolanParties = useMemo(
     () => nolanData.map((d: any) => d.nombre),
     [nolanData],
   );
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   const availableWordcloudParties = useMemo(
     () => wordcloudData.map((d: any) => d.partido),
     [wordcloudData],
@@ -155,6 +328,21 @@ function CompararContent() {
 
   return (
     <main>
+      {/* Joyride */}
+      <Joyride
+        steps={TOUR_STEPS}
+        run={runTour}
+        continuous
+        showSkipButton
+        showProgress
+        callback={handleTourCallback}
+        tooltipComponent={CustomTooltip}
+        floaterProps={{ styles: { arrow: { color: "#fff" } } }}
+        styles={{
+          options: { overlayColor: "rgba(80, 50, 36, 0.5)", zIndex: 10000 },
+        }}
+      />
+
       <Nav />
 
       {/* Header */}
@@ -165,10 +353,18 @@ function CompararContent() {
         <p className="font-body text-subtitle/70 mt-1">
           Analiza y compara partidos con gráficos interactivos
         </p>
+        {tourCompleted && (
+          <button
+            onClick={() => setRunTour(true)}
+            className="mt-2 text-xs font-body text-button-background-primary hover:underline"
+          >
+            🎯 Ver tutorial nuevamente
+          </button>
+        )}
       </div>
 
       {/* Party selector */}
-      <div className="my-6 space-y-4">
+      <div className="tour-selector-partidos my-6 space-y-4">
         {/* Selected parties chips */}
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-body font-bold text-subtitle/50 uppercase">
@@ -278,12 +474,12 @@ function CompararContent() {
       </div>
 
       {/* Tabs */}
-      <div className="flex items-stretch justify-center gap-1 bg-button-background-secondary/20 rounded-xl p-1 border-2 border-subtitle/10 mb-6">
+      <div className="tour-tabs flex items-stretch justify-center gap-1 bg-button-background-secondary/20 rounded-xl p-1 border-2 border-subtitle/10 mb-6">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex-1 py-2.5 px-3 rounded-lg font-body text-sm font-semibold transition-all border-2 flex items-center justify-center gap-1.5 ${
+            className={`tour-tab-${tab.id} flex-1 py-2.5 px-3 rounded-lg font-body text-sm font-semibold transition-all border-2 flex items-center justify-center gap-1.5 ${
               activeTab === tab.id
                 ? "bg-button-background-primary text-white shadow-md border-button-background-primary"
                 : "text-subtitle hover:bg-white/50 border-transparent"
@@ -314,7 +510,7 @@ function CompararContent() {
           </p>
         </div>
       ) : (
-        <div className="pb-12">
+        <div className="tour-chart-area pb-12">
           {activeTab === "radar" && (
             <RadarValores
               data={radarData as never[]}
