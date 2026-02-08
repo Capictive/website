@@ -1598,15 +1598,21 @@ export default function CandidatosPage() {
               {/* Busca más información */}
               <button
                 onClick={() => {
+                  const parts = [
+                    selectedCandidato.nombreCompleto,
+                    selectedCandidato.partido,
+                    selectedCandidato.resumenHoja || "",
+                    "Noticias Elecciones 2026 Perú",
+                  ];
                   const query = encodeURIComponent(
-                    `${selectedCandidato.nombreCompleto} Hoja de vida Noticias Elecciones 2026 Perú`,
+                    parts.filter(Boolean).join(" "),
                   );
                   window.open(
                     `https://www.perplexity.ai/search/new?q=${query}`,
                     "_blank",
                   );
                 }}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 cursor-pointer bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-body text-sm font-bold transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 cursor-pointer bg-yellow-500 hover:bg-amber-700  rounded-lg font-body text-sm font-bold transition-colors"
               >
                 <span>🌐</span>
                 Busca más información del candidato
