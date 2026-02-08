@@ -73,10 +73,34 @@ const CrossMark = () => (
   </svg>
 );
 
+interface FavCandidate {
+  nombreCompleto: string;
+  numeroCandidato: number | null;
+  partido: string;
+  cargo: string;
+}
+
+function normalizeName(s: string) {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+const VOTE_TYPE_CARGO_MATCH: Record<VoteType, string[]> = {
+  president: ["PRESIDENTE", "VICEPRESIDENTE"],
+  senatorsNational: ["SENADOR"],
+  senatorsUniverse: ["SENADOR"],
+  deputies: ["DIPUTADO"],
+  andean: ["PARLAMENTO"],
+};
+
 export default function BallotSheet({
   favoritePartyIds = [],
+  favoriteCandidates = [],
 }: {
   readonly favoritePartyIds?: string[];
+  readonly favoriteCandidates?: FavCandidate[];
 }) {
   const ballotRef = useRef<HTMLDivElement>(null);
   const summaryRef = useRef<HTMLDivElement>(null);
@@ -782,21 +806,34 @@ export default function BallotSheet({
                   }
                 />
                 <div className="flex-1" style={{ backgroundColor: "#ffffff" }}>
-                  {mockParties.map((party, idx) => (
-                    <LegislativeRow
-                      key={`${col.id}-${party.id}`}
-                      party={party}
-                      voteType={col.type as VoteType}
-                      currentVote={votes[col.type as VoteType]}
-                      onVote={handleVote}
-                      onPreference={handlePreference}
-                      isLast={idx === mockParties.length - 1}
-                      isSelected={
-                        votes[col.type as VoteType].partyId === party.id
-                      }
-                      isMobile={isMobile}
-                    />
-                  ))}
+                  {mockParties.map((party, idx) => {
+                    // Find matching favorite candidates for this party + column
+                    const matchingCands = favoriteCandidates.filter(
+                      (c) =>
+                        normalizeName(c.partido) ===
+                          normalizeName(party.name) &&
+                        VOTE_TYPE_CARGO_MATCH[col.type as VoteType]?.some(
+                          (kw) => c.cargo.toUpperCase().includes(kw),
+                        ),
+                    );
+                    return (
+                      <LegislativeRow
+                        key={`${col.id}-${party.id}`}
+                        party={party}
+                        voteType={col.type as VoteType}
+                        currentVote={votes[col.type as VoteType]}
+                        onVote={handleVote}
+                        onPreference={handlePreference}
+                        isLast={idx === mockParties.length - 1}
+                        isSelected={
+                          votes[col.type as VoteType].partyId === party.id
+                        }
+                        isMobile={isMobile}
+                        isFavorite={favoritePartyIds.includes(party.id)}
+                        matchingCandidates={matchingCands}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             );
@@ -837,6 +874,8 @@ const LegislativeRow = ({
   isLast,
   isSelected,
   isMobile,
+  isFavorite = false,
+  matchingCandidates = [],
 }: {
   party: PoliticalParty;
   voteType: VoteType;
@@ -851,16 +890,32 @@ const LegislativeRow = ({
   isLast: boolean;
   isSelected: boolean;
   isMobile: boolean;
+  isFavorite?: boolean;
+  matchingCandidates?: FavCandidate[];
 }) => {
   return (
     <div
-      className="flex items-stretch transition-colors"
+      className="flex items-stretch transition-colors relative"
       style={{
         borderBottom: isLast ? "none" : "1px solid #000000",
         height: isMobile ? "112px" : "150px",
-        backgroundColor: isSelected ? "#FFF9C4" : "#ffffff",
+        backgroundColor: isSelected
+          ? "#FFF9C4"
+          : isFavorite
+            ? "#FFF0F0"
+            : "#ffffff",
+        borderLeft: isFavorite ? "4px solid #ef4444" : "none",
       }}
     >
+      {/* Favorite badge */}
+      {isFavorite && (
+        <span
+          className="absolute top-1 right-1 z-30 text-xs"
+          style={{ lineHeight: 1 }}
+        >
+          ❤️
+        </span>
+      )}
       {/* Name Cell - ONLY VISIBLE ON MOBILE */}
       {isMobile && (
         <div

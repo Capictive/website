@@ -324,6 +324,12 @@ export default function CandidatosPage() {
   const [selectedCandidato, setSelectedCandidato] = useState<Candidato | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
+  // Candidatos favoritos
+  const [favCandidatos, setFavCandidatos] = useState<
+    { id: number; nombreCompleto: string; numeroCandidato: number | null; partido: string; cargo: string }[]
+  >([]);
+  const favCandidatoIds = useMemo(() => new Set(favCandidatos.map((f) => f.id)), [favCandidatos]);
+
   // Constante para paginación local
   // Eliminado: PAGE_SIZE ya no se usa
 
@@ -368,6 +374,16 @@ export default function CandidatosPage() {
       return () => clearTimeout(timer);
     } else {
       setTourCompleted(true);
+    }
+  }, []);
+
+  // Cargar candidatos favoritos de localStorage
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("capictive-favoritos-candidatos");
+      if (raw) setFavCandidatos(JSON.parse(raw));
+    } catch {
+      /* empty */
     }
   }, []);
 
@@ -597,6 +613,28 @@ export default function CandidatosPage() {
     setTooltipPosition({ x: event.clientX, y: event.clientY });
   };
 
+  // Toggle candidato favorito
+  const toggleFavCandidato = (e: React.MouseEvent, candidato: Candidato) => {
+    e.stopPropagation();
+    setFavCandidatos((prev) => {
+      const exists = prev.some((f) => f.id === candidato.id);
+      const next = exists
+        ? prev.filter((f) => f.id !== candidato.id)
+        : [
+            ...prev,
+            {
+              id: candidato.id,
+              nombreCompleto: candidato.nombreCompleto,
+              numeroCandidato: candidato.numeroCandidato,
+              partido: candidato.partido,
+              cargo: candidato.cargo,
+            },
+          ];
+      localStorage.setItem("capictive-favoritos-candidatos", JSON.stringify(next));
+      return next;
+    });
+  };
+
   // Función para renderizar el panel de candidatos
   const renderCandidatosPanel = () => {
     // Estado de carga
@@ -702,39 +740,60 @@ export default function CandidatosPage() {
 
               {/* Candidatos del partido */}
               <div className="space-y-2">
-                {partido.candidatos.map((candidato) => (
-                  <button
-                    key={candidato.id}
-                    onClick={() => setSelectedCandidato(candidato)}
-                    className="w-full flex items-center justify-between bg-white/60 hover:bg-white rounded-xl px-4 py-3 border border-subtitle/10 hover:border-button-background-primary/50 hover:shadow-md transition-all duration-200 group text-left"
-                  >
-                    <div>
-                      <span className="font-body text-subtitle group-hover:text-button-background-primary transition-colors block">
-                        {candidato.nombreCompleto}
-                      </span>
-                      <span className="font-body text-subtitle/50 text-xs">
-                        {candidato.cargo}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {candidato.experienciaPolitica === 1 && (
-                        <span className="text-lg" title="Experiencia política">
-                          ⚖️
+                {partido.candidatos.map((candidato) => {
+                  const isCandFav = favCandidatoIds.has(candidato.id);
+                  return (
+                    <button
+                      key={candidato.id}
+                      onClick={() => setSelectedCandidato(candidato)}
+                      className={`w-full flex items-center justify-between rounded-xl px-4 py-3 border hover:shadow-md transition-all duration-200 group text-left ${
+                        isCandFav
+                          ? "bg-red-50/80 border-red-200 hover:border-red-400"
+                          : "bg-white/60 hover:bg-white border-subtitle/10 hover:border-button-background-primary/50"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3 flex-1 min-w-0">
+                        {candidato.numeroCandidato != null && (
+                          <span className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-subtitle/10 font-title font-extrabold text-sm text-subtitle">
+                            {candidato.numeroCandidato}
+                          </span>
+                        )}
+                        <div className="min-w-0">
+                          <span className="font-body text-subtitle group-hover:text-button-background-primary transition-colors block truncate">
+                            {candidato.nombreCompleto}
+                          </span>
+                          <span className="font-body text-subtitle/50 text-xs">
+                            {candidato.cargo}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span
+                          onClick={(e) => toggleFavCandidato(e, candidato)}
+                          className="text-lg cursor-pointer hover:scale-125 transition-transform"
+                          title={isCandFav ? "Quitar de favoritos" : "Marcar como favorito"}
+                        >
+                          {isCandFav ? "❤️" : "🤍"}
                         </span>
-                      )}
-                      {candidato.experienciaCongreso === 1 && (
-                        <span className="text-lg" title="Experiencia en Congreso">
-                          🏛️
-                        </span>
-                      )}
-                      {candidato.resumenAntecedente && (
-                        <span className="text-lg" title="Antecedentes">
-                          ⚠️
-                        </span>
-                      )}
-                    </div>
-                  </button>
-                ))}
+                        {candidato.experienciaPolitica === 1 && (
+                          <span className="text-lg" title="Experiencia política">
+                            ⚖️
+                          </span>
+                        )}
+                        {candidato.experienciaCongreso === 1 && (
+                          <span className="text-lg" title="Experiencia en Congreso">
+                            🏛️
+                          </span>
+                        )}
+                        {candidato.resumenAntecedente && (
+                          <span className="text-lg" title="Antecedentes">
+                            ⚠️
+                          </span>
+                        )}
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -744,6 +803,7 @@ export default function CandidatosPage() {
         <div className="mt-6 pt-4 border-t border-subtitle/20">
           <p className="text-sm font-body text-subtitle/60 mb-2">Iconos:</p>
           <div className="flex flex-wrap gap-4 text-sm font-body text-subtitle/80">
+            <span>❤️ Favorito</span>
             <span>⚖️ Exp. política</span>
             <span>🏛️ Exp. Congreso</span>
             <span>⚠️ Antecedentes</span>
@@ -1204,7 +1264,23 @@ export default function CandidatosPage() {
               </button>
             </div>
 
-            {/* Info básica */}
+            {/* Botón de favorito */}
+            <button
+              onClick={(e) => toggleFavCandidato(e, selectedCandidato)}
+              className={`mt-3 w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-body text-sm font-bold transition-colors ${
+                favCandidatoIds.has(selectedCandidato.id)
+                  ? "bg-red-100 text-red-700 border border-red-200"
+                  : "bg-gray-100 text-subtitle border border-subtitle/20 hover:bg-gray-200"
+              }`}
+            >
+              <span>{favCandidatoIds.has(selectedCandidato.id) ? "❤️" : "🤍"}</span>
+              {favCandidatoIds.has(selectedCandidato.id) ? "Candidato favorito" : "Marcar como favorito"}
+              {selectedCandidato.numeroCandidato != null && (
+                <span className="ml-1 opacity-70">(N° {selectedCandidato.numeroCandidato})</span>
+              )}
+            </button>
+
+            {/* Info básica */}}
             <div className="mt-4 bg-white/50 rounded-lg px-4 py-3 space-y-2">
               <p className="text-sm text-subtitle/60 font-body">
                 Postula a:{" "}
