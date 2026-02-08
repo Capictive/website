@@ -335,6 +335,9 @@ export default function CandidatosPage() {
   const [isNacional, setIsNacional] = useState<boolean>(false);
   const [isExtranjero, setIsExtranjero] = useState<boolean>(false);
 
+  // Partidos bloqueados
+  const [blockedParties, setBlockedParties] = useState<string[]>([]);
+
   // Estado para búsqueda por nombre
   const [searchInput, setSearchInput] = useState<string>("");
   const [searchNombre, setSearchNombre] = useState<string>("");
@@ -415,7 +418,7 @@ export default function CandidatosPage() {
     }
   }, []);
 
-  // Cargar candidatos favoritos de localStorage
+  // Cargar candidatos favoritos y partidos bloqueados de localStorage
   useEffect(() => {
     try {
       const raw = localStorage.getItem("capictive-favoritos-candidatos");
@@ -423,7 +426,19 @@ export default function CandidatosPage() {
     } catch {
       /* empty */
     }
+    try {
+      const rawBlocked = localStorage.getItem("blocked-parties");
+      if (rawBlocked) setBlockedParties(JSON.parse(rawBlocked));
+    } catch {
+      /* empty */
+    }
   }, []);
+
+  // Partidos disponibles filtrados (sin bloqueados)
+  const partidosDisponibles = useMemo(
+    () => PARTIDOS_DISPONIBLES.filter((p) => !blockedParties.includes(p)),
+    [blockedParties],
+  );
 
   // Callback del tour
   const handleTourCallback = (data: CallBackProps) => {
@@ -1078,7 +1093,7 @@ export default function CandidatosPage() {
                     Cerrar
                   </button>
                 </div>
-                {PARTIDOS_DISPONIBLES.map((partido) => (
+                {partidosDisponibles.map((partido) => (
                   <label
                     key={partido}
                     className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 cursor-pointer"
@@ -1579,22 +1594,44 @@ export default function CandidatosPage() {
             )}
 
             {/* Botones de acción */}
-            <div className="mt-6 flex justify-between items-center gap-3">
+            <div className="mt-6 space-y-3">
+              {/* Busca más información */}
               <button
-                onClick={() =>
-                  handleCorroborar(selectedCandidato.nombreCompleto)
-                }
-                className="flex items-center gap-2 px-4 py-2 cursor-pointer bg-orange-900/40 hover:bg-orange-900/50 text-white rounded-lg font-body text-sm transition-colors"
+                onClick={() => {
+                  const query = encodeURIComponent(
+                    `${selectedCandidato.nombreCompleto} Hoja de vida Noticias Elecciones 2026 Perú`,
+                  );
+                  window.open(
+                    `https://www.perplexity.ai/search/new?q=${query}`,
+                    "_blank",
+                  );
+                }}
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 cursor-pointer bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-body text-sm font-bold transition-colors"
               >
-                <span>🔍</span>
-                Corroborar en JNE
+                <span>🌐</span>
+                Busca más información del candidato
               </button>
-              <button
-                onClick={() => setSelectedCandidato(null)}
-                className="btn-primary"
-              >
-                Cerrar
-              </button>
+              <p className="text-[10px] font-body text-subtitle/50 text-center -mt-1">
+                Serás redirigido a Perplexity AI para ver más detalles
+              </p>
+
+              <div className="flex justify-between items-center gap-3">
+                <button
+                  onClick={() =>
+                    handleCorroborar(selectedCandidato.nombreCompleto)
+                  }
+                  className="flex items-center gap-2 px-4 py-2 cursor-pointer bg-orange-900/40 hover:bg-orange-900/50 text-white rounded-lg font-body text-sm transition-colors"
+                >
+                  <span>🔍</span>
+                  Corroborar en JNE
+                </button>
+                <button
+                  onClick={() => setSelectedCandidato(null)}
+                  className="btn-primary"
+                >
+                  Cerrar
+                </button>
+              </div>
             </div>
           </article>
         </dialog>

@@ -203,6 +203,7 @@ function CompararContent() {
   const [wordcloudParty, setWordcloudParty] = useState<string>("");
   const [selectorOpen, setSelectorOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [blockedParties, setBlockedParties] = useState<string[]>([]);
 
   // JSON data
   const [radarData, setRadarData] = useState<unknown[]>([]);
@@ -213,6 +214,16 @@ function CompararContent() {
   // Tour state
   const [runTour, setRunTour] = useState(false);
   const [tourCompleted, setTourCompleted] = useState(false);
+
+  // Cargar partidos bloqueados
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("blocked-parties");
+      if (raw) setBlockedParties(JSON.parse(raw));
+    } catch {
+      /* empty */
+    }
+  }, []);
 
   useEffect(() => {
     const seen = localStorage.getItem("comparar-tour-completed");
@@ -263,17 +274,17 @@ function CompararContent() {
   }, []);
 
   // Party name list from data that exists in radar/nolan
-   
+
   const availableRadarParties = useMemo(
     () => radarData.map((d: any) => d.partido),
     [radarData],
   );
-   
+
   const availableNolanParties = useMemo(
     () => nolanData.map((d: any) => d.nombre),
     [nolanData],
   );
-   
+
   const availableWordcloudParties = useMemo(
     () => wordcloudData.map((d: any) => d.partido),
     [wordcloudData],
@@ -283,9 +294,11 @@ function CompararContent() {
     const q = searchQuery.toLowerCase();
     return PARTIES.filter(
       (p) =>
-        p.name.toLowerCase().includes(q) && !selectedParties.includes(p.name),
+        p.name.toLowerCase().includes(q) &&
+        !selectedParties.includes(p.name) &&
+        !blockedParties.includes(p.name),
     );
-  }, [searchQuery, selectedParties]);
+  }, [searchQuery, selectedParties, blockedParties]);
 
   const addParty = (partyName: string) => {
     if (!selectedParties.includes(partyName)) {
