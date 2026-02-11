@@ -838,6 +838,36 @@
     "descripcion": "Podemos Perú se posiciona como una organización conservadora que combina la defensa de la economía social de mercado con un rol estatal regulador y soberano. Socialmente, se ancla en valores tradicionales pro-vida y una agenda de seguridad de 'mano dura' que involucra a las Fuerzas Armadas en tareas de orden interno."
   },
   {
+  "nombre": "Partido Político Primero La Gente",
+  "siglas": "PLG",
+  "libertadEconomica": 5.5,
+  "libertadPersonal": 7.8,
+  "analisis": {
+    "economico": {
+      "calificacion": 5.5,
+      "justificacion": "El plan propone una economía mixta que busca un equilibrio entre la promoción de la inversión privada y una fuerte intervención estatal para cerrar brechas sociales. Aunque defiende la inversión privada y la seguridad jurídica, pone énfasis en la progresividad tributaria, la regulación de mercados (especialmente salud) y la expansión del gasto social.",
+      "evidencias": [
+        "Racionalización de exoneraciones y la ampliación ordenada de la base del Impuesto a la Renta... hacer el sistema tributario más progresivo",
+        "Regular el sistema privado de seguros y medicamentos limitando prácticas abusivas y oligopólicas",
+        "Promoción de inversión privada competitiva con compromiso ambiental y social",
+        "Aumentar en 0.5 p.p. del PBI el gasto público en Protección Social"
+      ]
+    },
+    "personal": {
+      "calificacion": 7.8,
+      "justificacion": "Muestra un fuerte compromiso con las libertades civiles, la igualdad de género y los derechos de las minorías. Se aleja del conservadurismo social al incluir explícitamente a las 'diversidades' en sus metas de protección y participación política, y promueve una cultura de respeto a la diversidad y derechos humanos bajo un marco democrático.",
+      "evidencias": [
+        "Prevenir y erradicar la violencia de género y las múltiples discriminaciones, garantizando igualdad sustantiva para mujeres, niñas, adolescentes y diversidades",
+        "Cohesión social, convivencia democrática y respeto a la diversidad; equidad de género, interculturalidad y no discriminación",
+        "Asegurar que el empleo de FF.AA. para orden interno sea excepcional, subordinado a conducción civil, con protocolos claros... y formación en derechos humanos",
+        "Elevar la participación juvenil organizada... con incremento mayor en mujeres jóvenes, pueblos indígenas y diversidades sexuales"
+      ]
+    }
+  },
+  "cuadrante": "progresista",
+  "descripcion": "El partido se define por una ideología progresista que combina una gestión económica de mercado con fuerte regulación y enfoque social, junto con una agenda de libertades civiles amplia y una profunda reforma institucional basada en la meritocracia y la transparencia."
+},
+  {
     "nombre": "Progresemos",
     "siglas": "PROGRESEMOS",
     "libertadEconomica": 6.0,

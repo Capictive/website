@@ -1159,6 +1159,118 @@
     "perfilIdeologico": "Derecha conservadora y liberal en lo económico (Fujimorismo). Prioriza el orden público ('mano dura'), la inversión privada en sectores extractivos e infraestructura, y programas sociales asistencialistas focalizados. El Estado tiene un rol fuerte en seguridad y justicia, pero subsidiario en la economía."
   },
   {
+  "partido": "Primero la Gente",
+  "valores": {
+    "economia": 8.0,
+    "educacion": 9.0,
+    "salud": 7.0,
+    "seguridad": 8.0,
+    "infraestructura": 7.5,
+    "medioAmbiente": 6.5,
+    "desarrolloSocial": 8.5,
+    "agricultura": 6.0
+  },
+  "analisisDetallado": {
+    "economia": {
+      "calificacion": 8.0,
+      "justificacion": "Se dedica una sección extensa (páginas 31-37) con un enfoque tecnocrático. Propone reducir la evasión del IGV al 25%, aumentar la presión tributaria ampliando la base y fomentar nuevos motores de crecimiento como la acuicultura y forestal. Incluye metas de inversión minera (US$ 10,000 millones) y reducción de la informalidad.",
+      "propuestasDestacadas": [
+        "Reducir evasión del IGV e Impuesto a la Renta",
+        "Impulso a nuevos sectores: forestal, acuicultura y economía creativa",
+        "Destrabe de grandes proyectos mineros y de infraestructura"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "educacion": {
+      "calificacion": 9.0,
+      "justificacion": "Es el primer eje del documento (páginas 1-6) y presenta el mayor nivel de detalle en indicadores. Establece metas precisas basadas en pruebas estandarizadas (ENLA) para lectura y matemáticas, cierre de brechas digitales (90% de escuelas conectadas) y revalorización docente.",
+      "propuestasDestacadas": [
+        "Incremento de logros de aprendizaje con metas porcentuales específicas (ENLA)",
+        "Cierre de brecha digital y de servicios básicos en escuelas rurales",
+        "Expansión de educación técnica y tecnológica acreditada"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "salud": {
+      "calificacion": 7.0,
+      "justificacion": "Aborda la fragmentación del sistema y la infraestructura (páginas 6-7). Propone unificar el sistema de salud y tiene un fuerte énfasis en salud mental, proponiendo crear 450 Centros de Salud Mental Comunitaria. Las metas son claras pero la extensión es menor comparada con Educación.",
+      "propuestasDestacadas": [
+        "Unificación del sistema nacional de salud",
+        "Reducción de brechas de infraestructura en el primer nivel de atención",
+        "Implementación de 450 Centros de Salud Mental Comunitaria"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "seguridad": {
+      "calificacion": 8.0,
+      "justificacion": "Tratamiento profundo (páginas 16-21) que abarca seguridad ciudadana, justicia y defensa. Incluye metas agresivas como reducir la extorsión en 40% y la victimización urbana. Plantea reformas penitenciarias y fortalecimiento de inteligencia policial.",
+      "propuestasDestacadas": [
+        "Reducción de tasa de homicidios y extorsión con porcentajes definidos",
+        "Control de cárceles y bloqueo de comunicaciones al 90% o más",
+        "Fortalecimiento de la ciberdefensa y protección de infraestructura crítica"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "infraestructura": {
+      "calificacion": 7.5,
+      "justificacion": "Se enfoca en transporte masivo, conectividad regional y vivienda (páginas 10, 41-43). Menciona proyectos específicos como el Tren de Cercanías Lima-Chancay y las Líneas del Metro. Propone 60 mil viviendas mejoradas al año.",
+      "propuestasDestacadas": [
+        "Tren de cercanías Lima-Chancay-Barranca",
+        "Mejoramiento de vivienda y autoconstrucción asistida",
+        "Infraestructura logística multimodal y puertos"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "medioAmbiente": {
+      "calificacion": 6.5,
+      "justificacion": "Se centra en la gestión hídrica y transición energética (páginas 38-41). Plantea triplicar proyectos de siembra y cosecha de agua y alcanzar 3,000 MW en energías renovables. El enfoque es más de gestión de recursos que conservacionista puro.",
+      "propuestasDestacadas": [
+        "Gestión de cuencas y seguridad hídrica",
+        "Expansión de energías renovables no convencionales",
+        "Economía circular y reducción de emisiones"
+      ],
+      "presupuestoMencionado": false,
+      "metasEspecificas": true
+    },
+    "desarrolloSocial": {
+      "calificacion": 8.5,
+      "justificacion": "Eje central de la ideología del partido (páginas 7-9, 11-15). Propone la creación de un Sistema Nacional de Cuidados y metas ambiciosas de reducción de pobreza monetaria al 15%. Incluye fuerte componente de género e inclusión.",
+      "propuestasDestacadas": [
+        "Creación del Sistema Nacional de Cuidados",
+        "Reducción de pobreza extrema al 2.0%",
+        "Pensión social y reforma del sistema previsional"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    },
+    "agricultura": {
+      "calificacion": 6.0,
+      "justificacion": "El tema agrícola está diluido entre las secciones de economía (MIPYMES) y gestión del agua (páginas 33-34, 39). Se enfoca en riego tecnificado y crédito, pero carece de un capítulo exclusivo de gran envergadura comparado con otros sectores.",
+      "propuestasDestacadas": [
+        "Ampliación de riego tecnificado",
+        "Acceso a crédito para pequeños productores",
+        "Promoción de la agroexportación y cadenas productivas"
+      ],
+      "presupuestoMencionado": true,
+      "metasEspecificas": true
+    }
+  },
+  "top3Prioridades": [
+    "educacion",
+    "desarrolloSocial",
+    "economia"
+  ],
+  "areasDesatendidas": [
+    "agricultura"
+  ],
+  "perfilIdeologico": "Centro-reformista con fuerte énfasis tecnocrático. Combina una visión de protección social robusta (Sistema de Cuidados, enfoque de género) con ortodoxia económica (responsabilidad fiscal, OCDE, productividad) y gestión pública basada en indicadores de desempeño."
+},
+  {
     "partido": "Integridad Democrática",
     "valores": {
       "economia": 9.0,

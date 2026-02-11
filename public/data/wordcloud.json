@@ -1005,6 +1005,266 @@
     "enfoquePrincipal": "El plan de gobierno se centra en la seguridad ciudadana y nacional, el desarrollo económico sostenible con énfasis en la minería, agricultura, pesca y turismo, y la mejora de la infraestructura. Prioriza la reforma de la justicia, la modernización del Estado, y la promoción del empleo, la educación, la salud y los programas sociales, buscando la formalización y el uso de tecnología e innovación."
   },
   {
+  "partido": "Primero la Gente",
+  "palabras": [
+    {
+      "text": "educación",
+      "value": 55,
+      "categoria": "educacion"
+    },
+    {
+      "text": "desarrollo",
+      "value": 48,
+      "categoria": "economia"
+    },
+    {
+      "text": "social",
+      "value": 42,
+      "categoria": "social"
+    },
+    {
+      "text": "salud",
+      "value": 38,
+      "categoria": "salud"
+    },
+    {
+      "text": "brechas",
+      "value": 35,
+      "categoria": "social"
+    },
+    {
+      "text": "sistema",
+      "value": 32,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "territorio",
+      "value": 30,
+      "categoria": "territorio"
+    },
+    {
+      "text": "gestión",
+      "value": 28,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "servicios",
+      "value": 26,
+      "categoria": "social"
+    },
+    {
+      "text": "inversión",
+      "value": 24,
+      "categoria": "economia"
+    },
+    {
+      "text": "calidad",
+      "value": 22,
+      "categoria": "social"
+    },
+    {
+      "text": "derechos",
+      "value": 20,
+      "categoria": "social"
+    },
+    {
+      "text": "corrupción",
+      "value": 18,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "justicia",
+      "value": 17,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "seguridad",
+      "value": 16,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "población",
+      "value": 15,
+      "categoria": "social"
+    },
+    {
+      "text": "democracia",
+      "value": 14,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "infraestructura",
+      "value": 13,
+      "categoria": "territorio"
+    },
+    {
+      "text": "rural",
+      "value": 13,
+      "categoria": "territorio"
+    },
+    {
+      "text": "economía",
+      "value": 12,
+      "categoria": "economia"
+    },
+    {
+      "text": "estado",
+      "value": 12,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "pobreza",
+      "value": 11,
+      "categoria": "social"
+    },
+    {
+      "text": "mujeres",
+      "value": 11,
+      "categoria": "social"
+    },
+    {
+      "text": "agua",
+      "value": 11,
+      "categoria": "ambiente"
+    },
+    {
+      "text": "capacidad",
+      "value": 10,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "conectividad",
+      "value": 10,
+      "categoria": "territorio"
+    },
+    {
+      "text": "productividad",
+      "value": 9,
+      "categoria": "economia"
+    },
+    {
+      "text": "acceso",
+      "value": 9,
+      "categoria": "social"
+    },
+    {
+      "text": "urbano",
+      "value": 8,
+      "categoria": "territorio"
+    },
+    {
+      "text": "digital",
+      "value": 8,
+      "categoria": "tecnologia"
+    },
+    {
+      "text": "riesgo",
+      "value": 8,
+      "categoria": "ambiente"
+    },
+    {
+      "text": "reforma",
+      "value": 7,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "descentralización",
+      "value": 7,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "vivienda",
+      "value": 7,
+      "categoria": "social"
+    },
+    {
+      "text": "ciudadanía",
+      "value": 7,
+      "categoria": "social"
+    },
+    {
+      "text": "pensiones",
+      "value": 6,
+      "categoria": "social"
+    },
+    {
+      "text": "sostenibilidad",
+      "value": 6,
+      "categoria": "ambiente"
+    },
+    {
+      "text": "energía",
+      "value": 6,
+      "categoria": "ambiente"
+    },
+    {
+      "text": "programas",
+      "value": 6,
+      "categoria": "social"
+    },
+    {
+      "text": "cuentas",
+      "value": 5,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "desastres",
+      "value": 5,
+      "categoria": "ambiente"
+    },
+    {
+      "text": "formalización",
+      "value": 5,
+      "categoria": "economia"
+    },
+    {
+      "text": "innovación",
+      "value": 5,
+      "categoria": "tecnologia"
+    },
+    {
+      "text": "empleo",
+      "value": 4,
+      "categoria": "economia"
+    },
+    {
+      "text": "comercio",
+      "value": 4,
+      "categoria": "economia"
+    },
+    {
+      "text": "amazonía",
+      "value": 4,
+      "categoria": "territorio"
+    },
+    {
+      "text": "gobernanza",
+      "value": 4,
+      "categoria": "gobernanza"
+    },
+    {
+      "text": "cultura",
+      "value": 3,
+      "categoria": "social"
+    }
+  ],
+  "totalPalabras": 20000,
+  "palabrasUnicas": 3000,
+  "top10": [
+    "educación",
+    "desarrollo",
+    "social",
+    "salud",
+    "brechas",
+    "sistema",
+    "territorio",
+    "gestión",
+    "servicios",
+    "inversión"
+  ],
+  "enfoquePrincipal": "El plan se centra en el desarrollo social, abordando brechas en educación, salud y protección social. Destaca reformas de gobernanza para combatir la corrupción, fortalecer la justicia y seguridad, e impulsar la productividad económica y sostenibilidad en los territorios, especialmente rurales y amazónicos."
+},
+  {
     "partido": "Avanza País",
     "palabras": [
       {
