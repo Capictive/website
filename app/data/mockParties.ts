@@ -36,6 +36,7 @@ const partiesData = [
   { file: "peru_moderno_logo.jpg", name: "PERÚ MODERNO" },
   { file: "peru_primero_logo.png", name: "PERÚ PRIMERO" },
   { file: "podemos_peru_logo.png", name: "PODEMOS PERÚ" },
+  { file: "primero_la_gente_logo.jpg", name: "PRIMERO LA GENTE" },
   { file: "progresemos_logo.jpg", name: "PROGRESEMOS" },
   { file: "renovacion_popular_logo.png", name: "RENOVACIÓN POPULAR" },
   { file: "salvemos_al_peru_logo.png", name: "SALVEMOS AL PERÚ" },
@@ -48,7 +49,7 @@ export const mockParties: PoliticalParty[] = partiesData.map((p, index) => {
   // Construimos el nombre del archivo de retrato asumiendo la convención _portrait
   // Reemplazamos _logo con _portrait y mantenemos la extensión original o probamos jpg
   const baseName = p.file.replace(/_logo\.(png|jpg|svg)$/, "");
-  
+
   return {
     id: `party-${index}`,
     name: p.name,
