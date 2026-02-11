@@ -757,8 +757,11 @@ export default function PartidosPage() {
                   <div className="relative mt-4">
                     <Image
                       src={
-                        detailState.detail.presidente_links[0] ||
-                        selected.candidateImage
+                        (Array.isArray(detailState.detail.presidente_links)
+                          ? detailState.detail.presidente_links[0]
+                          : undefined) ||
+                        selected.candidateImage ||
+                        "/pose/reading.png"
                       }
                       alt={`Candidato ${selected.name}`}
                       width={240}
@@ -1123,7 +1126,7 @@ export default function PartidosPage() {
                   Fuentes Consultadas
                 </h3>
                 <ul className="list-disc list-inside space-y-1">
-                  {detailState.detail.fuentes_consultadas.map(
+                  {(detailState.detail.fuentes_consultadas ?? []).map(
                     (fuente: string, i: number) => (
                       <li key={i} className="font-body text-sm">
                         {fuente}
