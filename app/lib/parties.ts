@@ -334,7 +334,7 @@ const portraitMap: Record<string, string> = {
     peru_moderno: "/portraits/peru_moderno_portrait.jpg",
     peru_primero: "/portraits/peru_primero_portrait.jpg",
     podemos_peru: "/portraits/podemos_peru_portrait.jpg",
-    primero_la_gente: "/portraits/primero_la_gente_portrait.jpg",
+    primero_la_gente: "/portraits/primero_la_gente_portrait.png",
     progresemos: "/portraits/progresemos_portrait.jpg",
     renovacion_popular: "/portraits/renovacion_popular_portrait.jpg",
     salvemos_al_peru: "/portraits/salvemos_al_peru_portrait.jpg",
