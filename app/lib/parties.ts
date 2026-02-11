@@ -99,6 +99,7 @@ const logoMap: Record<string, string> = {
     "Perú Libre": "/political parties/peru_libre_logo.png",
     "Perú Moderno": "/political parties/peru_moderno_logo.jpg",
     "Perú Primero": "/political parties/peru_primero_logo.png",
+    "Primero la Gente": "/political parties/primero_la_gente_logo.jpg",
     "Podemos Perú": "/political parties/podemos_peru_logo.png",
     Progresemos: "/political parties/progresemos_logo.jpg",
     "Renovación Popular": "/political parties/renovacion_popular_logo.png",
@@ -253,6 +254,11 @@ const candidatosMap: Record<string, Candidatos> = {
         presidente: "José León Luna Gálvez",
         primer_vicepresidente: "Cecilia Jaqueline García Rodríguez",
         segundo_vicepresidente: "Raúl Noblecilla Olaechea",
+    },
+    "Primero la Gente": {
+        presidente: "Maria Soledad Perez Tello de Rodriguez",
+        primer_vicepresidente: "Raul Alberto Molina Martinez",
+        segundo_vicepresidente: "Manuel Antonio Ato Del Avellanal Carrera"
     },
     Progresemos: {
         presidente: "Paul Jaimes Blanco",
@@ -580,6 +586,14 @@ export const PARTIES: Party[] = [
         logo: logoMap["Podemos Perú"],
         candidateImage: getPortraitById("podemos_peru"),
         candidatos: candidatosMap["Podemos Perú"] || defaultCandidatos,
+    },
+    {
+        id: "primero_la_gente",
+        name: "Primero la Gente",
+        description: "Partido político peruano",
+        logo: logoMap["Primero la Gente"],
+        candidateImage: getPortraitById("primero_la_gente"),
+        candidatos: candidatosMap["Primero la Gente"]
     },
     {
         id: "progresemos",
