@@ -357,7 +357,9 @@ function PartidosContent() {
     scandals: Escandalo[] | null;
     loading: boolean;
   }>({ scandals: null, loading: false });
-  const [allyPopupState, setAllyPopupState] = useState<'hidden' | 'visible' | 'exiting'>('hidden');
+  const [allyPopupState, setAllyPopupState] = useState<
+    "hidden" | "visible" | "exiting"
+  >("hidden");
   const [currentEjeIndex, setCurrentEjeIndex] = useState(0);
   const [currentProblemaIndex, setCurrentProblemaIndex] = useState(0);
   const [currentEscandaloIndex, setCurrentEscandaloIndex] = useState(0);
@@ -374,12 +376,15 @@ function PartidosContent() {
       if (partyMatch) {
         setSelected(partyMatch);
       }
-      
+
       // Mostrar popup del aliado y luego ocultarlo con animación
-      setAllyPopupState('visible');
-      const t1 = setTimeout(() => setAllyPopupState('exiting'), 3000);
-      const t2 = setTimeout(() => setAllyPopupState('hidden'), 3500); // 500ms de gracia para animar
-      return () => { clearTimeout(t1); clearTimeout(t2); };
+      setAllyPopupState("visible");
+      const t1 = setTimeout(() => setAllyPopupState("exiting"), 3000);
+      const t2 = setTimeout(() => setAllyPopupState("hidden"), 3500); // 500ms de gracia para animar
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+      };
     }
   }, [ppParam]);
 
@@ -1264,12 +1269,12 @@ function PartidosContent() {
       )}
 
       {/* PopUp Aliado Decide.pe */}
-      {allyPopupState !== 'hidden' && (
-        <div 
+      {allyPopupState !== "hidden" && (
+        <div
           className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-3 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border border-subtitle/20 shadow-xl px-5 py-3 rounded-full transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.26,1.55)] ${
-            allyPopupState === 'visible' 
-              ? 'translate-y-0 opacity-100 scale-100' 
-              : 'translate-y-20 opacity-0 scale-50'
+            allyPopupState === "visible"
+              ? "translate-y-0 opacity-100 scale-100"
+              : "translate-y-20 opacity-0 scale-50"
           }`}
         >
           <span className="font-body text-sm font-semibold text-subtitle/90 whitespace-nowrap">
