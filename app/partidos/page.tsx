@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
@@ -296,7 +297,48 @@ async function fetchPartyScandals(
   }
 }
 
+// Mapa de siglas a nombres de partidos
+const PP_ALIAS_MAP: Record<string, string> = {
+  AXLN: "Ahora Nación",
+  RXAS: "Alianza Electoral Venceremos",
+  FXMA: "Alianza Fuerza y Libertad",
+  CXAP: "Alianza Para el Progreso",
+  RXCL: "Alianza Unidad Nacional",
+  JXWZ: "Avanza País",
+  YXLA: "Cooperación Popular",
+  AXLB: "Fe en el Perú",
+  FXOV: "Frente de la Esperanza",
+  KXFH: "Fuerza Popular",
+  WXGC: "Integridad Democrática",
+  RXSP: "Juntos por el Perú",
+  RXBL: "Libertad Popular",
+  EXVP: "Partido Aprista Peruano",
+  RXBC: "Partido Cívico Obras",
+  JXNM: "Partido del Buen Gobierno",
+  AXMF: "Partido Democrático Federal",
+  AXCG: "Partido Demócrata Verde",
+  MXGA: "Partido Morado",
+  HXCG: "Partido Patriótico del Perú",
+  WXCP: "Partido Político PRIN",
+  CXÁL: "País para todos",
+  FXCT: "Perú Acción",
+  VXCR: "Perú Libre",
+  CXJC: "Perú Moderno",
+  MXVC: "Perú Primero",
+  JXLG: "Podemos Perú",
+  MXDR: "Primero la Gente",
+  PXJB: "Progresemos",
+  RXLA: "Renovación Popular", // Sigla asignada especialmente para Rafael Bernardo López Aliaga Cazorla
+  AXOV: "Salvemos al Perú",
+  CXEG: "SiCreo",
+  GXFS: "Somos Perú",
+  RXFB: "Un Camino Diferente",
+};
+
 export default function PartidosPage() {
+  const searchParams = useSearchParams();
+  const ppParam = searchParams?.get("pp")?.toUpperCase();
+
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState<Party | null>(null);
@@ -316,6 +358,16 @@ export default function PartidosPage() {
   );
   const [blockedParties, setBlockedParties] = useState<string[]>([]);
   const [favoriteParties, setFavoriteParties] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (ppParam && PARTIES.length > 0) {
+      const partyMatchName = PP_ALIAS_MAP[ppParam];
+      const partyMatch = PARTIES.find((p) => p.name === partyMatchName);
+      if (partyMatch) {
+        setSelected(partyMatch);
+      }
+    }
+  }, [ppParam]);
 
   // Estado para el modal de bloqueo
   const [partyToBlock, setPartyToBlock] = useState<string | null>(null);
@@ -1196,6 +1248,21 @@ export default function PartidosPage() {
           </div>
         </div>
       )}
+
+      {/* PopUp Aliado Decide.pe */}
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-3 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border border-subtitle/20 shadow-xl px-5 py-3 rounded-full animate-fade-in-up">
+        <span className="font-body text-sm font-semibold text-subtitle/90 whitespace-nowrap">
+          Gracias a nuestro Aliado decide.pe
+        </span>
+        <div className="w-8 h-8 md:w-10 md:h-10 relative flex-shrink-0 bg-white rounded-full p-1 overflow-hidden shadow-sm">
+          <Image
+            src="/decide.png"
+            alt="decide.pe"
+            fill
+            className="object-contain"
+          />
+        </div>
+      </div>
     </main>
   );
 }
