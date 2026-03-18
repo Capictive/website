@@ -2,7 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useMemo, useState, useEffect, useRef, useCallback } from "react";
+import {
+  useMemo,
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  Suspense,
+} from "react";
 import Joyride, { CallBackProps, STATUS, Step } from "react-joyride";
 import Nav from "../components/Nav";
 import BlockedPartiesSheet from "../components/BlockedPartiesSheet";
@@ -335,7 +342,7 @@ const PP_ALIAS_MAP: Record<string, string> = {
   RXFB: "Un Camino Diferente",
 };
 
-export default function PartidosPage() {
+function PartidosContent() {
   const searchParams = useSearchParams();
   const ppParam = searchParams?.get("pp")?.toUpperCase();
 
@@ -1264,6 +1271,20 @@ export default function PartidosPage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function PartidosPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center font-body text-subtitle">
+          Cargando partidos...
+        </div>
+      }
+    >
+      <PartidosContent />
+    </Suspense>
   );
 }
 
