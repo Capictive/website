@@ -194,9 +194,48 @@ const CustomTooltip = ({
   </div>
 );
 
+// Mapa de siglas a nombres de partidos
+const PP_ALIAS_MAP: Record<string, string> = {
+  AXLN: "Ahora Nación",
+  RXAS: "Alianza Electoral Venceremos",
+  FXMA: "Alianza Fuerza y Libertad",
+  CXAP: "Alianza Para el Progreso",
+  RXCL: "Alianza Unidad Nacional",
+  JXWZ: "Avanza País",
+  YXLA: "Cooperación Popular",
+  AXLB: "Fe en el Perú",
+  FXOV: "Frente de la Esperanza",
+  KXFH: "Fuerza Popular",
+  WXGC: "Integridad Democrática",
+  RXSP: "Juntos por el Perú",
+  RXBL: "Libertad Popular",
+  EXVP: "Partido Aprista Peruano",
+  RXBC: "Partido Cívico Obras",
+  JXNM: "Partido del Buen Gobierno",
+  AXMF: "Partido Democrático Federal",
+  AXCG: "Partido Demócrata Verde",
+  MXGA: "Partido Morado",
+  HXCG: "Partido Patriótico del Perú",
+  WXCP: "Partido Político PRIN",
+  CXÁL: "País para todos",
+  FXCT: "Perú Acción",
+  VXCR: "Perú Libre",
+  CXJC: "Perú Moderno",
+  MXVC: "Perú Primero",
+  JXLG: "Podemos Perú",
+  MXDR: "Primero la Gente",
+  PXJB: "Progresemos",
+  RXLA: "Renovación Popular",
+  AXOV: "Salvemos al Perú",
+  CXEG: "SiCreo",
+  GXFS: "Somos Perú",
+  RXFB: "Un Camino Diferente",
+};
+
 function CompararContent() {
   const searchParams = useSearchParams();
   const initialParty = searchParams.get("partido") || "";
+  const ppParams = searchParams.getAll("pp"); // Soporte para multiples ?pp=...&pp=...
 
   const [activeTab, setActiveTab] = useState<Tab>("radar");
   const [selectedParties, setSelectedParties] = useState<string[]>([]);
@@ -205,6 +244,9 @@ function CompararContent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [blockedParties, setBlockedParties] = useState<string[]>([]);
   const [showNolanGuide, setShowNolanGuide] = useState(false);
+  const [allyPopupState, setAllyPopupState] = useState<
+    "hidden" | "visible" | "exiting"
+  >("hidden");
 
   // JSON data
   const [radarData, setRadarData] = useState<unknown[]>([]);
@@ -260,19 +302,52 @@ function CompararContent() {
       .finally(() => setLoading(false));
   }, []);
 
-  // Set initial party from URL (only once on mount)
+  //conset initial party from URL (only once on mount)
   useEffect(() => {
-    if (!initialParty) return;
-    const found = PARTIES.find(
-      (p) => p.name.toLowerCase() === initialParty.toLowerCase(),
-    );
-    if (found) {
-      // Use functional updater to avoid cascading render warning
-      setSelectedParties((prev) => (prev.length === 0 ? [found.name] : prev));
-      setWordcloudParty((prev) => prev || found.name);
+    let matches: string[] = [];
+
+    // Manejar parametro heredado `partido=`
+    if (initialParty) {
+      const found = PARTIES.find(
+        (p) => p.name.toLowerCase() === initialParty.toLowerCase(),
+      );
+      if (found) matches.push(found.name);
+    }
+
+    // Manejar multiples parametros `pp=` (ej: ?pp=AXLN&pp=VXCR)
+    if (ppParams.length > 0) {
+      ppParams.forEach((pp) => {
+        const partyMatchName = PP_ALIAS_MAP[pp.toUpperCase()];
+        if (partyMatchName) {
+          const found = PARTIES.find((p) => p.name === partyMatchName);
+          if (found && !matches.includes(found.name)) {
+            matches.push(found.name);
+          }
+        }
+      });
+
+      // Mostrar el popup de aliado si se usaron los parametros 'pp'
+      setAllyPopupState("visible");
+      const t1 = setTimeout(() => setAllyPopupState("exiting"), 3000);
+      const t2 = setTimeout(() => setAllyPopupState("hidden"), 3500);
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+      };
+    }
+
+    if (matches.length > 0) {
+      setSelectedParties((prev) => {
+        const newParties = [...prev];
+        matches.forEach((m) => {
+          if (!newParties.includes(m)) newParties.push(m);
+        });
+        return newParties;
+      });
+      setWordcloudParty((prev) => prev || matches[0]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [initialParty, searchParams]); // `searchParams` incluido pues `ppParams` se deriva de él
 
   // Party name list from data that exists in radar/nolan
 
@@ -629,6 +704,29 @@ function CompararContent() {
               />
             </div>
           )}
+        </div>
+      )}
+
+      {/* PopUp Aliado Decide.pe */}
+      {allyPopupState !== "hidden" && (
+        <div
+          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-3 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border border-subtitle/20 shadow-xl px-5 py-3 rounded-full transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.26,1.55)] ${
+            allyPopupState === "visible"
+              ? "translate-y-0 opacity-100 scale-100"
+              : "translate-y-20 opacity-0 scale-50"
+          }`}
+        >
+          <span className="font-body text-sm font-semibold text-subtitle/90 whitespace-nowrap">
+            Gracias a nuestro aliado decide.pe
+          </span>
+          <div className="w-16 h-8 md:w-20 md:h-10 relative flex-shrink-0 bg-white rounded-md p-1 shadow-sm">
+            <Image
+              src="/decide.png"
+              alt="decide.pe"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
       )}
     </main>
