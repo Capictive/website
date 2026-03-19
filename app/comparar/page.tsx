@@ -314,6 +314,7 @@ function CompararContent() {
       if (found) matches.push(found.name);
     }
 
+    let isUsingPpAlias = false;
     // Manejar multiples parametros `pp=` (ej: ?pp=AXLN&pp=VXCR)
     if (ppParams.length > 0) {
       ppParams.forEach((pp) => {
@@ -322,18 +323,10 @@ function CompararContent() {
           const found = PARTIES.find((p) => p.name === partyMatchName);
           if (found && !matches.includes(found.name)) {
             matches.push(found.name);
+            isUsingPpAlias = true;
           }
         }
       });
-
-      // Mostrar el popup de aliado si se usaron los parametros 'pp'
-      setAllyPopupState("visible");
-      const t1 = setTimeout(() => setAllyPopupState("exiting"), 3000);
-      const t2 = setTimeout(() => setAllyPopupState("hidden"), 3500);
-      return () => {
-        clearTimeout(t1);
-        clearTimeout(t2);
-      };
     }
 
     if (matches.length > 0) {
@@ -345,6 +338,17 @@ function CompararContent() {
         return newParties;
       });
       setWordcloudParty((prev) => prev || matches[0]);
+    }
+
+    if (isUsingPpAlias) {
+      // Mostrar el popup de aliado si se usaron los parametros 'pp'
+      setAllyPopupState("visible");
+      const t1 = setTimeout(() => setAllyPopupState("exiting"), 3000);
+      const t2 = setTimeout(() => setAllyPopupState("hidden"), 3500);
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+      };
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialParty, searchParams]); // `searchParams` incluido pues `ppParams` se deriva de él
