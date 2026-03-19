@@ -369,12 +369,30 @@ function PartidosContent() {
   const [blockedParties, setBlockedParties] = useState<string[]>([]);
   const [favoriteParties, setFavoriteParties] = useState<string[]>([]);
 
+  const [partyToBlock, setPartyToBlock] = useState<string | null>(null);
+  const [showBlockModal, setShowBlockModal] = useState(false);
+
+  const detailArticleRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
     if (ppParam && PARTIES.length > 0) {
       const partyMatchName = PP_ALIAS_MAP[ppParam];
-      const partyMatch = PARTIES.find((p) => p.name === partyMatchName);
-      if (partyMatch) {
-        setSelected(partyMatch);
+      const partyIndex = PARTIES.findIndex((p) => p.name === partyMatchName);
+      if (partyIndex !== -1) {
+        // Seleccionamos el partido activo
+        setSelected(PARTIES[partyIndex]);
+        // Calculamos en qué página está para posicionar la lista
+        setPage(Math.floor(partyIndex / 5));
+
+        // Simular scroll como si hicieran click en móviles
+        if (window.innerWidth < 768) {
+          setTimeout(() => {
+            detailArticleRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }, 300);
+        }
       }
 
       // Mostrar popup del aliado y luego ocultarlo con animación
@@ -387,12 +405,6 @@ function PartidosContent() {
       };
     }
   }, [ppParam]);
-
-  // Estado para el modal de bloqueo
-  const [partyToBlock, setPartyToBlock] = useState<string | null>(null);
-  const [showBlockModal, setShowBlockModal] = useState(false);
-
-  const detailArticleRef = useRef<HTMLElement>(null);
 
   // Cargar partidos bloqueados y favoritos
   useEffect(() => {
@@ -1271,7 +1283,7 @@ function PartidosContent() {
       {/* PopUp Aliado Decide.pe */}
       {allyPopupState !== "hidden" && (
         <div
-          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-3 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border border-subtitle/20 shadow-xl px-5 py-3 rounded-full transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.26,1.55)] ${
+          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-3 bg-white/95 backdrop-blur-sm border border-subtitle/20 shadow-xl px-5 py-3 rounded-full transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.26,1.55)] ${
             allyPopupState === "visible"
               ? "translate-y-0 opacity-100 scale-100"
               : "translate-y-20 opacity-0 scale-50"

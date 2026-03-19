@@ -304,7 +304,7 @@ function CompararContent() {
 
   //conset initial party from URL (only once on mount)
   useEffect(() => {
-    let matches: string[] = [];
+    const matches: string[] = [];
 
     // Manejar parametro heredado `partido=`
     if (initialParty) {
@@ -710,7 +710,7 @@ function CompararContent() {
       {/* PopUp Aliado Decide.pe */}
       {allyPopupState !== "hidden" && (
         <div
-          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-3 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border border-subtitle/20 shadow-xl px-5 py-3 rounded-full transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.26,1.55)] ${
+          className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-3 bg-white/95 backdrop-blur-sm border border-subtitle/20 shadow-xl px-5 py-3 rounded-full transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.26,1.55)] ${
             allyPopupState === "visible"
               ? "translate-y-0 opacity-100 scale-100"
               : "translate-y-20 opacity-0 scale-50"
